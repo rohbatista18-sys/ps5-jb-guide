@@ -35,9 +35,13 @@
   gap: var(--space-3);
 }
 
+/* Original VT323 look, like the risk strip and tagline. */
 .label {
   color: var(--ink);
-  line-height: 1.6;
+  font-family: var(--font-retro);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  -webkit-font-smoothing: none;
 }
 
 /* Secondary to the field: separated by a dashed rule, like the menu panels' footers. */
