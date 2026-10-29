@@ -6,13 +6,15 @@
   gap: var(--space-2) var(--space-5);
   padding: var(--space-3) var(--gutter);
   /* Yellow tint over a near-opaque base, so the moving scenery never shows through the text. */
-  background: linear-gradient(rgb(255 210 63 / 0.08) 0 0), var(--reading-bg, rgb(6 6 12 / 0.94));
+  background: linear-gradient(rgb(255 210 63 / 0.08) 0 0), rgb(6 6 12 / 0.88);
   border-block: 2px dashed var(--yellow);
   color: var(--yellow);
-  font-family: var(--font-text);
-  line-height: 1.5;
+  /* Short warnings keep the original VT323 look; the readable text font is for long prose. */
+  font-family: var(--font-retro);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  -webkit-font-smoothing: none;
   text-align: center;
-  text-wrap: pretty;
 }
 
 .items {
@@ -26,16 +28,12 @@
 .items li::before {
   content: "! ";
   font-family: var(--font-display);
-  font-size: max(0.75em, var(--pixel-min, 0.6875rem));
+  font-size: 0.75em;
   color: var(--red);
 }
 
 .more {
-  display: inline-flex;
-  align-items: center;
-  min-height: var(--tap);
   color: var(--ink);
-  text-decoration: underline;
   text-underline-offset: 3px;
 }
 
