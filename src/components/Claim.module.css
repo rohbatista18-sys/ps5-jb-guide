@@ -1,0 +1,17 @@
+.claim {
+  line-height: 1.6;
+}
+
+.claim > :first-child {
+  vertical-align: 0.15em;
+}
+
+.source {
+  color: var(--ps-blue-hi);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.source:hover {
+  color: var(--cyan);
+}

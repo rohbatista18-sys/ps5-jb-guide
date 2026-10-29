@@ -1,0 +1,127 @@
+.nav {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .nav prefix: the global .px-btn sets display and would otherwise win. */
+.nav .toggle {
+  display: none;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.item {
+  position: relative;
+}
+
+.trigger[aria-current="page"],
+.trigger[aria-expanded="true"] {
+  --pb: var(--yellow);
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + var(--space-3));
+  left: 50%;
+  translate: -50% 0;
+  min-width: 15rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2);
+  background: var(--panel-solid);
+  border: 3px solid var(--yellow);
+  box-shadow: var(--space-1) var(--space-1) 0 0 rgb(0 0 0 / 0.6);
+  text-align: left;
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.panel a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: var(--space-1) var(--space-3);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.panel a:hover,
+.panel a[aria-current="page"] {
+  background: var(--panel-raised);
+  color: var(--yellow);
+}
+
+/* A coloured square before each range mirrors its StatusBadge colour. */
+.panel a[data-status]::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-right: var(--space-3);
+  background: var(--yellow);
+}
+
+.panel a[data-status="public"]::before { background: var(--green); }
+.panel a[data-status="none"]::before { background: var(--red); }
+
+.panelFooter {
+  margin-top: var(--space-1);
+  padding-top: var(--space-1);
+  border-top: 2px dashed var(--line);
+}
+
+@media (max-width: 639px) {
+  .nav .toggle {
+    display: inline-flex;
+    min-height: var(--tap);
+  }
+
+  .list {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-top: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .list[data-open] {
+    display: flex;
+  }
+
+  .trigger {
+    width: 100%;
+    min-height: var(--tap);
+    justify-content: space-between;
+  }
+
+  /* On phones the panels open inline instead of floating over the page. */
+  .panel {
+    position: static;
+    translate: none;
+    min-width: 0;
+    margin-top: var(--space-3);
+    box-shadow: none;
+  }
+}
+
+.caret {
+  flex: none;
+}
+
+.caret[data-open] {
+  rotate: 180deg;
+}

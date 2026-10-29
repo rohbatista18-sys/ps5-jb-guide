@@ -1,0 +1,210 @@
+{
+  "repos": [
+    {
+      "id": "ntfargo/Relapse-Exploit",
+      "category": "exploit",
+      "firmware": [
+        {
+          "min": "7.00",
+          "max": "13.60",
+          "evidence": "proven",
+          "source": "relapse-readme"
+        }
+      ],
+      "status": "review",
+      "notes": "README: 'Supported firmware: 7.00 through 13.60.'"
+    },
+    {
+      "id": "etaHEN/etaHEN",
+      "category": "hen",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030)."
+    },
+    {
+      "id": "EchoStretch/kstuff",
+      "category": "hen",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030). GitHub marks it as a fork: check upstream."
+    },
+    {
+      "id": "ps5-payload-dev/elfldr",
+      "category": "loader",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030)."
+    },
+    {
+      "id": "itsPLK/ps5-webkit-autoloader",
+      "category": "loader",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030)."
+    },
+    {
+      "id": "itsPLK/ps5-payload-manager",
+      "category": "loader",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030)."
+    },
+    {
+      "id": "ps5-payload-dev/ftpsrv",
+      "category": "utility",
+      "firmware": [],
+      "status": "review"
+    },
+    {
+      "id": "ps5-payload-dev/websrv",
+      "category": "utility",
+      "firmware": [],
+      "status": "review"
+    },
+    {
+      "id": "ps5-payload-dev/sdk",
+      "category": "utility",
+      "firmware": [],
+      "status": "review"
+    },
+    {
+      "id": "Gezine/Y2JB",
+      "category": "exploit",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030)."
+    },
+    {
+      "id": "Gezine/BD-JB5",
+      "category": "exploit",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030)."
+    },
+    {
+      "id": "idlesauce/umtx2",
+      "category": "exploit",
+      "firmware": [],
+      "status": "review",
+      "notes": "Firmware range pending README review (T030)."
+    },
+    {
+      "id": "Cryptogenic/PS5-IPV6-Kernel-Exploit",
+      "category": "exploit",
+      "firmware": [],
+      "status": "review",
+      "notes": "Author's description says <= 4.51; lower bound not sourced yet."
+    },
+    {
+      "id": "EchoStretch/ps5-app-dumper",
+      "category": "backup",
+      "firmware": [],
+      "status": "review",
+      "notes": "No description: read README before listing."
+    },
+    {
+      "id": "mihawk-99/PS5_RetroArch",
+      "category": "homebrew",
+      "firmware": [],
+      "status": "review"
+    },
+    {
+      "id": "darkxex/ProsperoStore",
+      "category": "store",
+      "firmware": [],
+      "status": "review",
+      "notes": "Store / transfer tool: list only if the catalog is homebrew-only and the README mentions no third-party games (spec Esclarecimento 1)."
+    },
+    {
+      "id": "elripalda/RecompStore",
+      "category": "store",
+      "firmware": [],
+      "status": "review",
+      "notes": "Store / transfer tool: list only if the catalog is homebrew-only and the README mentions no third-party games (spec Esclarecimento 1)."
+    },
+    {
+      "id": "phantomptr/ps5upload",
+      "category": "store",
+      "firmware": [],
+      "status": "review",
+      "notes": "Store / transfer tool: list only if the catalog is homebrew-only and the README mentions no third-party games (spec Esclarecimento 1)."
+    },
+    {
+      "id": "Loopayeh/pkg-sender",
+      "category": "store",
+      "firmware": [],
+      "status": "review",
+      "notes": "Store / transfer tool: list only if the catalog is homebrew-only and the README mentions no third-party games (spec Esclarecimento 1)."
+    },
+    {
+      "id": "ZigZagBoi1/PS5-14.10-Research",
+      "category": "research",
+      "firmware": [],
+      "status": "review",
+      "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "pastawithpesto/PS5-14.10-Jailbreak-Research",
+      "category": "research",
+      "firmware": [],
+      "status": "review",
+      "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "kuzibelit/PS5-14.00-14.10-Jailbreak-PoC",
+      "category": "research",
+      "firmware": [],
+      "status": "review",
+      "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "ftrevino739-ctrl/PS5-14.10-JB",
+      "category": "research",
+      "firmware": [],
+      "status": "review",
+      "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "stark3y93/PS5-FW-14.10-Research",
+      "category": "research",
+      "firmware": [],
+      "status": "review",
+      "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "Kickazzman/ps5-1410-research",
+      "category": "research",
+      "firmware": [],
+      "status": "review",
+      "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "oniz93/ps5-14.10-research",
+      "category": "research",
+      "firmware": [],
+      "status": "review",
+      "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "m2k7m/Relapse-Exploit",
+      "category": "exploit",
+      "firmware": [],
+      "status": "excluded",
+      "notes": "Copy of ntfargo/Relapse-Exploit (same description, created 2026-10-01). Link only the original."
+    },
+    {
+      "id": "jordyidk/slopkit",
+      "category": "exploit",
+      "firmware": [],
+      "status": "excluded",
+      "notes": "Unknown provenance, no license, created 2026-08-10."
+    },
+    {
+      "id": "saawant12/orbit-store-ps5",
+      "category": "store",
+      "firmware": [],
+      "status": "excluded",
+      "notes": "Reported in news as a storefront distributing pirated games (news URL still to be attached)."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+name: verify-repos
+
+# Weekly snapshot of every repo in content/repos.json (spec FR-023).
+# Opens a PR with the diff and the report. It never merges and never deploys.
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: verify-repos
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify repos
+        id: verify
+        # A failing repo (404, rename, unmarked archive) still gets a PR so a person sees it.
+        continue-on-error: true
+        run: npm run verify:repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Open PR with the snapshot diff
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+        run: |
+          if git diff --quiet -- content/repos.snapshot.json; then
+            echo "Snapshot unchanged."
+            exit 0
+          fi
+          DAY=$(date -u +%Y-%m-%d)
+          BRANCH="repos/snapshot-$DAY"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$BRANCH"
+          git add content/repos.snapshot.json
+          git commit -m "repos: snapshot $DAY"
+          git push --force-with-lease origin "$BRANCH"
+          {
+            if [ "$VERIFY_OUTCOME" != "success" ]; then
+              echo "> **verify-repos reported errors. Do not merge before a person reviews them.**"
+              echo
+            fi
+            cat verify-report.md
+          } > pr-body.md
+          gh pr create --title "repos: snapshot $DAY" --body-file pr-body.md --head "$BRANCH" \
+            || gh pr edit "$BRANCH" --body-file pr-body.md
+
+      - name: Fail the run when verify-repos failed
+        if: steps.verify.outcome != 'success'
+        run: exit 1

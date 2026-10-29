@@ -1,0 +1,36 @@
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  padding: var(--space-3) var(--gutter);
+  background: rgb(255 210 63 / 0.08);
+  border-block: 2px dashed var(--yellow);
+  color: var(--yellow);
+  text-align: center;
+}
+
+.items {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1) var(--space-5);
+}
+
+.items li::before {
+  content: "! ";
+  font-family: var(--font-display);
+  font-size: 0.75em;
+  color: var(--red);
+}
+
+.more {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+.more:hover {
+  color: var(--yellow);
+}

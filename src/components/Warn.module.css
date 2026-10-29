@@ -1,0 +1,41 @@
+.warn {
+  --pb: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.warn[data-kind="ban"],
+.warn[data-kind="scam"] {
+  --pb: var(--red);
+}
+
+.warn[data-kind="brick"] {
+  --pb: var(--magenta);
+}
+
+.warn[data-kind="terms"] {
+  --pb: var(--ps-blue-hi);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--pb);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.body ul {
+  padding-left: 2.5ch;
+  list-style: square;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}

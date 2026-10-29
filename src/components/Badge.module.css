@@ -1,0 +1,38 @@
+.group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.badge {
+  --tone: var(--ink-dim);
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border: 2px solid var(--tone);
+  color: var(--tone);
+  background: var(--bg-deep);
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge[data-tone="public"],
+.badge[data-tone="proven"] {
+  --tone: var(--green);
+}
+
+.badge[data-tone="none"] {
+  --tone: var(--red);
+}
+
+.badge[data-tone="unknown"],
+.badge[data-tone="reported"] {
+  --tone: var(--yellow);
+}
+
+.badge[data-tone="draft"] {
+  --tone: var(--cyan);
+  border-style: dashed;
+}

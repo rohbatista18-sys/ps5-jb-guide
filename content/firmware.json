@@ -1,0 +1,43 @@
+{
+  "latestKnownFirmware": "14.10",
+  "ranges": [
+    {
+      "id": "7.00-13.60",
+      "min": "7.00",
+      "max": "13.60",
+      "status": "public",
+      "title": {
+        "en": "7.00 to 13.60",
+        "es": "7.00 a 13.60",
+        "pt": "7.00 a 13.60"
+      },
+      "repos": [
+        "ntfargo/Relapse-Exploit"
+      ],
+      "claims": [
+        {
+          "text": "relapse-support",
+          "evidence": "proven",
+          "source": "relapse-readme"
+        }
+      ],
+      "draft": true,
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "14.00-14.10",
+      "min": "14.00",
+      "max": "14.10",
+      "status": "none",
+      "title": {
+        "en": "14.00 and 14.10",
+        "es": "14.00 y 14.10",
+        "pt": "14.00 e 14.10"
+      },
+      "repos": [],
+      "claims": [],
+      "draft": true,
+      "reviewedAt": "2026-10-29"
+    }
+  ]
+}
