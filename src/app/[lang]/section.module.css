@@ -14,41 +14,95 @@
   text-shadow: 3px 3px 0 var(--bg-deep);
 }
 
-/* Text that sits straight on the pixel scenery gets a hard 8-bit shadow, so platforms or stars
-   drawn behind it never drop its contrast. */
-.intro,
-.note,
+/* Short labels that sit straight on the pixel scenery keep a hard 8-bit shadow. Running text never
+   does: it always gets a solid reading surface instead (see .intro, .note, .prose, .bullets). */
 .groupTitle,
-.prose > p,
-.prose > h2,
-.prose > ul,
-.prose > ol,
 .group > label {
   text-shadow: 2px 2px 0 var(--bg-deep);
 }
 
+/* Solid reading surface for paragraphs that would otherwise sit on the moving scenery. */
+.intro,
+.note,
+.bullets {
+  padding: var(--space-3) var(--space-4);
+  background: var(--reading-bg, var(--panel-solid));
+  border: 2px solid var(--line);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
 .intro {
-  max-width: 60ch;
+  width: 100%;
+  max-width: calc(var(--measure, 68ch) + 2 * var(--space-4));
   margin-inline: auto;
   color: var(--ink-dim);
   text-align: center;
-  text-wrap: pretty;
+}
+
+/* ErrorList's live region is empty until the visitor types: no empty box. */
+.intro:empty {
+  padding: 0;
+  border: 0;
+  background: none;
 }
 
 .note {
-  color: var(--ink-faint);
-  text-wrap: pretty;
+  max-width: calc(var(--measure, 68ch) + 2 * var(--space-4));
+  color: var(--ink-dim);
 }
 
+/* Guide and tutorial text: one solid panel behind the whole flow, so no paragraph or list ever
+   sits on the animated background. Inside a .px-box (home "how to", About) the box is the panel. */
 .prose {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
+  line-height: 1.6;
+}
+
+.prose:not(:global(.px-box)) {
+  padding: var(--space-5);
+  background: var(--reading-bg, var(--panel-solid));
+  border: 2px solid var(--line);
+}
+
+@media (max-width: 639px) {
+  .prose:not(:global(.px-box)) {
+    padding: var(--space-4) var(--space-3);
+  }
+}
+
+/* Comfortable line length for running text; cards and boxes keep the full column. */
+.prose :is(p, ul, ol) {
+  max-width: var(--measure, 68ch);
 }
 
 .prose > p {
   color: var(--ink-dim);
   text-wrap: pretty;
+}
+
+.prose > ul:not([class]),
+.prose > ol:not([class]) {
+  padding-left: 2.5ch;
+  list-style: square;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.prose > ol:not([class]) {
+  list-style: decimal;
+}
+
+.prose li > :is(ul, ol):not([class]) {
+  margin-top: 0.5em;
+  padding-left: 2.5ch;
+  list-style: circle;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
 }
 
 .group {
@@ -68,7 +122,9 @@
 .empty {
   padding: var(--space-3) var(--space-4);
   border: 2px dashed var(--line);
-  color: var(--ink-faint);
+  background: var(--reading-bg, var(--panel-solid));
+  color: var(--ink-dim);
+  line-height: 1.6;
 }
 
 .cards {
@@ -81,10 +137,11 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
   height: 100%;
   padding: var(--space-4);
   color: var(--ink);
+  line-height: 1.6;
   text-decoration: none;
 }
 
@@ -92,11 +149,13 @@
   background: var(--panel-raised);
 }
 
+/* Error and guide titles wrap to two or three lines: pixel font, but with room between lines. */
 .cardTitle {
   font-family: var(--font-display);
-  font-size: 0.6875rem;
-  line-height: 1.6;
+  font-size: 0.75rem;
+  line-height: 1.75;
   color: var(--cyan);
+  text-wrap: balance;
 }
 
 .group input[type="search"] {
@@ -117,18 +176,26 @@
 }
 
 .bullets {
-  padding-left: 2.5ch;
+  max-width: calc(var(--measure, 68ch) + 2 * var(--space-4) + 2.5ch);
+  padding-left: calc(var(--space-4) + 2.5ch);
   list-style: square;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 0.75em;
 }
 
-.prose h2 {
+/* Direct child only: a Warn's own h2 title keeps its kind colour. */
+.prose > h2 {
+  margin-top: var(--space-2);
   font-family: var(--font-display);
   font-size: 0.75rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--cyan);
+  text-wrap: balance;
+}
+
+.prose > h2:first-child {
+  margin-top: 0;
 }
 
 /* /guias: one cell per menu instead of one long column of single cards. */
@@ -154,7 +221,7 @@
   margin-top: auto;
   align-self: flex-end;
   font-family: var(--font-display);
-  font-size: 0.625rem;
+  font-size: var(--pixel-min, 0.6875rem);
   color: var(--magenta);
 }
 
@@ -217,8 +284,9 @@
 }
 
 .repoMeta {
-  font-size: 1rem;
-  color: var(--ink-faint);
+  font-size: max(var(--text-small, 0.9375rem), 1rem);
+  line-height: 1.5;
+  color: var(--ink-faint); /* on the solid .px-box panel */
 }
 
 .backLink {

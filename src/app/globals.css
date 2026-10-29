@@ -8,9 +8,17 @@
   --panel-raised: #181833;
   --line: #2a2a52;
 
-  --ink: #ecebff;
-  --ink-dim: #a9a8cf;
-  --ink-faint: #9e9dcc; /* was #8f8ebd: 6.1:1 on --panel dropped near 4:1 under the CRT vignette; now 7.3:1 */
+  /* Contrast on --panel-solid #101022 / --panel-raised #181833 (WCAG):
+     ink 15.4:1 / 14.2:1, ink-dim 9.3:1 / 8.5:1, ink-faint 7.9:1 / 7.3:1 */
+  --ink: #e8e8f4; /* near-white without pure-white glare */
+  --ink-dim: #b4b3d8;
+  --ink-faint: #a5a4d0;
+
+  /* Reading comfort */
+  --reading-bg: rgb(16 16 34 / 0.97); /* --panel-solid, near-opaque: for long text surfaces */
+  --measure: 68ch; /* max line length for prose */
+  --text-small: 0.9375rem; /* smallest size for --font-text */
+  --pixel-min: 0.6875rem; /* smallest size for --font-display (Press Start 2P) */
 
   --ps-blue: #0070d1;
   --ps-blue-hi: #5aa9ff;
@@ -34,8 +42,12 @@
   --space-7: 40px;
   --tap: 44px; /* minimum touch target */
 
+  /* Pixel font for headings and buttons only, never for paragraphs */
   --font-display: var(--font-pixel), "Courier New", monospace;
-  --font-text: var(--font-body), ui-monospace, "Courier New", monospace;
+  /* Atkinson Hyperlegible: all reading text */
+  --font-text: var(--font-body), system-ui, sans-serif;
+  /* VT323: short decorative numbers only (online counter HUD) */
+  --font-retro: var(--font-vt323), ui-monospace, monospace;
 }
 
 *,
@@ -62,15 +74,18 @@ body {
     var(--bg);
   color: var(--ink);
   font-family: var(--font-text);
-  font-size: 1.25rem;
-  line-height: 1.35;
-  -webkit-font-smoothing: none;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
 }
 
-/* CRT scanlines + vignette; sits above everything but never intercepts input */
-/* Oversized so mobile toolbars collapsing and overscroll bounce never expose an uncovered strip. */
+/* CRT scanlines + vignette, drawn BEHIND the content: it tints only the backdrop and the pixel
+   scenery, never the text. Stacking (all in the root stacking context, body creates none):
+   PixelCrowd canvases are fixed z-index 0, this pseudo-element is also z-index 0 but comes later
+   in tree order so it paints over them, and .shell (z-index 1) with all the page text paints over
+   it. Static on purpose: no flicker animation.
+   Oversized so mobile toolbars collapsing and overscroll bounce never expose an uncovered strip. */
 body::after {
   content: "";
   position: fixed;
@@ -78,30 +93,17 @@ body::after {
   left: 0;
   right: 0;
   height: 130lvh;
-  z-index: 50;
+  z-index: 0;
   pointer-events: none;
   background:
     repeating-linear-gradient(
       to bottom,
       rgb(0 0 0 / 0) 0,
       rgb(0 0 0 / 0) 2px,
-      rgb(0 0 0 / 0.22) 3px,
+      rgb(0 0 0 / 0.08) 3px,
       rgb(0 0 0 / 0) 4px
     ),
-    radial-gradient(ellipse at center, transparent 62%, rgb(0 0 0 / 0.45) 100%);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  body::after {
-    animation: crt-flicker 6s steps(1) infinite;
-  }
-}
-
-@keyframes crt-flicker {
-  0%, 100% { opacity: 1; }
-  48% { opacity: 0.92; }
-  50% { opacity: 1; }
-  91% { opacity: 0.95; }
+    radial-gradient(ellipse at center, transparent 70%, rgb(0 0 0 / 0.3) 100%);
 }
 
 a {
@@ -113,8 +115,14 @@ a:hover {
   color: var(--cyan);
 }
 
-button {
+button,
+input,
+select,
+textarea {
   font: inherit;
+}
+
+button {
   color: inherit;
   background: none;
   border: 0;
@@ -123,6 +131,16 @@ button {
 
 ul, ol {
   list-style: none;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+/* Code-like values (IPs, hashes, commands) stay monospaced now that body text is proportional */
+code, kbd, samp, pre {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
+  font-size: 0.9375em;
 }
 
 ::selection {
@@ -164,10 +182,12 @@ a:not(.px-btn):focus-visible {
   background: var(--btn-bg, var(--panel-raised));
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 0.5625rem;
-  line-height: 1.4;
-  letter-spacing: 0.04em;
+  font-size: var(--pixel-min);
+  /* Whole-pixel spacing and an even line box keep the 8px-grid pixel font crisp */
+  line-height: 1.5;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  -webkit-font-smoothing: none;
   white-space: nowrap;
   box-shadow:
     0 -3px 0 0 var(--pb, var(--ps-blue)),

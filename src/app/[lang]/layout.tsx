@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { Press_Start_2P, VT323 } from "next/font/google";
+import { Atkinson_Hyperlegible, Press_Start_2P, VT323 } from "next/font/google";
 import Dialog from "@/components/Dialog";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import PixelCrowd from "@/components/PixelCrowd";
@@ -21,10 +21,19 @@ const pixel = Press_Start_2P({
   display: "swap",
 });
 
-const body = VT323({
-  weight: "400",
+// Reading font for all body text (globals.css: --font-text). Pixel fonts stay for headings/buttons.
+const body = Atkinson_Hyperlegible({
+  weight: ["400", "700"],
   subsets: ["latin", "latin-ext"],
   variable: "--font-body",
+  display: "swap",
+});
+
+// Short decorative numbers only (globals.css: --font-retro), e.g. the online counter HUD.
+const retro = VT323({
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-vt323",
   display: "swap",
 });
 
@@ -70,7 +79,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const { default: About } = await import(`@content/${lang}/about.mdx`);
 
   return (
-    <html lang={INTL_TAG[lang]} data-scroll-behavior="smooth" className={`${pixel.variable} ${body.variable}`}>
+    <html lang={INTL_TAG[lang]} data-scroll-behavior="smooth" className={`${pixel.variable} ${body.variable} ${retro.variable}`}>
       <body>
         <PixelCrowd
           onlineLabel={dict.presence.online}

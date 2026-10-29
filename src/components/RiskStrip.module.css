@@ -6,10 +6,13 @@
   gap: var(--space-2) var(--space-5);
   padding: var(--space-3) var(--gutter);
   /* Yellow tint over a near-opaque base, so the moving scenery never shows through the text. */
-  background: linear-gradient(rgb(255 210 63 / 0.08) 0 0), rgb(6 6 12 / 0.88);
+  background: linear-gradient(rgb(255 210 63 / 0.08) 0 0), var(--reading-bg, rgb(6 6 12 / 0.94));
   border-block: 2px dashed var(--yellow);
   color: var(--yellow);
+  font-family: var(--font-text);
+  line-height: 1.5;
   text-align: center;
+  text-wrap: pretty;
 }
 
 .items {
@@ -23,12 +26,16 @@
 .items li::before {
   content: "! ";
   font-family: var(--font-display);
-  font-size: 0.75em;
+  font-size: max(0.75em, var(--pixel-min, 0.6875rem));
   color: var(--red);
 }
 
 .more {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
   color: var(--ink);
+  text-decoration: underline;
   text-underline-offset: 3px;
 }
 

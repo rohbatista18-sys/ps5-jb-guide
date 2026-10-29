@@ -6,6 +6,7 @@ ol.path {
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2);
+  max-width: none;
 }
 
 /* Separator and label wrap together, so a line never ends on a lone "›". */
@@ -20,6 +21,9 @@ ol.path {
   background: var(--bg-deep);
   border: 2px solid var(--cyan);
   color: var(--ink);
+  font-family: var(--font-text);
+  font-size: max(var(--text-small, 0.9375rem), 1rem);
+  line-height: 1.5;
 }
 
 .step:last-child .item {

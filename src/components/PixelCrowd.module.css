@@ -1,4 +1,6 @@
-/* Full-viewport pixel scenery behind the page (.page is z-index 1; CRT overlay is 50).
+/* Full-viewport pixel scenery behind the page (.shell is z-index 1; the body::after CRT overlay is
+   z-index 0, after these canvases in tree order, so it sits between the scenery and the text).
+   Slightly dimmed so the animation stays ambient instead of competing with the text.
    100lvh so mobile toolbars collapsing don't resize it (and regenerate the scene) mid-scroll. */
 .canvas {
   position: fixed;
@@ -10,6 +12,7 @@
   height: 100lvh;
   pointer-events: none;
   image-rendering: pixelated;
+  opacity: 0.7;
 }
 
 /* The own sprite's corner overlay (next sibling, inline z-index 20) goes behind the page here:
@@ -27,9 +30,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 10px;
-  font-family: var(--font-pixel), ui-monospace, monospace;
-  font-size: 10px;
+  padding: 6px 10px;
+  /* VT323: retro digits that stay legible (Press Start 2P at 8-10px was below --pixel-min) */
+  font-family: var(--font-retro);
+  font-size: 1.125rem;
   line-height: 1;
   letter-spacing: 0.02em;
   color: #e8e6f0;
@@ -67,8 +71,8 @@
   padding-left: 8px;
   margin-left: 2px;
   border-left: 2px solid #3a2f55;
-  font-size: 8px;
-  color: #8f8ebd;
+  font-size: 1rem;
+  color: var(--ink-faint);
 }
 
 .hud > span {

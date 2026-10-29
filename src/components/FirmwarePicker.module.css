@@ -37,6 +37,7 @@
 
 .label {
   color: var(--ink);
+  line-height: 1.6;
 }
 
 /* Secondary to the field: separated by a dashed rule, like the menu panels' footers. */
@@ -92,8 +93,10 @@
 
 .message {
   max-width: 48ch;
-  min-height: 1.35em;
+  min-height: 1.6em;
   color: var(--yellow);
+  font-family: var(--font-text);
+  line-height: 1.6;
   text-wrap: pretty;
 }
 
@@ -126,6 +129,7 @@
   height: 100%;
   padding: var(--space-4);
   color: var(--ink);
+  line-height: 1.6;
   text-decoration: none;
 }
 
@@ -140,5 +144,5 @@
 .rangeName {
   font-family: var(--font-display);
   font-size: 0.8125rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }

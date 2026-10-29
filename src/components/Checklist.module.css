@@ -3,8 +3,8 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
-  padding: var(--space-3) var(--space-4);
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
 }
 
 .list li {
@@ -40,10 +40,13 @@
   align-self: stretch;
   display: flex;
   align-items: center;
+  padding-block: var(--space-1);
+  font-family: var(--font-text);
+  line-height: 1.5;
   cursor: pointer;
 }
 
 .list input:checked + label {
-  color: var(--ink-faint);
+  color: var(--ink-faint); /* on the solid .px-box panel */
   text-decoration: line-through;
 }

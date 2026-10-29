@@ -13,11 +13,19 @@
   text-shadow: 3px 3px 0 var(--bg-deep);
 }
 
-.intro {
+/* Running text gets a solid reading surface instead of a shadow over the scenery. */
+.intro,
+.source {
+  width: 100%;
+  max-width: calc(var(--measure, 68ch) + 2 * var(--space-4));
+  margin-inline: auto;
+  padding: var(--space-3) var(--space-4);
+  background: var(--reading-bg, var(--panel-solid));
+  border: 2px solid var(--line);
   color: var(--ink-dim);
+  line-height: 1.6;
   text-align: center;
   text-wrap: pretty;
-  text-shadow: 2px 2px 0 var(--bg-deep);
 }
 
 .warn {
@@ -27,20 +35,20 @@
   gap: var(--space-2);
   padding: var(--space-4) var(--space-5);
   color: var(--ink-dim);
+  line-height: 1.6;
   text-wrap: pretty;
+}
+
+.warn > :not(.warnTitle) {
+  max-width: var(--measure, 68ch);
 }
 
 .warnTitle {
   font-family: var(--font-display);
   font-size: 0.75rem;
-  line-height: 1.6;
+  line-height: 1.75;
   color: var(--red);
-}
-
-.source {
-  text-align: center;
-  color: var(--ink-dim);
-  text-shadow: 2px 2px 0 var(--bg-deep);
+  text-wrap: balance;
 }
 
 .source a {
@@ -61,7 +69,8 @@
 
 .filterLabel {
   font-family: var(--font-display);
-  font-size: 0.625rem;
+  font-size: var(--pixel-min, 0.6875rem);
+  line-height: 1.6;
   color: var(--cyan);
 }
 
@@ -106,6 +115,7 @@
   border: 2px dashed var(--line);
   background: var(--panel);
   color: var(--ink-dim);
+  line-height: 1.6;
   text-align: center;
 }
 
@@ -130,7 +140,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 /* Version and buttons on one line; the MD5 on its own line below, so it never squeezes them. */
@@ -139,8 +149,8 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: var(--space-2) var(--space-3);
-  padding: var(--space-2) var(--space-3);
-  background: var(--panel);
+  padding: var(--space-3) var(--space-4);
+  background: var(--reading-bg, var(--panel-solid));
   border: 2px solid var(--line);
 }
 
@@ -171,7 +181,8 @@
   background: var(--bg-deep);
   color: var(--magenta);
   font-family: var(--font-display);
-  font-size: 0.625rem;
+  font-size: var(--pixel-min, 0.6875rem);
+  line-height: 1.4;
   text-decoration: none;
 }
 
@@ -181,16 +192,20 @@
   color: var(--bg);
 }
 
+/* Hashes are compared character by character: a real monospace, not the decorative pixel faces. */
 .md5 {
   grid-column: 1 / -1;
-  font-family: var(--font-text);
-  font-size: 1.0625rem;
+  font-family: ui-monospace, "Cascadia Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: var(--text-small, 0.9375rem);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
   color: var(--ink-dim);
   overflow-wrap: anywhere;
   user-select: all;
 }
 
 .md5Label {
+  font-family: var(--font-text);
   color: var(--ink-faint);
   user-select: none;
 }

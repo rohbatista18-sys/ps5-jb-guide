@@ -37,11 +37,24 @@
   background: rgb(6 6 12 / 0.82);
 }
 
+/* Reading surface for dialog prose (About, how-to): body font, relaxed leading, solid panel. */
 .panel {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-family: var(--font-text);
+  line-height: 1.6;
+}
+
+/* Beats the global .px-box translucent --panel fill */
+.panel > :not(.close) {
+  background-color: var(--reading-bg);
+}
+
+/* Cap line length without narrowing wide content (tables, images) */
+.panel :where(p, li, dd, blockquote) {
+  max-width: var(--measure);
 }
 
 .close {
@@ -54,7 +67,7 @@
   align-self: flex-end;
   padding: 8px 12px;
   font-family: var(--font-display);
-  font-size: 0.625rem;
+  font-size: var(--pixel-min);
   color: var(--ink);
   text-transform: uppercase;
 }

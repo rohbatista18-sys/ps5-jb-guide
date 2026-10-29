@@ -1,5 +1,7 @@
 .claim {
+  font-family: var(--font-text);
   line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .claim > :first-child {

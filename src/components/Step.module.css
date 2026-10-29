@@ -2,8 +2,14 @@
   --pb: var(--ps-blue);
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-4) var(--space-5);
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+@media (max-width: 639px) {
+  .step {
+    padding: var(--space-4);
+  }
 }
 
 .title {
@@ -12,8 +18,9 @@
   gap: var(--space-3);
   font-family: var(--font-display);
   font-size: 0.75rem;
-  line-height: 1.6;
+  line-height: 1.75; /* titles often wrap to two lines */
   color: var(--cyan);
+  text-wrap: balance;
 }
 
 .n {
@@ -29,26 +36,40 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 0.75em;
+  font-family: var(--font-text);
+  line-height: 1.6;
   text-wrap: pretty;
 }
 
-.body ul,
-.body ol {
+.body :is(p, ul, ol) {
+  max-width: var(--measure, 68ch);
+}
+
+.body ul:not([class]),
+.body ol:not([class]) {
   padding-left: 2.5ch;
   list-style: square;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 .body code {
-  padding: 0 var(--space-1);
+  padding: 0.1em var(--space-1);
   background: var(--bg-deep);
   color: var(--yellow);
-  font-family: var(--font-text);
+  font-family: ui-monospace, "Cascadia Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
 }
 
 .source {
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
   color: var(--ps-blue-hi);
-  font-size: 1rem;
+  font-size: max(var(--text-small, 0.9375rem), 1rem);
   overflow-wrap: anywhere;
 }
