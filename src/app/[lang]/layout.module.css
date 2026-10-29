@@ -40,8 +40,17 @@
 
 @media (max-width: 639px) {
   .support.support {
+    max-width: calc(100vw - 24px);
     padding: 8px 10px;
     font-size: var(--pixel-min);
+    white-space: normal;
+  }
+}
+
+/* Below ~380px the label wraps to two lines: give the header the extra room. */
+@media (max-width: 379px) {
+  .shell {
+    padding-top: 80px;
   }
 }
 
