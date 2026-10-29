@@ -1,0 +1,85 @@
+<Warn kind="update" title="Lee los riesgos primero">
+
+Antes de empezar, lee la [página de riesgos](/es/riscos). Explica cómo desactivar las actualizaciones automáticas y qué evitar mientras la consola esté modificada.
+
+</Warn>
+
+## Qué necesitas
+
+- Una PS5 con firmware 7.00 a 13.60. Si no sabes tu versión, usa la herramienta en la [página principal](/es).
+- Una conexión Wi-Fi o Ethernet para cargar la página del exploit.
+
+## Paso a paso
+
+<Step n={1} title="Desactiva las actualizaciones automáticas">
+
+Sigue las instrucciones de la [página de riesgos](/es/riscos) para desmarcar "Descargar archivos de actualización automáticamente" e "Instalar archivos de actualización automáticamente". Si no lo haces, una actualización puede sobrescribir tu firmware mientras la consola está en modo de reposo.
+
+</Step>
+
+<Step n={2} title="Cierra sesión en PSN">
+
+Ve a los ajustes de la cuenta y cierra la sesión de PlayStation Network antes de ejecutar el exploit.
+
+<MenuPath items={["Ajustes", "Usuarios y cuentas", "Otros", "Cerrar sesión"]} />
+
+En Latinoamérica:
+
+<MenuPath items={["Configuración", "Usuarios y cuentas", "Otros", "Cerrar sesión"]} />
+
+No vuelvas a iniciar sesión mientras tengas el jailbreak activo. Hacerlo puede hacer que baneen la consola o la cuenta.
+
+</Step>
+
+<Step n={3} title="Abre el navegador de la PS5">
+
+La PS5 no tiene un icono de navegador en la pantalla de inicio. Ábrelo así:
+
+<MenuPath items={["Ajustes", "Guía del usuario, Salud y seguridad y Otra información", "Guía del usuario"]} />
+
+En Latinoamérica:
+
+<MenuPath items={["Configuración", "Guía del usuario, Salud y seguridad y Otra información", "Guía del usuario"]} />
+
+Esto abre la página del manual de Sony en un navegador interno.
+
+</Step>
+
+<Step n={4} title="Ve a la página del exploit" src="relapse-readme">
+
+En el navegador, navega a la página del exploit Relapse. La URL actual está en el [README de Relapse en GitHub](https://github.com/ntfargo/Relapse-Exploit#readme). Siempre tómala del repositorio oficial — nunca confíes en enlaces de otras fuentes.
+
+</Step>
+
+<Step n={5} title="Ejecuta el exploit" src="relapse-readme">
+
+Pulsa el botón en la página del exploit y espera. Puede tardar unos segundos o un par de minutos.
+
+- **Si el navegador se queda parado:** recarga la página y vuelve a intentarlo.
+- **Si la consola se congela o se bloquea:** mantén pulsado el botón de encendido hasta que la consola pite dos veces para forzar el apagado, espera unos segundos, enciéndela y empieza otra vez desde el Paso 3. Mira [consola congelada](/es/erros/console-frozen) para más detalles.
+
+Puede necesitar varios intentos. Esto es normal — el exploit depende del momento exacto y no siempre funciona a la primera.
+
+</Step>
+
+<Step n={6} title="Confirma que el jailbreak está activo" src="relapse-readme">
+
+Cuando el exploit tenga éxito, aparecerá una notificación o un menú homebrew en la pantalla. La consola ahora tiene jailbreak para esta sesión.
+
+Si no pasa nada y el navegador vuelve a la página del exploit, el intento falló en silencio. Recarga y prueba el Paso 5 otra vez.
+
+</Step>
+
+<Warn kind="brick" title="No es persistente">
+
+Este jailbreak solo dura hasta que apagues o reinicies la consola. Después de cada reinicio tienes que ejecutar el exploit otra vez desde el Paso 3. Nunca actualices el firmware.
+
+</Warn>
+
+<Warn kind="ban" title="Quédate sin conexión después del jailbreak">
+
+No vuelvas a iniciar sesión en PSN mientras tengas el jailbreak activo. Solo reconéctate a PSN después de reiniciar la consola normalmente sin ejecutar el exploit.
+
+</Warn>
+
+<Checklist items={["Leí la página de riesgos", "Las actualizaciones automáticas están desactivadas", "Cerré sesión en PSN", "El exploit funcionó y veo confirmación en pantalla", "Entiendo que hay que repetirlo después de cada reinicio"]} />

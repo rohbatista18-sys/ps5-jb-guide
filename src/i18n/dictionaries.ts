@@ -13,6 +13,7 @@ const en = {
   },
   home: {
     title: "What is your firmware?",
+    howTo: "How do I find my version?",
     soon: "The tutorials are still being written and reviewed. Nothing here is a step-by-step guide yet.",
   },
   nav: {
@@ -50,6 +51,9 @@ const en = {
     filterPlaceholder: "e.g. freezes",
     empty: "No error has been documented and reviewed yet.",
     noMatch: "Nothing matches \"{query}\".",
+    back: "← All errors",
+    symptoms: "What you see",
+    sources: "Sources",
     severity: { low: "Low risk", medium: "Medium risk", high: "Risk of data loss" },
   },
   guides: {
@@ -108,6 +112,10 @@ const en = {
   },
   claims: {
     "relapse-support": "The Relapse exploit's README lists firmware 7.00 through 13.60 as supported.",
+    "prolapse-announced": "A researcher announced an exploit called Prolapse for 14.00 and 14.10. It has not been released and has no release date.",
+    "gezine-demo": "Developer Gezine showed a private demo on 14.10. It has not been released.",
+    "latest-1420": "Sony's newest system software for PS5 is 14.20.",
+    "prolapse-not-1420": "The Prolapse researcher says the 14.20 update fixed the flaw it relies on, so it does not work on 14.20.",
   } as Record<string, string>,
   footer: {
     noticeLabel: "Important notices",
@@ -138,6 +146,7 @@ const es: Dictionary = {
   },
   home: {
     title: "¿Cuál es tu firmware?",
+    howTo: "¿Cómo veo mi versión?",
     soon: "Los tutoriales todavía se están escribiendo y revisando. Nada de aquí es aún una guía paso a paso.",
   },
   nav: {
@@ -175,6 +184,9 @@ const es: Dictionary = {
     filterPlaceholder: "ej.: se congela",
     empty: "Todavía no hay ningún error documentado y revisado.",
     noMatch: "Nada coincide con \"{query}\".",
+    back: "← Todos los errores",
+    symptoms: "Lo que ves",
+    sources: "Fuentes",
     severity: { low: "Riesgo bajo", medium: "Riesgo medio", high: "Riesgo de perder datos" },
   },
   guides: {
@@ -233,6 +245,10 @@ const es: Dictionary = {
   },
   claims: {
     "relapse-support": "El README del exploit Relapse indica compatibilidad con los firmwares 7.00 a 13.60.",
+    "prolapse-announced": "Un investigador anunció un exploit llamado Prolapse para 14.00 y 14.10. No se ha publicado y no tiene fecha.",
+    "gezine-demo": "El desarrollador Gezine mostró una demo privada en 14.10. No se ha publicado.",
+    "latest-1420": "El software del sistema más reciente de Sony para PS5 es el 14.20.",
+    "prolapse-not-1420": "El investigador de Prolapse dice que la actualización 14.20 corrigió el fallo que usa, así que no funciona en 14.20.",
   },
   footer: {
     noticeLabel: "Avisos importantes",
@@ -261,6 +277,7 @@ const pt: Dictionary = {
   },
   home: {
     title: "Qual é o seu firmware?",
+    howTo: "Como descobrir a minha versão?",
     soon: "Os tutoriais ainda estão sendo escritos e revisados. Nada aqui é um passo a passo ainda.",
   },
   nav: {
@@ -298,6 +315,9 @@ const pt: Dictionary = {
     filterPlaceholder: "ex.: trava",
     empty: "Nenhum erro foi documentado e revisado ainda.",
     noMatch: "Nada corresponde a \"{query}\".",
+    back: "← Todos os erros",
+    symptoms: "O que aparece",
+    sources: "Fontes",
     severity: { low: "Risco baixo", medium: "Risco médio", high: "Risco de perder dados" },
   },
   guides: {
@@ -356,6 +376,10 @@ const pt: Dictionary = {
   },
   claims: {
     "relapse-support": "O README do exploit Relapse lista os firmwares 7.00 a 13.60 como compatíveis.",
+    "prolapse-announced": "Um pesquisador anunciou um exploit chamado Prolapse para 14.00 e 14.10. Ele não foi lançado e não tem data.",
+    "gezine-demo": "O desenvolvedor Gezine mostrou uma demo privada no 14.10. Ela não foi lançada.",
+    "latest-1420": "O software do sistema mais novo da Sony para o PS5 é o 14.20.",
+    "prolapse-not-1420": "O pesquisador do Prolapse diz que a atualização 14.20 corrigiu a falha que ele usa, então não funciona no 14.20.",
   },
   footer: {
     noticeLabel: "Avisos importantes",

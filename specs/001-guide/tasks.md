@@ -33,28 +33,28 @@ Legenda:
 
 ## Fase 3 — Pesquisa de conteúdo (cada fato com fonte e selo)
 - [ ] T030 [C] Tabela completa de faixas de firmware (≤4.51 … 13.60) com fonte primária por faixa, entry point, HEN/loader e se é persistente. Lacunas viram "sem método público".
-- [ ] T031 [P][C] Rótulos oficiais da Sony em EN/PT-BR/ES para:
+- [x] T031 [P][C] Rótulos oficiais da Sony em EN/PT-BR/ES para:
   - ver a versão do sistema;
   - desligar a atualização automática;
   - as opções do Modo de Segurança e o que cada uma apaga.
 
-  Usar só páginas de suporte da Sony como fonte.
-- [ ] T032 [P][C] Fontes do anúncio do Prolapse (14.00–14.10) e do demo privado do Gezine no 14.10. Selo "relatado".
-- [ ] T033 [P][C] Erros comuns: sintoma, causa, solução e quando parar, com fonte. Lista mínima da US7.
+  Usar só páginas de suporte da Sony como fonte. (2026-10-29: rótulos en-us/pt-br/es-es/es-mx conferidos; usados no modal "Como descobrir" e em /riscos. A Sony só explica como LIGAR as atualizações automáticas; "desligar = desmarcar" está dito como inferência.)
+- [x] T032 [P][C] Fontes do anúncio do Prolapse (14.00–14.10) e do demo privado do Gezine no 14.10. Selo "relatado". (2026-10-29: ixbt, PCQuest, tbreak; nada lançado. Firmware mais novo da Sony = 14.20, com faixa própria.)
+- [x] T033 [P][C] Erros comuns: sintoma, causa, solução e quando parar, com fonte. Lista mínima da US7. (2026-10-29: 8 erros, 6 da Sony + 2 do README do Relapse, EN/ES/PT. Fora: o travamento do YouTube do Y2JB, até o repo ser revisado.)
 - [ ] T034 [P][C] Guias do menu (pacotes, apps/homebrew, payloads, FTP, backup dos próprios jogos, emuladores): pré-requisitos e repos, sem nenhuma referência a obtenção de jogos de terceiros.
 - [ ] T035 [TL] Revisão humana dos repos em `review`: README, releases e golpe. Marcar `listed`/`excluded` com motivo.
 
 ## Fase 4 — UI (paralela, depois da Fase 2)
 - [ ] T040 [P][D1][US1][US2] `FirmwarePicker` (input `X.YY` + grade de faixas com `StatusBadge`) e modal "Como descobrir?" com `MenuPath` em pixel-art.
-  - 2026-10-29: picker + grade + `StatusBadge` prontos e testados no navegador (inválido, mais novo que 14.10, lacuna, `9.6` → `/fw/7.00-13.60`). **Falta** o modal "Como descobrir?" + `MenuPath`, que depende dos rótulos oficiais da Sony (T031).
+  - 2026-10-29: picker + grade + `StatusBadge` prontos e testados no navegador (inválido, mais novo que 14.10, lacuna, `9.6` → `/fw/7.00-13.60`). Modal "Como descobrir?" + `MenuPath` com os rótulos da Sony feitos em 2026-10-29.
 - [x] T041 [P][D2][US6] `SiteMenu`: dropdowns Firmware/Guias acessíveis por teclado (`aria-expanded`, Esc fecha) e menu único ≤639 px. (2026-10-29: Esc devolve o foco, clique fora e navegação fecham, `aria-current`; testado no navegador em desktop e 360 px.)
 - [ ] T042 [P][D1][US3] `fw/[range]/page.tsx`: StatusBadge → Checklist → precisa → MDX → funcionou → reboot → `RepoCard`s → erros da faixa → fontes.
   - 2026-10-29: rota estática por faixa com StatusBadge, aviso de rascunho, MDX (EN como fallback), claims com selo e fonte, `RepoCard`s e fontes. Conteúdo da faixa dentro de `<Suspense>` (validação de navegação instantânea do Next 16.4). **Falta** Checklist, "funcionou?", "depois de reiniciar" e erros da faixa (dependem de T030/T033).
 - [ ] T043 [P][D2][US4] Variante `status: none` (14.00–14.10 e >latest): texto honesto, relatados com selo e botão para o tracker.
-  - 2026-10-29: bloco "sem jailbreak público" + botão do tracker na página da faixa; versões > latest recebem a mensagem no picker. **Falta** os relatos com selo (T032).
+  - 2026-10-29: bloco "sem jailbreak público" + botão do tracker na página da faixa; versões > latest recebem a mensagem no picker. Relatos com selo e fonte (Prolapse, Gezine) e faixa 14.20 adicionados em 2026-10-29.
 - [x] T044 [P][D1][US5] `RiskStrip` (todas as páginas) + `/riscos`. (2026-10-29: `risks.mdx` EN/ES/PT com `<Warn>`, só conselhos cautelosos; caminhos de menu da Sony e o que cada opção do Modo de Segurança apaga entram com fonte na T031.)
-- [ ] T045 [P][D2][US7] `/erros`: lista com filtro client-side por sintoma + `/erros/[slug]`.
-  - 2026-10-29: lista + filtro (ignora acento e caixa) prontos, testados com entradas temporárias já removidas. **Falta** `/erros/[slug]`: o Cache Components não aceita `generateStaticParams` vazio, então a rota entra junto com o primeiro erro (T033). O `check-content` falha se houver erro sem a rota.
+- [x] T045 [P][D2][US7] `/erros`: lista com filtro client-side por sintoma + `/erros/[slug]`.
+  - 2026-10-29: lista + filtro (ignora acento e caixa) prontos, testados com entradas temporárias já removidas. `/erros/[slug]` criada com os 8 erros (sintomas, passos com fonte, quando parar, fontes no idioma da página).
 - [ ] T046 [P][D1][US6] `/guias` + `/guias/[slug]`.
   - 2026-10-29: `/guias` com as 6 seções (âncoras do menu) e estado vazio. **Falta** `/guias/[slug]`, pelo mesmo motivo (T034).
 - [x] T047 [P][D2][US9] `Claim`, `RepoCard` (texto só, sem avatar; "verificado em" e aviso se o snapshot tiver mais de 14 dias) e "última revisão" por página. (2026-10-29: ambos registrados no MDX; `RepoCard` e aviso de 14 dias conferidos no navegador com um `listed` temporário, já revertido.)

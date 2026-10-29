@@ -2,7 +2,7 @@ Read this before you follow any tutorial. It is short on purpose.
 
 <Warn kind="ban" title="Stay offline">
 
-Do not sign in to PSN, and do not leave the console online, while it is jailbroken. Using PSN on a modified console can get the console or the account banned, and this guide cannot undo a ban.
+Do not sign in to PSN, and do not leave the console online, while it is jailbroken. Using PSN on a modified console can get the console or the account banned, and this guide cannot undo a ban. If you see error WS-116332-6, read [what it means](/en/erros/ws-116332-6-psn-blocked).
 
 </Warn>
 
@@ -10,9 +10,25 @@ Do not sign in to PSN, and do not leave the console online, while it is jailbrok
 
 Every jailbreak works only on specific firmware versions. Updating can close it for your console, and you cannot count on going back.
 
-- Turn off automatic downloads and installs of system software.
+Sony shows the automatic update options here. Leave both unchecked: "Download Update Files Automatically" and "Install Update Files Automatically".
+
+<MenuPath items={["Settings", "System", "System Software", "System Software Update and Settings"]} />
+
+Sony also says rest mode needs "Stay Connected to the Internet" for automatic updates. Leave it unchecked too:
+
+<MenuPath items={["Settings", "System", "Power Saving", "Features Available in Rest Mode"]} />
+
+Sony's page explains how to turn these options on; turning them off is unchecking the same options. [Source: Sony](https://www.playstation.com/en-us/support/hardware/automatic-updates-playstation/)
+
 - Ignore every update prompt, including ones that show up when you insert a disc or open an app.
-- Before you use any Safe Mode option, read what it does on Sony's support site.
+
+</Warn>
+
+<Warn kind="brick" title="Safe Mode: what erases your data">
+
+- <Claim evidence="proven" src="sony-safemode-en">"Reset PS5" and "Reset PS5 (Reinstall System Software)" delete all user data.</Claim>
+- <Claim evidence="proven" src="sony-safemode-en">"Repair Console Storage" does not erase data, and "Restore Default Settings" keeps your games and saves.</Claim>
+- "Update System Software" and "Reset PS5 (Reinstall System Software)" install system software, so they can cost you the version your jailbreak needs.
 
 </Warn>
 
@@ -20,13 +36,30 @@ Every jailbreak works only on specific firmware versions. Updating can close it 
 
 - Back up your saves before you start.
 - Never unplug the console while it is writing data: updating, installing or copying.
-- If something looks wrong, stop. Read the README and the open issues of the project you are using before you try again.
+- If something looks wrong, stop. Look it up in [common errors](/en/erros) before you try again.
 
 </Warn>
 
 <Warn kind="terms" title="Warranty and terms">
 
 Jailbreaking goes against Sony's terms of use and may void your warranty. You do it on your own console and at your own risk.
+
+</Warn>
+
+<Warn kind="brick" title="Safe Mode and firmware downloads">
+
+If your console boots into Safe Mode and asks for a system software update, you do NOT have to install the latest firmware. You can reinstall the same version (or any other) from a USB drive:
+
+1. Download the firmware file for your version from [Darthsternie's PS5 firmware archive](https://darthsternie.net/ps5-firmwares/).
+2. Format a USB drive as FAT32 or exFAT.
+3. Create the folder path `PS5/UPDATE/` on the USB drive.
+4. Copy the downloaded file into that folder and rename it to `PS5UPDATE.PUP`.
+5. Plug the USB drive into the console while it is in Safe Mode.
+6. Choose "Update System Software" → "Update from USB Storage Device".
+
+If Safe Mode asks to "Reinstall System Software" (option 7), you need the full installation file instead. Darthsternie provides both versions — the update file and the full reinstall file. Check which one you need before downloading.
+
+<Claim evidence="proven" src="sony-systemsoftware-en">Sony's support page describes how to update from USB and the folder structure the console expects.</Claim>
 
 </Warn>
 
@@ -37,5 +70,3 @@ Jailbreaking goes against Sony's terms of use and may void your warranty. You do
 - Only use the repositories listed on this guide, and only from their official GitHub page.
 
 </Warn>
-
-The exact Sony menu names and what each Safe Mode option erases are being checked against Sony's support pages. They will be added here with their sources.

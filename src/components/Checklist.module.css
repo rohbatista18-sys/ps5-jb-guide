@@ -1,0 +1,42 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.list input {
+  flex: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  border: 3px solid var(--green);
+  background: var(--bg-deep);
+  cursor: pointer;
+}
+
+.list input:checked {
+  background:
+    linear-gradient(var(--green), var(--green)) center / 10px 10px no-repeat,
+    var(--bg-deep);
+}
+
+.list input:focus-visible {
+  outline-offset: 3px;
+}
+
+.list label {
+  cursor: pointer;
+}
+
+.list input:checked + label {
+  color: var(--ink-faint);
+  text-decoration: line-through;
+}

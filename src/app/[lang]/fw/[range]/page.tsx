@@ -53,9 +53,9 @@ async function RangeContent({ params }: Pick<PageProps<"/[lang]/fw/[range]">, "p
   const dict = getDictionary(lang);
   const t = dict.range;
 
-  // check-content guarantees content/en/<id>.mdx for every non-draft range.
+  // check-content guarantees content/en/<id>.mdx for every published "public" range.
   let Tutorial: React.ComponentType | null = null;
-  if (!range.draft) {
+  if (!range.draft && range.status === "public") {
     Tutorial = (
       await import(`@content/${lang}/${id}.mdx`).catch(() => import(`@content/en/${id}.mdx`))
     ).default;

@@ -1,13 +1,19 @@
 import type { MDXComponents } from "mdx/types";
 import Claim from "@/components/Claim";
+import Checklist from "@/components/Checklist";
+import MenuPath from "@/components/MenuPath";
 import RepoCard from "@/components/RepoCard";
+import Step from "@/components/Step";
 import Warn from "@/components/Warn";
 
-// Required by @next/mdx in the App Router. Step and MenuPath (plan.md › "Componentes MDX")
-// are added as they are built. check-content validates every <Claim> and <Repo> in content/.
+// Required by @next/mdx in the App Router. check-content validates every <Claim>, <Repo> and
+// <Step src> in content/.
 const components: MDXComponents = {
+  Checklist,
   Claim,
+  MenuPath,
   Repo: RepoCard,
+  Step,
   Warn,
   a: ({ href = "", ...props }) =>
     href.startsWith("/") || href.startsWith("#") ? (

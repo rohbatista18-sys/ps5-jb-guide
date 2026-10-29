@@ -11,7 +11,9 @@
           "source": "relapse-readme"
         }
       ],
-      "status": "review",
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29",
       "notes": "README: 'Supported firmware: 7.00 through 13.60.'"
     },
     {

@@ -14,7 +14,13 @@
   color: var(--yellow);
 }
 
-.soon {
-  color: var(--ink-dim);
-  text-wrap: pretty;
+.howTo {
+  display: flex;
+  justify-content: center;
+}
+
+.howToBody {
+  --pb: var(--cyan);
+  padding: var(--space-5);
+  text-align: left;
 }

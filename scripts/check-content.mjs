@@ -16,7 +16,7 @@ const EVIDENCE_VALUES = ["proven", "reported"];
 const RANGE_STATUSES = ["public", "none", "unknown"];
 const REPO_CATEGORIES = ["exploit", "hen", "loader", "homebrew", "store", "utility", "backup", "research"];
 const REPO_STATUSES = ["listed", "review", "excluded"];
-const SOURCE_KINDS = ["readme", "release", "sony-support", "news", "forum", "video"];
+const SOURCE_KINDS = ["readme", "release", "sony-support", "news", "forum", "video", "archive"];
 const GUIDE_MENUS = ["packages", "apps", "payloads", "transfer", "backup", "emulators"];
 const ERROR_SEVERITIES = ["low", "medium", "high"];
 
@@ -177,8 +177,8 @@ if (fwData) {
         }
       }
 
-      // Non-draft ranges need at least an EN MDX tutorial
-      if (!r.draft) {
+      // Published "public" ranges need at least an EN MDX tutorial
+      if (!r.draft && r.status === "public") {
         const mdxPath = join(CONTENT, "en", `${r.id}.mdx`);
         if (!existsSync(mdxPath)) {
           fail(w, `non-draft range needs content/en/${r.id}.mdx`);
@@ -279,8 +279,12 @@ if (errorsData) {
         }
       }
 
-      if (!Array.isArray(e.sources)) {
-        fail(w, "sources must be an array");
+      if (!existsSync(join(CONTENT, "en", "errors", `${e.slug}.mdx`))) {
+        fail(w, `error needs content/en/errors/${e.slug}.mdx`);
+      }
+
+      if (!Array.isArray(e.sources) || e.sources.length === 0) {
+        fail(w, "sources must be a non-empty array");
       } else {
         for (const sid of e.sources) {
           requireSource(w, sid);
@@ -309,6 +313,11 @@ for (const loc of LOCALES) {
       const id = attr(tag, "id");
       if (!id) fail(w, `${tag} has no id`);
       else if (!listedRepoIds.has(id)) fail(w, `<Repo id="${id}"> is not "listed" in repos.json`);
+    }
+
+    for (const [tag] of text.matchAll(/<Step\b[^>]*>/g)) {
+      const src = attr(tag, "src");
+      if (src !== undefined) requireSource(w, src);
     }
 
     for (const [tag] of text.matchAll(/<Claim\b[^>]*>/g)) {

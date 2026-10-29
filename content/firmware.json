@@ -1,5 +1,5 @@
 {
-  "latestKnownFirmware": "14.10",
+  "latestKnownFirmware": "14.20",
   "ranges": [
     {
       "id": "7.00-13.60",
@@ -21,7 +21,7 @@
           "source": "relapse-readme"
         }
       ],
-      "draft": true,
+      "draft": false,
       "reviewedAt": "2026-10-29"
     },
     {
@@ -35,8 +35,43 @@
         "pt": "14.00 e 14.10"
       },
       "repos": [],
-      "claims": [],
-      "draft": true,
+      "claims": [
+        {
+          "text": "prolapse-announced",
+          "evidence": "reported",
+          "source": "news-ixbt-prolapse"
+        },
+        {
+          "text": "gezine-demo",
+          "evidence": "reported",
+          "source": "news-tbreak-gezine"
+        }
+      ],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "14.20",
+      "min": "14.20",
+      "max": "14.20",
+      "status": "none",
+      "title": {
+        "en": "14.20",
+        "es": "14.20",
+        "pt": "14.20"
+      },
+      "repos": [],
+      "claims": [
+        {
+          "text": "latest-1420",
+          "evidence": "proven",
+          "source": "sony-ps5-sw-info"
+        },
+        {
+          "text": "prolapse-not-1420",
+          "evidence": "reported",
+          "source": "news-ixbt-prolapse"
+        }
+      ],
       "reviewedAt": "2026-10-29"
     }
   ]

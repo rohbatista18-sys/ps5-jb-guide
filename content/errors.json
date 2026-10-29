@@ -1,3 +1,132 @@
 {
-  "errors": []
+  "errors": [
+    {
+      "slug": "console-frozen",
+      "severity": "medium",
+      "title": {
+        "en": "The console freezes or stops responding",
+        "es": "La consola se congela o deja de responder",
+        "pt": "O console trava ou para de responder"
+      },
+      "symptoms": {
+        "en": ["The power indicator only blinks white, or stays blue and never turns solid white.", "The screen and the controller stop responding."],
+        "es": ["El indicador de encendido solo parpadea en blanco, o se queda en azul y nunca pasa a blanco fijo.", "La pantalla y el mando dejan de responder."],
+        "pt": ["A luz de energia só pisca em branco, ou fica azul e nunca fica branca fixa.", "A tela e o controle param de responder."]
+      },
+      "sources": ["sony-powerlights-en", "sony-powerlights-es", "sony-powerlights-pt", "relapse-readme"],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "browser-stalls",
+      "severity": "low",
+      "title": {
+        "en": "The browser stops on the jailbreak page",
+        "es": "El navegador se detiene en la página del jailbreak",
+        "pt": "O navegador para na página do jailbreak"
+      },
+      "symptoms": {
+        "en": ["The page in the PS5 browser stops responding or never finishes."],
+        "es": ["La página en el navegador de la PS5 deja de responder o nunca termina."],
+        "pt": ["A página no navegador do PS5 para de responder ou nunca termina."]
+      },
+      "sources": ["relapse-readme"],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "su-101337-5-did-not-start",
+      "severity": "high",
+      "title": {
+        "en": "The console did not start properly (SU-101337-5)",
+        "es": "La consola no se inició correctamente (SU-101337-5)",
+        "pt": "O console não iniciou corretamente (SU-101337-5)"
+      },
+      "symptoms": {
+        "en": ["Error SU-101337-5 appears when the console turns on.", "The console does not start normally."],
+        "es": ["Aparece el error SU-101337-5 al encender la consola.", "La consola no se inicia con normalidad."],
+        "pt": ["Aparece o erro SU-101337-5 ao ligar o console.", "O console não inicia normalmente."]
+      },
+      "sources": ["sony-su-101337-5", "sony-safemode-en"],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "ce-108262-9-data-read",
+      "severity": "high",
+      "title": {
+        "en": "Error reading system or app data (CE-108262-9)",
+        "es": "Error al leer datos del sistema o de una app (CE-108262-9)",
+        "pt": "Erro ao ler dados do sistema ou de um app (CE-108262-9)"
+      },
+      "symptoms": {
+        "en": ["Error CE-108262-9 appears.", "A game or app does not open, or the console reports a data read error."],
+        "es": ["Aparece el error CE-108262-9.", "Un juego o una app no abre, o la consola indica un error al leer datos."],
+        "pt": ["Aparece o erro CE-108262-9.", "Um jogo ou app não abre, ou o console avisa que houve erro ao ler dados."]
+      },
+      "sources": ["sony-ce-108262-9", "sony-safemode-en"],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "ce-108255-1-app-error",
+      "severity": "low",
+      "title": {
+        "en": "A game or app closes with an error (CE-108255-1)",
+        "es": "Un juego o una app se cierra con un error (CE-108255-1)",
+        "pt": "Um jogo ou app fecha com erro (CE-108255-1)"
+      },
+      "symptoms": {
+        "en": ["A game or app closes and shows error CE-108255-1."],
+        "es": ["Un juego o una app se cierra y muestra el error CE-108255-1."],
+        "pt": ["Um jogo ou app fecha e mostra o erro CE-108255-1."]
+      },
+      "sources": ["sony-ce-108255-1"],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "ws-116332-6-psn-blocked",
+      "severity": "medium",
+      "title": {
+        "en": "Access to PlayStation Network is blocked (WS-116332-6)",
+        "es": "El acceso a PlayStation Network está bloqueado (WS-116332-6)",
+        "pt": "O acesso à PlayStation Network está bloqueado (WS-116332-6)"
+      },
+      "symptoms": {
+        "en": ["Error WS-116332-6 appears when you try to use PlayStation Network."],
+        "es": ["Aparece el error WS-116332-6 al intentar usar PlayStation Network."],
+        "pt": ["Aparece o erro WS-116332-6 ao tentar usar a PlayStation Network."]
+      },
+      "sources": ["sony-ws116332-en", "sony-ws116332-es", "sony-ws116332-pt"],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "ce-109737-7-usb",
+      "severity": "low",
+      "title": {
+        "en": "USB drive not recognized (CE-109737-7)",
+        "es": "La unidad USB no se reconoce (CE-109737-7)",
+        "pt": "O pendrive não é reconhecido (CE-109737-7)"
+      },
+      "symptoms": {
+        "en": ["Error CE-109737-7 appears.", "The console does not see the USB drive."],
+        "es": ["Aparece el error CE-109737-7.", "La consola no ve la unidad USB."],
+        "pt": ["Aparece o erro CE-109737-7.", "O console não enxerga o pendrive."]
+      },
+      "sources": ["sony-ce-109737-7"],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "ce-110538-8-disc",
+      "severity": "low",
+      "title": {
+        "en": "The console cannot read a disc (CE-110538-8)",
+        "es": "La consola no puede leer un disco (CE-110538-8)",
+        "pt": "O console não consegue ler um disco (CE-110538-8)"
+      },
+      "symptoms": {
+        "en": ["Error CE-110538-8 appears after you insert a disc."],
+        "es": ["Aparece el error CE-110538-8 al meter un disco."],
+        "pt": ["Aparece o erro CE-110538-8 ao colocar um disco."]
+      },
+      "sources": ["sony-ce-110538-8"],
+      "reviewedAt": "2026-10-29"
+    }
+  ]
 }

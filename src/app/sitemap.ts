@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { INTL_TAG, LOCALES } from "@/i18n/config";
-import { getRanges } from "@/lib/content";
+import { getErrors, getRanges } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getRanges().map((r) => ({ path: `/fw/${r.id}`, lastModified: r.reviewedAt })),
     { path: "/riscos" },
     { path: "/erros" },
+    ...getErrors().map((e) => ({ path: `/erros/${e.slug}`, lastModified: e.reviewedAt })),
     { path: "/guias" },
   ];
 

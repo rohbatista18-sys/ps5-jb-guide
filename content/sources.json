@@ -6,6 +6,230 @@
       "title": "Relapse-Exploit README",
       "kind": "readme",
       "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-version-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/playstation-system-software-application-version/",
+      "title": "Sony: check the system software version (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-version-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/playstation-system-software-application-version/",
+      "title": "Sony: check the system software version (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-version-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/playstation-system-software-application-version/",
+      "title": "Sony: check the system software version (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-autoupdate-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/automatic-updates-playstation/",
+      "title": "Sony: automatic updates (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-autoupdate-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/automatic-updates-playstation/",
+      "title": "Sony: automatic updates (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-autoupdate-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/automatic-updates-playstation/",
+      "title": "Sony: automatic updates (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-safemode-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/safe-mode-playstation/",
+      "title": "Sony: Safe Mode (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-safemode-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/safe-mode-playstation/",
+      "title": "Sony: Safe Mode (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-safemode-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/safe-mode-playstation/",
+      "title": "Sony: Safe Mode (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-systemsoftware-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/ps5/system-software/",
+      "title": "Sony: PS5 system software update (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-systemsoftware-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/ps5/system-software/",
+      "title": "Sony: PS5 system software update (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-systemsoftware-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/ps5/system-software/",
+      "title": "Sony: PS5 system software update (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-powerlights-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/ps5-ps4-power-indicator-lights/",
+      "title": "Sony: power indicator lights (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-powerlights-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/ps5-ps4-power-indicator-lights/",
+      "title": "Sony: power indicator lights (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-powerlights-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/ps5-ps4-power-indicator-lights/",
+      "title": "Sony: power indicator lights (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ws116332-en",
+      "url": "https://www.playstation.com/en-us/support/error-codes/ps5/ws-116332-6/",
+      "title": "Sony: error WS-116332-6 (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ws116332-pt",
+      "url": "https://www.playstation.com/pt-br/support/error-codes/ps5/ws-116332-6/",
+      "title": "Sony: error WS-116332-6 (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ws116332-es",
+      "url": "https://www.playstation.com/es-es/support/error-codes/ps5/ws-116332-6/",
+      "title": "Sony: error WS-116332-6 (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-version-esmx",
+      "url": "https://www.playstation.com/es-mx/support/hardware/playstation-system-software-application-version/",
+      "title": "Sony: check the system software version (es-mx)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-autoupdate-esmx",
+      "url": "https://www.playstation.com/es-mx/support/hardware/automatic-updates-playstation/",
+      "title": "Sony: automatic updates (es-mx)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-safemode-esmx",
+      "url": "https://www.playstation.com/es-mx/support/hardware/safe-mode-playstation/",
+      "title": "Sony: Safe Mode (es-mx)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ps5-sw-info",
+      "url": "https://www.playstation.com/en-us/support/hardware/ps5/system-software-info/",
+      "title": "Sony: PS5 system software release notes (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-su-101337-5",
+      "url": "https://www.playstation.com/en-us/support/error-codes/ps5/su-101337-5/",
+      "title": "Sony: error SU-101337-5 (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ce-108255-1",
+      "url": "https://www.playstation.com/en-us/support/error-codes/ps5/ce-108255-1/",
+      "title": "Sony: error CE-108255-1 (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ce-108262-9",
+      "url": "https://www.playstation.com/en-us/support/error-codes/ps5/ce-108262-9/",
+      "title": "Sony: error CE-108262-9 (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ce-109737-7",
+      "url": "https://www.playstation.com/en-us/support/error-codes/ps5/ce-109737-7/",
+      "title": "Sony: error CE-109737-7 (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "sony-ce-110538-8",
+      "url": "https://www.playstation.com/en-us/support/error-codes/ps5/ce-110538-8/",
+      "title": "Sony: error CE-110538-8 (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "news-weekend-1420",
+      "url": "https://www.weekend.at/lifestyle/unterhaltung/ps5-update-jailbreak-oktober",
+      "title": "weekend.at: PS5 update 14.20 (2026-10)",
+      "kind": "news",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "news-ixbt-prolapse",
+      "url": "https://ixbt.games/en/news/2026/10/25/xaker-anonsiroval-eksploit-iadra-dlia-playstation-5-s-prosivkami-1400-i-1410.html",
+      "title": "ixbt.games: Prolapse announced for 14.00 and 14.10 (2026-10-25)",
+      "kind": "news",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "news-pcquest-prolapse",
+      "url": "https://www.pcquest.com/gaming/playstation-5-reportedly-gets-another-jailbreak-prolapse-for-firmware-14-and-1410-12746277",
+      "title": "PCQuest: Prolapse reported for 14.00 and 14.10 (2026-10-24)",
+      "kind": "news",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "news-tbreak-gezine",
+      "url": "https://tbreak.com/ps5-firmware-14-10-jailbreak-demo/",
+      "title": "tbreak: 14.10 jailbreak demo (2026-10-20)",
+      "kind": "news",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "darthsternie-fw",
+      "url": "https://darthsternie.net/ps5-firmwares/",
+      "title": "Darthsternie: PS5 firmware archive",
+      "kind": "archive",
+      "accessedAt": "2026-10-29"
     }
   ]
 }

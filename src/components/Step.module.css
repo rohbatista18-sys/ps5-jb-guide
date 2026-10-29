@@ -1,0 +1,54 @@
+.step {
+  --pb: var(--ps-blue);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--cyan);
+}
+
+.n {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: var(--ps-blue);
+  color: var(--ink);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-wrap: pretty;
+}
+
+.body ul,
+.body ol {
+  padding-left: 2.5ch;
+  list-style: square;
+}
+
+.body code {
+  padding: 0 var(--space-1);
+  background: var(--bg-deep);
+  color: var(--yellow);
+  font-family: var(--font-text);
+}
+
+.source {
+  align-self: flex-start;
+  color: var(--ps-blue-hi);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}

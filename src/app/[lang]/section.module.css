@@ -94,3 +94,18 @@
   color: var(--ink-faint);
   opacity: 1;
 }
+
+.bullets {
+  padding-left: 2.5ch;
+  list-style: square;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--cyan);
+}

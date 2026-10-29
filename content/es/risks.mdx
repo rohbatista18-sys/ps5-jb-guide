@@ -2,7 +2,7 @@ Lee esto antes de seguir cualquier tutorial. Es corto a propósito.
 
 <Warn kind="ban" title="Quédate sin conexión">
 
-No inicies sesión en PSN ni dejes la consola conectada mientras tenga jailbreak. Usar PSN con una consola modificada puede hacer que baneen la consola o la cuenta, y esta guía no puede deshacer un baneo.
+No inicies sesión en PSN ni dejes la consola conectada mientras tenga jailbreak. Usar PSN con una consola modificada puede hacer que baneen la consola o la cuenta, y esta guía no puede deshacer un baneo. Si ves el error WS-116332-6, lee [qué significa](/es/erros/ws-116332-6-psn-blocked).
 
 </Warn>
 
@@ -10,9 +10,29 @@ No inicies sesión en PSN ni dejes la consola conectada mientras tenga jailbreak
 
 Cada jailbreak funciona solo en versiones de firmware concretas. Actualizar puede cerrarlo para tu consola, y no puedes contar con volver atrás.
 
-- Desactiva la descarga y la instalación automáticas del software del sistema.
+Sony muestra las opciones de actualización automática aquí. Deja las dos desmarcadas: "Descargar archivos de actualización automáticamente" e "Instalar archivos de actualización automáticamente".
+
+<MenuPath items={["Ajustes", "Sistema", "Software del sistema", "Ajustes y actualización del software del sistema"]} />
+
+En Latinoamérica:
+
+<MenuPath items={["Configuración", "Sistema", "Software del sistema", "Actualización y configuración del software del sistema"]} />
+
+Sony también dice que el modo de reposo necesita "Mantenerse conectado a Internet" para las actualizaciones automáticas. Déjala desmarcada también:
+
+<MenuPath items={["Ajustes", "Sistema", "Ahorro de energía", "Funciones disponibles en modo de reposo"]} />
+
+La página de Sony explica cómo activar estas opciones; desactivarlas es desmarcar las mismas opciones. [Fuente: Sony España](https://www.playstation.com/es-es/support/hardware/automatic-updates-playstation/) · [Fuente: Sony México](https://www.playstation.com/es-mx/support/hardware/automatic-updates-playstation/)
+
 - Ignora cualquier aviso de actualización, también los que aparecen al meter un disco o abrir una app.
-- Antes de usar cualquier opción del Modo seguro, lee qué hace en el sitio de soporte de Sony.
+
+</Warn>
+
+<Warn kind="brick" title="Modo seguro: qué borra tus datos">
+
+- <Claim evidence="proven" src="sony-safemode-es">"Restaurar PS5" y "Restaurar PS5 (reinstalar software del sistema)" borran todos los datos del usuario. En Latinoamérica se llaman "Restablecer PS5".</Claim>
+- <Claim evidence="proven" src="sony-safemode-es">"Reparar almacenamiento de la consola" no borra datos, y "Restaurar ajustes predeterminados" conserva tus juegos y partidas guardadas.</Claim>
+- "Actualizar software del sistema" y "Restaurar PS5 (reinstalar software del sistema)" instalan software del sistema, así que pueden costarte la versión que necesita tu jailbreak.
 
 </Warn>
 
@@ -20,13 +40,30 @@ Cada jailbreak funciona solo en versiones de firmware concretas. Actualizar pued
 
 - Haz una copia de tus partidas guardadas antes de empezar.
 - Nunca desenchufes la consola mientras escribe datos: al actualizar, instalar o copiar.
-- Si algo parece raro, para. Lee el README y los issues abiertos del proyecto que usas antes de volver a intentarlo.
+- Si algo parece raro, para. Búscalo en [errores comunes](/es/erros) antes de volver a intentarlo.
 
 </Warn>
 
 <Warn kind="terms" title="Garantía y términos">
 
 El jailbreak va contra los términos de uso de Sony y puede anular la garantía. Lo haces en tu propia consola y bajo tu propio riesgo.
+
+</Warn>
+
+<Warn kind="brick" title="Modo seguro y descargas de firmware">
+
+Si la consola arranca en Modo seguro y pide una actualización del software del sistema, NO tienes que instalar el firmware más reciente. Puedes reinstalar la misma versión (o cualquier otra) desde un pendrive:
+
+1. Descarga el archivo del firmware de tu versión en [el archivo de firmwares de PS5 de Darthsternie](https://darthsternie.net/ps5-firmwares/).
+2. Formatea un pendrive en FAT32 o exFAT.
+3. Crea la ruta de carpetas `PS5/UPDATE/` en el pendrive.
+4. Copia el archivo descargado en esa carpeta y renómbralo a `PS5UPDATE.PUP`.
+5. Conecta el pendrive a la consola mientras esté en Modo seguro.
+6. Elige "Actualizar software del sistema" → "Actualizar desde dispositivo USB".
+
+Si el Modo seguro pide "Restaurar PS5 (reinstalar software del sistema)" (opción 7), necesitas el archivo de instalación completa. Darthsternie tiene las dos versiones — el archivo de actualización y el de reinstalación. Revisa cuál necesitas antes de descargar.
+
+<Claim evidence="proven" src="sony-systemsoftware-es">La página de soporte de Sony explica cómo actualizar desde USB y la estructura de carpetas que necesita la consola.</Claim>
 
 </Warn>
 
@@ -37,5 +74,3 @@ El jailbreak va contra los términos de uso de Sony y puede anular la garantía.
 - Usa solo los repositorios que aparecen en esta guía, y solo desde su página oficial de GitHub.
 
 </Warn>
-
-Los nombres exactos de los menús de Sony y lo que borra cada opción del Modo seguro se están comprobando en las páginas de soporte de Sony. Se añadirán aquí con sus fuentes.
