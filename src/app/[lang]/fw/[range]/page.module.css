@@ -6,7 +6,17 @@
 
 .back {
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
   color: var(--ps-blue-hi);
+}
+
+/* Solid backing for sections that would otherwise sit on the animated pixel scenery. */
+.panel {
+  padding: var(--space-4) var(--space-5);
+  background: var(--panel);
+  border: 2px solid var(--line);
 }
 
 .hero {
@@ -97,6 +107,75 @@
   gap: var(--space-4);
 }
 
+/* Loose tutorial text (headings, intro paragraphs, lists) stays readable over the scenery. */
+.prose > :is(h2, p, ul, ol) {
+  text-shadow: 2px 2px 0 var(--bg-deep);
+}
+
+.prose > h2 {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--cyan);
+}
+
+.prose > ul {
+  padding-left: 2.5ch;
+  list-style: square;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
 .loading {
   min-height: 160px;
+}
+
+.methodsIntro {
+  text-shadow: 2px 2px 0 var(--bg-deep);
+  text-wrap: pretty;
+}
+
+.methods {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-5);
+}
+
+.methods > li {
+  display: flex;
+}
+
+.method {
+  --pb: var(--cyan);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.method:hover,
+.method:focus-visible {
+  --pb: var(--yellow);
+}
+
+.methodTitle {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--yellow);
+}
+
+.methodGo {
+  margin-top: auto;
+  color: var(--cyan);
+}
+
+.anchor {
+  scroll-margin-top: var(--space-6);
 }

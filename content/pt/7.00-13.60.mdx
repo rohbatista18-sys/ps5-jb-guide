@@ -27,34 +27,50 @@ Não entre de novo na PSN enquanto o jailbreak estiver ativo. Ficar conectado po
 
 </Step>
 
-<Step n={3} title="Abra o navegador do PS5">
+<Step n={3} title="Configure o DNS no console">
+
+Mude o servidor DNS para que o console se conecte ao host do exploit em vez dos servidores da Sony. Vá em:
+
+<MenuPath items={["Configurações", "Rede", "Configurações", "Configurar conexão à Internet"]} />
+
+Selecione a sua conexão Wi-Fi ou Ethernet, aperte Opções e escolha **Configurações avançadas**. Configure:
+
+- **Configurações de DNS:** Manual
+- **DNS primário:** <CopyValue value="45.56.67.85" />
+- **DNS secundário:** `0.0.0.0`
+
+Aperte OK e teste a conexão. Ela deve se conectar à internet. Se não funcionar, confira o endereço DNS.
+
+</Step>
+
+<Step n={4} title="Abra o navegador do PS5">
 
 O PS5 não tem ícone de navegador na tela inicial. Abra assim:
 
 <MenuPath items={["Configurações", "Guia do Usuário, Saúde e Segurança e Outras Informações", "Guia do Usuário"]} />
 
-Isso abre a página do manual da Sony num navegador interno.
+Isso abre a página do exploit diretamente porque o DNS do passo 3 redireciona a URL do Guia do Usuário para o host do exploit.
 
 </Step>
 
-<Step n={4} title="Vá para a página do exploit" src="relapse-readme">
+<Step n={5} title="Vá para a página do exploit" src="relapse-readme">
 
-No navegador, vá para a página do exploit Relapse. A URL atual está no [README do Relapse no GitHub](https://github.com/ntfargo/Relapse-Exploit#readme). Sempre pegue a URL do repositório oficial — nunca confie em links de outras fontes.
+Se a página não carregou automaticamente pelo DNS, vá manualmente para a página do exploit Relapse. A URL atual está no [README do Relapse no GitHub](https://github.com/ntfargo/Relapse-Exploit#readme). Sempre pegue a URL do repositório oficial — nunca confie em links de outras fontes.
 
 </Step>
 
-<Step n={5} title="Execute o exploit" src="relapse-readme">
+<Step n={6} title="Execute o exploit" src="relapse-readme">
 
 Aperte o botão na página do exploit e espere. Pode levar alguns segundos ou uns dois minutos.
 
 - **Se o navegador travar:** recarregue a página e tente de novo.
-- **Se o console congelar ou travar de vez:** segure o botão de energia até o console apitar duas vezes para forçar o desligamento, espere alguns segundos, ligue de novo e recomece do Passo 3. Veja [console congelado](/pt/erros/console-frozen) para mais detalhes.
+- **Se o console congelar ou travar de vez:** segure o botão de energia até o console apitar duas vezes para forçar o desligamento, espere alguns segundos, ligue de novo e recomece do Passo 4. Veja [console congelado](/pt/erros/console-frozen) para mais detalhes.
 
 Pode precisar de várias tentativas. Isso é normal — o exploit depende de timing e nem sempre funciona de primeira.
 
 </Step>
 
-<Step n={6} title="Confirme que o jailbreak está ativo" src="relapse-readme">
+<Step n={7} title="Confirme que o jailbreak está ativo" src="relapse-readme">
 
 Quando o exploit funcionar, uma notificação ou um menu homebrew aparece na tela. O console agora está desbloqueado para esta sessão.
 
@@ -64,7 +80,7 @@ Se nada acontecer e o navegador voltar para a página do exploit, a tentativa fa
 
 <Warn kind="brick" title="Não é persistente">
 
-Este jailbreak dura só até você desligar ou reiniciar o console. Depois de cada reinício você precisa executar o exploit de novo a partir do Passo 3. Nunca atualize o firmware.
+Este jailbreak dura só até você desligar ou reiniciar o console. Depois de cada reinício você precisa executar o exploit de novo a partir do Passo 4. Nunca atualize o firmware.
 
 </Warn>
 
@@ -74,4 +90,6 @@ Não entre de volta na PSN enquanto o jailbreak estiver ativo. Só reconecte na 
 
 </Warn>
 
-<Checklist items={["Li a página de riscos", "As atualizações automáticas estão desativadas", "Saí da PSN", "O exploit funcionou e vejo confirmação na tela", "Entendo que preciso repetir depois de cada reinício"]} />
+## Checklist final
+
+<Checklist items={["Li a página de riscos", "As atualizações automáticas estão desativadas", "Saí da PSN", "O DNS está configurado em 45.56.67.85", "O exploit funcionou e vejo confirmação na tela", "Entendo que preciso repetir depois de cada reinício"]} />

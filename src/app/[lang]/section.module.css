@@ -11,11 +11,32 @@
   line-height: 1.4;
   color: var(--yellow);
   text-align: center;
+  text-shadow: 3px 3px 0 var(--bg-deep);
+}
+
+/* Text that sits straight on the pixel scenery gets a hard 8-bit shadow, so platforms or stars
+   drawn behind it never drop its contrast. */
+.intro,
+.note,
+.groupTitle,
+.prose > p,
+.prose > h2,
+.prose > ul,
+.prose > ol,
+.group > label {
+  text-shadow: 2px 2px 0 var(--bg-deep);
 }
 
 .intro {
+  max-width: 60ch;
+  margin-inline: auto;
   color: var(--ink-dim);
   text-align: center;
+  text-wrap: pretty;
+}
+
+.note {
+  color: var(--ink-faint);
   text-wrap: pretty;
 }
 
@@ -108,4 +129,102 @@
   font-size: 0.75rem;
   line-height: 1.5;
   color: var(--cyan);
+}
+
+/* /guias: one cell per menu instead of one long column of single cards. */
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-6) var(--space-5);
+}
+
+.stack {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  height: 100%;
+}
+
+.stack > li {
+  flex: 1;
+}
+
+.cardMore {
+  margin-top: auto;
+  align-self: flex-end;
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  color: var(--magenta);
+}
+
+.card:hover .cardMore,
+.card:focus-visible .cardMore {
+  color: var(--yellow);
+}
+
+/* Guide detail: repository cards from the GitHub snapshot. */
+.repoGrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-4);
+}
+
+.repoGrid > li > * {
+  height: 100%;
+}
+
+/* /guias: shortcut to every repository on one page. */
+.cta {
+  align-self: center;
+  --pb: var(--magenta);
+  color: var(--ink);
+}
+
+/* /guias/repositorios: compact link lists, one panel per section. */
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2);
+}
+
+.linkList > li + li {
+  border-top: 2px dashed var(--line);
+}
+
+.repoLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-1);
+  min-height: var(--tap);
+  padding: var(--space-2) var(--space-3);
+  color: var(--ps-blue-hi);
+  overflow-wrap: anywhere;
+}
+
+.repoLink:hover,
+.repoLink:focus-visible {
+  background: var(--panel-raised);
+  color: var(--cyan);
+}
+
+.repoName::after {
+  content: " ↗";
+  color: var(--magenta);
+}
+
+.repoMeta {
+  font-size: 1rem;
+  color: var(--ink-faint);
+}
+
+.backLink {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  text-shadow: 2px 2px 0 var(--bg-deep);
 }

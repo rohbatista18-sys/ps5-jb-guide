@@ -11,6 +11,13 @@
   text-transform: uppercase;
 }
 
+/* Long labels ("How do I find my version?" in ES/PT) wrap instead of overflowing on phones.
+   Doubled class: must beat the global .px-btn nowrap, which may load after this module. */
+.open.open {
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
 
 
 .dialog {

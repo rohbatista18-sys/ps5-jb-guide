@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T09:38:02.459Z",
+  "checkedAt": "2026-10-29T12:02:56.315Z",
   "repos": {
     "ntfargo/Relapse-Exploit": {
       "full_name": "ntfargo/Relapse-Exploit",
@@ -67,7 +67,7 @@
       "fork": false,
       "created_at": "2026-08-05T19:05:25Z",
       "pushed_at": "2026-10-28T00:07:17Z",
-      "stargazers_count": 1282,
+      "stargazers_count": 1286,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.6.2",
@@ -84,13 +84,30 @@
       "fork": false,
       "created_at": "2026-04-19T12:45:11Z",
       "pushed_at": "2026-10-19T13:42:54Z",
-      "stargazers_count": 680,
+      "stargazers_count": 681,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.6.3",
         "published_at": "2026-10-19T13:42:55Z"
       },
       "flags": []
+    },
+    "itsPLK/ps5-y2jb-autoloader": {
+      "full_name": "itsPLK/ps5-y2jb-autoloader",
+      "html_url": "https://github.com/itsPLK/ps5-y2jb-autoloader",
+      "archived": false,
+      "fork": true,
+      "created_at": "2025-11-11T22:20:46Z",
+      "pushed_at": "2026-10-28T14:19:47Z",
+      "stargazers_count": 1085,
+      "license": "GPL-3.0",
+      "latestRelease": {
+        "tag": "v1.1.0-ba879c8",
+        "published_at": "2026-10-28T14:19:48Z"
+      },
+      "flags": [
+        "fork-of-listed"
+      ]
     },
     "ps5-payload-dev/ftpsrv": {
       "full_name": "ps5-payload-dev/ftpsrv",
@@ -129,7 +146,7 @@
       "fork": false,
       "created_at": "2024-04-06T09:53:45Z",
       "pushed_at": "2026-10-21T17:43:01Z",
-      "stargazers_count": 266,
+      "stargazers_count": 267,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.45",
@@ -144,7 +161,7 @@
       "fork": false,
       "created_at": "2025-10-16T12:07:52Z",
       "pushed_at": "2026-08-02T16:19:46Z",
-      "stargazers_count": 1611,
+      "stargazers_count": 1613,
       "license": "MIT",
       "latestRelease": {
         "tag": "1.6",
@@ -216,7 +233,7 @@
       "fork": false,
       "created_at": "2026-09-18T15:02:47Z",
       "pushed_at": "2026-10-19T20:57:27Z",
-      "stargazers_count": 409,
+      "stargazers_count": 410,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v4.0.0-beta-4",
@@ -231,7 +248,7 @@
       "fork": false,
       "created_at": "2026-10-02T19:05:20Z",
       "pushed_at": "2026-10-28T15:44:18Z",
-      "stargazers_count": 448,
+      "stargazers_count": 450,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v1.000.115",
@@ -268,8 +285,8 @@
       "stargazers_count": 933,
       "license": "NOASSERTION",
       "latestRelease": {
-        "tag": "v8.10.0",
-        "published_at": "2026-10-29T04:13:55Z"
+        "tag": "v9.0.1",
+        "published_at": "2026-10-29T10:03:46Z"
       },
       "flags": [
         "windows-binary"
@@ -300,7 +317,7 @@
       "fork": false,
       "created_at": "2026-10-16T00:46:59Z",
       "pushed_at": "2026-10-28T13:58:23Z",
-      "stargazers_count": 391,
+      "stargazers_count": 393,
       "license": "NOASSERTION",
       "latestRelease": null,
       "flags": [
@@ -328,7 +345,7 @@
       "fork": false,
       "created_at": "2026-10-27T20:21:38Z",
       "pushed_at": "2026-10-27T22:38:45Z",
-      "stargazers_count": 28,
+      "stargazers_count": 29,
       "license": "NOASSERTION",
       "latestRelease": null,
       "flags": [
@@ -398,6 +415,237 @@
         "same-name-as:ZigZagBoi1/PS5-14.10-Research"
       ]
     },
+    "itsPLK/ps5-pkg-manager": {
+      "full_name": "itsPLK/ps5-pkg-manager",
+      "html_url": "https://github.com/itsPLK/ps5-pkg-manager",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-09-17T13:05:29Z",
+      "pushed_at": "2026-10-10T15:38:09Z",
+      "stargazers_count": 235,
+      "license": "GPL-3.0",
+      "latestRelease": {
+        "tag": "v1.5.1",
+        "published_at": "2026-10-10T15:38:10Z"
+      },
+      "flags": []
+    },
+    "XavyProd-Git/pkg-mutant-shop": {
+      "full_name": "XavyProd-Git/pkg-mutant-shop",
+      "html_url": "https://github.com/XavyProd-Git/pkg-mutant-shop",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-10-06T17:55:28Z",
+      "pushed_at": "2026-10-26T01:22:00Z",
+      "stargazers_count": 12,
+      "license": "GPL-3.0",
+      "latestRelease": {
+        "tag": "v3.99.5",
+        "published_at": "2026-10-26T01:22:00Z"
+      },
+      "flags": [
+        "new-repo",
+        "new-account",
+        "windows-binary"
+      ]
+    },
+    "ps5-payload-dev/pacbrew-repo": {
+      "full_name": "ps5-payload-dev/pacbrew-repo",
+      "html_url": "https://github.com/ps5-payload-dev/pacbrew-repo",
+      "archived": false,
+      "fork": false,
+      "created_at": "2024-04-06T10:00:13Z",
+      "pushed_at": "2026-10-16T15:41:39Z",
+      "stargazers_count": 27,
+      "license": "GPL-3.0",
+      "latestRelease": {
+        "tag": "v0.41.1",
+        "published_at": "2026-10-10T19:03:56Z"
+      },
+      "flags": []
+    },
+    "darkxex/ps5-homebrew-catalog": {
+      "full_name": "darkxex/ps5-homebrew-catalog",
+      "html_url": "https://github.com/darkxex/ps5-homebrew-catalog",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-09-29T01:14:43Z",
+      "pushed_at": "2026-10-29T11:07:16Z",
+      "stargazers_count": 60,
+      "license": "GPL-3.0",
+      "latestRelease": null,
+      "flags": []
+    },
+    "notmaj0r/ProsperoMgr": {
+      "full_name": "notmaj0r/ProsperoMgr",
+      "html_url": "https://github.com/notmaj0r/ProsperoMgr",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-08-17T19:26:34Z",
+      "pushed_at": "2026-10-27T19:11:31Z",
+      "stargazers_count": 273,
+      "license": "GPL-3.0",
+      "latestRelease": {
+        "tag": "v1.1",
+        "published_at": "2026-09-28T19:32:33Z"
+      },
+      "flags": []
+    },
+    "zazha093/ps5-payloads-atlas": {
+      "full_name": "zazha093/ps5-payloads-atlas",
+      "html_url": "https://github.com/zazha093/ps5-payloads-atlas",
+      "archived": false,
+      "fork": true,
+      "created_at": "2026-10-12T04:24:16Z",
+      "pushed_at": "2026-10-29T09:51:03Z",
+      "stargazers_count": 0,
+      "license": "MIT",
+      "latestRelease": null,
+      "flags": [
+        "new-repo",
+        "few-stars",
+        "fork"
+      ]
+    },
+    "itsPLK/ps5-payloads-mirror": {
+      "full_name": "itsPLK/ps5-payloads-mirror",
+      "html_url": "https://github.com/itsPLK/ps5-payloads-mirror",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-04-28T22:26:17Z",
+      "pushed_at": "2026-10-29T04:55:06Z",
+      "stargazers_count": 185,
+      "license": null,
+      "latestRelease": {
+        "tag": "payloads-mirror",
+        "published_at": "2026-04-28T22:29:36Z"
+      },
+      "flags": []
+    },
+    "aydencharles/onionHEN": {
+      "full_name": "aydencharles/onionHEN",
+      "html_url": "https://github.com/aydencharles/onionHEN",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-07-20T03:10:14Z",
+      "pushed_at": "2026-10-27T05:44:15Z",
+      "stargazers_count": 479,
+      "license": "GPL-3.0",
+      "latestRelease": {
+        "tag": "v0.9.0",
+        "published_at": "2026-10-15T07:42:25Z"
+      },
+      "flags": []
+    },
+    "LightningMods/Itemzflow": {
+      "full_name": "LightningMods/Itemzflow",
+      "html_url": "https://github.com/LightningMods/Itemzflow",
+      "archived": false,
+      "fork": false,
+      "created_at": "2022-12-11T23:18:21Z",
+      "pushed_at": "2026-10-21T17:45:37Z",
+      "stargazers_count": 369,
+      "license": "GPL-3.0",
+      "latestRelease": {
+        "tag": "1.08",
+        "published_at": "2026-05-31T22:08:52Z"
+      },
+      "flags": []
+    },
+    "earthonion/garlic-savemgr": {
+      "full_name": "earthonion/garlic-savemgr",
+      "html_url": "https://github.com/earthonion/garlic-savemgr",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-03-01T19:24:02Z",
+      "pushed_at": "2026-10-23T13:44:07Z",
+      "stargazers_count": 177,
+      "license": null,
+      "latestRelease": {
+        "tag": "v1.15-beta1",
+        "published_at": "2026-10-23T13:44:07Z"
+      },
+      "flags": []
+    },
+    "SocialMDev/ps5_retroarch": {
+      "full_name": "SocialMDev/ps5_retroarch",
+      "html_url": "https://github.com/SocialMDev/ps5_retroarch",
+      "archived": false,
+      "fork": true,
+      "created_at": "2026-10-05T21:37:10Z",
+      "pushed_at": "2026-10-05T18:00:40Z",
+      "stargazers_count": 1,
+      "license": "GPL-3.0",
+      "latestRelease": null,
+      "flags": [
+        "new-repo",
+        "few-stars",
+        "fork-of-listed",
+        "same-name-as:mihawk-99/PS5_RetroArch"
+      ]
+    },
+    "leecloudvictor/ps5-PSXS5": {
+      "full_name": "leecloudvictor/ps5-PSXS5",
+      "html_url": "https://github.com/leecloudvictor/ps5-PSXS5",
+      "archived": false,
+      "fork": true,
+      "created_at": "2026-10-07T02:40:47Z",
+      "pushed_at": "2026-10-07T02:29:36Z",
+      "stargazers_count": 1,
+      "license": "GPL-3.0",
+      "latestRelease": null,
+      "flags": [
+        "new-repo",
+        "few-stars",
+        "fork"
+      ]
+    },
+    "soniciso1/LuaPSX": {
+      "full_name": "soniciso1/LuaPSX",
+      "html_url": "https://github.com/soniciso1/LuaPSX",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-08-23T12:23:21Z",
+      "pushed_at": "2026-08-28T23:02:30Z",
+      "stargazers_count": 9,
+      "license": "GPL-2.0",
+      "latestRelease": {
+        "tag": "v1.0",
+        "published_at": "2026-08-23T12:24:53Z"
+      },
+      "flags": []
+    },
+    "axxx503/PS5-Ultimate-Home-Console-Guide": {
+      "full_name": "axxx503/PS5-Ultimate-Home-Console-Guide",
+      "html_url": "https://github.com/axxx503/PS5-Ultimate-Home-Console-Guide",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-10-08T11:12:07Z",
+      "pushed_at": "2026-10-19T12:01:10Z",
+      "stargazers_count": 47,
+      "license": "NOASSERTION",
+      "latestRelease": {
+        "tag": "v1.5.4",
+        "published_at": "2026-10-18T21:46:43Z"
+      },
+      "flags": [
+        "new-repo"
+      ]
+    },
+    "MiladRTX/ps5-homebrew-starter": {
+      "full_name": "MiladRTX/ps5-homebrew-starter",
+      "html_url": "https://github.com/MiladRTX/ps5-homebrew-starter",
+      "archived": false,
+      "fork": false,
+      "created_at": "2026-10-20T11:12:26Z",
+      "pushed_at": "2026-10-20T13:51:08Z",
+      "stargazers_count": 7,
+      "license": "GPL-3.0",
+      "latestRelease": null,
+      "flags": [
+        "new-repo"
+      ]
+    },
     "m2k7m/Relapse-Exploit": {
       "full_name": "m2k7m/Relapse-Exploit",
       "html_url": "https://github.com/m2k7m/Relapse-Exploit",
@@ -431,8 +679,8 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-02T22:53:42Z",
-      "pushed_at": "2026-10-28T19:36:27Z",
-      "stargazers_count": 1234,
+      "pushed_at": "2026-10-29T11:54:45Z",
+      "stargazers_count": 1235,
       "license": null,
       "latestRelease": {
         "tag": "v1.7.0",

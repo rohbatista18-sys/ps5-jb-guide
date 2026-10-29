@@ -27,34 +27,50 @@ Do not sign back in while jailbroken. Staying signed in risks a console or accou
 
 </Step>
 
-<Step n={3} title="Open the PS5 web browser">
+<Step n={3} title="Set the DNS on the console">
+
+Change the DNS server so the console connects to the exploit host instead of Sony's servers. Go to:
+
+<MenuPath items={["Settings", "Network", "Settings", "Set Up Internet Connection"]} />
+
+Select your Wi-Fi or Ethernet connection, press Options, then choose **Advanced Settings**. Set:
+
+- **DNS Settings:** Manual
+- **Primary DNS:** <CopyValue value="45.56.67.85" />
+- **Secondary DNS:** `0.0.0.0`
+
+Press OK and test the connection. It should connect to the internet. If it does not, double-check the DNS address.
+
+</Step>
+
+<Step n={4} title="Open the PS5 web browser">
 
 The PS5 does not have a browser icon on the home screen. Open it through:
 
 <MenuPath items={["Settings", "User's Guide, Health & Safety, and Other Information", "User's Guide"]} />
 
-This opens Sony's manual page in an internal browser.
+This opens the exploit page directly because the DNS from step 3 redirects the User's Guide URL to the exploit host.
 
 </Step>
 
-<Step n={4} title="Go to the exploit page" src="relapse-readme">
+<Step n={5} title="Go to the exploit page" src="relapse-readme">
 
-In the browser, navigate to the Relapse exploit host page. The current URL is in the [Relapse README on GitHub](https://github.com/ntfargo/Relapse-Exploit#readme). Always get it from the official repository — never trust links from other sources.
+If the page did not load automatically via DNS, navigate manually to the Relapse exploit host page. The current URL is in the [Relapse README on GitHub](https://github.com/ntfargo/Relapse-Exploit#readme). Always get it from the official repository — never trust links from other sources.
 
 </Step>
 
-<Step n={5} title="Run the exploit" src="relapse-readme">
+<Step n={6} title="Run the exploit" src="relapse-readme">
 
 Press the button on the exploit page and wait. It can take a few seconds to a couple of minutes.
 
 - **If the browser stalls:** reload the page and try again.
-- **If the console freezes or crashes:** hold the power button until the console beeps twice to force a shutdown, wait a few seconds, turn it back on and start again from Step 3. See [console frozen](/en/erros/console-frozen) for more details.
+- **If the console freezes or crashes:** hold the power button until the console beeps twice to force a shutdown, wait a few seconds, turn it back on and start again from Step 4. See [console frozen](/en/erros/console-frozen) for more details.
 
 It may take several attempts. This is normal — the exploit depends on timing and does not succeed every time.
 
 </Step>
 
-<Step n={6} title="Confirm the jailbreak is active" src="relapse-readme">
+<Step n={7} title="Confirm the jailbreak is active" src="relapse-readme">
 
 When the exploit succeeds, a notification or a homebrew menu appears on screen. The console is now jailbroken for this session.
 
@@ -64,7 +80,7 @@ If nothing happens and the browser returns to the exploit page, the attempt fail
 
 <Warn kind="brick" title="Not persistent">
 
-This jailbreak lasts only until you turn off or restart the console. After every reboot you must run the exploit again from Step 3. Never update the firmware.
+This jailbreak lasts only until you turn off or restart the console. After every reboot you must run the exploit again from Step 4. Never update the firmware.
 
 </Warn>
 
@@ -74,4 +90,6 @@ Do not sign back in to PSN while jailbroken. Only reconnect to PSN after you res
 
 </Warn>
 
-<Checklist items={["I read the risks page", "Auto-updates are disabled", "I am signed out of PSN", "The exploit ran and I see confirmation on screen", "I understand this must be repeated after every reboot"]} />
+## Final checklist
+
+<Checklist items={["I read the risks page", "Auto-updates are disabled", "I am signed out of PSN", "DNS is set to 45.56.67.85", "The exploit ran and I see confirmation on screen", "I understand this must be repeated after every reboot"]} />

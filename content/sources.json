@@ -8,6 +8,27 @@
       "accessedAt": "2026-10-29"
     },
     {
+      "id": "y2jb-autoloader-readme",
+      "url": "https://github.com/itsPLK/ps5-y2jb-autoloader#readme",
+      "title": "PS5 Y2JB Autoloader README",
+      "kind": "readme",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "y2jb-autoloader-releases",
+      "url": "https://github.com/itsPLK/ps5-y2jb-autoloader/releases",
+      "title": "PS5 Y2JB Autoloader releases",
+      "kind": "release",
+      "accessedAt": "2026-10-29"
+    },
+    {
+      "id": "y2jb-readme",
+      "url": "https://github.com/Gezine/Y2JB#readme",
+      "title": "Y2JB README (original project)",
+      "kind": "readme",
+      "accessedAt": "2026-10-29"
+    },
+    {
       "id": "sony-version-en",
       "url": "https://www.playstation.com/en-us/support/hardware/playstation-system-software-application-version/",
       "title": "Sony: check the system software version (en-us)",

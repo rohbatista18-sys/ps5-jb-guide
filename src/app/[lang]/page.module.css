@@ -1,24 +1,3 @@
-.hero {
-  --pb: var(--magenta);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  padding: var(--space-6) var(--space-5);
-  text-align: center;
-}
-
-.heading {
-  font-family: var(--font-display);
-  font-size: clamp(0.875rem, 3vw, 1.25rem);
-  line-height: 1.5;
-  color: var(--yellow);
-}
-
-.howTo {
-  display: flex;
-  justify-content: center;
-}
-
 .howToBody {
   --pb: var(--cyan);
   padding: var(--space-5);

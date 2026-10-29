@@ -41,7 +41,11 @@ export default function ErrorList({ lang, entries, labels }: { lang: Locale; ent
         autoComplete="off"
       />
       <p role="status" aria-live="polite" className={styles.intro}>
-        {shown.length === 0 ? fill(labels.noMatch, { query: deferred }) : null}
+        {!q
+          ? null
+          : shown.length === 0
+            ? fill(labels.noMatch, { query: deferred.trim() })
+            : fill(labels.matches, { count: shown.length, total: entries.length })}
       </p>
       <ul className={styles.cards}>
         {shown.map((e) => (

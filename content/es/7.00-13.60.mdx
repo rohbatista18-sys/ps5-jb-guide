@@ -31,7 +31,27 @@ No vuelvas a iniciar sesión mientras tengas el jailbreak activo. Hacerlo puede 
 
 </Step>
 
-<Step n={3} title="Abre el navegador de la PS5">
+<Step n={3} title="Configura el DNS en la consola">
+
+Cambia el servidor DNS para que la consola se conecte al host del exploit en vez de a los servidores de Sony. Ve a:
+
+<MenuPath items={["Ajustes", "Red", "Configuración", "Configurar conexión a Internet"]} />
+
+En Latinoamérica:
+
+<MenuPath items={["Configuración", "Red", "Configuración", "Configurar la conexión a Internet"]} />
+
+Selecciona tu conexión Wi-Fi o Ethernet, pulsa Opciones y elige **Configuración avanzada**. Configura:
+
+- **Configuración de DNS:** Manual
+- **DNS principal:** <CopyValue value="45.56.67.85" />
+- **DNS secundario:** `0.0.0.0`
+
+Pulsa Aceptar y prueba la conexión. Debe conectarse a internet. Si no lo hace, revisa la dirección DNS.
+
+</Step>
+
+<Step n={4} title="Abre el navegador de la PS5">
 
 La PS5 no tiene un icono de navegador en la pantalla de inicio. Ábrelo así:
 
@@ -41,28 +61,28 @@ En Latinoamérica:
 
 <MenuPath items={["Configuración", "Guía del usuario, Salud y seguridad y Otra información", "Guía del usuario"]} />
 
-Esto abre la página del manual de Sony en un navegador interno.
+Esto abre la página del exploit directamente porque el DNS del paso 3 redirige la URL de la Guía del usuario al host del exploit.
 
 </Step>
 
-<Step n={4} title="Ve a la página del exploit" src="relapse-readme">
+<Step n={5} title="Ve a la página del exploit" src="relapse-readme">
 
-En el navegador, navega a la página del exploit Relapse. La URL actual está en el [README de Relapse en GitHub](https://github.com/ntfargo/Relapse-Exploit#readme). Siempre tómala del repositorio oficial — nunca confíes en enlaces de otras fuentes.
+Si la página no se cargó automáticamente por DNS, navega manualmente a la página del exploit Relapse. La URL actual está en el [README de Relapse en GitHub](https://github.com/ntfargo/Relapse-Exploit#readme). Siempre tómala del repositorio oficial — nunca confíes en enlaces de otras fuentes.
 
 </Step>
 
-<Step n={5} title="Ejecuta el exploit" src="relapse-readme">
+<Step n={6} title="Ejecuta el exploit" src="relapse-readme">
 
 Pulsa el botón en la página del exploit y espera. Puede tardar unos segundos o un par de minutos.
 
 - **Si el navegador se queda parado:** recarga la página y vuelve a intentarlo.
-- **Si la consola se congela o se bloquea:** mantén pulsado el botón de encendido hasta que la consola pite dos veces para forzar el apagado, espera unos segundos, enciéndela y empieza otra vez desde el Paso 3. Mira [consola congelada](/es/erros/console-frozen) para más detalles.
+- **Si la consola se congela o se bloquea:** mantén pulsado el botón de encendido hasta que la consola pite dos veces para forzar el apagado, espera unos segundos, enciéndela y empieza otra vez desde el Paso 4. Mira [consola congelada](/es/erros/console-frozen) para más detalles.
 
 Puede necesitar varios intentos. Esto es normal — el exploit depende del momento exacto y no siempre funciona a la primera.
 
 </Step>
 
-<Step n={6} title="Confirma que el jailbreak está activo" src="relapse-readme">
+<Step n={7} title="Confirma que el jailbreak está activo" src="relapse-readme">
 
 Cuando el exploit tenga éxito, aparecerá una notificación o un menú homebrew en la pantalla. La consola ahora tiene jailbreak para esta sesión.
 
@@ -72,7 +92,7 @@ Si no pasa nada y el navegador vuelve a la página del exploit, el intento fall�
 
 <Warn kind="brick" title="No es persistente">
 
-Este jailbreak solo dura hasta que apagues o reinicies la consola. Después de cada reinicio tienes que ejecutar el exploit otra vez desde el Paso 3. Nunca actualices el firmware.
+Este jailbreak solo dura hasta que apagues o reinicies la consola. Después de cada reinicio tienes que ejecutar el exploit otra vez desde el Paso 4. Nunca actualices el firmware.
 
 </Warn>
 
@@ -82,4 +102,6 @@ No vuelvas a iniciar sesión en PSN mientras tengas el jailbreak activo. Solo re
 
 </Warn>
 
-<Checklist items={["Leí la página de riesgos", "Las actualizaciones automáticas están desactivadas", "Cerré sesión en PSN", "El exploit funcionó y veo confirmación en pantalla", "Entiendo que hay que repetirlo después de cada reinicio"]} />
+## Lista final
+
+<Checklist items={["Leí la página de riesgos", "Las actualizaciones automáticas están desactivadas", "Cerré sesión en PSN", "El DNS está configurado en 45.56.67.85", "El exploit funcionó y veo confirmación en pantalla", "Entiendo que hay que repetirlo después de cada reinicio"]} />

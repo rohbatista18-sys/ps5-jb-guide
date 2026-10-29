@@ -4,6 +4,30 @@
   gap: var(--space-6);
 }
 
+.hero {
+  --pb: var(--magenta);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-5);
+  text-align: center;
+}
+
+@media (max-width: 639px) {
+  .hero {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--yellow);
+  text-wrap: balance;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -12,7 +36,20 @@
 }
 
 .label {
-  color: var(--ink-dim);
+  color: var(--ink);
+}
+
+/* Secondary to the field: separated by a dashed rule, like the menu panels' footers. */
+.help {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: var(--space-4);
+  border-top: 2px dashed var(--line);
+}
+
+.go {
+  --pb: var(--magenta);
 }
 
 .row {
@@ -66,6 +103,7 @@
 
 .rangesTitle {
   margin-bottom: var(--space-4);
+  text-shadow: 2px 2px 0 var(--bg-deep);
   font-family: var(--font-display);
   font-size: 0.75rem;
   line-height: 1.5;

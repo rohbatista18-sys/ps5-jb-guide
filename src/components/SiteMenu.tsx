@@ -121,9 +121,19 @@ export default function SiteMenu({ lang, labels, ranges, guideMenus }: Props) {
                 {labels.allGuides}
               </Link>
             </li>
+            <li>
+              <Link href={`/${lang}/guias/repositorios`} aria-current={current(`/${lang}/guias/repositorios`)}>
+                {labels.allRepos}
+              </Link>
+            </li>
           </ul>
         </li>
 
+        <li className={styles.item}>
+          <Link href={`/${lang}/firmwares`} className={`px-btn ${styles.trigger}`} aria-current={current(`/${lang}/firmwares`)}>
+            {labels.firmwareDownloads}
+          </Link>
+        </li>
         <li className={styles.item}>
           <Link href={`/${lang}/erros`} className={`px-btn ${styles.trigger}`} aria-current={current(`/${lang}/erros`)}>
             {labels.errors}

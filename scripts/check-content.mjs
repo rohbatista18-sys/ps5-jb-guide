@@ -14,10 +14,10 @@ const REPO_ID_RE = /^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const EVIDENCE_VALUES = ["proven", "reported"];
 const RANGE_STATUSES = ["public", "none", "unknown"];
-const REPO_CATEGORIES = ["exploit", "hen", "loader", "homebrew", "store", "utility", "backup", "research"];
+const REPO_CATEGORIES = ["exploit", "hen", "loader", "homebrew", "store", "utility", "backup", "research", "package-manager", "payload", "emulator", "guide"];
 const REPO_STATUSES = ["listed", "review", "excluded"];
 const SOURCE_KINDS = ["readme", "release", "sony-support", "news", "forum", "video", "archive"];
-const GUIDE_MENUS = ["packages", "apps", "payloads", "transfer", "backup", "emulators"];
+const GUIDE_MENUS = ["jailbreak", "packages", "apps", "payloads", "transfer", "backup", "emulators"];
 const ERROR_SEVERITIES = ["low", "medium", "high"];
 
 const errors = [];

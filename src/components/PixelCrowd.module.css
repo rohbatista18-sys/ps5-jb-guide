@@ -1,0 +1,90 @@
+/* Full-viewport pixel scenery behind the page (.page is z-index 1; CRT overlay is 50).
+   100lvh so mobile toolbars collapsing don't resize it (and regenerate the scene) mid-scroll. */
+.canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100lvh;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+/* The own sprite's corner overlay (next sibling, inline z-index 20) goes behind the page here:
+   on narrow screens it sat on top of the open menu and the footer text. It now peeks out only
+   where the plain background shows. */
+.canvas + canvas {
+  z-index: 0 !important;
+}
+
+.hud {
+  position: fixed;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-family: var(--font-pixel), ui-monospace, monospace;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #e8e6f0;
+  background: rgba(11, 11, 20, 0.88);
+  border: 2px solid #3a2f55;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.dot {
+  color: #5ee6c5;
+  animation: blink 1.6s steps(2, jump-none) infinite;
+}
+
+.extra {
+  color: #ffd166;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
+}
+
+/* Discreet all-time counter: small and dim, separated from the live count. */
+.visits {
+  padding-left: 8px;
+  margin-left: 2px;
+  border-left: 2px solid #3a2f55;
+  font-size: 8px;
+  color: #8f8ebd;
+}
+
+.hud > span {
+  white-space: nowrap;
+}
+
+.visitsShort {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .visitsLong {
+    display: none;
+  }
+
+  .visitsShort {
+    display: inline;
+  }
+}

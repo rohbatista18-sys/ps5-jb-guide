@@ -23,29 +23,23 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   }));
 
   return (
-    <>
-      <section className={`px-box ${styles.hero}`} aria-labelledby="home-title">
-        <h1 id="home-title" className={styles.heading}>
-          {dict.home.title}
-        </h1>
-        <div className={styles.howTo}>
-          <Dialog label={dict.home.howTo} closeLabel={dict.footer.close} titleId="how-to-title">
-            <article className={`px-box ${section.prose} ${styles.howToBody}`}>
-              <h2 id="how-to-title" className={section.groupTitle}>
-                {dict.home.howTo}
-              </h2>
-              <CheckFirmware />
-            </article>
-          </Dialog>
-        </div>
-      </section>
-      <FirmwarePicker
-        lang={lang}
-        ranges={ranges}
-        latestKnownFirmware={latestKnownFirmware()}
-        labels={dict.picker}
-        statusLabels={dict.status}
-      />
-    </>
+    <FirmwarePicker
+      lang={lang}
+      ranges={ranges}
+      latestKnownFirmware={latestKnownFirmware()}
+      heading={dict.home.title}
+      labels={dict.picker}
+      statusLabels={dict.status}
+      help={
+        <Dialog label={dict.home.howTo} closeLabel={dict.footer.close} titleId="how-to-title">
+          <article className={`px-box ${section.prose} ${styles.howToBody}`}>
+            <h2 id="how-to-title" className={section.groupTitle}>
+              {dict.home.howTo}
+            </h2>
+            <CheckFirmware />
+          </article>
+        </Dialog>
+      }
+    />
   );
 }

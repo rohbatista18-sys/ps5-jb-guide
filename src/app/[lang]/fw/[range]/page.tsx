@@ -8,7 +8,7 @@ import RepoCard from "@/components/RepoCard";
 import StatusBadge from "@/components/StatusBadge";
 import { hasLocale } from "@/i18n/config";
 import { fill, getDictionary } from "@/i18n/dictionaries";
-import { getListedRepos, getRange, getRanges, getSource } from "@/lib/content";
+import { getGuides, getListedRepos, getRange, getRanges, getSource } from "@/lib/content";
 import { formatDate } from "@/lib/format";
 import { TRACKER_URL } from "@/lib/site";
 import type { Source } from "@/lib/types";
@@ -61,6 +61,8 @@ async function RangeContent({ params }: Pick<PageProps<"/[lang]/fw/[range]">, "p
     ).default;
   }
 
+  // Other ways to start the jailbreak on this range: guides in the "jailbreak" menu that list it.
+  const methods = getGuides().filter((g) => g.menu === "jailbreak" && g.requires.ranges.includes(range.id));
   const repos = getListedRepos(range.repos);
   const sources = [...new Set(range.claims.map((c) => c.source))]
     .map(getSource)
@@ -93,14 +95,41 @@ async function RangeContent({ params }: Pick<PageProps<"/[lang]/fw/[range]">, "p
         </p>
       )}
 
+      {Tutorial && methods.length > 0 && (
+        <section aria-labelledby="methods-title" className={styles.section}>
+          <h2 id="methods-title" className={styles.sectionTitle}>
+            {t.methodsTitle}
+          </h2>
+          <p className={styles.methodsIntro}>{t.methodsIntro}</p>
+          <ul className={styles.methods}>
+            <li>
+              <a href="#browser-method" className={`px-box ${styles.method}`}>
+                <span className={styles.methodTitle}>{t.browserTitle}</span>
+                <span>{t.browserBody}</span>
+                <span className={styles.methodGo}>{t.methodOpen}</span>
+              </a>
+            </li>
+            {methods.map((g) => (
+              <li key={g.slug}>
+                <Link href={`/${lang}/guias/${g.slug}`} className={`px-box ${styles.method}`}>
+                  <span className={styles.methodTitle}>{g.title[lang]}</span>
+                  <span>{g.summary[lang]}</span>
+                  <span className={styles.methodGo}>{t.methodOpen}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {Tutorial && (
-        <div className={styles.prose}>
+        <div id="browser-method" className={`${styles.prose} ${styles.anchor}`}>
           <Tutorial />
         </div>
       )}
 
       {range.claims.length > 0 && (
-        <section aria-labelledby="claims-title" className={styles.section}>
+        <section aria-labelledby="claims-title" className={`${styles.section} ${styles.panel}`}>
           <h2 id="claims-title" className={styles.sectionTitle}>
             {t.claimsTitle}
           </h2>
@@ -134,7 +163,7 @@ async function RangeContent({ params }: Pick<PageProps<"/[lang]/fw/[range]">, "p
       )}
 
       {sources.length > 0 && (
-        <section aria-labelledby="sources-title" className={styles.section}>
+        <section aria-labelledby="sources-title" className={`${styles.section} ${styles.panel}`}>
           <h2 id="sources-title" className={styles.sectionTitle}>
             {t.sourcesTitle}
           </h2>

@@ -1,0 +1,28 @@
+.wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  vertical-align: middle;
+}
+
+.value {
+  padding: var(--space-1) var(--space-2);
+  background: var(--bg-deep);
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+  font-family: var(--font-text);
+  font-size: 1.375rem;
+  letter-spacing: 0.04em;
+  user-select: all;
+}
+
+.btn {
+  --pb: var(--cyan);
+  min-width: 9ch;
+  min-height: var(--tap);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  color: var(--cyan);
+}

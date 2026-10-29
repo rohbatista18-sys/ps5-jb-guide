@@ -10,7 +10,12 @@ interface Props {
 }
 
 async function copy(text: string) {
-  if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
+  // writeText also rejects when the document is not focused or the permission is denied.
+  if (navigator.clipboard?.writeText) {
+    try {
+      return await navigator.clipboard.writeText(text);
+    } catch {}
+  }
   const area = document.createElement("textarea");
   area.value = text;
   area.setAttribute("readonly", "");

@@ -1,0 +1,51 @@
+<Warn kind="update" title="Jailbreak required">
+
+You need to have run the exploit successfully before sending payloads. Follow the [jailbreak tutorial](/en/fw/7.00-13.60) first.
+
+</Warn>
+
+## What is a payload?
+
+A payload is a small binary that runs on the PS5 after the exploit opens a way in. Some exploit pages send the payload automatically. Others leave the console listening on a network port so you can send a payload from your computer or phone.
+
+## How to send a payload
+
+<Step n={1} title="Run the exploit">
+
+After the exploit runs, the console may show a message saying it is waiting for a payload, or it may display the IP address and port to connect to.
+
+</Step>
+
+<Step n={2} title="Find the console's IP address">
+
+If it is not shown on screen, go to:
+
+<MenuPath items={["Settings", "Network", "View Connection Status"]} />
+
+Note the IPv4 address (e.g. `192.168.1.100`).
+
+</Step>
+
+<Step n={3} title="Send the payload from your computer">
+
+Use a payload sender tool on your computer. Point it to the console's IP and the port shown on screen (usually 9020 or 9021). Select the payload file and send it.
+
+On Linux or macOS, you can also use netcat:
+
+```
+nc <console-ip> 9020 < payload.bin
+```
+
+</Step>
+
+<Step n={4} title="Confirm it ran">
+
+If the payload ran successfully, you will see a notification or a change on screen. If nothing happens, try sending it again — some payloads take a few seconds.
+
+</Step>
+
+<Warn kind="brick" title="Only use trusted payloads">
+
+A payload has full access to the system. Never send a payload from an untrusted source. Only use payloads from reviewed repositories.
+
+</Warn>

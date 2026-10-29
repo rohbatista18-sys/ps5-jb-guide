@@ -1,3 +1,123 @@
 {
-  "guides": []
+  "guides": [
+    {
+      "slug": "y2jb-autoloader",
+      "menu": "jailbreak",
+      "requires": { "ranges": ["7.00-13.60"], "hen": true },
+      "repos": ["itsPLK/ps5-y2jb-autoloader", "Gezine/Y2JB", "itsPLK/ps5-payload-manager"],
+      "title": {
+        "en": "Y2JB Autoloader: jailbreak through the YouTube app",
+        "es": "Y2JB Autoloader: jailbreak con la app de YouTube",
+        "pt": "Y2JB Autoloader: jailbreak pelo app do YouTube"
+      },
+      "summary": {
+        "en": "Open the YouTube app and the kernel exploit and your payloads load by themselves, with no browser. One-time setup on a console that is already jailbroken.",
+        "es": "Abres la app de YouTube y el exploit del kernel y tus payloads se cargan solos, sin navegador. Se configura una sola vez en una consola que ya tiene jailbreak.",
+        "pt": "Você abre o app do YouTube e o exploit do kernel e os seus payloads carregam sozinhos, sem navegador. A configuração é feita uma vez, num console que já está desbloqueado."
+      },
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "install-packages",
+      "menu": "packages",
+      "requires": { "ranges": ["7.00-13.60"], "hen": true },
+      "repos": ["itsPLK/ps5-pkg-manager", "XavyProd-Git/pkg-mutant-shop", "ps5-payload-dev/pacbrew-repo"],
+      "title": {
+        "en": "How to install PKG files",
+        "es": "Cómo instalar archivos PKG",
+        "pt": "Como instalar arquivos PKG"
+      },
+      "summary": {
+        "en": "Install homebrew packages on your jailbroken PS5 using the built-in package installer.",
+        "es": "Instala paquetes homebrew en tu PS5 con jailbreak usando el instalador de paquetes integrado.",
+        "pt": "Instale pacotes homebrew no seu PS5 desbloqueado usando o instalador de pacotes integrado."
+      },
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "homebrew-apps",
+      "menu": "apps",
+      "requires": { "ranges": ["7.00-13.60"], "hen": true },
+      "repos": ["darkxex/ps5-homebrew-catalog", "elripalda/RecompStore", "notmaj0r/ProsperoMgr"],
+      "title": {
+        "en": "Homebrew apps overview",
+        "es": "Resumen de apps homebrew",
+        "pt": "Visão geral dos apps homebrew"
+      },
+      "summary": {
+        "en": "What homebrew apps are available and what they do. Only apps from reviewed repositories.",
+        "es": "Qué apps homebrew están disponibles y para qué sirven. Solo apps de repositorios revisados.",
+        "pt": "Quais apps homebrew estão disponíveis e o que eles fazem. Só apps de repositórios revisados."
+      },
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "send-payloads",
+      "menu": "payloads",
+      "requires": { "ranges": ["7.00-13.60"], "hen": false },
+      "repos": ["zazha093/ps5-payloads-atlas", "itsPLK/ps5-payloads-mirror", "ps5-payload-dev/elfldr", "aydencharles/onionHEN"],
+      "title": {
+        "en": "How to send payloads",
+        "es": "Cómo enviar payloads",
+        "pt": "Como enviar payloads"
+      },
+      "summary": {
+        "en": "Send payloads to the PS5 from your computer or phone after running the exploit.",
+        "es": "Envía payloads a la PS5 desde tu ordenador o teléfono después de ejecutar el exploit.",
+        "pt": "Envie payloads para o PS5 pelo computador ou celular depois de executar o exploit."
+      },
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "ftp-setup",
+      "menu": "transfer",
+      "requires": { "ranges": ["7.00-13.60"], "hen": true },
+      "repos": ["ps5-payload-dev/ftpsrv", "ps5-payload-dev/websrv", "notmaj0r/ProsperoMgr"],
+      "title": {
+        "en": "FTP file transfer",
+        "es": "Transferencia de archivos por FTP",
+        "pt": "Transferência de arquivos por FTP"
+      },
+      "summary": {
+        "en": "Connect to your PS5 over FTP to browse and transfer files between the console and your computer.",
+        "es": "Conéctate a tu PS5 por FTP para navegar y transferir archivos entre la consola y tu ordenador.",
+        "pt": "Conecte-se ao PS5 por FTP para navegar e transferir arquivos entre o console e o computador."
+      },
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "backup-own-games",
+      "menu": "backup",
+      "requires": { "ranges": ["7.00-13.60"], "hen": true },
+      "repos": ["LightningMods/Itemzflow", "EchoStretch/ps5-app-dumper", "earthonion/garlic-savemgr", "notmaj0r/ProsperoMgr"],
+      "title": {
+        "en": "Back up your own games",
+        "es": "Copia de seguridad de tus propios juegos",
+        "pt": "Backup dos seus próprios jogos"
+      },
+      "summary": {
+        "en": "Create a backup of games you own on disc or digital. This guide covers only your own games — never pirated content.",
+        "es": "Crea una copia de seguridad de juegos que tienes en disco o digitales. Esta guía cubre solo tus propios juegos — nunca contenido pirata.",
+        "pt": "Crie um backup dos jogos que você tem em disco ou digital. Este guia cobre só os seus próprios jogos — nunca conteúdo pirata."
+      },
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "retro-emulators",
+      "menu": "emulators",
+      "requires": { "ranges": ["7.00-13.60"], "hen": true },
+      "repos": ["SocialMDev/ps5_retroarch", "leecloudvictor/ps5-PSXS5", "elripalda/RecompStore", "soniciso1/LuaPSX"],
+      "title": {
+        "en": "Retro emulators on PS5",
+        "es": "Emuladores retro en PS5",
+        "pt": "Emuladores retro no PS5"
+      },
+      "summary": {
+        "en": "Run retro console emulators on your jailbroken PS5. Requires your own ROMs from games you own.",
+        "es": "Ejecuta emuladores de consolas retro en tu PS5 con jailbreak. Necesitas tus propias ROMs de juegos que tengas.",
+        "pt": "Rode emuladores de consoles retro no PS5 desbloqueado. Precisa das suas próprias ROMs de jogos que você tenha."
+      },
+      "reviewedAt": "2026-10-29"
+    }
+  ]
 }

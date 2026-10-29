@@ -1,0 +1,8 @@
+.env*
+!.env.example
+.next
+node_modules
+.specify
+specs
+verify-report.md
+tsconfig.tsbuildinfo

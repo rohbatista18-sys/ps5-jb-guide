@@ -1,5 +1,6 @@
 import errorsFile from "@content/errors.json";
 import firmwareFile from "@content/firmware.json";
+import firmwareDownloadsFile from "@content/firmwares-downloads.json";
 import guidesFile from "@content/guides.json";
 import reposFile from "@content/repos.json";
 import snapshotFile from "@content/repos.snapshot.json";
@@ -7,6 +8,7 @@ import sourcesFile from "@content/sources.json";
 import { matchRange } from "./match";
 import type {
   ErrorEntry,
+  FirmwareDownloadsFile,
   FirmwareFile,
   GuideEntry,
   GuideMenu,
@@ -20,6 +22,7 @@ import { compareVersions, strictVersion } from "./version";
 // Everything is a static module import, so it is read once at build time and every page that
 // uses it is prerendered. scripts/check-content.mjs has already rejected malformed files.
 const firmware = firmwareFile as FirmwareFile;
+const fwDownloads = firmwareDownloadsFile as FirmwareDownloadsFile;
 const repos = (reposFile as { repos: RepoEntry[] }).repos;
 const snapshot = snapshotFile as SnapshotFile;
 const sources = (sourcesFile as { sources: Source[] }).sources;
@@ -59,13 +62,18 @@ export function getListedRepo(id: string): ListedRepo | null {
 export const getListedRepos = (ids: string[]) =>
   ids.map(getListedRepo).filter((r): r is ListedRepo => r !== null);
 
+export const getListedReposInCategory = (category: RepoEntry["category"]) =>
+  getListedRepos(repos.filter((r) => r.category === category).map((r) => r.id));
+
 export const getSource = (id: string) => sources.find((s) => s.id === id) ?? null;
 
 /** Order of the Guides menu and of the sections on /guias. */
-export const GUIDE_MENUS: GuideMenu[] = ["packages", "apps", "payloads", "transfer", "backup", "emulators"];
+export const GUIDE_MENUS: GuideMenu[] = ["jailbreak", "packages", "apps", "payloads", "transfer", "backup", "emulators"];
 
 export const getGuides = () => guides;
 export const getGuide = (slug: string) => guides.find((g) => g.slug === slug) ?? null;
 
 export const getErrors = () => errors;
 export const getError = (slug: string) => errors.find((e) => e.slug === slug) ?? null;
+
+export const getFirmwareDownloads = () => fwDownloads;

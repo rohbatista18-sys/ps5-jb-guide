@@ -1,7 +1,16 @@
-.path {
+/* ol.path, so Step's `.body ol` (square bullets, indent) never wins on specificity. */
+ol.path {
   list-style: none;
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Separator and label wrap together, so a line never ends on a lone "›". */
+.step {
+  display: flex;
   align-items: center;
   gap: var(--space-2);
 }
@@ -13,7 +22,7 @@
   color: var(--ink);
 }
 
-.item:last-child {
+.step:last-child .item {
   border-color: var(--yellow);
   color: var(--yellow);
 }

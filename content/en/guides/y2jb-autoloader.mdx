@@ -1,0 +1,133 @@
+<Warn kind="update" title="Your PS5 must already be jailbroken">
+
+This guide is for a PS5 on firmware 7.00 to 13.60 that you can already jailbreak with the [browser method](/en/fw/7.00-13.60), with [FTP](/en/guias/ftp-setup) working. You do this setup only once. After that, opening the YouTube app replaces the browser exploit.
+
+</Warn>
+
+## What it is
+
+Y2JB (by Gezine) runs code on the PS5 through the YouTube app. The **Y2JB Autoloader** (by itsPLK) is a fork of Y2JB: when you open YouTube, it runs the kernel exploit and then loads your payloads by itself. Its README says it supports firmware 4.03 to 13.60.
+
+## What you need
+
+- A PS5 you can jailbreak now with the browser method, and FTP access to it.
+- An **offline account that is fake-activated**. Y2JB does not work with an account activated on PSN.
+- The YouTube app in the right version for your firmware (title ID `PPSA01650`, `PPSA01651` or `PPSA01652`, depending on the region):
+  - **4.03 to 12.40:** `v01.000.003`
+  - **12.60 to 13.20:** `v01.000.030`
+  - **13.40 to 13.60:** `v01.009.253`
+- The `download0.dat` file from the [autoloader releases page](https://github.com/itsPLK/ps5-y2jb-autoloader/releases) (about 340 MB).
+- Optional: a USB drive, for your own payload list and for updates.
+
+This site does not link YouTube app packages or system backups.
+
+## Step by step
+
+<Step n={1} title="Set the DNS to 127.0.0.2" src="y2jb-readme">
+
+Do this before YouTube connects to the internet. Go to:
+
+<MenuPath items={["Settings", "Network", "Settings", "Set Up Internet Connection"]} />
+
+Choose **Set Up Manually**, pick Wi-Fi or LAN cable, change **DNS Settings** to Manual and set **Primary DNS** to <CopyValue value="127.0.0.2" />. Leave the secondary DNS blank.
+
+A network or PSN connection error after this is expected. This DNS keeps the console and the YouTube app away from PSN, YouTube updates and system update prompts.
+
+The browser method from the tutorial needs the `45.56.67.85` DNS. Switch back to it whenever you need the browser exploit.
+
+</Step>
+
+<Step n={2} title="Keep the console on your local network" src="y2jb-autoloader-readme">
+
+The exploit (Relapse) needs an active network connection: Wi-Fi or a cable to your router. Internet access is not required.
+
+- **10.20 to 13.60:** the network connection is required.
+- **7.00 to 10.01:** Relapse is used when a network connection is found; without one, it falls back to Lapse.
+
+</Step>
+
+<Step n={3} title="Create a fake-activated offline account" src="y2jb-readme">
+
+1. Create a new **offline** account on the PS5.
+2. With the console jailbroken and etaHEN loaded, log in to that new account and open the **etaHEN toolbox**.
+3. Open the **Remote Play** menu. The account is fake-activated automatically.
+
+Use this account, not your PSN account, every time you open YouTube for the jailbreak.
+
+</Step>
+
+<Step n={4} title="Install the right YouTube version" src="y2jb-autoloader-readme">
+
+Install the YouTube version that matches your firmware (list above). Never let it update: the DNS from Step 1 blocks updates.
+
+</Step>
+
+<Step n={5} title="Copy download0.dat with FTP" src="y2jb-autoloader-readme">
+
+Jailbreak the console with the browser method and start FTP. Then send `download0.dat` to the folder of your YouTube app. Create the folder if it does not exist:
+
+```
+/user/download/PPSA01650/
+```
+
+If your YouTube app has another title ID, use its folder instead (`PPSA01651` or `PPSA01652`).
+
+</Step>
+
+<Step n={6} title="Choose how your payloads load" src="y2jb-autoloader-readme">
+
+**Option A — Payload Manager (default).** If there is no `autoload.txt`, the autoloader starts **Payload Manager**, which has a web page you open in your computer or phone browser to send payloads and set what loads at startup. No files to prepare.
+
+**Option B — your own list (`autoload.txt`).** Create a folder named `ps5_autoloader` and put your `.elf` / `.bin` payloads in it, plus a file named `autoload.txt` with one file name per line:
+
+- Names are case-sensitive and must match the files exactly.
+- A line like `!1000` waits 1000 ms before the next payload.
+- Put the folder at the root of a USB drive (checked first) or at `/data/ps5_autoloader` on the console.
+
+When `autoload.txt` exists, Payload Manager does not start. To keep it, add `pldmgr.elf` to the folder and to the list.
+
+</Step>
+
+<Step n={7} title="Open YouTube" src="y2jb-autoloader-readme">
+
+Log in to the fake-activated account and open the YouTube app. The autoloader runs the kernel exploit and then loads your payloads (or Payload Manager).
+
+</Step>
+
+<Warn kind="brick" title="Still not permanent">
+
+The jailbreak ends when the console turns off or restarts. After each restart, open the YouTube app again — no browser needed. Never update the firmware.
+
+</Warn>
+
+## Updating the autoloader
+
+Copy `y2jb_update.zip` from the [releases page](https://github.com/itsPLK/ps5-y2jb-autoloader/releases) to the **root** of a USB drive, plug it in and open the YouTube app.
+
+<Warn kind="ban" title="Never use your PSN account">
+
+Use only the fake-activated offline account and keep the DNS at `127.0.0.2`. Signing in to PSN while jailbroken risks a console or account ban.
+
+</Warn>
+
+<Warn kind="update" title="If YouTube updates">
+
+If YouTube updates, it can get stuck and stop opening. The [Y2JB README](https://github.com/Gezine/Y2JB#readme) has the recovery steps. It also has an optional script that blocks YouTube updates by editing a system database; a mistake there can erase all installed packages and saves, so this guide does not cover it.
+
+</Warn>
+
+<Warn kind="brick" title="PS5 without jailbreak">
+
+The README describes another path for consoles that are not jailbroken: restoring a system backup that already contains Y2JB. **Restoring a backup factory-resets the PS5 and erases all its data.** The autoloader's author does not distribute these backups; the original Y2JB project publishes its own on its releases page. This guide does not cover that path.
+
+</Warn>
+
+<Warn kind="scam" title="Only trusted payloads">
+
+A payload has full access to the console. Only load payloads from reviewed repositories.
+
+</Warn>
+
+## Final checklist
+
+<Checklist items={["DNS is set to 127.0.0.2", "The console is on Wi-Fi or a cable to the router", "I use a fake-activated offline account, not my PSN account", "YouTube is the right version for my firmware", "download0.dat is in /user/download/PPSA0165x/", "I chose Payload Manager or my own autoload.txt", "I know I must open YouTube again after every restart"]} />

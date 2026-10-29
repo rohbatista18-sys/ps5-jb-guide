@@ -3,13 +3,14 @@ import { notFound } from "next/navigation";
 import { Press_Start_2P, VT323 } from "next/font/google";
 import Dialog from "@/components/Dialog";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import PixelCrowd from "@/components/PixelCrowd";
 import PsButtons from "@/components/PsButtons";
 import RiskStrip from "@/components/RiskStrip";
 import SiteMenu from "@/components/SiteMenu";
 import { INTL_TAG, LOCALES, OG_LOCALE, hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { GUIDE_MENUS, getRanges } from "@/lib/content";
-import { SITE_URL, TRACKER_URL } from "@/lib/site";
+import { COMMUNITY_URL, REPO_URL, SITE_URL, SUPPORT_URL, TRACKER_URL } from "@/lib/site";
 import styles from "./layout.module.css";
 import "../globals.css";
 
@@ -71,7 +72,16 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   return (
     <html lang={INTL_TAG[lang]} data-scroll-behavior="smooth" className={`${pixel.variable} ${body.variable}`}>
       <body>
+        <PixelCrowd
+          onlineLabel={dict.presence.online}
+          youLabel={dict.presence.you}
+          visitsLabel={dict.presence.visits}
+          visitsShortLabel={dict.presence.visitsShort}
+        />
         <div className={styles.shell}>
+          <a href="#main" className={`px-btn ${styles.skip}`}>
+            {dict.header.skip}
+          </a>
           <header className={styles.header}>
             <a href={`/${lang}`} className={styles.brand} aria-label={`${dict.meta.title} · ${dict.header.home}`}>
               <PsButtons className={styles.symbols} />
@@ -85,10 +95,27 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
               guideMenus={GUIDE_MENUS}
             />
             <LanguageSwitcher current={lang} label={dict.header.language} />
+            {/* Fixed top-right on screen; last in the header so keyboard users meet the menu first. */}
+            <a
+              href={SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-btn ${styles.support}`}
+              title={dict.header.supportSiteHint}
+            >
+              <span aria-hidden="true">♥ </span>
+              {dict.header.supportSite}
+              <span className="sr-only">
+                {" "}
+                — {dict.header.supportSiteHint} {dict.header.newTab}
+              </span>
+            </a>
           </header>
           <RiskStrip lang={lang} labels={dict.riskStrip} />
 
-          <main className={styles.main}>{children}</main>
+          <main id="main" tabIndex={-1} className={styles.main}>
+            {children}
+          </main>
 
           <footer className={styles.footer}>
             <div className={styles.notice} role="note" aria-label={dict.footer.noticeLabel}>
@@ -105,6 +132,12 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
               </Dialog>
               <a href={`${TRACKER_URL}/${lang}`} className={styles.footerLink} target="_blank" rel="noopener noreferrer">
                 {dict.footer.tracker} ↗
+              </a>
+              <a href={COMMUNITY_URL} className={styles.footerLink} target="_blank" rel="noopener noreferrer">
+                {dict.footer.community} ↗
+              </a>
+              <a href={REPO_URL} className={styles.footerLink} target="_blank" rel="noopener noreferrer">
+                {dict.footer.sourceCode} ↗
               </a>
             </div>
           </footer>

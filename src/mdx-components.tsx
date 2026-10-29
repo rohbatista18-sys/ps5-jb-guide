@@ -1,6 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import Claim from "@/components/Claim";
 import Checklist from "@/components/Checklist";
+import CopyValue from "@/components/CopyValue";
 import MenuPath from "@/components/MenuPath";
 import RepoCard from "@/components/RepoCard";
 import Step from "@/components/Step";
@@ -11,6 +12,7 @@ import Warn from "@/components/Warn";
 const components: MDXComponents = {
   Checklist,
   Claim,
+  CopyValue,
   MenuPath,
   Repo: RepoCard,
   Step,

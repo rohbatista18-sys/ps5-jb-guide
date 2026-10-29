@@ -1,0 +1,45 @@
+<Warn kind="update" title="Jailbreak necesario">
+
+Necesitas un jailbreak activo y HEN en ejecución. Sigue el [tutorial de jailbreak](/es/fw/7.00-13.60) primero.
+
+</Warn>
+
+## ¿Qué es FTP en PS5?
+
+FTP (File Transfer Protocol) te permite navegar por el sistema de archivos de la PS5 desde tu ordenador y transferir archivos en ambas direcciones. Necesitas un servidor FTP homebrew en la PS5 y un cliente FTP en tu ordenador.
+
+## Cómo configurarlo
+
+<Step n={1} title="Instala un servidor FTP homebrew">
+
+Instala un PKG de servidor FTP en la PS5. Mira [cómo instalar archivos PKG](/es/guias/install-packages) si no lo has hecho antes.
+
+</Step>
+
+<Step n={2} title="Abre el servidor FTP">
+
+Abre la app del servidor FTP en la PS5. Mostrará la dirección IP de la consola y el puerto en el que está escuchando (normalmente el puerto 2121).
+
+</Step>
+
+<Step n={3} title="Conéctate desde tu ordenador">
+
+Abre un cliente FTP en tu ordenador (FileZilla, WinSCP o cualquier otro). Conéctate a:
+
+- **Host:** la dirección IP que muestra la pantalla de la PS5
+- **Puerto:** el puerto indicado (normalmente 2121)
+- **Usuario/Contraseña:** normalmente anónimo o déjalo en blanco
+
+</Step>
+
+<Step n={4} title="Navega y transfiere archivos">
+
+Una vez conectado, puedes navegar por el sistema de archivos de la PS5. Ten cuidado de no borrar ni sobrescribir archivos del sistema — esto puede brickear la consola.
+
+</Step>
+
+<Warn kind="brick" title="No modifiques archivos del sistema">
+
+Borrar o cambiar archivos fuera de las carpetas de datos del usuario puede hacer que la consola no arranque. Solo transfiere archivos a las carpetas que la app homebrew te indique.
+
+</Warn>

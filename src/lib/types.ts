@@ -38,7 +38,19 @@ export interface FirmwareFile {
   ranges: FirmwareRange[];
 }
 
-export type RepoCategory = "exploit" | "hen" | "loader" | "homebrew" | "store" | "utility" | "backup" | "research";
+export type RepoCategory =
+  | "exploit"
+  | "hen"
+  | "loader"
+  | "homebrew"
+  | "store"
+  | "utility"
+  | "backup"
+  | "research"
+  | "package-manager"
+  | "payload"
+  | "emulator"
+  | "guide";
 export type RepoStatus = "listed" | "review" | "excluded";
 
 export interface RepoEntry {
@@ -77,11 +89,11 @@ export interface Source {
   id: string;
   url: string;
   title: string;
-  kind: "readme" | "release" | "sony-support" | "news" | "forum" | "video";
+  kind: "readme" | "release" | "sony-support" | "news" | "forum" | "video" | "archive";
   accessedAt: string;
 }
 
-export type GuideMenu = "packages" | "apps" | "payloads" | "transfer" | "backup" | "emulators";
+export type GuideMenu = "jailbreak" | "packages" | "apps" | "payloads" | "transfer" | "backup" | "emulators";
 
 export interface GuideEntry {
   slug: string;
@@ -93,6 +105,21 @@ export interface GuideEntry {
   reviewedAt: string;
 }
 
+export interface FirmwareDownload {
+  version: string;
+  md5: string;
+  mega: string;
+  onefichier?: string;
+}
+
+export interface FirmwareDownloadsFile {
+  source: string;
+  sourceTitle: string;
+  scrapedAt: string;
+  official: FirmwareDownload[];
+  recovery: FirmwareDownload[];
+}
+
 export interface ErrorEntry {
   slug: string;
   /** "high" = risk of losing data. */
@@ -101,4 +128,9 @@ export interface ErrorEntry {
   symptoms: Record<keyof Localized, string[]>;
   sources: string[];
   reviewedAt: string;
+}
+
+export interface PresenceResponse {
+  online: number;
+  visits: number; // all-time page views (one per page load; no identifier stored)
 }

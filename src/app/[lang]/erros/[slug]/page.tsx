@@ -108,6 +108,9 @@ async function ErrorContent({ params }: Pick<PageProps<"/[lang]/erros/[slug]">, 
       </section>
 
       <p className={styles.muted}>{fill(dict.range.reviewed, { date: formatDate(entry.reviewedAt, lang) })}</p>
+      <Link href={`/${lang}/erros`} className={styles.back}>
+        {t.back}
+      </Link>
     </article>
   );
 }

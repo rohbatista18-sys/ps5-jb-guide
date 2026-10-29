@@ -31,9 +31,9 @@ export default function Checklist({ items }: { items: string[] }) {
   }
 
   return (
-    <ul className={styles.list}>
+    <ul className={`px-box ${styles.list}`}>
       {items.map((item, i) => (
-        <li key={item}>
+        <li key={i}>
           <input id={`${id}-${i}`} type="checkbox" checked={done[i]} onChange={() => toggle(i)} />
           <label htmlFor={`${id}-${i}`}>{item}</label>
         </li>

@@ -6,6 +6,65 @@
   min-height: 100dvh;
 }
 
+/* Site donation, as in the tracker: fixed in the free top-right corner so it stays visible while
+   scrolling (the counter HUD and the own sprite take the bottom corners).
+   Doubled class: the global .px-btn padding/font-size would otherwise win. */
+.support.support {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  z-index: 30;
+  --pb: var(--yellow);
+  --btn-bg: var(--bg-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+}
+
+.support > span[aria-hidden] {
+  color: var(--magenta);
+}
+
+/* The button is ~390px wide (EN): below ~1110px it reaches the centred brand, so push the header
+   down to clear it. */
+@media (max-width: 1149px) {
+  .shell {
+    padding-top: 56px;
+  }
+}
+
+@media (max-width: 639px) {
+  .support.support {
+    padding: 8px 10px;
+    font-size: 0.625rem;
+  }
+}
+
+/* Off-screen until focused. Fixed, so PixelCrowd's gutter measurement ignores it. */
+.skip {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  left: max(12px, env(safe-area-inset-left));
+  z-index: 40;
+  --pb: var(--yellow);
+  --btn-bg: var(--bg-deep);
+  color: var(--yellow);
+  translate: 0 -200%;
+}
+
+.skip:focus-visible {
+  translate: none;
+}
+
+.main:focus {
+  outline: none;
+}
+
 /* ---------- header ---------- */
 .header {
   display: flex;
@@ -47,9 +106,11 @@
   text-shadow: 3px 3px 0 var(--bg-deep);
 }
 
+/* Shadows keep the header text legible over the moving pixel scenery behind it. */
 .tagline {
   color: var(--ink-dim);
   text-wrap: balance;
+  text-shadow: 2px 2px 0 var(--bg-deep), -1px -1px 0 var(--bg-deep);
 }
 
 /* ---------- main ---------- */
@@ -70,7 +131,9 @@
   align-items: center;
   gap: var(--space-4);
   margin-top: auto;
-  padding: var(--space-4) var(--gutter) var(--space-5);
+  /* Bottom room for the fixed online-counter HUD (~30px + 12px inset), so it never covers the
+     footer's last line or links when scrolled to the end. */
+  padding: var(--space-4) var(--gutter) calc(var(--space-5) + 48px);
   font-size: 1.125rem;
   line-height: 1.3;
   color: var(--ink-dim);

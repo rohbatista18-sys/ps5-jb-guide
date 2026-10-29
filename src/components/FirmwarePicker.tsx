@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type FormEvent } from "react";
+import { useId, useState, type FormEvent, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { Locale } from "@/i18n/config";
@@ -15,11 +15,15 @@ interface Props {
   lang: Locale;
   ranges: PickerRange[];
   latestKnownFirmware: string;
+  /** The page's h1: the question the form answers. */
+  heading: string;
+  /** "How do I find my version?" control, shown under the form. */
+  help?: ReactNode;
   labels: Dictionary["picker"];
   statusLabels: Dictionary["status"];
 }
 
-export default function FirmwarePicker({ lang, ranges, latestKnownFirmware, labels, statusLabels }: Props) {
+export default function FirmwarePicker({ lang, ranges, latestKnownFirmware, heading, help, labels, statusLabels }: Props) {
   const router = useRouter();
   const inputId = useId();
   const messageId = useId();
@@ -48,32 +52,39 @@ export default function FirmwarePicker({ lang, ranges, latestKnownFirmware, labe
 
   return (
     <div className={styles.picker}>
-      <form className={styles.form} onSubmit={onSubmit} noValidate>
-        <label htmlFor={inputId} className={styles.label}>
-          {labels.label}
-        </label>
-        <div className={styles.row}>
-          <input
-            id={inputId}
-            name="version"
-            className={styles.input}
-            type="text"
-            inputMode="decimal"
-            autoComplete="off"
-            spellCheck={false}
-            placeholder={labels.placeholder}
-            maxLength={6}
-            aria-describedby={message ? messageId : undefined}
-            aria-invalid={message === labels.invalid || undefined}
-          />
-          <button type="submit" className="px-btn" style={{ "--pb": "var(--magenta)" } as React.CSSProperties}>
-            {labels.go}
-          </button>
-        </div>
-        <p id={messageId} className={styles.message} role="status" aria-live="polite">
-          {message}
-        </p>
-      </form>
+      {/* Question, answer field and help in one panel: the field is the page's main action. */}
+      <section className={`px-box ${styles.hero}`} aria-labelledby={`${inputId}-title`}>
+        <h1 id={`${inputId}-title`} className={styles.heading}>
+          {heading}
+        </h1>
+        <form className={styles.form} onSubmit={onSubmit} noValidate>
+          <label htmlFor={inputId} className={styles.label}>
+            {labels.label}
+          </label>
+          <div className={styles.row}>
+            <input
+              id={inputId}
+              name="version"
+              className={styles.input}
+              type="text"
+              inputMode="decimal"
+              autoComplete="off"
+              spellCheck={false}
+              placeholder={labels.placeholder}
+              maxLength={6}
+              aria-describedby={message ? messageId : undefined}
+              aria-invalid={message === labels.invalid || undefined}
+            />
+            <button type="submit" className={`px-btn ${styles.go}`}>
+              {labels.go}
+            </button>
+          </div>
+          <p id={messageId} className={styles.message} role="status" aria-live="polite">
+            {message}
+          </p>
+        </form>
+        {help && <div className={styles.help}>{help}</div>}
+      </section>
 
       <section aria-labelledby={`${inputId}-ranges`}>
         <h2 id={`${inputId}-ranges`} className={styles.rangesTitle}>

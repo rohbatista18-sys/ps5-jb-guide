@@ -1,0 +1,133 @@
+<Warn kind="update" title="O seu PS5 já precisa estar desbloqueado">
+
+Este guia é para um PS5 no firmware 7.00 a 13.60 que você já consegue desbloquear pelo [método do navegador](/pt/fw/7.00-13.60), com o [FTP](/pt/guias/ftp-setup) funcionando. Essa configuração é feita uma vez só. Depois, abrir o app do YouTube substitui o exploit do navegador.
+
+</Warn>
+
+## O que é
+
+O Y2JB (do Gezine) roda código no PS5 pelo app do YouTube. O **Y2JB Autoloader** (do itsPLK) é um fork do Y2JB: quando você abre o YouTube, ele roda o exploit do kernel e depois carrega os seus payloads sozinho. O README diz que ele funciona nos firmwares 4.03 a 13.60.
+
+## O que você precisa
+
+- Um PS5 que você consegue desbloquear agora pelo método do navegador, com acesso por FTP.
+- Uma **conta offline com ativação falsa** (fake-activated). O Y2JB não funciona com uma conta ativada na PSN.
+- O app do YouTube na versão certa para o seu firmware (ID `PPSA01650`, `PPSA01651` ou `PPSA01652`, conforme a região):
+  - **4.03 a 12.40:** `v01.000.003`
+  - **12.60 a 13.20:** `v01.000.030`
+  - **13.40 a 13.60:** `v01.009.253`
+- O arquivo `download0.dat` da [página de releases do autoloader](https://github.com/itsPLK/ps5-y2jb-autoloader/releases) (cerca de 340 MB).
+- Opcional: um pendrive, para a sua própria lista de payloads e para atualizar.
+
+Este site não tem links para pacotes do app do YouTube nem para backups do sistema.
+
+## Passo a passo
+
+<Step n={1} title="Coloque o DNS em 127.0.0.2" src="y2jb-readme">
+
+Faça isso antes de o YouTube se conectar à internet. Vá em:
+
+<MenuPath items={["Configurações", "Rede", "Configurações", "Configurar conexão à Internet"]} />
+
+Escolha **Configurar manualmente**, selecione Wi-Fi ou cabo LAN, mude as **Configurações de DNS** para Manual e coloque no **DNS primário** <CopyValue value="127.0.0.2" />. Deixe o DNS secundário em branco.
+
+Depois disso é normal aparecer um erro de rede ou de PSN. Esse DNS mantém o console e o app do YouTube longe da PSN, das atualizações do YouTube e dos avisos de atualização do sistema.
+
+O método do navegador do tutorial precisa do DNS `45.56.67.85`. Volte para ele quando precisar do exploit do navegador.
+
+</Step>
+
+<Step n={2} title="Deixe o console na sua rede local" src="y2jb-autoloader-readme">
+
+O exploit (Relapse) precisa de uma conexão de rede ativa: Wi-Fi ou cabo no roteador. Não precisa ter internet.
+
+- **10.20 a 13.60:** a conexão de rede é obrigatória.
+- **7.00 a 10.01:** o Relapse é usado quando há conexão de rede; sem ela, é usado o Lapse.
+
+</Step>
+
+<Step n={3} title="Crie uma conta offline com ativação falsa" src="y2jb-readme">
+
+1. Crie uma conta **offline** nova no PS5.
+2. Com o console desbloqueado e o etaHEN carregado, entre nessa conta nova e abra o **etaHEN toolbox**.
+3. Abra o menu **Remote Play**. A conta é ativada de forma falsa automaticamente.
+
+Use essa conta, e não a sua conta da PSN, toda vez que abrir o YouTube para o jailbreak.
+
+</Step>
+
+<Step n={4} title="Instale a versão certa do YouTube" src="y2jb-autoloader-readme">
+
+Instale a versão do YouTube que corresponde ao seu firmware (lista acima). Nunca deixe atualizar: o DNS do passo 1 bloqueia as atualizações.
+
+</Step>
+
+<Step n={5} title="Copie o download0.dat pelo FTP" src="y2jb-autoloader-readme">
+
+Desbloqueie o console pelo método do navegador e inicie o FTP. Depois envie o `download0.dat` para a pasta do seu app do YouTube. Crie a pasta se ela não existir:
+
+```
+/user/download/PPSA01650/
+```
+
+Se o seu app do YouTube tiver outro ID, use a pasta dele (`PPSA01651` ou `PPSA01652`).
+
+</Step>
+
+<Step n={6} title="Escolha como os payloads carregam" src="y2jb-autoloader-readme">
+
+**Opção A — Payload Manager (padrão).** Se não houver `autoload.txt`, o autoloader abre o **Payload Manager**, que tem uma página web que você abre no navegador do computador ou do celular para enviar payloads e escolher o que carrega na inicialização. Não precisa preparar arquivos.
+
+**Opção B — sua própria lista (`autoload.txt`).** Crie uma pasta chamada `ps5_autoloader` e coloque dentro os seus payloads `.elf` / `.bin` e um arquivo `autoload.txt` com um nome de arquivo por linha:
+
+- Os nomes diferenciam maiúsculas de minúsculas e precisam ser iguais aos dos arquivos.
+- Uma linha como `!1000` espera 1000 ms antes do próximo payload.
+- Coloque a pasta na raiz de um pendrive (verificado primeiro) ou em `/data/ps5_autoloader` no console.
+
+Quando existe `autoload.txt`, o Payload Manager não abre. Para manter ele, coloque o `pldmgr.elf` na pasta e na lista.
+
+</Step>
+
+<Step n={7} title="Abra o YouTube" src="y2jb-autoloader-readme">
+
+Entre na conta com ativação falsa e abra o app do YouTube. O autoloader roda o exploit do kernel e depois carrega os seus payloads (ou o Payload Manager).
+
+</Step>
+
+<Warn kind="brick" title="Continua não sendo permanente">
+
+O jailbreak acaba quando o console desliga ou reinicia. Depois de cada reinício, abra o app do YouTube de novo — sem navegador. Nunca atualize o firmware.
+
+</Warn>
+
+## Atualizar o autoloader
+
+Copie o `y2jb_update.zip` da [página de releases](https://github.com/itsPLK/ps5-y2jb-autoloader/releases) para a **raiz** de um pendrive, conecte no console e abra o app do YouTube.
+
+<Warn kind="ban" title="Nunca use a sua conta da PSN">
+
+Use só a conta offline com ativação falsa e mantenha o DNS em `127.0.0.2`. Entrar na PSN com o console desbloqueado pode banir o console ou a conta.
+
+</Warn>
+
+<Warn kind="update" title="Se o YouTube atualizar">
+
+Se o YouTube atualizar, ele pode travar e não abrir mais. O [README do Y2JB](https://github.com/Gezine/Y2JB#readme) tem os passos para recuperar. Ele também tem um script opcional que bloqueia as atualizações do YouTube editando um banco de dados do sistema; um erro ali pode apagar todos os pacotes instalados e os saves, por isso este guia não cobre esse script.
+
+</Warn>
+
+<Warn kind="brick" title="PS5 sem jailbreak">
+
+O README descreve outro caminho para consoles sem jailbreak: restaurar um backup do sistema que já vem com o Y2JB. **Restaurar um backup volta o PS5 às configurações de fábrica e apaga todos os dados.** O autor do autoloader não distribui esses backups; o projeto original do Y2JB publica os dele na página de releases. Este guia não cobre esse caminho.
+
+</Warn>
+
+<Warn kind="scam" title="Só payloads confiáveis">
+
+Um payload tem acesso total ao console. Carregue só payloads de repositórios revisados.
+
+</Warn>
+
+## Checklist final
+
+<Checklist items={["O DNS está em 127.0.0.2", "O console está no Wi-Fi ou no cabo do roteador", "Uso uma conta offline com ativação falsa, não a minha conta da PSN", "O YouTube está na versão certa para o meu firmware", "O download0.dat está em /user/download/PPSA0165x/", "Escolhi o Payload Manager ou o meu próprio autoload.txt", "Sei que preciso abrir o YouTube de novo depois de cada reinício"]} />

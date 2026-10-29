@@ -34,8 +34,9 @@
       "id": "ps5-payload-dev/elfldr",
       "category": "loader",
       "firmware": [],
-      "status": "review",
-      "notes": "Firmware range pending README review (T030)."
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
     },
     {
       "id": "itsPLK/ps5-webkit-autoloader",
@@ -48,20 +49,42 @@
       "id": "itsPLK/ps5-payload-manager",
       "category": "loader",
       "firmware": [],
-      "status": "review",
-      "notes": "Firmware range pending README review (T030)."
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29",
+      "notes": "Web dashboard to send and autoload payloads; default payload of the Y2JB Autoloader. Releases ship pldmgr.elf only. Can download payloads from a cloud repository and user-added third-party repositories: the guide only covers loading reviewed payloads."
+    },
+    {
+      "id": "itsPLK/ps5-y2jb-autoloader",
+      "category": "loader",
+      "firmware": [
+        {
+          "min": "4.03",
+          "max": "13.60",
+          "evidence": "proven",
+          "source": "y2jb-autoloader-readme"
+        }
+      ],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29",
+      "notes": "Fork of Gezine/Y2JB (GPL-3.0). README: 'Supports PS5 firmwares 4.03-13.60'. Releases ship download0.dat and y2jb_update.zip only. Non-jailbroken path needs a system backup the author does not distribute; the guide does not link backups or YouTube PKGs."
     },
     {
       "id": "ps5-payload-dev/ftpsrv",
       "category": "utility",
       "firmware": [],
-      "status": "review"
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
     },
     {
       "id": "ps5-payload-dev/websrv",
       "category": "utility",
       "firmware": [],
-      "status": "review"
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
     },
     {
       "id": "ps5-payload-dev/sdk",
@@ -73,8 +96,10 @@
       "id": "Gezine/Y2JB",
       "category": "exploit",
       "firmware": [],
-      "status": "review",
-      "notes": "Firmware range pending README review (T030)."
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29",
+      "notes": "Original project the Y2JB Autoloader forks (MIT). README: 'At least 4.03 firmware', no upper bound given, so no firmware range here. Releases include system backups whose restore factory-resets the PS5; the guide does not link them."
     },
     {
       "id": "Gezine/BD-JB5",
@@ -101,8 +126,9 @@
       "id": "EchoStretch/ps5-app-dumper",
       "category": "backup",
       "firmware": [],
-      "status": "review",
-      "notes": "No description: read README before listing."
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
     },
     {
       "id": "mihawk-99/PS5_RetroArch",
@@ -121,8 +147,9 @@
       "id": "elripalda/RecompStore",
       "category": "store",
       "firmware": [],
-      "status": "review",
-      "notes": "Store / transfer tool: list only if the catalog is homebrew-only and the README mentions no third-party games (spec Esclarecimento 1)."
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
     },
     {
       "id": "phantomptr/ps5upload",
@@ -186,6 +213,126 @@
       "firmware": [],
       "status": "review",
       "notes": "14.x research tracked by ps5-jb-tracker; not a public jailbreak."
+    },
+    {
+      "id": "itsPLK/ps5-pkg-manager",
+      "category": "package-manager",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "XavyProd-Git/pkg-mutant-shop",
+      "category": "package-manager",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "ps5-payload-dev/pacbrew-repo",
+      "category": "package-manager",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "darkxex/ps5-homebrew-catalog",
+      "category": "store",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "notmaj0r/ProsperoMgr",
+      "category": "utility",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "zazha093/ps5-payloads-atlas",
+      "category": "payload",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "itsPLK/ps5-payloads-mirror",
+      "category": "payload",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "aydencharles/onionHEN",
+      "category": "hen",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "LightningMods/Itemzflow",
+      "category": "backup",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "earthonion/garlic-savemgr",
+      "category": "backup",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "SocialMDev/ps5_retroarch",
+      "category": "emulator",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "leecloudvictor/ps5-PSXS5",
+      "category": "emulator",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "soniciso1/LuaPSX",
+      "category": "emulator",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "axxx503/PS5-Ultimate-Home-Console-Guide",
+      "category": "guide",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "id": "MiladRTX/ps5-homebrew-starter",
+      "category": "guide",
+      "firmware": [],
+      "status": "listed",
+      "reviewedBy": "rodrigo",
+      "reviewedAt": "2026-10-29"
     },
     {
       "id": "m2k7m/Relapse-Exploit",

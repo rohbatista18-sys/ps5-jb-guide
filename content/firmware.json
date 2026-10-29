@@ -12,7 +12,8 @@
         "pt": "7.00 a 13.60"
       },
       "repos": [
-        "ntfargo/Relapse-Exploit"
+        "ntfargo/Relapse-Exploit",
+        "itsPLK/ps5-y2jb-autoloader"
       ],
       "claims": [
         {
