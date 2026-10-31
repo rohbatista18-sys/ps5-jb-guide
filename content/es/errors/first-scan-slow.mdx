@@ -1,0 +1,21 @@
+## Qué significa
+
+La primera vez que ShadowMountPlus escanea las copias de seguridad de tus propios juegos, tiene que registrar cada título. El README dice que este primer escaneo puede tardar más si tu biblioteca es grande, y que los juegos muy grandes necesitan tiempo extra para comprobarse.
+
+## Qué hacer
+
+<Step n={1} title="Espera a que termine el primer escaneo" src="shadowmountplus-readme" />
+
+<Step n={2} title="Lee el log antes de reiniciar el montador" src="shadowmountplus-readme">
+
+El log de depuración viene activado por defecto (`debug=1`). Revisa `/data/shadowmount/debug.log` y las notificaciones de ShadowMountPlus para ver si el escaneo sigue avanzando antes de reiniciar nada.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Lento no es lo mismo que colgado">
+
+Un primer escaneo lento, por sí solo, no demuestra que ShadowMountPlus se haya colgado. Mira el log antes de decidir.
+
+</Warn>

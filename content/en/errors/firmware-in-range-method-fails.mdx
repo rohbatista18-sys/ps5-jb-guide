@@ -1,0 +1,19 @@
+## What it means
+
+A general range like 7.00 to 13.60 does not mean every version in it is supported the same way. Each implementation and build can have its own documented exceptions.
+
+## What to do
+
+<Step n={1} title="Check your exact firmware in the changelog" src="webkit-autoloader-changelog">
+
+For example, the WebKit Autoloader v0.6.1 changelog (2026-10-08) notes that Relapse was still unsupported on 9.05 and 11.40 in that implementation, even though the general range is wider. Version 0.6.2 (2026-10-28) then added 11.40. Read the entry for the version you actually use, because the list changes between versions.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="One build is not the whole story">
+
+Do not treat an exception in one build as a permanent fact about that firmware.
+
+</Warn>

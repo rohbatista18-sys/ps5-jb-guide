@@ -1,0 +1,27 @@
+## What it means
+
+This is about autoloaders and payloads. Users report that a working setup got worse after changing versions: for example, freezes and shutdowns after moving to WebKit Autoloader 0.4.0, and shutdowns after a kstuff-lite update on firmware 12.70. These are reports for specific combinations, not confirmed for every console.
+
+## What to do
+
+<Step n={1} title="Write down which component you changed" />
+
+<Step n={2} title="As a check, change one thing at a time">
+
+Keep your settings and logs, so you can compare.
+
+</Step>
+
+<Step n={3} title="Go back to the previous version only if it still supports your firmware" src="webkit-autoloader-feedback-040">
+
+In the 0.4.0 discussion, several users say going back to 0.3.1 made things stable again.
+
+</Step>
+
+## When to stop
+
+<Warn kind="update" title="Do not downgrade the firmware">
+
+Do not downgrade the console firmware to test this. A regression reported for one combination does not apply to every console.
+
+</Warn>

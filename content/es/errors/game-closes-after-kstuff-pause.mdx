@@ -1,0 +1,36 @@
+## Qué significa
+
+Por defecto (`kstuff_game_auto_toggle=1`), ShadowMountPlus pausa kstuff poco después de que se abre uno de tus juegos montados, y lo vuelve a activar cuando el juego se cierra. La espera por defecto antes de la pausa es de 25 segundos para juegos montados desde una imagen y de 15 segundos para los demás.
+
+Con la detección de cierres activada (`kstuff_crash_detection=1`, el valor por defecto), ShadowMountPlus vigila lo que pasa después:
+
+- Si el juego se cierra en los 2 minutos siguientes a la pausa automática, duplica el retraso de la pausa para ese título, lo guarda en `/data/shadowmount/autotune.ini` y te pide que vuelvas a abrir el juego. El retraso nunca pasa de 3600 segundos.
+- Si el juego se cierra antes de la pausa, solo te avisa de que la app se cerró. Ese cierre no tiene relación con la pausa.
+
+## Qué hacer
+
+<Step n={1} title="Revisa el log y las notificaciones" src="shadowmountplus-readme">
+
+Mira `/data/shadowmount/debug.log` y las notificaciones de ShadowMountPlus. Comprueba si el juego se cerró antes o después de la pausa automática de kstuff.
+
+</Step>
+
+<Step n={2} title="Si se cerró justo después de la pausa, vuelve a abrir el juego" src="shadowmountplus-readme">
+
+ShadowMountPlus ajusta este retraso por su cuenta: duplica el retraso de ese título y te pide que abras el juego otra vez.
+
+</Step>
+
+<Step n={3} title="Revisa el retraso guardado para ese título" src="shadowmountplus-readme">
+
+El retraso de cada título se guarda en `/data/shadowmount/autotune.ini`.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="No todos los cierres vienen de la pausa">
+
+No culpes a este mecanismo de todos los cierres. Solo tómalo como causa cuando el log muestre que el juego se cerró justo después de la pausa automática.
+
+</Warn>

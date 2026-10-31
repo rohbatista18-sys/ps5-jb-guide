@@ -120,10 +120,26 @@ export interface FirmwareDownloadsFile {
   recovery: FirmwareDownload[];
 }
 
+export type ErrorGroup =
+  | "exploit"
+  | "autoloader"
+  | "compat"
+  | "y2jb"
+  | "network"
+  | "hen"
+  | "bdj"
+  | "games-mount"
+  | "games-run"
+  | "codes"
+  | "triage";
+
 export interface ErrorEntry {
   slug: string;
+  group: ErrorGroup;
   /** "high" = risk of losing data. */
   severity: "low" | "medium" | "high";
+  /** Omitted for diagnostic recommendations that are not a documented fix or a user report. */
+  evidence?: Evidence;
   title: Localized;
   symptoms: Record<keyof Localized, string[]>;
   sources: string[];

@@ -1,0 +1,25 @@
+## O que significa
+
+O README do Y2JB tem um passo opcional que bloqueia as atualizações do YouTube editando o `appinfo.db`, o banco de aplicativos do console, em `/system_data/priv/mms/appinfo.db`. Você copia o arquivo por FTP, altera com um script e coloca de volta. O README avisa que a corrupção do banco pode apagar todos os pacotes instalados (FPKGs) e os dados salvos do armazenamento interno.
+
+## O que fazer
+
+<Step n={1} title="Faça backup dos dados salvos antes de qualquer alteração" src="y2jb-readme">
+
+O README manda fazer backup dos dados salvos com o recurso de backup do próprio PS5, em Configurações. Guarde também, sem alterar, o `appinfo.db` original que você copiou do console.
+
+</Step>
+
+<Step n={2} title="Feche o YouTube e espere as instalações terminarem antes de substituir o arquivo" src="y2jb-readme">
+
+Feche o aplicativo do YouTube por completo, vá para a página de Configurações e confira se nenhum pacote está sendo instalado ou atualizado.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Isso pode apagar seus pacotes e saves">
+
+Se o aviso de corrupção já apareceu, pare as edições e planeje uma recuperação baseada no seu backup. O README avisa que a corrupção do banco pode apagar todos os pacotes instalados e os dados salvos do armazenamento interno. Não substitua o banco repetidamente e não apague arquivos sem um plano de recuperação.
+
+</Warn>

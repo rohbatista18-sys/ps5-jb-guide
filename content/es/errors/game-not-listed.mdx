@@ -1,0 +1,43 @@
+## Qué significa
+
+ShadowMountPlus busca las copias de tus propios juegos en carpetas definidas y registra lo que encuentra. Si la copia está en el almacenamiento pero nunca aparece, el escáner no la encontró o no pudo leerla.
+
+## Qué hacer
+
+<Step n={1} title="Revisa las rutas de búsqueda" src="shadowmountplus-readme">
+
+Si tu configuración tiene al menos una línea `scanpath=`, solo se usan esas rutas personalizadas. Asegúrate de que el juego esté dentro de una de ellas.
+
+</Step>
+
+<Step n={2} title="Revisa la profundidad de búsqueda" src="shadowmountplus-readme">
+
+Con `scan_depth=1` (el valor por defecto), solo se revisan las subcarpetas del primer nivel. Un juego una carpeta más adentro necesita `scan_depth=2`.
+
+</Step>
+
+<Step n={3} title="Revisa la estructura de la carpeta" src="shadowmountplus-readme">
+
+La carpeta del juego necesita `sce_sys/param.json` o `sce_sys/param.sfo` dentro.
+
+</Step>
+
+<Step n={4} title="Lee el registro" src="shadowmountplus-readme">
+
+El registro de depuración viene activado por defecto y se escribe en `/data/shadowmount/debug.log`.
+
+</Step>
+
+<Step n={5} title="Espera si la copia todavía se está escribiendo" src="shadowmountplus-readme">
+
+Si el registro muestra `source not stable yet`, la copia aún no ha terminado. Espera a que termine.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Cambiar el nombre no lo arregla">
+
+Cambiar el nombre del archivo no corrige un contenido ni una estructura que no son válidos.
+
+</Warn>

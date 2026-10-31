@@ -1,0 +1,36 @@
+## What it means
+
+By default (`kstuff_game_auto_toggle=1`), ShadowMountPlus pauses kstuff a short while after one of your mounted games starts, and turns it back on when the game stops. The default wait before the pause is 25 seconds for games mounted from an image and 15 seconds for other launches.
+
+With crash detection on (`kstuff_crash_detection=1`, the default), ShadowMountPlus watches what happens next:
+
+- If the game crashes within 2 minutes after the automatic pause, it doubles the pause delay for that title, saves it in `/data/shadowmount/autotune.ini` and asks you to start the game again. The delay never goes above 3600 seconds.
+- If the game crashes before the pause, it only tells you the app crashed. That crash is not linked to the pause.
+
+## What to do
+
+<Step n={1} title="Check the log and the notifications" src="shadowmountplus-readme">
+
+Look at `/data/shadowmount/debug.log` and the ShadowMountPlus notifications. Check whether the game closed before or after the automatic kstuff pause.
+
+</Step>
+
+<Step n={2} title="If it crashed right after the pause, start the game again" src="shadowmountplus-readme">
+
+ShadowMountPlus adjusts this delay on its own: it doubles the delay for that title and asks you to launch the game again.
+
+</Step>
+
+<Step n={3} title="Check the delay saved for that title" src="shadowmountplus-readme">
+
+The delay for each title is kept in `/data/shadowmount/autotune.ini`.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Not every crash comes from the pause">
+
+Do not blame every crash on this mechanism. Only treat it as the cause when the log shows the crash happened right after the automatic pause.
+
+</Warn>

@@ -1,0 +1,21 @@
+## O que significa
+
+Na primeira vez que o ShadowMountPlus varre os backups dos seus próprios jogos, ele precisa registrar cada título. O README diz que essa primeira varredura pode demorar mais se a biblioteca for grande, e que jogos muito grandes precisam de um tempo extra para serem verificados.
+
+## O que fazer
+
+<Step n={1} title="Espere a primeira varredura terminar" src="shadowmountplus-readme" />
+
+<Step n={2} title="Leia o log antes de reiniciar o montador" src="shadowmountplus-readme">
+
+O log de depuração vem ligado por padrão (`debug=1`). Confira o `/data/shadowmount/debug.log` e as notificações do ShadowMountPlus para ver se a varredura ainda está andando antes de reiniciar qualquer coisa.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Lento não é o mesmo que travado">
+
+Uma primeira varredura lenta, sozinha, não prova que o ShadowMountPlus travou. Olhe o log antes de decidir.
+
+</Warn>

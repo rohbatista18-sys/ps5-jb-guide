@@ -1,0 +1,27 @@
+## O que significa
+
+Isso envolve autoloaders e payloads. Há relatos de configurações que funcionavam e pioraram depois de trocar de versão: por exemplo, travamentos e desligamentos ao passar para o WebKit Autoloader 0.4.0, e desligamentos depois de uma atualização do kstuff-lite no firmware 12.70. São relatos de combinações específicas, não algo confirmado para todo console.
+
+## O que fazer
+
+<Step n={1} title="Anote qual componente você trocou" />
+
+<Step n={2} title="Como verificação, mude uma coisa de cada vez">
+
+Guarde as configurações e os logs para poder comparar.
+
+</Step>
+
+<Step n={3} title="Volte à versão anterior só se ela continuar compatível com o seu firmware" src="webkit-autoloader-feedback-040">
+
+Na discussão da 0.4.0, vários usuários dizem que voltar para a 0.3.1 deixou tudo estável de novo.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="update" title="Não faça downgrade do firmware">
+
+Não faça downgrade do firmware do console para testar. Uma regressão relatada em uma combinação não vale para todos os consoles.
+
+</Warn>

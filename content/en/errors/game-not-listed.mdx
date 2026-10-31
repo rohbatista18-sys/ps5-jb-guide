@@ -1,0 +1,43 @@
+## What it means
+
+ShadowMountPlus scans set folders for your own game backups and registers what it finds. If the copy is in storage but never shows up, the scanner did not find it or could not read it.
+
+## What to do
+
+<Step n={1} title="Check the scan paths" src="shadowmountplus-readme">
+
+If your config has at least one `scanpath=` line, only those custom paths are used. Make sure the game is inside one of them.
+
+</Step>
+
+<Step n={2} title="Check the scan depth" src="shadowmountplus-readme">
+
+With `scan_depth=1` (the default), only first-level subfolders are checked. A game one folder deeper needs `scan_depth=2`.
+
+</Step>
+
+<Step n={3} title="Check the folder structure" src="shadowmountplus-readme">
+
+A game folder needs `sce_sys/param.json` or `sce_sys/param.sfo` inside it.
+
+</Step>
+
+<Step n={4} title="Read the log" src="shadowmountplus-readme">
+
+Debug logging is on by default and writes to `/data/shadowmount/debug.log`.
+
+</Step>
+
+<Step n={5} title="Wait if the copy is still being written" src="shadowmountplus-readme">
+
+If the log shows `source not stable yet`, the copy has not finished. Wait for it to finish.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Renaming does not fix it">
+
+Renaming the file does not fix content or a structure that is invalid.
+
+</Warn>

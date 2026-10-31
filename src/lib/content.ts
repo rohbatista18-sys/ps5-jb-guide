@@ -8,6 +8,7 @@ import sourcesFile from "@content/sources.json";
 import { matchRange } from "./match";
 import type {
   ErrorEntry,
+  ErrorGroup,
   FirmwareDownloadsFile,
   FirmwareFile,
   GuideEntry,
@@ -72,6 +73,21 @@ export const GUIDE_MENUS: GuideMenu[] = ["jailbreak", "packages", "apps", "paylo
 
 export const getGuides = () => guides;
 export const getGuide = (slug: string) => guides.find((g) => g.slug === slug) ?? null;
+
+/** Order of the topic sections on /erros. */
+export const ERROR_GROUPS: ErrorGroup[] = [
+  "exploit",
+  "autoloader",
+  "compat",
+  "y2jb",
+  "network",
+  "hen",
+  "bdj",
+  "games-mount",
+  "games-run",
+  "codes",
+  "triage",
+];
 
 export const getErrors = () => errors;
 export const getError = (slug: string) => errors.find((e) => e.slug === slug) ?? null;

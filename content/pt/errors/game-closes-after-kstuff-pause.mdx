@@ -1,0 +1,36 @@
+## O que significa
+
+Por padrão (`kstuff_game_auto_toggle=1`), o ShadowMountPlus pausa o kstuff um pouco depois que um dos seus jogos montados abre, e liga o kstuff de novo quando o jogo fecha. A espera padrão antes da pausa é de 25 segundos para jogos montados a partir de imagem e de 15 segundos para os outros.
+
+Com a detecção de crash ligada (`kstuff_crash_detection=1`, o padrão), o ShadowMountPlus observa o que acontece depois:
+
+- Se o jogo fechar até 2 minutos depois da pausa automática, ele dobra o atraso da pausa para aquele título, salva em `/data/shadowmount/autotune.ini` e pede para você abrir o jogo de novo. O atraso nunca passa de 3600 segundos.
+- Se o jogo fechar antes da pausa, ele só avisa que o app fechou. Esse crash não tem relação com a pausa.
+
+## O que fazer
+
+<Step n={1} title="Confira o log e as notificações" src="shadowmountplus-readme">
+
+Veja o `/data/shadowmount/debug.log` e as notificações do ShadowMountPlus. Confira se o jogo fechou antes ou depois da pausa automática do kstuff.
+
+</Step>
+
+<Step n={2} title="Se fechou logo após a pausa, abra o jogo de novo" src="shadowmountplus-readme">
+
+O ShadowMountPlus ajusta esse atraso sozinho: ele dobra o atraso daquele título e pede para você abrir o jogo outra vez.
+
+</Step>
+
+<Step n={3} title="Confira o atraso salvo para aquele título" src="shadowmountplus-readme">
+
+O atraso de cada título fica em `/data/shadowmount/autotune.ini`.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Nem todo crash vem da pausa">
+
+Não culpe esse mecanismo por todo crash. Só trate a pausa como causa quando o log mostrar que o jogo fechou logo depois dela.
+
+</Warn>

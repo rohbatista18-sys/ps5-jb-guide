@@ -1,0 +1,21 @@
+## O que significa
+
+O ShadowMountPlus monta os backups dos seus próprios jogos. Cada jogo tem um Title ID. Se o ShadowMountPlus encontra duas origens (pastas ou imagens) com o mesmo Title ID, ele mostra a notificação `duplicate titleId`. O README pede para manter só uma origem por Title ID. O README não diz qual das duas cópias ele usa.
+
+## O que fazer
+
+<Step n={1} title="Encontre as duas origens no log" src="shadowmountplus-readme">
+
+Abra o `/data/shadowmount/debug.log` e leia as notificações do ShadowMountPlus para ver quais origens têm o mesmo Title ID e qual delas você quer manter.
+
+</Step>
+
+<Step n={2} title="Mantenha só uma origem ativa por Title ID" src="shadowmountplus-readme" />
+
+## Quando parar
+
+<Warn kind="brick" title="Não apague a outra cópia ainda">
+
+Não apague a segunda cópia antes de confirmar qual delas o ShadowMountPlus está usando de fato. Se apagar a errada, você perde a cópia que funciona.
+
+</Warn>

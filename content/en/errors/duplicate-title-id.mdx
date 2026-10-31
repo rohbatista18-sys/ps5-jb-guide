@@ -1,0 +1,21 @@
+## What it means
+
+ShadowMountPlus mounts your own game backups. Each game has a Title ID. If ShadowMountPlus finds two sources (folders or images) with the same Title ID, it shows a `duplicate titleId` notification. Its README asks you to keep only one source per Title ID. The README does not say which of the two copies it uses.
+
+## What to do
+
+<Step n={1} title="Find the two sources in the log" src="shadowmountplus-readme">
+
+Open `/data/shadowmount/debug.log` and read the ShadowMountPlus notifications to see which two sources share the Title ID and which one you want to keep.
+
+</Step>
+
+<Step n={2} title="Keep only one active source for each Title ID" src="shadowmountplus-readme" />
+
+## When to stop
+
+<Warn kind="brick" title="Do not delete the other copy yet">
+
+Do not delete the second copy before you confirm which one ShadowMountPlus is actually using. If you delete the wrong one, you lose the copy that works.
+
+</Warn>

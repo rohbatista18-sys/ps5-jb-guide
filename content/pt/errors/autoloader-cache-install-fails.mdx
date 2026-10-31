@@ -1,0 +1,25 @@
+## O que significa
+
+Isso envolve o instalador do WebKit Autoloader. O projeto documentou correções nas releases: a partir da v0.3.1, o instalador consegue detectar quando o cache do navegador não é baixado porque os dados salvos do navegador estão corrompidos.
+
+## O que fazer
+
+<Step n={1} title="Use a recuperação de cache das versões que têm esse recurso" src="webkit-autoloader-releases">
+
+Nessas versões, o instalador mostra um aviso na tela que oferece apagar os dados do navegador WebKit e tentar de novo.
+
+</Step>
+
+<Step n={2} title="Se o procedimento pedir para limpar os dados do navegador, faça isso e deixe a instalação terminar" src="webkit-autoloader-releases">
+
+Não feche a janela até o instalador concluir.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Cache do navegador não é o sistema">
+
+Não confunda limpar o cache do navegador com reinstalar o firmware ou apagar arquivos do sistema na mão. Esse problema não pede nenhuma das duas coisas.
+
+</Warn>

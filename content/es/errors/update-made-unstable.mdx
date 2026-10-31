@@ -1,0 +1,27 @@
+## Qué significa
+
+Se trata de autoloaders y payloads. Hay relatos de configuraciones que funcionaban y empeoraron al cambiar de versión: por ejemplo, cuelgues y apagados al pasar a WebKit Autoloader 0.4.0, y apagados tras una actualización de kstuff-lite en el firmware 12.70. Son relatos de combinaciones concretas, no algo confirmado para todas las consolas.
+
+## Qué hacer
+
+<Step n={1} title="Anota qué componente cambiaste" />
+
+<Step n={2} title="Como comprobación, cambia una sola cosa cada vez">
+
+Guarda tu configuración y tus logs para poder comparar.
+
+</Step>
+
+<Step n={3} title="Vuelve a la versión anterior solo si sigue admitiendo tu firmware" src="webkit-autoloader-feedback-040">
+
+En la discusión de la 0.4.0, varios usuarios dicen que volver a la 0.3.1 les devolvió la estabilidad.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="update" title="No bajes la versión del firmware">
+
+No hagas un downgrade del firmware de la consola para probar esto. Una regresión relatada en una combinación no vale para todas las consolas.
+
+</Warn>

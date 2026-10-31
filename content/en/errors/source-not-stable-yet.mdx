@@ -1,0 +1,25 @@
+## What it means
+
+ShadowMountPlus waits until a source (a folder or image of your own game backup) is old enough before it processes it. Newer sources are put off until they are stable, and the log shows `source not stable yet`. This usually means the files are still being copied or written. The wait is set by `stability_wait_seconds`, which is 10 seconds by default.
+
+## What to do
+
+<Step n={1} title="Let the copy finish" src="shadowmountplus-readme">
+
+Wait until the copy or transfer of the game files has fully finished. Then check `/data/shadowmount/debug.log` again.
+
+</Step>
+
+<Step n={2} title="Only if needed, adjust the stability wait" src="shadowmountplus-readme">
+
+The README says you can change `stability_wait_seconds` in `/data/shadowmount/config.ini`. It accepts values from 0 to 3600 seconds. Change only this setting, as the README describes it.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Do not force the mount during a copy">
+
+Do not try to force the mount while files are still being written. Wait for the copy to end first.
+
+</Warn>

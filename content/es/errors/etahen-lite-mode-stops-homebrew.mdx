@@ -1,0 +1,25 @@
+## Qué significa
+
+La Toolbox de etaHEN tiene la opción Lite Mode. Su descripción dice que cierra todos los servicios y plugins de etaHEN y deja un modo solo con kstuff o solo con HEN. El texto de confirmación añade que el homebrew que necesita etaHEN también deja de funcionar. Así que es normal que servicios o plugins se detengan después de activarla.
+
+## Qué hacer
+
+<Step n={1} title="Comprueba qué desactiva Lite Mode" src="etahen-toolbox-options">
+
+La opción cierra a la fuerza los servicios y plugins activos. Solo el ELF loader sigue funcionando, para poder volver a activarlos.
+
+</Step>
+
+<Step n={2} title="Vuelve a activar lo que necesitas según el procedimiento de tu build" src="etahen-toolbox-options">
+
+Lo que depende de esos servicios queda apagado hasta que lo reactives con el procedimiento de tu build de etaHEN.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Lite Mode no sobrevive al modo de reposo">
+
+El texto de la opción dice que el menú Lite no sobrevive al modo de reposo. No cuentes con que siga igual después de que la consola entre en reposo.
+
+</Warn>

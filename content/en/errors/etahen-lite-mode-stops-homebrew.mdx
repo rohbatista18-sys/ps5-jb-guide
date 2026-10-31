@@ -1,0 +1,25 @@
+## What it means
+
+The etaHEN Toolbox has a Lite Mode option. Its description says it kills all etaHEN services and plugins, leaving a kstuff or HEN-only mode. The confirmation text adds that homebrew that needs etaHEN will also stop working. So it is expected that services or plugins stop after you switch it on.
+
+## What to do
+
+<Step n={1} title="Check what Lite Mode turns off" src="etahen-toolbox-options">
+
+The option forcefully kills active services and plugins. Only the ELF loader stays running, so things can be turned back on.
+
+</Step>
+
+<Step n={2} title="Turn the features you need back on the way your build describes" src="etahen-toolbox-options">
+
+Anything that depends on those services stays off until you re-enable it with your etaHEN build's own procedure.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Lite Mode does not survive rest mode">
+
+The option text says the Lite menu will not survive rest mode. Do not count on it staying the same after the console goes into rest mode.
+
+</Warn>

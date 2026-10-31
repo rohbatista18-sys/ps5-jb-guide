@@ -1,0 +1,27 @@
+## Qué significa
+
+Se trata del HEN y otros payloads. Que un exploit funcione en tu firmware no significa que todos los payloads también: cada ELF tiene su propio soporte de firmware. Hay que comprobarlo para cada payload y firmware, y no está confirmado para todas las consolas.
+
+## Qué hacer
+
+<Step n={1} title="Comprueba el soporte de cada ELF en sus notas de versión" src="etahen-releases" />
+
+<Step n={2} title="Distingue las releases oficiales de los ports experimentales" src="etahen-port-releases">
+
+Por ejemplo, un port comunitario de etaHEN dice en su página de releases que no es oficial ni una release oficial de etaHEN, y algunas de sus builds están marcadas como experimentales.
+
+</Step>
+
+<Step n={3} title="Como comprobación, carga primero solo los componentes necesarios">
+
+Añade los servicios opcionales solo cuando eso funcione.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Un port no oficial no es el proyecto oficial">
+
+El soporte que anuncia un port no oficial no debe atribuirse al proyecto oficial.
+
+</Warn>

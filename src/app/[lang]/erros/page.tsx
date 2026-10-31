@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import ErrorList from "@/components/ErrorList";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { getErrors } from "@/lib/content";
+import { ERROR_GROUPS, getErrors } from "@/lib/content";
 import styles from "../section.module.css";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/erros">): Promise<Metadata> {
@@ -20,7 +20,9 @@ export default async function ErrorsPage({ params }: PageProps<"/[lang]/erros">)
   // Only this locale's text crosses to the client for the filter.
   const entries = getErrors().map((e) => ({
     slug: e.slug,
+    group: e.group,
     severity: e.severity,
+    evidence: e.evidence,
     title: e.title[lang],
     symptoms: e.symptoms[lang],
   }));
@@ -34,7 +36,13 @@ export default async function ErrorsPage({ params }: PageProps<"/[lang]/erros">)
       {entries.length === 0 ? (
         <p className={styles.empty}>{dict.errors.empty}</p>
       ) : (
-        <ErrorList lang={lang} entries={entries} labels={dict.errors} />
+        <ErrorList
+          lang={lang}
+          entries={entries}
+          groups={ERROR_GROUPS}
+          labels={dict.errors}
+          evidenceLabels={dict.evidence}
+        />
       )}
     </article>
   );

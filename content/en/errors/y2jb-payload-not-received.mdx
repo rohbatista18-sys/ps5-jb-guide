@@ -1,0 +1,25 @@
+## What it means
+
+Y2JB runs a Remote JS Server on the console that receives what you send. The Y2JB README says this server does not always use port `50000`: it usually does, but it may sometimes use another port, and that is normal.
+
+## What to do
+
+<Step n={1} title="Do not assume port 50000" src="y2jb-readme">
+
+If the current run shows a port, send to that one.
+
+</Step>
+
+<Step n={2} title="As a check, confirm the IP and the stage">
+
+Make sure you are sending to the console's current IP, and to the right service for this stage. The JavaScript server and the ELF loader are different services.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Ports from other tutorials">
+
+A port used in another tutorial may not match your current run.
+
+</Warn>

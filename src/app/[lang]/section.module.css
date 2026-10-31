@@ -127,6 +127,13 @@
   line-height: 1.6;
 }
 
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-block: var(--space-2);
+}
+
 .cards {
   list-style: none;
   display: grid;

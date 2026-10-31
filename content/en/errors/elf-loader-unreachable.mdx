@@ -1,0 +1,31 @@
+## What it means
+
+The PS5 WebKit Autoloader does not always open its ELF loader to the network. Its v0.3.0 release notes say it switched to a localhost-only `elfldr`, which accepts payloads only from the console itself, to stop unwanted payloads from running over the network. The same notes say a network-facing `elfldr` can still be used through Payload Manager or a custom `autoload.txt`.
+
+## What to do
+
+<Step n={1} title="Check if your build uses a localhost-only elfldr" src="webkit-autoloader-releases">
+
+Read the release notes for your version. If its `elfldr` is localhost-only, a computer on your network cannot send to it.
+
+</Step>
+
+<Step n={2} title="Use a delivery method the project provides" src="webkit-autoloader-releases">
+
+The release notes point to Payload Manager or a custom `autoload.txt` for a network-facing `elfldr`. Use one of these, set up on purpose.
+
+</Step>
+
+<Step n={3} title="As a check, confirm the IP, the service and the local connection">
+
+Check the console's IP, that the service you are sending to is running, and that the computer and the PS5 are on the same local network.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Keep the loader on your local network">
+
+Do not expose the loader to the internet to fix a local network problem.
+
+</Warn>

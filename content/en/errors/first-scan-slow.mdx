@@ -1,0 +1,21 @@
+## What it means
+
+The first time ShadowMountPlus scans your own game backups, it has to register every title. The README says this first scan can take longer if you have a large library, and that very large games need extra time to be checked.
+
+## What to do
+
+<Step n={1} title="Wait for the first scan to finish" src="shadowmountplus-readme" />
+
+<Step n={2} title="Read the log before you restart the mounter" src="shadowmountplus-readme">
+
+Debug logging is on by default (`debug=1`). Check `/data/shadowmount/debug.log` and the ShadowMountPlus notifications to see whether the scan is still moving before you restart anything.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Slow is not the same as frozen">
+
+A slow first scan, on its own, does not prove that ShadowMountPlus froze. Look at the log before you decide.
+
+</Warn>

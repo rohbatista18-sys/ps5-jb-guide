@@ -1,0 +1,25 @@
+## Qué significa
+
+BD-JB5 es una entrada de jailbreak que se ejecuta desde un disco Blu-ray. Su README dice que tiene soporte hasta el firmware 13.42. En 13.60, el procedimiento con el disco que quizá usaste en un firmware anterior no funciona por sí solo.
+
+## Qué hacer
+
+<Step n={1} title="Comprueba si tu firmware está en el rango compatible" src="bdjb5-readme">
+
+El README indica soporte directo hasta 13.42.
+
+</Step>
+
+<Step n={2} title="En 13.60, la consola ya tiene que tener jailbreak" src="bdjb5-readme">
+
+Para 13.60, el README describe enviar `bdj_unpatch.elf` al ELF loader para quitar el parche de BD-J y solo después usar BD-JB. Ese paso necesita una PS5 que ya tenga jailbreak por otra cadena.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="No es una primera entrada en 13.60">
+
+El paso de `bdj_unpatch` no es una entrada independiente para una PS5 en 13.60 que sigue bloqueada. Sin otro jailbreak que funcione en esa consola, BD-JB5 por sí solo no te va a dar acceso.
+
+</Warn>

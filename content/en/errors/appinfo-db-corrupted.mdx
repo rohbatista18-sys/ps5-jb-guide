@@ -1,0 +1,25 @@
+## What it means
+
+The Y2JB README has an optional step that blocks YouTube updates by editing `appinfo.db`, the console's app database, at `/system_data/priv/mms/appinfo.db`. You copy the file with FTP, change it with a script and put it back. The README warns that database corruption can delete all installed packages (FPKGs) and saved data on the internal storage.
+
+## What to do
+
+<Step n={1} title="Back up your saved data before any change" src="y2jb-readme">
+
+The README tells you to back up your saved data with the PS5's own backup feature in Settings. Also keep the original `appinfo.db` you copied from the console, unchanged.
+
+</Step>
+
+<Step n={2} title="Close YouTube and wait for installs to finish before replacing the file" src="y2jb-readme">
+
+Close the YouTube app completely, go to the Settings page, and make sure no package is installing or updating.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="This can wipe your packages and saves">
+
+If the corruption notice already appeared, stop editing and plan a recovery based on your backup. The README warns that database corruption can delete all installed packages and saved data on the internal storage. Do not replace the database again and again, and do not delete files without a recovery plan.
+
+</Warn>

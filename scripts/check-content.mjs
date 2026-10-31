@@ -19,6 +19,7 @@ const REPO_STATUSES = ["listed", "review", "excluded"];
 const SOURCE_KINDS = ["readme", "release", "sony-support", "news", "forum", "video", "archive"];
 const GUIDE_MENUS = ["jailbreak", "packages", "apps", "payloads", "transfer", "backup", "emulators"];
 const ERROR_SEVERITIES = ["low", "medium", "high"];
+const ERROR_GROUPS = ["exploit", "autoloader", "compat", "y2jb", "network", "hen", "bdj", "games-mount", "games-run", "codes", "triage"];
 
 const errors = [];
 const fail = (where, msg) => errors.push(`[${where}] ${msg}`);
@@ -266,6 +267,8 @@ if (errorsData) {
       errorSlugs.add(e.slug);
 
       if (!ERROR_SEVERITIES.includes(e.severity)) fail(w, `severity "${e.severity}" invalid`);
+      if (!ERROR_GROUPS.includes(e.group)) fail(w, `group "${e.group}" invalid`);
+      if (e.evidence !== undefined && !EVIDENCE_VALUES.includes(e.evidence)) fail(w, `evidence "${e.evidence}" invalid`);
       if (!DATE_RE.test(e.reviewedAt)) fail(w, `reviewedAt "${e.reviewedAt}" invalid`);
       checkLocalized(w, e.title, "title");
 

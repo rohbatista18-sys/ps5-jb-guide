@@ -1,0 +1,25 @@
+## Qué significa
+
+Se trata del instalador de WebKit Autoloader. El proyecto ha documentado correcciones en sus releases: desde la v0.3.1, el instalador puede detectar cuando la caché del navegador no se descarga porque los datos guardados del navegador están dañados.
+
+## Qué hacer
+
+<Step n={1} title="Usa la recuperación de caché de las versiones que la incluyen" src="webkit-autoloader-releases">
+
+En esas versiones, el instalador muestra un aviso en pantalla que ofrece borrar los datos del navegador WebKit y volver a intentarlo.
+
+</Step>
+
+<Step n={2} title="Si el procedimiento pide borrar los datos del navegador, hazlo y deja que la instalación termine" src="webkit-autoloader-releases">
+
+No cierres la ventana hasta que el instalador acabe.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="brick" title="La caché del navegador no es el sistema">
+
+No confundas borrar la caché del navegador con reinstalar el firmware o eliminar a mano archivos del sistema. Este problema no requiere ninguna de las dos cosas.
+
+</Warn>

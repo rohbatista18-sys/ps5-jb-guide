@@ -1,132 +1,1163 @@
 {
   "errors": [
     {
-      "slug": "console-frozen",
-      "severity": "medium",
-      "title": {
-        "en": "The console freezes or stops responding",
-        "es": "La consola se congela o deja de responder",
-        "pt": "O console trava ou para de responder"
-      },
-      "symptoms": {
-        "en": ["The power indicator only blinks white, or stays blue and never turns solid white.", "The screen and the controller stop responding."],
-        "es": ["El indicador de encendido solo parpadea en blanco, o se queda en azul y nunca pasa a blanco fijo.", "La pantalla y el mando dejan de responder."],
-        "pt": ["A luz de energia só pisca em branco, ou fica azul e nunca fica branca fixa.", "A tela e o controle param de responder."]
-      },
-      "sources": ["sony-powerlights-en", "sony-powerlights-es", "sony-powerlights-pt", "relapse-readme"],
-      "reviewedAt": "2026-10-29"
-    },
-    {
       "slug": "browser-stalls",
+      "group": "exploit",
       "severity": "low",
+      "evidence": "proven",
       "title": {
         "en": "The browser stops on the jailbreak page",
         "es": "El navegador se detiene en la página del jailbreak",
         "pt": "O navegador para na página do jailbreak"
       },
       "symptoms": {
-        "en": ["The page in the PS5 browser stops responding or never finishes."],
-        "es": ["La página en el navegador de la PS5 deja de responder o nunca termina."],
-        "pt": ["A página no navegador do PS5 para de responder ou nunca termina."]
+        "en": [
+          "The page in the PS5 browser stops responding or never finishes."
+        ],
+        "es": [
+          "La página en el navegador de la PS5 deja de responder o nunca termina."
+        ],
+        "pt": [
+          "A página no navegador do PS5 para de responder ou nunca termina."
+        ]
       },
-      "sources": ["relapse-readme"],
+      "sources": [
+        "relapse-readme"
+      ],
       "reviewedAt": "2026-10-29"
     },
     {
-      "slug": "su-101337-5-did-not-start",
+      "slug": "console-frozen",
+      "group": "exploit",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "The console freezes or stops responding",
+        "es": "La consola se congela o deja de responder",
+        "pt": "O console trava ou para de responder"
+      },
+      "symptoms": {
+        "en": [
+          "The power indicator only blinks white, or stays blue and never turns solid white.",
+          "The screen and the controller stop responding."
+        ],
+        "es": [
+          "El indicador de encendido solo parpadea en blanco, o se queda en azul y nunca pasa a blanco fijo.",
+          "La pantalla y el mando dejan de responder."
+        ],
+        "pt": [
+          "A luz de energia só pisca em branco, ou fica azul e nunca fica branca fixa.",
+          "A tela e o controle param de responder."
+        ]
+      },
+      "sources": [
+        "sony-powerlights-en",
+        "sony-powerlights-es",
+        "sony-powerlights-pt",
+        "relapse-readme"
+      ],
+      "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "works-then-fails",
+      "group": "exploit",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "It works on one try and fails on the next",
+        "es": "Funciona en un intento y falla en el siguiente",
+        "pt": "Funciona em uma tentativa e falha na seguinte"
+      },
+      "symptoms": {
+        "en": [
+          "The same setup works on one boot and fails on another."
+        ],
+        "es": [
+          "La misma configuración funciona en un arranque y falla en otro."
+        ],
+        "pt": [
+          "A mesma configuração funciona em uma inicialização e falha em outra."
+        ]
+      },
+      "sources": [
+        "relapse-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "p2jb-takes-long",
+      "group": "exploit",
+      "severity": "low",
+      "evidence": "reported",
+      "title": {
+        "en": "P2JB takes very long or seems stuck",
+        "es": "P2JB tarda mucho o parece no avanzar",
+        "pt": "O P2JB demora muito ou parece não avançar"
+      },
+      "symptoms": {
+        "en": [
+          "P2JB keeps running for tens of minutes with no clear sign of progress."
+        ],
+        "es": [
+          "P2JB sigue en marcha durante decenas de minutos sin una señal clara de avance."
+        ],
+        "pt": [
+          "O P2JB fica rodando por dezenas de minutos sem sinal claro de avanço."
+        ]
+      },
+      "sources": [
+        "y2jb-autoloader-p2jb-tests"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "autoloader-cache-install-fails",
+      "group": "autoloader",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The autoloader install does not finish the cache",
+        "es": "La instalación del autoloader no termina la caché",
+        "pt": "A instalação do autoloader não conclui o cache"
+      },
+      "symptoms": {
+        "en": [
+          "The installer stops near the end or says the cache failed."
+        ],
+        "es": [
+          "El instalador se detiene cerca del final o indica que falló la caché."
+        ],
+        "pt": [
+          "O instalador para perto do fim ou informa falha de cache."
+        ]
+      },
+      "sources": [
+        "webkit-autoloader-releases"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "autoloader-offline-broken",
+      "group": "autoloader",
+      "severity": "low",
+      "evidence": "reported",
+      "title": {
+        "en": "The autoloader stopped opening offline",
+        "es": "El autoloader dejó de abrir sin conexión",
+        "pt": "O autoloader deixou de abrir offline"
+      },
+      "symptoms": {
+        "en": [
+          "The shortcut used to work, and now it asks for a connection or shows an error."
+        ],
+        "es": [
+          "El acceso directo antes funcionaba y ahora pide conexión o muestra un error."
+        ],
+        "pt": [
+          "O atalho antes funcionava e agora pede conexão ou mostra um erro."
+        ]
+      },
+      "sources": [
+        "webkit-autoloader-releases",
+        "webkit-autoloader-feedback-030"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "slow-after-autoloader",
+      "group": "autoloader",
+      "severity": "medium",
+      "evidence": "reported",
+      "title": {
+        "en": "The system is slow after installing the autoloader",
+        "es": "El sistema va lento después de instalar el autoloader",
+        "pt": "O sistema fica lento depois de instalar o autoloader"
+      },
+      "symptoms": {
+        "en": [
+          "Menus, game descriptions and pages take a very long time to load."
+        ],
+        "es": [
+          "Los menús, las descripciones y las páginas tardan muchísimo en cargar."
+        ],
+        "pt": [
+          "Menus, descrições e páginas passam a carregar muito devagar."
+        ]
+      },
+      "sources": [
+        "webkit-autoloader-feedback-050"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "update-made-unstable",
+      "group": "autoloader",
+      "severity": "medium",
+      "evidence": "reported",
+      "title": {
+        "en": "An autoloader or payload update made things less stable",
+        "es": "Una actualización del autoloader o de un payload empeoró la estabilidad",
+        "pt": "Uma atualização do autoloader ou de um payload piorou a estabilidade"
+      },
+      "symptoms": {
+        "en": [
+          "A setup that worked starts freezing or crashing after you swap a component."
+        ],
+        "es": [
+          "Una configuración que funcionaba empieza a colgarse después de cambiar un componente."
+        ],
+        "pt": [
+          "Uma configuração que funcionava passa a travar depois de trocar um componente."
+        ]
+      },
+      "sources": [
+        "webkit-autoloader-feedback-040",
+        "kstuff-lite-issue-81"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "firmware-in-range-method-fails",
+      "group": "compat",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "Your firmware is in the listed range but the method fails",
+        "es": "Tu firmware está en el rango anunciado pero el método falla",
+        "pt": "O firmware está na faixa anunciada, mas o método falha"
+      },
+      "symptoms": {
+        "en": [
+          "You expected every version from 7.00 to 13.60 to be supported the same way, but the method fails on yours."
+        ],
+        "es": [
+          "Esperabas que todas las versiones de 7.00 a 13.60 tuvieran el mismo soporte, pero el método falla en la tuya."
+        ],
+        "pt": [
+          "Você esperava que toda versão de 7.00 a 13.60 tivesse o mesmo suporte, mas o método falha na sua."
+        ]
+      },
+      "sources": [
+        "webkit-autoloader-changelog"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "entry-runs-jailbreak-incomplete",
+      "group": "compat",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "YouTube or BD-J opens, but the jailbreak is not complete",
+        "es": "YouTube o BD-J se abre, pero el jailbreak no está completo",
+        "pt": "O YouTube ou o BD-J abre, mas o jailbreak não está completo"
+      },
+      "symptoms": {
+        "en": [
+          "The entry point runs code, but the features you expect are not there."
+        ],
+        "es": [
+          "La entrada ejecuta código, pero las funciones que esperas no aparecen."
+        ],
+        "pt": [
+          "A entrada executa código, mas as funções esperadas não ficam disponíveis."
+        ]
+      },
+      "sources": [
+        "y2jb-readme",
+        "bdjb5-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "lapse-above-10-01",
+      "group": "compat",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "Lapse does not work above firmware 10.01",
+        "es": "Lapse no funciona por encima del firmware 10.01",
+        "pt": "O Lapse não funciona acima do firmware 10.01"
+      },
+      "symptoms": {
+        "en": [
+          "The entry works, but the kernel payload does not finish on a newer firmware."
+        ],
+        "es": [
+          "La entrada funciona, pero el payload de kernel no termina en un firmware más nuevo."
+        ],
+        "pt": [
+          "A entrada funciona, mas o payload de kernel não completa em um firmware mais novo."
+        ]
+      },
+      "sources": [
+        "y2jb-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "payload-firmware-mismatch",
+      "group": "compat",
+      "severity": "medium",
+      "evidence": "reported",
+      "title": {
+        "en": "A payload does not support the same firmware as the exploit",
+        "es": "Un payload no admite el mismo firmware que el exploit",
+        "pt": "Um payload não suporta o mesmo firmware que o exploit"
+      },
+      "symptoms": {
+        "en": [
+          "The exploit finishes, then the next ELF fails or shuts the system down."
+        ],
+        "es": [
+          "El exploit termina y el siguiente ELF falla o apaga el sistema."
+        ],
+        "pt": [
+          "O exploit termina e o ELF seguinte falha ou encerra o sistema."
+        ]
+      },
+      "sources": [
+        "etahen-releases",
+        "etahen-port-releases"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "y2jb-wrong-app-or-backup",
+      "group": "y2jb",
       "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "Y2JB does not start because the app or backup is the wrong one",
+        "es": "Y2JB no arranca porque la app o la copia no son las correctas",
+        "pt": "O Y2JB não inicia porque o aplicativo ou o backup é o errado"
+      },
+      "symptoms": {
+        "en": [
+          "After installing the YouTube app or restoring the Y2JB backup, the setup does not start."
+        ],
+        "es": [
+          "Después de instalar la app de YouTube o restaurar la copia de Y2JB, la configuración no arranca."
+        ],
+        "pt": [
+          "Depois de instalar o aplicativo do YouTube ou restaurar o backup do Y2JB, a configuração não inicia."
+        ]
+      },
+      "sources": [
+        "y2jb-readme",
+        "y2jb-releases"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "y2jb-account-not-accepted",
+      "group": "y2jb",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The account does not work with Y2JB",
+        "es": "La cuenta no funciona con Y2JB",
+        "pt": "A conta não funciona com o Y2JB"
+      },
+      "symptoms": {
+        "en": [
+          "The YouTube app is ready, but Y2JB does not work with the account you are using."
+        ],
+        "es": [
+          "La app de YouTube está preparada, pero Y2JB no funciona con la cuenta que usas."
+        ],
+        "pt": [
+          "O aplicativo do YouTube está pronto, mas o Y2JB não funciona com a conta que você está usando."
+        ]
+      },
+      "sources": [
+        "y2jb-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "youtube-update-softlock",
+      "group": "y2jb",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "YouTube is stuck asking for an update",
+        "es": "YouTube se queda bloqueado pidiendo una actualización",
+        "pt": "O YouTube fica preso pedindo atualização"
+      },
+      "symptoms": {
+        "en": [
+          "The YouTube app no longer opens after the console reached the update services."
+        ],
+        "es": [
+          "La app de YouTube ya no se abre después de que la consola llegara a los servicios de actualización."
+        ],
+        "pt": [
+          "O aplicativo do YouTube não abre mais depois que o console teve contato com os serviços de atualização."
+        ]
+      },
+      "sources": [
+        "y2jb-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "psn-test-fails-dns-block",
+      "group": "y2jb",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The PSN test fails after you set the DNS block",
+        "es": "La prueba de PSN falla después de configurar el bloqueo por DNS",
+        "pt": "O teste de PSN falha depois de configurar o bloqueio por DNS"
+      },
+      "symptoms": {
+        "en": [
+          "The connection to PlayStation Network fails, even though the console works on your local network."
+        ],
+        "es": [
+          "La conexión a PlayStation Network falla, aunque la consola funciona en tu red local."
+        ],
+        "pt": [
+          "A conexão com a PlayStation Network falha, embora o console funcione na sua rede local."
+        ]
+      },
+      "sources": [
+        "y2jb-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "y2jb-payload-not-received",
+      "group": "network",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The payload does not reach the Y2JB server",
+        "es": "El payload no llega al servidor de Y2JB",
+        "pt": "O payload não chega ao servidor do Y2JB"
+      },
+      "symptoms": {
+        "en": [
+          "Sending the payload is refused, or it keeps waiting for an answer."
+        ],
+        "es": [
+          "El envío del payload es rechazado o se queda esperando respuesta."
+        ],
+        "pt": [
+          "O envio do payload é recusado ou fica esperando resposta."
+        ]
+      },
+      "sources": [
+        "y2jb-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "elf-loader-unreachable",
+      "group": "network",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The computer cannot reach the ELF loader",
+        "es": "El ordenador no llega al cargador ELF",
+        "pt": "O computador não alcança o loader ELF"
+      },
+      "symptoms": {
+        "en": [
+          "Sending a payload over the network fails, even with the autoloader open."
+        ],
+        "es": [
+          "El envío de un payload por la red falla, aunque el autoloader esté abierto."
+        ],
+        "pt": [
+          "O envio de um payload pela rede falha, mesmo com o autoloader aberto."
+        ]
+      },
+      "sources": [
+        "webkit-autoloader-releases"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "appinfo-db-corrupted",
+      "group": "network",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "A database error appears after replacing appinfo.db",
+        "es": "Aparece un error de base de datos tras reemplazar appinfo.db",
+        "pt": "Aparece um erro no banco de aplicativos depois de substituir o appinfo.db"
+      },
+      "symptoms": {
+        "en": [
+          "The console shows a database corruption notice after you replaced the app database."
+        ],
+        "es": [
+          "La consola muestra un aviso de base de datos dañada después de reemplazar la base de datos de aplicaciones."
+        ],
+        "pt": [
+          "O console mostra um aviso de corrupção do banco de dados depois que você substituiu o banco de aplicativos."
+        ]
+      },
+      "sources": [
+        "y2jb-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "toolbox-missing",
+      "group": "hen",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The Toolbox does not appear after the payload loads",
+        "es": "La Toolbox no aparece después de cargar el payload",
+        "pt": "A Toolbox não aparece depois que o payload carrega"
+      },
+      "symptoms": {
+        "en": [
+          "You see the load notification, but the etaHEN Toolbox menu is not there."
+        ],
+        "es": [
+          "Ves la notificación de carga, pero el menú Toolbox de etaHEN no está."
+        ],
+        "pt": [
+          "A notificação de carregamento aparece, mas o menu Toolbox do etaHEN não está lá."
+        ]
+      },
+      "sources": [
+        "etahen-releases",
+        "etahen-port-releases"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "cheats-dont-detect-game",
+      "group": "hen",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "Cheats do not detect the running game",
+        "es": "Los trucos no detectan el juego en ejecución",
+        "pt": "Os cheats não reconhecem o jogo em execução"
+      },
+      "symptoms": {
+        "en": [
+          "The game does not show up, or turning a cheat on changes nothing."
+        ],
+        "es": [
+          "El juego no aparece, o activar un truco no cambia nada."
+        ],
+        "pt": [
+          "O jogo não aparece, ou ativar um cheat não muda nada."
+        ]
+      },
+      "sources": [
+        "etahen-port-releases"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "rest-mode-crash",
+      "group": "hen",
+      "severity": "medium",
+      "evidence": "reported",
+      "title": {
+        "en": "The console crashes when entering or leaving rest mode",
+        "es": "La consola falla al entrar o salir del modo de reposo",
+        "pt": "O console trava ao entrar ou sair do repouso"
+      },
+      "symptoms": {
+        "en": [
+          "Putting the console in rest mode, or waking it, ends in a freeze, a shutdown or a restart."
+        ],
+        "es": [
+          "Al poner la consola en reposo o al despertarla, se congela, se apaga o se reinicia."
+        ],
+        "pt": [
+          "Ao entrar no repouso ou sair dele, o console congela, desliga ou reinicia."
+        ]
+      },
+      "sources": [
+        "etahen-releases",
+        "webkit-autoloader-feedback-060"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "payload-manager-not-running",
+      "group": "hen",
+      "severity": "low",
+      "evidence": "reported",
+      "title": {
+        "en": "Payload Manager shows pldmgr not running",
+        "es": "Payload Manager muestra pldmgr not running",
+        "pt": "O Payload Manager mostra pldmgr not running"
+      },
+      "symptoms": {
+        "en": [
+          "The Payload Manager page opens, but it shows \"pldmgr not running\" and the service does not respond."
+        ],
+        "es": [
+          "La página de Payload Manager se abre, pero muestra \"pldmgr not running\" y el servicio no responde."
+        ],
+        "pt": [
+          "A página do Payload Manager abre, mas mostra \"pldmgr not running\" e o serviço não responde."
+        ]
+      },
+      "sources": [
+        "webkit-autoloader-feedback-060"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "bdjb5-not-direct-on-13-60",
+      "group": "bdj",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "BD-JB5 does not work directly on 13.60",
+        "es": "BD-JB5 no funciona directamente en 13.60",
+        "pt": "O BD-JB5 não funciona direto no 13.60"
+      },
+      "symptoms": {
+        "en": [
+          "The Blu-ray procedure that worked on an earlier firmware does not work on 13.60."
+        ],
+        "es": [
+          "El procedimiento con Blu-ray que funcionaba en un firmware anterior no funciona en 13.60."
+        ],
+        "pt": [
+          "O procedimento com Blu-ray que funcionava em um firmware anterior não funciona no 13.60."
+        ]
+      },
+      "sources": [
+        "bdjb5-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "bdjb-lost-after-reinstall",
+      "group": "bdj",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "BD-JB stopped working after reinstalling the firmware",
+        "es": "BD-JB dejó de funcionar tras reinstalar el firmware",
+        "pt": "O BD-JB parou de funcionar depois de reinstalar o firmware"
+      },
+      "symptoms": {
+        "en": [
+          "The BD-JB access you had set up is gone after reinstalling the system software."
+        ],
+        "es": [
+          "El acceso por BD-JB que habías preparado desaparece después de reinstalar el software del sistema."
+        ],
+        "pt": [
+          "O acesso pelo BD-JB que você tinha preparado some depois de reinstalar o software do sistema."
+        ]
+      },
+      "sources": [
+        "bdjb5-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "kstuff-crash-after-update",
+      "group": "bdj",
+      "severity": "medium",
+      "evidence": "reported",
+      "title": {
+        "en": "The console shuts down when loading kstuff after an update",
+        "es": "La consola se apaga al cargar kstuff tras una actualización",
+        "pt": "O console desliga ao carregar o kstuff depois de atualizar"
+      },
+      "symptoms": {
+        "en": [
+          "The exploit finishes, but the console shuts down when the updated kstuff payload loads."
+        ],
+        "es": [
+          "El exploit termina, pero la consola se apaga al cargar el payload de kstuff actualizado."
+        ],
+        "pt": [
+          "O exploit termina, mas o console desliga ao carregar o payload do kstuff atualizado."
+        ]
+      },
+      "sources": [
+        "kstuff-lite-issue-81"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "etahen-lite-mode-stops-homebrew",
+      "group": "bdj",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "Homebrew stops after turning on etaHEN Lite Mode",
+        "es": "El homebrew deja de funcionar al activar Lite Mode de etaHEN",
+        "pt": "Os homebrews param depois de ativar o Lite Mode do etaHEN"
+      },
+      "symptoms": {
+        "en": [
+          "Services, plugins or homebrew stop working after you switch etaHEN to Lite Mode."
+        ],
+        "es": [
+          "Servicios, plugins o homebrew dejan de funcionar después de pasar etaHEN a Lite Mode."
+        ],
+        "pt": [
+          "Serviços, plugins ou homebrews param de funcionar depois de trocar o etaHEN para o Lite Mode."
+        ]
+      },
+      "sources": [
+        "etahen-toolbox-options"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "game-not-listed",
+      "group": "games-mount",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The game is in storage but does not show up",
+        "es": "El juego está en el almacenamiento pero no aparece",
+        "pt": "O jogo está no armazenamento mas não aparece"
+      },
+      "symptoms": {
+        "en": [
+          "Your game backup is in storage, but ShadowMountPlus never lists it."
+        ],
+        "es": [
+          "La copia de tu juego está en el almacenamiento, pero ShadowMountPlus nunca la muestra."
+        ],
+        "pt": [
+          "A cópia do seu jogo está no armazenamento, mas o ShadowMountPlus nunca a mostra."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "game-listed-wont-start",
+      "group": "games-mount",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The game shows up but does not start",
+        "es": "El juego aparece pero no se inicia",
+        "pt": "O jogo aparece mas não inicia"
+      },
+      "symptoms": {
+        "en": [
+          "The game has an icon in the menu, but it fails when you open it."
+        ],
+        "es": [
+          "El juego tiene icono en el menú, pero falla al abrirlo."
+        ],
+        "pt": [
+          "O jogo tem ícone no menu, mas falha ao abrir."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "image-wont-mount",
+      "group": "games-mount",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The image does not mount or shows broken pipe",
+        "es": "La imagen no se monta o muestra broken pipe",
+        "pt": "A imagem não monta ou mostra broken pipe"
+      },
+      "symptoms": {
+        "en": [
+          "ShadowMountPlus rejects the image or the mount fails, sometimes with broken pipe."
+        ],
+        "es": [
+          "ShadowMountPlus rechaza la imagen o el montaje falla, a veces con broken pipe."
+        ],
+        "pt": [
+          "O ShadowMountPlus rejeita a imagem ou a montagem falha, às vezes com broken pipe."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme",
+        "shadowmountplus-issue-47"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "param-json-sfo-missing",
+      "group": "games-mount",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "Missing or invalid param.json or param.sfo",
+        "es": "Falta param.json o param.sfo, o no es válido",
+        "pt": "param.json ou param.sfo ausente ou inválido"
+      },
+      "symptoms": {
+        "en": [
+          "The log shows missing or invalid param.json or param.sfo, and the title is not recognized."
+        ],
+        "es": [
+          "El registro muestra que falta param.json o param.sfo o que no es válido, y el título no se reconoce."
+        ],
+        "pt": [
+          "O log mostra param.json ou param.sfo ausente ou inválido, e o título não é reconhecido."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "duplicate-title-id",
+      "group": "games-run",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "A duplicate titleId message appears",
+        "es": "Aparece el mensaje duplicate titleId",
+        "pt": "Aparece a mensagem duplicate titleId"
+      },
+      "symptoms": {
+        "en": [
+          "ShadowMountPlus shows a duplicate titleId notification.",
+          "Two of your sources offer the same game."
+        ],
+        "es": [
+          "ShadowMountPlus muestra la notificación duplicate titleId.",
+          "Dos de tus orígenes ofrecen el mismo juego."
+        ],
+        "pt": [
+          "O ShadowMountPlus mostra a notificação duplicate titleId.",
+          "Duas das suas origens oferecem o mesmo jogo."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "source-not-stable-yet",
+      "group": "games-run",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The log says source not stable yet",
+        "es": "El log dice source not stable yet",
+        "pt": "O log diz source not stable yet"
+      },
+      "symptoms": {
+        "en": [
+          "The log shows source not stable yet.",
+          "ShadowMountPlus waits before recognizing a game folder or image."
+        ],
+        "es": [
+          "El log muestra source not stable yet.",
+          "ShadowMountPlus espera antes de reconocer una carpeta o imagen de juego."
+        ],
+        "pt": [
+          "O log mostra source not stable yet.",
+          "O ShadowMountPlus espera antes de reconhecer uma pasta ou imagem de jogo."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "first-scan-slow",
+      "group": "games-run",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The first scan seems to take too long",
+        "es": "El primer escaneo parece tardar demasiado",
+        "pt": "A primeira varredura parece demorar demais"
+      },
+      "symptoms": {
+        "en": [
+          "A large game library takes a long time to show up the first time."
+        ],
+        "es": [
+          "Una biblioteca de juegos grande tarda mucho en aparecer la primera vez."
+        ],
+        "pt": [
+          "Uma biblioteca de jogos grande demora a aparecer na primeira vez."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "game-closes-after-kstuff-pause",
+      "group": "games-run",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "The game closes after the automatic kstuff pause",
+        "es": "El juego se cierra tras la pausa automática de kstuff",
+        "pt": "O jogo fecha após a pausa automática do kstuff"
+      },
+      "symptoms": {
+        "en": [
+          "A mounted game closes shortly after kstuff is paused automatically."
+        ],
+        "es": [
+          "Un juego montado se cierra poco después de que kstuff se pause automáticamente."
+        ],
+        "pt": [
+          "Um jogo montado fecha pouco depois que o kstuff é pausado automaticamente."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "su-101337-5-did-not-start",
+      "group": "codes",
+      "severity": "high",
+      "evidence": "proven",
       "title": {
         "en": "The console did not start properly (SU-101337-5)",
         "es": "La consola no se inició correctamente (SU-101337-5)",
         "pt": "O console não iniciou corretamente (SU-101337-5)"
       },
       "symptoms": {
-        "en": ["Error SU-101337-5 appears when the console turns on.", "The console does not start normally."],
-        "es": ["Aparece el error SU-101337-5 al encender la consola.", "La consola no se inicia con normalidad."],
-        "pt": ["Aparece o erro SU-101337-5 ao ligar o console.", "O console não inicia normalmente."]
+        "en": [
+          "Error SU-101337-5 appears when the console turns on.",
+          "The console does not start normally."
+        ],
+        "es": [
+          "Aparece el error SU-101337-5 al encender la consola.",
+          "La consola no se inicia con normalidad."
+        ],
+        "pt": [
+          "Aparece o erro SU-101337-5 ao ligar o console.",
+          "O console não inicia normalmente."
+        ]
       },
-      "sources": ["sony-su-101337-5", "sony-safemode-en"],
+      "sources": [
+        "sony-su-101337-5",
+        "sony-safemode-en"
+      ],
       "reviewedAt": "2026-10-29"
     },
     {
       "slug": "ce-108262-9-data-read",
+      "group": "codes",
       "severity": "high",
+      "evidence": "proven",
       "title": {
         "en": "Error reading system or app data (CE-108262-9)",
         "es": "Error al leer datos del sistema o de una app (CE-108262-9)",
         "pt": "Erro ao ler dados do sistema ou de um app (CE-108262-9)"
       },
       "symptoms": {
-        "en": ["Error CE-108262-9 appears.", "A game or app does not open, or the console reports a data read error."],
-        "es": ["Aparece el error CE-108262-9.", "Un juego o una app no abre, o la consola indica un error al leer datos."],
-        "pt": ["Aparece o erro CE-108262-9.", "Um jogo ou app não abre, ou o console avisa que houve erro ao ler dados."]
+        "en": [
+          "Error CE-108262-9 appears.",
+          "A game or app does not open, or the console reports a data read error."
+        ],
+        "es": [
+          "Aparece el error CE-108262-9.",
+          "Un juego o una app no abre, o la consola indica un error al leer datos."
+        ],
+        "pt": [
+          "Aparece o erro CE-108262-9.",
+          "Um jogo ou app não abre, ou o console avisa que houve erro ao ler dados."
+        ]
       },
-      "sources": ["sony-ce-108262-9", "sony-safemode-en"],
+      "sources": [
+        "sony-ce-108262-9",
+        "sony-safemode-en"
+      ],
       "reviewedAt": "2026-10-29"
     },
     {
       "slug": "ce-108255-1-app-error",
+      "group": "codes",
       "severity": "low",
+      "evidence": "proven",
       "title": {
         "en": "A game or app closes with an error (CE-108255-1)",
         "es": "Un juego o una app se cierra con un error (CE-108255-1)",
         "pt": "Um jogo ou app fecha com erro (CE-108255-1)"
       },
       "symptoms": {
-        "en": ["A game or app closes and shows error CE-108255-1."],
-        "es": ["Un juego o una app se cierra y muestra el error CE-108255-1."],
-        "pt": ["Um jogo ou app fecha e mostra o erro CE-108255-1."]
+        "en": [
+          "A game or app closes and shows error CE-108255-1."
+        ],
+        "es": [
+          "Un juego o una app se cierra y muestra el error CE-108255-1."
+        ],
+        "pt": [
+          "Um jogo ou app fecha e mostra o erro CE-108255-1."
+        ]
       },
-      "sources": ["sony-ce-108255-1"],
+      "sources": [
+        "sony-ce-108255-1"
+      ],
       "reviewedAt": "2026-10-29"
     },
     {
       "slug": "ws-116332-6-psn-blocked",
+      "group": "codes",
       "severity": "medium",
+      "evidence": "proven",
       "title": {
         "en": "Access to PlayStation Network is blocked (WS-116332-6)",
         "es": "El acceso a PlayStation Network está bloqueado (WS-116332-6)",
         "pt": "O acesso à PlayStation Network está bloqueado (WS-116332-6)"
       },
       "symptoms": {
-        "en": ["Error WS-116332-6 appears when you try to use PlayStation Network."],
-        "es": ["Aparece el error WS-116332-6 al intentar usar PlayStation Network."],
-        "pt": ["Aparece o erro WS-116332-6 ao tentar usar a PlayStation Network."]
+        "en": [
+          "Error WS-116332-6 appears when you try to use PlayStation Network."
+        ],
+        "es": [
+          "Aparece el error WS-116332-6 al intentar usar PlayStation Network."
+        ],
+        "pt": [
+          "Aparece o erro WS-116332-6 ao tentar usar a PlayStation Network."
+        ]
       },
-      "sources": ["sony-ws116332-en", "sony-ws116332-es", "sony-ws116332-pt"],
+      "sources": [
+        "sony-ws116332-en",
+        "sony-ws116332-es",
+        "sony-ws116332-pt"
+      ],
       "reviewedAt": "2026-10-29"
     },
     {
       "slug": "ce-109737-7-usb",
+      "group": "triage",
       "severity": "low",
+      "evidence": "proven",
       "title": {
         "en": "USB drive not recognized (CE-109737-7)",
         "es": "La unidad USB no se reconoce (CE-109737-7)",
         "pt": "O pendrive não é reconhecido (CE-109737-7)"
       },
       "symptoms": {
-        "en": ["Error CE-109737-7 appears.", "The console does not see the USB drive."],
-        "es": ["Aparece el error CE-109737-7.", "La consola no ve la unidad USB."],
-        "pt": ["Aparece o erro CE-109737-7.", "O console não enxerga o pendrive."]
+        "en": [
+          "Error CE-109737-7 appears.",
+          "The console does not see the USB drive."
+        ],
+        "es": [
+          "Aparece el error CE-109737-7.",
+          "La consola no ve la unidad USB."
+        ],
+        "pt": [
+          "Aparece o erro CE-109737-7.",
+          "O console não enxerga o pendrive."
+        ]
       },
-      "sources": ["sony-ce-109737-7"],
+      "sources": [
+        "sony-ce-109737-7"
+      ],
       "reviewedAt": "2026-10-29"
     },
     {
       "slug": "ce-110538-8-disc",
+      "group": "triage",
       "severity": "low",
+      "evidence": "proven",
       "title": {
         "en": "The console cannot read a disc (CE-110538-8)",
         "es": "La consola no puede leer un disco (CE-110538-8)",
         "pt": "O console não consegue ler um disco (CE-110538-8)"
       },
       "symptoms": {
-        "en": ["Error CE-110538-8 appears after you insert a disc."],
-        "es": ["Aparece el error CE-110538-8 al meter un disco."],
-        "pt": ["Aparece o erro CE-110538-8 ao colocar um disco."]
+        "en": [
+          "Error CE-110538-8 appears after you insert a disc."
+        ],
+        "es": [
+          "Aparece el error CE-110538-8 al meter un disco."
+        ],
+        "pt": [
+          "Aparece o erro CE-110538-8 ao colocar um disco."
+        ]
       },
-      "sources": ["sony-ce-110538-8"],
+      "sources": [
+        "sony-ce-110538-8"
+      ],
       "reviewedAt": "2026-10-29"
+    },
+    {
+      "slug": "which-part-is-failing",
+      "group": "triage",
+      "severity": "low",
+      "title": {
+        "en": "It is not clear which part is failing",
+        "es": "No está claro qué parte está fallando",
+        "pt": "Não está claro qual parte está falhando"
+      },
+      "symptoms": {
+        "en": [
+          "You updated several tools at once and an error appeared.",
+          "You cannot tell where the problem started."
+        ],
+        "es": [
+          "Actualizaste varias herramientas a la vez y apareció un error.",
+          "No sabes dónde empezó el problema."
+        ],
+        "pt": [
+          "Você atualizou várias ferramentas de uma vez e apareceu um erro.",
+          "Você não sabe onde o problema começou."
+        ]
+      },
+      "sources": [
+        "relapse-readme",
+        "webkit-autoloader-changelog",
+        "shadowmountplus-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "fix-needs-wipe-or-update",
+      "group": "triage",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "A fix asks you to erase data or update",
+        "es": "Una solución te pide borrar datos o actualizar",
+        "pt": "Uma correção pede para apagar dados ou atualizar"
+      },
+      "symptoms": {
+        "en": [
+          "A guide or support page tells you to reset the console, restore a backup or reinstall the system software."
+        ],
+        "es": [
+          "Una guía o página de soporte te pide restaurar la consola, recuperar una copia de seguridad o reinstalar el software del sistema."
+        ],
+        "pt": [
+          "Um guia ou página de suporte manda redefinir o console, restaurar um backup ou reinstalar o software do sistema."
+        ]
+      },
+      "sources": [
+        "sony-su-101337-5",
+        "sony-ce-108262-9",
+        "sony-safemode-en",
+        "sony-safemode-es",
+        "sony-safemode-pt"
+      ],
+      "reviewedAt": "2026-10-31"
     }
   ]
 }

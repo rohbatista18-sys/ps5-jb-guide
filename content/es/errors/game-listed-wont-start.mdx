@@ -1,0 +1,25 @@
+## Qué significa
+
+El juego tiene icono en el menú, pero no se abre. ShadowMountPlus primero monta tu copia y luego la registra, y su README trata esto como dos pasos distintos. Un juego puede estar montado y aun así no iniciarse.
+
+## Qué hacer
+
+<Step n={1} title="Busca Register failed" src="shadowmountplus-readme">
+
+Revisa las notificaciones de registro y el `debug.log` en busca de `Register failed`. Eso apunta al paso de registro, no al montaje.
+
+</Step>
+
+<Step n={2} title="Mira qué copia usa el launcher antes de recrear la entrada" src="shadowmountplus-readme">
+
+Antes de quitar el icono del launcher y su entrada en Itemzflow para recrearlos, comprueba a qué origen apunta el launcher.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="brick" title="Haz una copia antes de borrar nada">
+
+No borres datos del juego ni partidas guardadas para probar sin tener una copia de seguridad. Montar con éxito no garantiza que el juego se inicie.
+
+</Warn>

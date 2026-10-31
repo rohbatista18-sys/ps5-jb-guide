@@ -1,0 +1,31 @@
+## Qué significa
+
+El PS5 WebKit Autoloader no siempre abre su cargador ELF a la red. Las notas de su versión v0.3.0 dicen que pasó a usar un `elfldr` solo para localhost, que acepta payloads únicamente desde la propia consola, para evitar que se ejecuten payloads no deseados por la red. Las mismas notas dicen que un `elfldr` abierto a la red se puede seguir usando con Payload Manager o con un `autoload.txt` personalizado.
+
+## Qué hacer
+
+<Step n={1} title="Comprueba si tu versión usa un elfldr solo para localhost" src="webkit-autoloader-releases">
+
+Lee las notas de tu versión. Si su `elfldr` es solo para localhost, un ordenador de tu red no puede enviarle nada.
+
+</Step>
+
+<Step n={2} title="Usa un modo de envío que ofrezca el proyecto" src="webkit-autoloader-releases">
+
+Las notas remiten a Payload Manager o a un `autoload.txt` personalizado para tener un `elfldr` abierto a la red. Usa uno de ellos, configurado a propósito.
+
+</Step>
+
+<Step n={3} title="Como comprobación, confirma la IP, el servicio y la conexión local">
+
+Revisa la IP de la consola, que el servicio al que envías esté activo y que el ordenador y la PS5 estén en la misma red local.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Deja el cargador en tu red local">
+
+No expongas el cargador a internet para resolver un problema de la red local.
+
+</Warn>

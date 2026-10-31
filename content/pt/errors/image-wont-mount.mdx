@@ -1,0 +1,25 @@
+## O que significa
+
+O ShadowMountPlus rejeita a imagem da sua cópia, ou a montagem falha, às vezes com `broken pipe`. Também há um relato na página de issues do ShadowMountPlus de imagens exFAT que falhavam ao montar com `broken pipe` em uma build.
+
+## O que fazer
+
+<Step n={1} title="Confira se a imagem está íntegra e se a extensão bate com o formato" src="shadowmountplus-readme">
+
+`.ffpkg` corresponde a UFS, `.exfat` a exFAT e `.ffpfs` a PFS.
+
+</Step>
+
+<Step n={2} title="Compare a sua build com o relato" src="shadowmountplus-issue-47">
+
+O relato descreve imagens exFAT falhando com `broken pipe` em uma build específica do ShadowMountPlus. Veja qual build você usa e compare.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Trocar a extensão não converte a imagem">
+
+Mudar só a extensão não transforma a imagem em outro formato.
+
+</Warn>

@@ -1,0 +1,25 @@
+## O que significa
+
+O jogo tem ícone no menu, mas não abre. O ShadowMountPlus primeiro monta a sua cópia e depois a registra, e o README trata isso como duas etapas separadas. Um jogo pode estar montado e mesmo assim não iniciar.
+
+## O que fazer
+
+<Step n={1} title="Procure Register failed" src="shadowmountplus-readme">
+
+Confira as notificações de registro e o `debug.log` em busca de `Register failed`. Isso indica falha no registro, não na montagem.
+
+</Step>
+
+<Step n={2} title="Veja qual cópia o launcher usa antes de recriar a entrada" src="shadowmountplus-readme">
+
+Antes de remover o ícone do launcher e a entrada no Itemzflow para recriá-los, confira para qual origem o launcher aponta.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Faça backup antes de apagar qualquer coisa">
+
+Não apague dados do jogo nem saves para testar sem ter backup. Montar com sucesso não garante que o jogo vai iniciar.
+
+</Warn>

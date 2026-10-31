@@ -1,0 +1,25 @@
+## Qué significa
+
+ShadowMountPlus lee los datos del juego en `param.json` o `param.sfo` dentro de la carpeta `sce_sys`. Cuando el registro muestra `missing/invalid param.json/param.sfo`, no puede reconocer el título.
+
+## Qué hacer
+
+<Step n={1} title="Comprueba que sce_sys esté donde debe" src="shadowmountplus-readme">
+
+En una carpeta de juego, el archivo tiene que estar en `sce_sys/param.json` o `sce_sys/param.sfo` dentro de esa carpeta. En una imagen, `sce_sys` tiene que estar en la raíz de la imagen.
+
+</Step>
+
+<Step n={2} title="Busca una carpeta de más en la raíz de la imagen" src="shadowmountplus-readme">
+
+Una carpeta extra en el nivel superior de la imagen puede impedir que se reconozca el título.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="No te inventes metadatos">
+
+No crees archivos de metadatos inventados. Vuelve a hacer la copia a partir de tu propio original en buen estado.
+
+</Warn>

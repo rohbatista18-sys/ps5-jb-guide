@@ -71,8 +71,11 @@ async function ErrorContent({ params }: Pick<PageProps<"/[lang]/erros/[slug]">, 
         <h1 id="error-title" className={styles.title}>
           {entry.title[lang]}
         </h1>
-        <span className={badge.badge} data-tone={TONE[entry.severity]}>
-          {t.severity[entry.severity]}
+        <span className={badge.group}>
+          <span className={badge.badge} data-tone={TONE[entry.severity]}>
+            {t.severity[entry.severity]}
+          </span>
+          {entry.evidence && <span className={badge.badge}>{dict.evidence[entry.evidence]}</span>}
         </span>
       </header>
 

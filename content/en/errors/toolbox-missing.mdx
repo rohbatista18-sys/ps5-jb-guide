@@ -1,0 +1,31 @@
+## What it means
+
+etaHEN adds a menu called the Toolbox. Whether it shows up depends on the build and on your firmware. The official etaHEN release notes list several fixes for loading the Toolbox, and the unofficial etaHEN port for 11.00 to 13.60 documents its own startup fixes and lists the exact firmwares it supports.
+
+## What to do
+
+<Step n={1} title="Check that your build has the Toolbox and supports your firmware" src="etahen-port-releases">
+
+Read the release notes of the build you use. The unofficial port, for example, lists the exact firmwares it supports and leaves some out.
+
+</Step>
+
+<Step n={2} title="Read the build's fixes for Toolbox loading" src="etahen-releases">
+
+The official release notes describe what etaHEN does when the Toolbox fails to load, such as trying to restart the home menu.
+
+</Step>
+
+<Step n={3} title="As a check, restart and try a minimal supported setup">
+
+Restart the console, jailbreak again and load only etaHEN, with nothing extra.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Do not stack HEN builds">
+
+Do not load different HEN builds one after another in the same session to force the menu. The unofficial port's notes say to load etaHEN once after a fresh boot, and not over an etaHEN that is already running.
+
+</Warn>

@@ -1,0 +1,25 @@
+## O que significa
+
+Isso envolve as entradas Y2JB (YouTube) e BD-JB5 (Java em Blu-ray). A entrada é só a primeira etapa da cadeia. Abrir o aplicativo de entrada não comprova que a cadeia inteira rodou.
+
+## O que fazer
+
+<Step n={1} title="Identifique a última etapa concluída" src="y2jb-readme">
+
+As etapas são a entrada, o exploit de kernel, o loader e o payload. Por exemplo, o README do Y2JB diz que, depois que o payload Lapse dá certo, ainda é preciso enviar o HEN ou outro ELF para a porta `9021`.
+
+</Step>
+
+<Step n={2} title="Confira qual componente ainda precisa ser carregado" src="bdjb5-readme">
+
+Cada entrada tem requisitos próprios. Por exemplo, o README do BD-JB5 diz que no 13.60 ou superior você precisa de um console que já tenha jailbreak.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Teste de userland não é jailbreak completo">
+
+Um teste de userland não prova suporte do kernel nem compatibilidade de um HEN com a sua configuração.
+
+</Warn>

@@ -29,6 +29,111 @@
       "accessedAt": "2026-10-29"
     },
     {
+      "id": "y2jb-autoloader-p2jb-tests",
+      "url": "https://github.com/itsPLK/ps5-y2jb-autoloader/discussions/7",
+      "title": "Y2JB Autoloader: P2JB testing discussion (#7)",
+      "kind": "forum",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "y2jb-releases",
+      "url": "https://github.com/Gezine/Y2JB/releases",
+      "title": "Y2JB releases",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "webkit-autoloader-releases",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases",
+      "title": "PS5 WebKit Autoloader releases",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "webkit-autoloader-changelog",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/blob/main/CHANGELOG.md",
+      "title": "PS5 WebKit Autoloader changelog",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "webkit-autoloader-feedback-030",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/discussions/9",
+      "title": "PS5 WebKit Autoloader: v0.3.0 feedback (#9)",
+      "kind": "forum",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "webkit-autoloader-feedback-040",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/discussions/13",
+      "title": "PS5 WebKit Autoloader: v0.4.0 feedback (#13)",
+      "kind": "forum",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "webkit-autoloader-feedback-050",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/discussions/15",
+      "title": "PS5 WebKit Autoloader: v0.5.0 feedback (#15)",
+      "kind": "forum",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "webkit-autoloader-feedback-060",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/discussions/22",
+      "title": "PS5 WebKit Autoloader: v0.6.0 and v0.6.1 feedback (#22)",
+      "kind": "forum",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "bdjb5-readme",
+      "url": "https://github.com/Gezine/BD-JB5#readme",
+      "title": "BD-JB5 README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "etahen-releases",
+      "url": "https://github.com/etaHEN/etaHEN/releases",
+      "title": "etaHEN releases (official)",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "etahen-toolbox-options",
+      "url": "https://github.com/etaHEN/etaHEN/blob/main/Source%20Code/shellui/assets/etaHEN_toolbox.xml",
+      "title": "etaHEN: Toolbox option definitions (rest mode, Lite mode)",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "etahen-port-releases",
+      "url": "https://github.com/GronedWaffel/etahen-11.00-13.60/releases",
+      "title": "Unofficial etaHEN port for 11.00–13.60: releases",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "kstuff-lite-issue-81",
+      "url": "https://github.com/EchoStretch/kstuff-lite/issues/81",
+      "title": "kstuff-lite issue #81: panic and shutdown on 12.70",
+      "kind": "forum",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "shadowmountplus-readme",
+      "url": "https://github.com/drakmor/ShadowMountPlus#readme",
+      "title": "ShadowMountPlus README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "shadowmountplus-issue-47",
+      "url": "https://github.com/drakmor/ShadowMountPlus/issues/47",
+      "title": "ShadowMountPlus issue #47: broken pipe",
+      "kind": "forum",
+      "accessedAt": "2026-10-31"
+    },
+    {
       "id": "sony-version-en",
       "url": "https://www.playstation.com/en-us/support/hardware/playstation-system-software-application-version/",
       "title": "Sony: check the system software version (en-us)",

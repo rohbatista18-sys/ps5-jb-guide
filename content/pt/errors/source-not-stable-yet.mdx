@@ -1,0 +1,25 @@
+## O que significa
+
+O ShadowMountPlus espera até que uma origem (pasta ou imagem do backup do seu próprio jogo) tenha idade suficiente antes de processá-la. Origens mais novas ficam para depois, até estarem estáveis, e o log mostra `source not stable yet`. Normalmente isso quer dizer que os arquivos ainda estão sendo copiados ou gravados. A espera é definida por `stability_wait_seconds`, que vem com 10 segundos por padrão.
+
+## O que fazer
+
+<Step n={1} title="Espere a cópia terminar" src="shadowmountplus-readme">
+
+Espere a cópia ou transferência dos arquivos do jogo terminar por completo. Depois confira o `/data/shadowmount/debug.log` de novo.
+
+</Step>
+
+<Step n={2} title="Só se precisar, ajuste a espera de estabilidade" src="shadowmountplus-readme">
+
+O README diz que dá para mudar `stability_wait_seconds` no `/data/shadowmount/config.ini`. Ele aceita valores de 0 a 3600 segundos. Mude só essa opção, do jeito que o README descreve.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Não force a montagem durante uma cópia">
+
+Não tente forçar a montagem enquanto os arquivos ainda estão sendo gravados. Espere a cópia acabar primeiro.
+
+</Warn>

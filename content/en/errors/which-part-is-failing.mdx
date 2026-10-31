@@ -1,0 +1,37 @@
+## What it means
+
+When you change several things at once (the exploit, the autoloader, payloads, the mounter), it gets hard to tell where the error started. This page is a way to narrow it down. It is a diagnostic routine, not an official fix.
+
+## What to do
+
+<Step n={1} title="As a check, write down how you got to the error">
+
+<Checklist items={["Firmware version", "Console model", "Entry point you used to start the jailbreak", "Version of each tool and payload", "Order in which you loaded the payloads", "Last message you saw on screen or in the log", "How the console was started before the attempt"]} />
+
+</Step>
+
+<Step n={2} title="Note the exact version of each tool" src="webkit-autoloader-changelog">
+
+Support can change between releases. The WebKit Autoloader changelog, for example, shows firmware support being added and dropped from one version to the next.
+
+</Step>
+
+<Step n={3} title="Save the log before you restart" src="shadowmountplus-readme">
+
+Some tools write a log on the console. ShadowMountPlus, for example, writes `/data/shadowmount/debug.log`. Keep a copy before you restart.
+
+</Step>
+
+<Step n={4} title="As a check, change one thing at a time and compare">
+
+Go back to the last setup that worked and change only one item per attempt. That way you can see which change brings the error back.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="What this check cannot tell you">
+
+Do not use videos or reports from another firmware as proof that something works on yours. This routine does not replace a hardware diagnosis.
+
+</Warn>

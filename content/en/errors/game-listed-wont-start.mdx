@@ -1,0 +1,25 @@
+## What it means
+
+The game has an icon in the menu, but opening it fails. ShadowMountPlus first mounts your backup and then registers it, and its README treats these as two separate steps. A game can be mounted and still not start.
+
+## What to do
+
+<Step n={1} title="Look for Register failed" src="shadowmountplus-readme">
+
+Check the registration notifications and `debug.log` for `Register failed`. That points to the registration step, not to mounting.
+
+</Step>
+
+<Step n={2} title="Check which copy the launcher uses before recreating the entry" src="shadowmountplus-readme">
+
+Before you remove the launcher icon and its Itemzflow entry to recreate them, check which source the launcher is pointing to.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Back up before deleting anything">
+
+Do not delete game data or saves to test without a backup. A successful mount does not guarantee the game will start.
+
+</Warn>

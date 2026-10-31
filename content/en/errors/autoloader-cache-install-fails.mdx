@@ -1,0 +1,25 @@
+## What it means
+
+This is about the WebKit Autoloader installer. The project has documented fixes for it in its releases: from v0.3.1, the installer can detect when the browser cache fails to download because the browser's saved data is damaged.
+
+## What to do
+
+<Step n={1} title="Use the cache recovery in versions that include it" src="webkit-autoloader-releases">
+
+In those versions, the installer shows a prompt on screen that offers to clear the WebKit browser data and try again.
+
+</Step>
+
+<Step n={2} title="If the procedure asks you to clear browser data, do it and let the install finish" src="webkit-autoloader-releases">
+
+Do not close the window until the installer is done.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Browser cache is not the system">
+
+Do not confuse clearing the browser cache with reinstalling the firmware or deleting system files by hand. This problem calls for neither.
+
+</Warn>
