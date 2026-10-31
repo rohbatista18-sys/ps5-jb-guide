@@ -1,0 +1,41 @@
+## Qué significa
+
+Netflix-N-Hack ejecuta código desde la pantalla de error de Netflix, mediante un proxy que corre en tu PC. Hay relatos de que muestra una notificación y luego no pasa nada más, o de que solo funciona en algunos intentos. El README indica el firmware de PS5 4.03–12.XX. Una notificación por sí sola no demuestra que el exploit de kernel haya terminado.
+
+## Qué hacer
+
+<Step n={1} title="Comprueba tu firmware y la aplicación de Netflix" src="netflix-n-hack-readme">
+
+El README indica el firmware de PS5 4.03–12.XX. También dice que la versión de PS4 de Netflix necesita licencia: si la aplicación sigue bloqueada, no puedes usar este jailbreak.
+
+</Step>
+
+<Step n={2} title="Comprueba el proxy en los ajustes de la PS5" src="netflix-n-hack-readme">
+
+El README dice que el PC que ejecuta el proxy debe estar en la misma red que la PS5 y ser accesible por su IP local. En la configuración de Internet de la PS5, elige configurarla manualmente, deja DNS y MTU en Automático y pon como servidor proxy la IP local de tu PC y el puerto `8080`. El mensaje de que no se puede conectar a Internet es normal y se puede ignorar después de pulsar OK.
+
+<MenuPath items={["Ajustes", "Red", "Configuración", "Configurar conexión a Internet"]} />
+
+</Step>
+
+<Step n={3} title="Inicia también el servidor de registros" src="netflix-n-hack-readme">
+
+El README dice que el script se activa después de que se inicie el WebSocket de los registros remotos, así que ejecuta también `ws.py`. Si usas la configuración con Docker, revisa los registros de `mitmproxy` y `ws` para ver que los dos servicios arrancaron.
+
+</Step>
+
+<Step n={4} title="Vuelve a intentarlo como dice el README" src="netflix-n-hack-readme">
+
+Si Netflix se cierra poco después de abrirla, ábrela otra vez. Si aparece un error verde `Exception`, pulsa X u O para reintentar. Si Lapse falla, una notificación te pide reiniciar, y tienes que reiniciar antes de volver a intentarlo.
+
+</Step>
+
+<Step n={5} title="Envía tu ELF solo cuando elfldr esté escuchando en el puerto 9021" src="netflix-n-hack-readme" />
+
+## Cuándo parar
+
+<Warn kind="terms" title="Una notificación no es un jailbreak terminado">
+
+Una notificación por sí sola no demuestra que el exploit de kernel haya terminado. El README describe una variante P2JB aparte solo para el firmware 10.x–12.40, con sus propios pasos y un tiempo estimado de unos 70 minutos. No la uses en otras versiones de firmware.
+
+</Warn>

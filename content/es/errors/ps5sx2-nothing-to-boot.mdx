@@ -1,0 +1,37 @@
+## Qué significa
+
+Hay relatos de dos casos: un disco de PS3 propio se instala como juego en PS5SX3 y luego muestra `Nothing to boot`, o una imagen de un juego propio se queda en la pantalla de carga y nunca arranca. No hay una solución confirmada para ninguno de los dos. PS5SX2 (PS2) y PS5SX3 son aplicaciones distintas, así que primero averigua cuál está implicada. Los pasos de abajo son comprobaciones, y solo los de PS5SX2 están documentados. La configuración básica de emuladores está en la [guía de emuladores retro](/es/guias/retro-emulators).
+
+## Qué hacer
+
+<Step n={1} title="Como comprobación, anota la app y su build">
+
+Apunta si pasa en PS5SX2 o en PS5SX3, qué build tienes y el mensaje exacto que aparece.
+
+</Step>
+
+<Step n={2} title="En PS5SX2, revisa la BIOS" src="ps5sx2-release-2-20">
+
+PS5SX2 2.20 comprueba la BIOS antes de cada inicio y te dice qué hacer; sus notas de versión dicen que la mayoría de los inicios fallidos eran por falta de BIOS. Tu propia BIOS va en `/data/PCSX2/bios`. La OpenPS2BIOS integrada es experimental: algunos juegos aún no funcionan con ella y no puede iniciar discos de PS1, CD de audio ni DVD de vídeo.
+
+</Step>
+
+<Step n={3} title="Revisa qué app recibe el disco" src="ps5sx2-release-2-20">
+
+Con PS5SX2 2.20, un disco de PS2 va a PS5SX2 y cualquier otro disco se deja a PS5SX3. Para eso, PS5SX3 debe ser TB19.1 o más reciente.
+
+</Step>
+
+<Step n={4} title="Como comprobación, revisa tu copia y las instrucciones del emulador">
+
+Comprueba que tu volcado está completo y en un formato que esa build acepta. Lee las instrucciones de esa build para saber si necesita un archivo de BIOS o de firmware propio.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Sin solución confirmada">
+
+No se encontró una solución confirmada para un disco que muestra `Nothing to boot` ni para una imagen que se queda cargando. No sigas guías de emuladores de PC como RPCS3 como si fueran el mismo programa. Nunca actualices el firmware de la consola para intentar arreglar un emulador.
+
+</Warn>

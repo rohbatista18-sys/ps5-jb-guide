@@ -1,0 +1,37 @@
+## O que significa
+
+A Sony diz que Recriar banco de dados, no Modo de Segurança, verifica a unidade e cria um novo banco de dados de todo o conteúdo do sistema. Há relatos de que, num console com jailbreak, homebrew, jogos montados e pacotes de PS4 instalados podem sumir da tela inicial depois disso, e de que os fundos do Welcome hub também podem sumir. Isso não quer dizer necessariamente que os arquivos foram apagados: pode ser que só o registro esteja faltando. Isto são verificações, não uma correção confirmada.
+
+## O que fazer
+
+<Step n={1} title="Como diagnóstico, veja se os arquivos continuam lá">
+
+Procure no armazenamento as pastas de jogo, as imagens e o homebrew antes de concluir que algo foi apagado.
+
+</Step>
+
+<Step n={2} title="Deixe o ShadowMountPlus fazer a busca de novo" src="shadowmountplus-1-7">
+
+Para jogos montados e homebrew, confirme que o ShadowMountPlus está rodando: ao carregar, ele mostra uma notificação ShadowMount+. Ele faz uma busca completa a cada `scan_interval_seconds` (15 por padrão). Depois confira o `/data/shadowmount/debug.log`.
+
+</Step>
+
+<Step n={3} title="Como diagnóstico, cuidado com ferramentas para pacotes instalados">
+
+Para pacotes de PS4 instalados no sistema, use só uma ferramenta de recuperação de registro que diga claramente que é compatível com PS5, e faça backup do banco de dados antes.
+
+</Step>
+
+<Step n={4} title="Como diagnóstico, guarde os arquivos se não houver ferramenta confiável">
+
+Se você não achar uma ferramenta confiável, guarde os arquivos e anote o que estava instalado antes de reinstalar qualquer coisa.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Recriar não é restaurar">
+
+O Recriar banco de dados da Sony não serve para restaurar registros personalizados. Nesta pesquisa nenhum script de banco de dados de PS4 foi validado no PS5, e não há jeito garantido de recuperar os fundos do Welcome hub com esse método.
+
+</Warn>

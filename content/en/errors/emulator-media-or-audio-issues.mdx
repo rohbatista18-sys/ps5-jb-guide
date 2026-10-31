@@ -1,0 +1,49 @@
+## What it means
+
+Stutter, lag and missing sound can have different causes: an incomplete copy of your own game, a setting that asks too much of the console, a slow drive or image format, or a sound problem on the whole console. Users report this with emulators and with backups of their own games. The steps below are checks to find which one it is, not a confirmed fix. The basic emulator setup is in the [retro emulators guide](/en/guias/retro-emulators).
+
+## What to do
+
+<Step n={1} title="Go back to the original settings" src="ps5sx2-performance">
+
+Turn off FPS patches and HD textures, then test again. In PS5SX2, a 60 FPS patch doubles the work for the CPU and the GPU, and HD texture packs can stutter while textures load the first time. To check a pack, turn off **Texture replacements** for that game.
+
+</Step>
+
+<Step n={2} title="As a check, look at your copy of the game">
+
+Check that your copy is complete, including its audio and language files. If only one game has no sound or no dialogue, start with that copy, not with the console.
+
+</Step>
+
+<Step n={3} title="As a check, compare on a drive you know works">
+
+Copy the same game to a drive where other games run well and play the same part again. Keep the original copy until you know the result.
+
+</Step>
+
+<Step n={4} title="Check the image format" src="shadowmountplus-1-7">
+
+ShadowMountPlus says compressed PFS images (`.ffpfsc`) read at roughly 150–250 MB/s, and games that read a lot of data or stream textures may stutter. It also says exFAT images made with clusters smaller than `64 KB` can lose performance.
+
+</Step>
+
+<Step n={5} title="In PS5SX2, find what holds the game back" src="ps5sx2-performance">
+
+Turn on the info box: on the settings page, **On screen**, set **Info box** to **FPS + load**. Go to a slow part and look at EE, GS and VU. The one at or near 100 is what holds the game back.
+
+</Step>
+
+<Step n={6} title="As a check, if the whole console has no sound">
+
+If sound fails in every game and app, not just one, the problem is not the game. Check the console's audio output (for example, try PCM), the TV or receiver, and another HDMI input. In an emulator, also check its own audio and renderer settings.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="These are checks, not a fix">
+
+Stutter in one game does not prove that the SSD is failing. There is no general fix for sound going out of sync. Do not delete or format anything just to test: keep the original copy until the new one works.
+
+</Warn>

@@ -16,10 +16,44 @@ Cada entrada tem requisitos próprios. Por exemplo, o README do BD-JB5 diz que n
 
 </Step>
 
+Um exploit de kernel que funcionou também não é o mesmo que um ambiente de homebrew pronto. Se os aplicativos ainda não abrem, siga os próximos passos.
+
+<Step n={3} title="Depois de reiniciar, rode o exploit de novo e confira se o loader está ativo" src="onionhen-readme">
+
+O README do onionHEN diz que ele não inclui exploit de kernel: primeiro você roda o exploit de kernel e inicia um `elfldr` ouvindo na porta `9021`, e só depois envia o HEN.
+
+</Step>
+
+<Step n={4} title="Carregue um HEN compatível uma vez só e deixe terminar de iniciar" src="onionhen-readme">
+
+Por exemplo, o README do onionHEN diz que ele inicia o daemon de utilitários, o `kstuff` e o daemon principal, nessa ordem. Se a Toolbox não aparecer, espere isso terminar e confira os logs.
+
+</Step>
+
+<Step n={5} title="Para jogos ou apps de pasta ou imagem, carregue o ShadowMount+ e espere" src="shadowmountplus-1-7">
+
+O README do ShadowMount+ diz que ele precisa do `kstuff` (kstuff-lite v1.07 ou mais novo), mostra uma notificação do ShadowMount+ quando inicia e mostra notificações de registro como `Register failed`. Com uma biblioteca grande, a primeira varredura pode levar alguns segundos.
+
+</Step>
+
+<Step n={6} title="Confira o que está rodando" src="payload-manager-readme">
+
+O README do Payload Manager diz que ele pode mostrar os processos ativos, então você vê o que está carregado de fato.
+
+</Step>
+
+<Step n={7} title="Teste um app que você sabe que funciona, sem o overlay, e guarde os logs" src="onionhen-readme">
+
+O README do onionHEN lista a opção `overlay.enabled` para desligar o overlay do jogo. Se o erro continuar voltando, o README pede que os relatos incluam o firmware, o host do exploit, os logs e os passos para reproduzir.
+
+</Step>
+
 ## Quando parar
 
 <Warn kind="terms" title="Teste de userland não é jailbreak completo">
 
 Um teste de userland não prova suporte do kernel nem compatibilidade de um HEN com a sua configuração.
+
+Não ignore um erro do sistema que volta sempre só porque uma notificação disse que o jailbreak funcionou. Não há correção única para todos os apps homebrew.
 
 </Warn>

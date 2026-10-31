@@ -1,0 +1,49 @@
+## What it means
+
+Garlic SaveMgr is a save manager that runs as a payload on a jailbroken PS5 and can import your own saves into the console. If a save goes to the wrong user, or to the wrong place for a PS4 or a PS5 save, the game may not see it or may treat it as corrupted. Garlic's release notes list several import bugs that were fixed in later versions.
+
+## What to do
+
+<Step n={1} title="Make a backup before you import" src="garlic-readme">
+
+Garlic can make backups as encrypted ZIP archives that can be restored. Set the destination in the Settings tab: on the PS5 itself (by default `/data/garlic/backups`) or on a USB drive (by default `/mnt/usb0/garlic-backups`).
+
+</Step>
+
+<Step n={2} title="Check whether it is a PS4 or a PS5 save" src="garlic-releases">
+
+The release notes say PS4 saves go to `savedata/` and PS5 saves go to `savedata_prospero/`. A save in the wrong one will not work.
+
+</Step>
+
+<Step n={3} title="Choose the right user" src="garlic-releases">
+
+Since v1.6, Garlic has a user selector in the top bar that lists all the users on the PS5. Pick the user who plays the game before you import.
+
+</Step>
+
+<Step n={4} title="Use a release that has the import fixes" src="garlic-releases">
+
+v1.6 makes PS4 saves import to the right folder; the notes say older versions wrote the user ID in a way that could corrupt PS4 saves. v1.62b fixes importing encrypted PS5 saves from USB. v1.14 fixes how saves are written for games with several save slots.
+
+</Step>
+
+<Step n={5} title="As a check, import one save and test it">
+
+Import a single save for the selected user and load it in the game. Check that its Title ID matches your game. Only then import the rest.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Updating Garlic does not repair a save">
+
+A newer Garlic version does not bring back a save that is already corrupted. Renaming the Title ID does not turn a save into a save for another game. Keep your backup until the imported save works.
+
+</Warn>
+
+<Warn kind="terms" title="Versions, PS4 keys and saves from another console">
+
+Garlic's version names are tags, not decimal numbers: on the releases page v1.62b comes before v1.6, and v1.14 comes after v1.7. A PS4 save backup also includes its `.bin` key file when there is one; keep the two together. Moving saves from a PS5 without a jailbreak depends on Sony's official options, your account and the save format. This guide does not promise that a save can be decrypted from USB.
+
+</Warn>

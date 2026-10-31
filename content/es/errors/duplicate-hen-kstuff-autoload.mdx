@@ -1,0 +1,43 @@
+## Qué significa
+
+Cuando el mismo HEN, `kstuff` o payload se envía más de una vez, o dos listas de autoload se solapan, hay relatos de kernel panic al abrir juegos, de un autoloader que solo carga a veces, o de un instalador que dice que la consola no respondió. Esto aplica a configuraciones con Y2JB Autoloader, Payload Manager y un HEN como onionHEN. Los casos detrás de esta página son relatos de usuarios, no pruebas hechas por esta guía.
+
+## Qué hacer
+
+<Step n={1} title="Guarda una copia de tu autoload.txt" src="y2jb-autoloader-readme">
+
+El README de Y2JB Autoloader dice que `autoload.txt` va en una carpeta `ps5_autoloader`, en la raíz de una memoria USB o en `/data/ps5_autoloader`, y que la USB tiene prioridad. Anota también los payloads de la lista de autoload de Payload Manager antes de cambiar nada.
+
+</Step>
+
+<Step n={2} title="Prueba solo con Payload Manager" src="payload-manager-readme">
+
+El README de Payload Manager dice que puede cargar una lista de payloads automáticamente cada vez que el gestor se inicia. Para esta prueba, inicia solo el gestor y nada más.
+
+</Step>
+
+<Step n={3} title="Deja solo una lista de autoload en uso" src="y2jb-autoloader-readme">
+
+El README dice que el `autoload.txt` del autoloader y el autoload interno de Payload Manager son independientes. Si no hay `autoload.txt`, el autoloader inicia Payload Manager. Si lo hay, Payload Manager no se inicia, salvo que `pldmgr.elf` esté en la lista. Pon tus payloads en una de las dos listas, no en las dos.
+
+</Step>
+
+<Step n={4} title="Carga una sola pila de HEN" src="onionhen-readme">
+
+El README de onionHEN dice que ya incluye `kstuff`, que se carga por defecto y se puede desactivar en su Toolbox, y que su plugin de ShadowMount+ necesita `kstuff`. Así que no hace falta enviar otro `kstuff` encima. Carga el HEN una vez, luego ShadowMount+ y solo los servicios que necesites.
+
+</Step>
+
+<Step n={5} title="Vuelve a añadir los payloads opcionales de uno en uno">
+
+Como comprobación, añade cada payload extra por separado y prueba después de cada uno, para ver cuál trae el problema de vuelta.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Un payload repetido no es señal de éxito">
+
+Ver que un payload se carga otra vez, o una segunda notificación, no confirma que haya funcionado. Las dos listas de autoload son independientes, así que revisa las dos antes de poner un payload en cualquiera. Los casos en los que esto ayudó son relatos de usuarios, no pruebas hechas por esta guía.
+
+</Warn>

@@ -16,10 +16,34 @@ Uma pasta extra no nível de cima da imagem pode impedir o reconhecimento do tí
 
 </Step>
 
+<Step n={3} title="Numa imagem, olhe dentro da montagem" src="shadowmountplus-1-7">
+
+Por FTP, abra a pasta dessa imagem dentro de `/mnt/shadowmnt/`. O nome dela é o nome da imagem seguido de um hash. Confira se o arquivo param está lá.
+
+</Step>
+
+<Step n={4} title="Como diagnóstico, confirme que os arquivos são deste jogo">
+
+O Title ID e a pasta `sce_sys` devem vir da mesma cópia do seu jogo. Não reaproveite um `param.json` de outro título.
+
+</Step>
+
+<Step n={5} title="Deixe o scanner registrar de novo e leia o log" src="shadowmountplus-1-7">
+
+Depois de corrigir a cópia, espere a próxima busca. Então confira o `/data/shadowmount/debug.log` e veja se aparece alguma notificação `Register failed`.
+
+</Step>
+
 ## Quando parar
 
 <Warn kind="terms" title="Não invente metadados">
 
 Não crie arquivos de metadados inventados. Refaça a cópia a partir do seu próprio original íntegro.
+
+</Warn>
+
+<Warn kind="brick" title="Não copie bancos de dados entre consoles">
+
+Não copie o `app.db` de outro console. Faltar logo ou descrição não prova que o jogo não vai rodar, e não foi encontrada uma correção única confirmada para os dados do título que faltam.
 
 </Warn>

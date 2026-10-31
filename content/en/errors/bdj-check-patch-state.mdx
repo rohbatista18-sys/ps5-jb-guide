@@ -1,0 +1,43 @@
+## What it means
+
+Some disc (BD-J) methods depend on a patched system file, `bdjstack.jar`. Users report a black screen with a BD-J disc after using another method, a BD-J disc that suddenly stopped working, or an unpatch payload that would not run. Check what state the console is in before you run anything else. This is a diagnostic order, not a confirmed fix.
+
+## What to do
+
+<Step n={1} title="Write down your port, firmware and patch state">
+
+As a check, note which BD-J port you use, your firmware version, and whether `bdjstack.jar` is patched right now.
+
+</Step>
+
+<Step n={2} title="Run only the patch or unpatch payload from the project for your setup" src="netflix-n-hack-readme">
+
+The Netflix-N-Hack README says that, on consoles with a disc drive, the ELF loader can be used to patch or unpatch `bdjstack.jar` (the BD-UN-JB project). Run it only once the loader is ready, and only the version made for your firmware.
+
+</Step>
+
+<Step n={3} title="Check that the loader accepts payloads from your device" src="y2jb-autoloader-readme">
+
+The Y2JB Autoloader README says its default ELF loader only accepts connections from the PS5 itself. To send a payload from another device, you first have to load a normal ELF loader through `autoload.txt`, as the README explains.
+
+</Step>
+
+<Step n={4} title="Restart and test with a disc you know works">
+
+As a check, restart the console before each test, so one attempt does not affect the next.
+
+</Step>
+
+<Step n={5} title="If it started after another method, write down your steps">
+
+As a check, note what you ran before the problem started and the exact error you see.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="Do not repeat unpatch at random">
+
+Do not mix payloads made for different firmwares, and do not run an unpatch payload over and over. The Netflix-N-Hack README says this patch is possible, but it does not confirm a fix for every black screen users report.
+
+</Warn>

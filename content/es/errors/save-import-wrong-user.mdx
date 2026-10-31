@@ -1,0 +1,49 @@
+## Qué significa
+
+Garlic SaveMgr es un gestor de partidas guardadas que funciona como payload en una PS5 con jailbreak y puede importar tus propias partidas a la consola. Si una partida va al usuario equivocado, o al lugar equivocado para una partida de PS4 o de PS5, el juego puede no verla o tratarla como dañada. Las notas de versión de Garlic recogen varios fallos de importación que se corrigieron en versiones posteriores.
+
+## Qué hacer
+
+<Step n={1} title="Haz una copia antes de importar" src="garlic-readme">
+
+Garlic puede hacer copias de seguridad en archivos ZIP cifrados que se pueden restaurar. Elige el destino en la pestaña Settings: en la propia PS5 (por defecto `/data/garlic/backups`) o en una unidad USB (por defecto `/mnt/usb0/garlic-backups`).
+
+</Step>
+
+<Step n={2} title="Comprueba si es una partida de PS4 o de PS5" src="garlic-releases">
+
+Las notas de versión dicen que las partidas de PS4 van a `savedata/` y las de PS5 a `savedata_prospero/`. Una partida en la carpeta equivocada no funciona.
+
+</Step>
+
+<Step n={3} title="Elige el usuario correcto" src="garlic-releases">
+
+Desde la v1.6, Garlic tiene un selector de usuario en la barra superior que muestra todos los usuarios de la PS5. Elige el usuario que juega a ese juego antes de importar.
+
+</Step>
+
+<Step n={4} title="Usa una versión que tenga las correcciones de importación" src="garlic-releases">
+
+La v1.6 hace que las partidas de PS4 se importen en la carpeta correcta; las notas dicen que las versiones anteriores escribían el ID de usuario de una forma que podía dañar partidas de PS4. La v1.62b corrige la importación de partidas cifradas de PS5 desde USB. La v1.14 corrige cómo se escriben las partidas en juegos con varias ranuras de guardado.
+
+</Step>
+
+<Step n={5} title="Como comprobación, importa una partida y pruébala">
+
+Importa una sola partida para el usuario elegido y cárgala en el juego. Comprueba que su Title ID coincide con el de tu juego. Solo entonces importa el resto.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="brick" title="Actualizar Garlic no repara una partida">
+
+Una versión nueva de Garlic no recupera una partida que ya está dañada. Cambiar el Title ID no convierte una partida en la de otro juego. Guarda tu copia hasta que la partida importada funcione.
+
+</Warn>
+
+<Warn kind="terms" title="Versiones, claves de PS4 y partidas de otra consola">
+
+Los nombres de versión de Garlic son etiquetas, no números decimales: en la página de versiones la v1.62b va antes que la v1.6, y la v1.14 va después de la v1.7. La copia de una partida de PS4 incluye también su archivo de clave `.bin` cuando existe; mantén los dos juntos. Pasar partidas desde una PS5 sin jailbreak depende de las opciones oficiales de Sony, de tu cuenta y del formato de la partida. Esta guía no promete que se pueda descifrar una partida desde USB.
+
+</Warn>

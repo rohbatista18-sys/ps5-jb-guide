@@ -1,0 +1,51 @@
+## What it means
+
+After a factory reset or a restore, the settings and files the jailbreak needs may be gone: browser settings, the network setup, automatic update settings, the entry app and your payloads. This page is a checklist to set them up again. It is a diagnostic order, not a documented fix.
+
+## What to do
+
+<Step n={1} title="Check that JavaScript is on in the browser the host uses">
+
+As a check, make sure JavaScript is turned on. One user report says an empty progress bar on a WebKit host went away after turning it on. That is a single report, not proof that this is the cause on every host.
+
+</Step>
+
+<Step n={2} title="Set up the network connection again" src="y2jb-autoloader-readme">
+
+The Y2JB Autoloader README says Relapse needs an active network interface: Wi-Fi or a cable connected to a local network, without needing internet access. On 10.20–13.60 it is required.
+
+</Step>
+
+<Step n={3} title="Turn automatic updates off again">
+
+As a check, open this menu and make sure "Download Update Files Automatically" and "Install Update Files Automatically" are not selected.
+
+<MenuPath items={["Settings", "System", "System Software", "System Software Update and Settings"]} />
+
+</Step>
+
+<Step n={4} title="Install the entry app and payloads for your firmware again" src="y2jb-autoloader-readme">
+
+For example, the Y2JB Autoloader README lists which YouTube version goes with each firmware range, and says `download0.dat` goes in `/user/download/PPSA0165*/`.
+
+</Step>
+
+<Step n={5} title="Set up Payload Manager again" src="payload-manager-readme">
+
+The Payload Manager README says recent autoloaders include `pldmgr.elf` as the default payload, and that it can also be loaded manually like any other `.elf` file.
+
+</Step>
+
+<Step n={6} title="Test without your old settings first">
+
+As a check, test the host with a fresh setup before you copy old configuration files back. If it works, add your old settings back one at a time.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="A reset does not pick your firmware">
+
+Do not count on a reset or restore to change the firmware version. Check the version in Console Information before you choose payloads. Turning on JavaScript fixed one report, but an empty progress bar does not prove that cause on every host.
+
+</Warn>

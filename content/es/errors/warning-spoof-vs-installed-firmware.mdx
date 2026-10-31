@@ -1,0 +1,47 @@
+## Qué significa
+
+Hay relatos de una notificación de actualización al entrar en modo de reposo, de PSN pidiendo actualizar, o de Información del sistema mostrando otra versión después de una restauración. Un aviso en pantalla no siempre significa que se instaló una actualización, y si tu pila hace spoof (falsea) la versión, lo que ves puede no ser la versión instalada. Esta página es una lista de comprobaciones, no una solución documentada.
+
+## Qué hacer
+
+<Step n={1} title="Anota la versión instalada">
+
+Como comprobación, abre Información del sistema y anota la versión. Anota también si algo de tu pila hace spoof de la versión.
+
+<MenuPath items={["Ajustes", "Sistema", "Software del sistema", "Información del sistema"]} />
+
+</Step>
+
+<Step n={2} title="Desactiva la descarga y la instalación automáticas">
+
+Como comprobación, asegúrate de que "Descargar archivos de actualización automáticamente" e "Instalar archivos de actualización automáticamente" no estén marcadas.
+
+<MenuPath items={["Ajustes", "Sistema", "Software del sistema", "Ajustes y actualización del software del sistema"]} />
+
+</Step>
+
+<Step n={3} title="Después de un kernel panic, revisa el DNS">
+
+Como comprobación, confirma que los ajustes de red y DNS que hiciste siguen en su sitio.
+
+</Step>
+
+<Step n={4} title="No aceptes una actualización para investigar el aviso" src="sony-safemode-es">
+
+El Modo seguro también tiene la opción "Actualizar software del sistema". No la elijas: actualizar puede quitar el firmware que necesita tu jailbreak.
+
+</Step>
+
+<Step n={5} title="Si ya empezó una actualización, anota en qué etapa estaba">
+
+Como comprobación, anota lo que mostraba la pantalla y hasta dónde llegó antes de intentar cualquier recuperación.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="update" title="Nada de esto deshace una actualización">
+
+Ninguna de las fuentes de esta página dice que restaurar una copia de seguridad cambie la versión del firmware instalado, así que no cuentes con ello. Esta guía no ha confirmado ninguna forma segura de quitar a mano una actualización pendiente. No borres particiones del sistema. Una versión mostrada en una pantalla no prueba, por sí sola, qué versión estaba instalada antes.
+
+</Warn>

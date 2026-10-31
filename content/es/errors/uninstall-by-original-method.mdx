@@ -1,0 +1,49 @@
+## Qué significa
+
+En una consola con jailbreak, un título puede venir de sitios distintos: un paquete instalado en el sistema, un homebrew o una imagen de tu propia copia de un juego que ShadowMountPlus monta y registra. Cada uno se quita de una forma diferente. El icono de la pantalla de inicio, el archivo en el almacenamiento y las partidas guardadas son tres cosas separadas, así que quitar una no quita las otras.
+
+## Qué hacer
+
+<Step n={1} title="Averigua qué tipo de contenido es" src="shadowmountplus-1-7">
+
+ShadowMountPlus monta carpetas de juego y archivos de imagen (`.ffpkg`, `.exfat`, `.ffpfs`, `.ffpfsc`). Un `.pkg` es otra cosa: pasa por el instalador del sistema. Quita cada uno con la herramienta que lo puso ahí.
+
+</Step>
+
+<Step n={2} title="Ten claro qué hace ShadowMountPlus cuando falta el archivo" src="shadowmountplus-1-7">
+
+Por defecto no quita un juego de la biblioteca cuando su archivo desaparece (`auto_remove_missing_games=0`). Con `auto_remove_missing_games=1`, lo quita cuando el archivo lleva ausente `auto_remove_missing_delay_seconds` (300 por defecto), y cancela la eliminación si el archivo vuelve. Los juegos con DLC instalado necesitan además `auto_remove_games_with_dlc=1`.
+
+</Step>
+
+<Step n={3} title="Si la entrada se queda atascada, quita el icono y la entrada de Itemzflow" src="shadowmountplus-1-7">
+
+La sección de problemas de ShadowMountPlus sugiere quitar el icono del lanzador y quitar el título de Itemzflow cuando no se registra bien.
+
+</Step>
+
+<Step n={4} title="Deja tus partidas a salvo" src="shadowmountplus-1-7">
+
+ShadowMountPlus avisa de que quitar los datos del juego desde los ajustes del sistema borra sus partidas guardadas. Haz una copia de tus partidas antes.
+
+</Step>
+
+<Step n={5} title="Como comprobación, revisa el icono, el archivo y las partidas por separado">
+
+Después de quitar algo, comprueba cada una de las tres cosas por separado. Un archivo que siga en una ruta de búsqueda puede volver a encontrarse y registrarse.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="brick" title="Quitar el icono no es quitar el archivo">
+
+Borrar el icono no borra necesariamente la imagen del almacenamiento, y borrar los datos del juego borra las partidas guardadas. Comprueba qué estás quitando antes de confirmar.
+
+</Warn>
+
+<Warn kind="terms" title="Sin solución confirmada para algunos errores">
+
+Para el error CE-118883-9, o una consola que se reinicia mientras desinstalas, esta investigación no encontró una solución concreta confirmada.
+
+</Warn>

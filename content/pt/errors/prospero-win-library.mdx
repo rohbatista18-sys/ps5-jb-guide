@@ -1,0 +1,49 @@
+## O que significa
+
+O prospero-win roda jogos de Windows que você tem em um PS5 com jailbreak, por meio do Wine. Um jogo só aparece no launcher dele por meio de um perfil: cada jogo tem um prefixo do Wine (o drive C: dele) e um arquivo de perfil, e o launcher lê a lista de `profiles/profiles.lst`. Na primeira vez que você abre, a lista está vazia e ele pede para adicionar perfis em `/data/prospero-win/profiles`. O guia de primeiros passos dele documenta os passos abaixo.
+
+## O que fazer
+
+<Step n={1} title="Anote a build" src="prospero-win-getting-started">
+
+O app salva um log de cada execução em `/data/prospero-win/logs/`. Cada arquivo de log começa com uma linha `PW_REPORT/1` que mostra a build e o jogo.
+
+</Step>
+
+<Step n={2} title="Instale a pasta inteira do app" src="prospero-win-getting-started">
+
+O app é a pasta `PPSA99995`, com o `eboot.bin`, o ambiente do Wine e os módulos. Envie a pasta inteira para `/data/homebrew/` e deixe o seu loader registrá-la. Copiar só o `eboot.bin` não basta.
+
+</Step>
+
+<Step n={3} title="Confira a lista de perfis" src="prospero-win-getting-started">
+
+O `profiles/profiles.lst` precisa listar o nome do arquivo do seu perfil, um por linha. A linha `prefix =` do perfil precisa bater com a pasta do jogo dentro de `prefixes/`.
+
+</Step>
+
+<Step n={4} title="Confira o elfldr e o lapy.elf" src="prospero-win-getting-started">
+
+O elfldr precisa estar escutando na porta 9021, e o app precisa conter o `lapy.elf`. Se esse pedido não terminar, o app para antes de carregar os perfis.
+
+</Step>
+
+<Step n={5} title="Atualize sem perder os seus jogos" src="prospero-win-getting-started">
+
+Para atualizar, substitua a pasta `PPSA99995` inteira. Os seus jogos e configurações ficam em `/data/prospero-win` e são mantidos. Os saves ficam no prefixo de cada jogo.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Não apague /data/prospero-win">
+
+Essa pasta guarda os prefixos, os saves e as configurações dos seus jogos. Apagar para começar do zero faz você perder tudo isso. Copie para um PC antes, se precisar reinstalar.
+
+</Warn>
+
+<Warn kind="update" title="Não atualize o console">
+
+Nunca atualize o firmware do PS5 para fazer um jogo aparecer. O guia diz que o app em si não depende do firmware: quem depende são o jailbreak, o loader de apps e o daemon Lapy, e cada um informa os firmwares que suporta.
+
+</Warn>

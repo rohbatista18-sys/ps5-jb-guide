@@ -1,0 +1,49 @@
+## What it means
+
+Users report consoles that crash, have a kernel panic or shut down a few minutes after the jailbreak or after a game starts, even though the jailbreak was stable before. Before you suspect the hardware, rule out what runs on top of the jailbreak: plugins, overlays and optional payloads. The ShadowMount+ README also warns that mounting images can cause shutdown problems and data corruption on internal drives, more often on older firmware. This is a diagnostic order, not a confirmed fix.
+
+## What to do
+
+<Step n={1} title="Save your settings, then restart without optional autoload" src="onionhen-readme">
+
+The onionHEN README says it keeps its settings in `/data/OnionHEN/config.ini` and `/user/data/OnionHEN/config.ini`. Copy the file before you change anything.
+
+</Step>
+
+<Step n={2} title="Turn off the overlay and optional payloads" src="onionhen-readme">
+
+The README lists an `overlay.enabled` option and says most options can be changed in the Toolbox. Auto-start for your own payloads is also set in the Toolbox, and plugins live in `/data/OnionHEN/plugins/`. Keep only the stack you really need.
+
+</Step>
+
+<Step n={3} title="Repeat the same test, then add things back one at a time">
+
+As a check, do the same thing that crashed before. If it is stable, turn each plugin, overlay or payload back on by itself and test again after each one.
+
+</Step>
+
+<Step n={4} title="Read the onionHEN logs" src="onionhen-readme">
+
+The README says the main log is `/data/OnionHEN/OnionHEN.log` and that crash details are kept in `/data/OnionHEN/OnionHEN_crash.log`.
+
+</Step>
+
+<Step n={5} title="Read the ShadowMount+ log" src="shadowmountplus-1-7">
+
+The ShadowMount+ README says debug logging is on by default and writes to `/data/shadowmount/debug.log`. It also watches game launches for up to 60 seconds and shows a notification when it sees a fatal error.
+
+</Step>
+
+<Step n={6} title="Only then look at temperature and power">
+
+As a check, if the problem continues with only the base stack, look at temperature, ventilation and the power supply.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Do not delete everything">
+
+Some users report the problem stopped after they removed one recently added item. That does not prove there is a fixed timer, and it is not a reason to delete all your games or data. Do not load two HEN stacks at the same time. Because the ShadowMount+ README warns about data corruption on internal drives, back up your saves before more tests.
+
+</Warn>

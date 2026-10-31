@@ -1,0 +1,55 @@
+## What it means
+
+PS5SX2 is a PS2 emulator for your own games. Its performance notes separate a slow game (the frame rate drops, the sound stutters, everything moves in slow motion) from a broken one (it won't start, crashes, or has a black screen or garbled graphics). Settings help with the first kind and rarely with the second. Many PS2 games run at 30 fps, or 25 on European discs, by design. Version 2.20 (build `vk-285-182`) adds updates inside the app and a BIOS check before every start. The basic emulator setup is in the [retro emulators guide](/en/guias/retro-emulators).
+
+## What to do
+
+<Step n={1} title="Check the BIOS" src="ps5sx2-release-2-20">
+
+Before a game starts, PS5SX2 2.20 asks whether to use OpenPS2BIOS or your own BIOS in `/data/PCSX2/bios`. Your own BIOS always wins. OpenPS2BIOS is experimental: some games don't work with it yet, and it can't start PS1 discs, audio CDs or DVD video.
+
+</Step>
+
+<Step n={2} title="Update from inside the app" src="ps5sx2-release-2-20">
+
+On the shelf, press Square, then go to **All games**, **PS5SX2**, **System update**. Press Cross to check and Cross again to install. PS5SX2 closes, installs the new version and starts again by itself.
+
+</Step>
+
+<Step n={3} title="If a texture pack download gets stuck" src="ps5sx2-release-2-20">
+
+Since 2.20, when the Google Drive download limit is used up, PS5SX2 shows a clear message instead of a download that stays stuck. Try again later, or pick the other copy of the pack that the app offers.
+
+</Step>
+
+<Step n={4} title="For stutter, find what holds the game back" src="ps5sx2-performance">
+
+Turn on the info box (settings page, **On screen**, **Info box**: **FPS + load**) and go to a slow part. Of EE, GS and VU, the one at or near 100 is the limit. Change one setting at a time and note the FPS after each change.
+
+</Step>
+
+<Step n={5} title="Lower the load" src="ps5sx2-performance">
+
+Lower the **Resolution** one step at a time (6x, 5x, 4x, 3x); on a regular PS5 or Slim, heavy games often need 4x or 3x. Turn off the game's 60 FPS patch. To see whether an HD texture pack is the cause, turn off **Texture replacements** for that game.
+
+</Step>
+
+<Step n={6} title="For graphics errors, compare with the software renderer" src="ps5sx2-performance">
+
+The software renderer is much slower than the hardware one, so use it only for a game the hardware renderer draws wrong. A **Renderer** change only applies when the game restarts.
+
+</Step>
+
+## When to stop
+
+<Warn kind="update" title="Update the app, not the console">
+
+Before updating or reinstalling PS5SX2, copy the `/data/PCSX2` folder (it holds your BIOS and logs) to a PC or a USB drive. Never update the console firmware to fix an emulator.
+
+</Warn>
+
+<Warn kind="terms" title="Saves from other places">
+
+This guide could not confirm that saves from a real PS2 or from another emulator work in PS5SX2. Do not count on importing them.
+
+</Warn>

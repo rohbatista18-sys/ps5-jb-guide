@@ -1,0 +1,51 @@
+## Qué significa
+
+Después de un restablecimiento de fábrica o de una restauración, los ajustes y archivos que necesita el jailbreak pueden haber desaparecido: ajustes del navegador, la red, las actualizaciones automáticas, la aplicación de entrada y tus payloads. Esta página es una lista para volver a configurarlo todo. Es un orden de diagnóstico, no una solución documentada.
+
+## Qué hacer
+
+<Step n={1} title="Comprueba que JavaScript esté activado en el navegador que usa el host">
+
+Como comprobación, asegúrate de que JavaScript esté activado. Un relato de usuario dice que una barra de progreso vacía en un host WebKit desapareció al activarlo. Es un solo relato, no prueba de que sea la causa en todos los hosts.
+
+</Step>
+
+<Step n={2} title="Vuelve a configurar la conexión de red" src="y2jb-autoloader-readme">
+
+El README de Y2JB Autoloader dice que Relapse necesita una interfaz de red activa: Wi-Fi o un cable conectado a una red local, sin necesidad de acceso a Internet. En 10.20–13.60 es obligatoria.
+
+</Step>
+
+<Step n={3} title="Vuelve a desactivar las actualizaciones automáticas">
+
+Como comprobación, abre este menú y asegúrate de que "Descargar archivos de actualización automáticamente" e "Instalar archivos de actualización automáticamente" no estén marcadas.
+
+<MenuPath items={["Ajustes", "Sistema", "Software del sistema", "Ajustes y actualización del software del sistema"]} />
+
+</Step>
+
+<Step n={4} title="Vuelve a instalar la aplicación de entrada y los payloads de tu firmware" src="y2jb-autoloader-readme">
+
+Por ejemplo, el README de Y2JB Autoloader indica qué versión de YouTube va con cada rango de firmware, y dice que `download0.dat` va en `/user/download/PPSA0165*/`.
+
+</Step>
+
+<Step n={5} title="Vuelve a configurar Payload Manager" src="payload-manager-readme">
+
+El README de Payload Manager dice que los autoloaders recientes ya incluyen `pldmgr.elf` como payload por defecto, y que también se puede cargar a mano como cualquier otro archivo `.elf`.
+
+</Step>
+
+<Step n={6} title="Prueba primero sin tus ajustes antiguos">
+
+Como comprobación, prueba el host con una configuración nueva antes de volver a copiar archivos de configuración antiguos. Si funciona, devuelve los ajustes antiguos de uno en uno.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Restablecer no elige tu firmware">
+
+No cuentes con que un restablecimiento o una restauración cambie la versión del firmware. Revisa la versión en Información del sistema antes de elegir payloads. Activar JavaScript resolvió un relato, pero una barra vacía no prueba esa causa en todos los hosts.
+
+</Warn>

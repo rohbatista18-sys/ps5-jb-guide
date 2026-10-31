@@ -1,0 +1,41 @@
+## O que significa
+
+O Netflix-N-Hack roda código a partir da tela de erro da Netflix, usando um proxy que roda no seu PC. Há relatos de que ele mostra uma notificação e depois nada acontece, ou de que só funciona em algumas tentativas. O README lista o firmware do PS5 4.03–12.XX. Uma notificação sozinha não mostra que o exploit de kernel terminou.
+
+## O que fazer
+
+<Step n={1} title="Confira seu firmware e o aplicativo da Netflix" src="netflix-n-hack-readme">
+
+O README lista o firmware do PS5 4.03–12.XX. Ele também diz que a versão de PS4 da Netflix precisa de licença: se o aplicativo continuar bloqueado, você não consegue usar este jailbreak.
+
+</Step>
+
+<Step n={2} title="Confira o proxy nas configurações do PS5" src="netflix-n-hack-readme">
+
+O README diz que o PC que roda o proxy precisa estar na mesma rede que o PS5 e acessível pelo IP local dele. Na configuração de internet do PS5, escolha configurar manualmente, deixe DNS e MTU em Automático e coloque como servidor proxy o IP local do seu PC e a porta `8080`. A mensagem de que não foi possível conectar à internet é esperada e pode ser ignorada depois de apertar OK.
+
+<MenuPath items={["Configurações", "Rede", "Configurações", "Configurar conexão à Internet"]} />
+
+</Step>
+
+<Step n={3} title="Inicie também o servidor de logs" src="netflix-n-hack-readme">
+
+O README diz que o script dispara depois que o WebSocket usado para os logs remotos inicia, então rode o `ws.py` também. Se usar a configuração com Docker, confira os logs de `mitmproxy` e `ws` para ver se os dois serviços subiram.
+
+</Step>
+
+<Step n={4} title="Tente de novo do jeito que o README diz" src="netflix-n-hack-readme">
+
+Se a Netflix fechar logo depois de abrir, abra de novo. Se aparecer um erro verde `Exception`, aperte X ou O para tentar de novo. Se o Lapse falhar, uma notificação pede para reiniciar, e você precisa reiniciar antes de tentar de novo.
+
+</Step>
+
+<Step n={5} title="Envie seu ELF só quando o elfldr estiver ouvindo na porta 9021" src="netflix-n-hack-readme" />
+
+## Quando parar
+
+<Warn kind="terms" title="Notificação não é jailbreak concluído">
+
+Uma notificação sozinha não mostra que o exploit de kernel terminou. O README descreve uma variante P2JB separada só para o firmware 10.x–12.40, com passos próprios e tempo estimado de cerca de 70 minutos. Não use essa variante em outras versões de firmware.
+
+</Warn>

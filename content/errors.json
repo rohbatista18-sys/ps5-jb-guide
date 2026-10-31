@@ -265,7 +265,10 @@
       },
       "sources": [
         "y2jb-readme",
-        "bdjb5-readme"
+        "bdjb5-readme",
+        "onionhen-readme",
+        "shadowmountplus-1-7",
+        "payload-manager-readme"
       ],
       "reviewedAt": "2026-10-31"
     },
@@ -607,7 +610,9 @@
         ]
       },
       "sources": [
-        "webkit-autoloader-feedback-060"
+        "webkit-autoloader-feedback-060",
+        "payload-manager-readme",
+        "y2jb-autoloader-readme"
       ],
       "reviewedAt": "2026-10-31"
     },
@@ -737,7 +742,8 @@
         ]
       },
       "sources": [
-        "shadowmountplus-readme"
+        "shadowmountplus-readme",
+        "shadowmountplus-1-7"
       ],
       "reviewedAt": "2026-10-31"
     },
@@ -816,7 +822,8 @@
         ]
       },
       "sources": [
-        "shadowmountplus-readme"
+        "shadowmountplus-readme",
+        "shadowmountplus-1-7"
       ],
       "reviewedAt": "2026-10-31"
     },
@@ -1155,7 +1162,665 @@
         "sony-ce-108262-9",
         "sony-safemode-en",
         "sony-safemode-es",
+        "sony-safemode-pt",
+        "sony-reinstall-en",
+        "sony-reinstall-es",
+        "sony-reinstall-pt"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "duplicate-hen-kstuff-autoload",
+      "group": "hen",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "HEN, kstuff or payloads load more than once",
+        "es": "HEN, kstuff o payloads se cargan más de una vez",
+        "pt": "HEN, kstuff ou payloads carregam mais de uma vez"
+      },
+      "symptoms": {
+        "en": [
+          "The console has a kernel panic or crashes when you open games after the autoloader runs.",
+          "The autoloader only loads some of the time, or an installer says the console did not respond."
+        ],
+        "es": [
+          "La consola da un kernel panic o se cuelga al abrir juegos después de ejecutar el autoloader.",
+          "El autoloader solo carga algunas veces, o un instalador dice que la consola no respondió."
+        ],
+        "pt": [
+          "O console dá kernel panic ou trava ao abrir jogos depois que o autoloader roda.",
+          "O autoloader só carrega às vezes, ou um instalador diz que o console não respondeu."
+        ]
+      },
+      "sources": [
+        "y2jb-autoloader-readme",
+        "payload-manager-readme",
+        "onionhen-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "prerequisites-after-restore",
+      "group": "triage",
+      "severity": "medium",
+      "title": {
+        "en": "The jailbreak stops working after a reset or restore",
+        "es": "El jailbreak deja de funcionar después de restablecer o restaurar",
+        "pt": "O jailbreak para de funcionar depois de redefinir ou restaurar"
+      },
+      "symptoms": {
+        "en": [
+          "After a factory reset or a restore, the jailbreak and your payloads no longer load.",
+          "The exploit page shows an empty progress bar or no animation."
+        ],
+        "es": [
+          "Después de un restablecimiento de fábrica o una restauración, el jailbreak y tus payloads ya no cargan.",
+          "La página del exploit muestra una barra de progreso vacía o ninguna animación."
+        ],
+        "pt": [
+          "Depois de uma redefinição de fábrica ou restauração, o jailbreak e seus payloads não carregam mais.",
+          "A página do exploit mostra uma barra de progresso vazia ou nenhuma animação."
+        ]
+      },
+      "sources": [
+        "y2jb-autoloader-readme",
+        "payload-manager-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "remote-play-pairing",
+      "group": "hen",
+      "severity": "low",
+      "evidence": "proven",
+      "title": {
+        "en": "Remote Play does not pair with the jailbroken console",
+        "es": "Remote Play no se vincula con la consola con jailbreak",
+        "pt": "O Remote Play não pareia com o console com jailbreak"
+      },
+      "symptoms": {
+        "en": [
+          "The Remote Play app on your PC or phone cannot register the console.",
+          "The Remote Play page in the onionHEN Toolbox is blocked or shows no PIN."
+        ],
+        "es": [
+          "La aplicación de Remote Play en tu PC o móvil no consigue registrar la consola.",
+          "La página de Remote Play en la Toolbox de onionHEN está bloqueada o no muestra ningún PIN."
+        ],
+        "pt": [
+          "O aplicativo do Remote Play no PC ou no celular não consegue registrar o console.",
+          "A página do Remote Play na Toolbox do onionHEN está bloqueada ou não mostra PIN."
+        ]
+      },
+      "sources": [
+        "onionhen-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "isolate-plugins-before-hardware",
+      "group": "hen",
+      "severity": "high",
+      "title": {
+        "en": "The console crashes or shuts down minutes after the jailbreak",
+        "es": "La consola se cuelga o se apaga minutos después del jailbreak",
+        "pt": "O console trava ou desliga minutos depois do jailbreak"
+      },
+      "symptoms": {
+        "en": [
+          "The console shuts down or has a kernel panic a few minutes after the jailbreak or after a game starts.",
+          "It started after you added a plugin, overlay or payload, and the jailbreak was stable before."
+        ],
+        "es": [
+          "La consola se apaga o da un kernel panic unos minutos después del jailbreak o de abrir un juego.",
+          "Empezó después de añadir un plugin, overlay o payload, y el jailbreak era estable antes."
+        ],
+        "pt": [
+          "O console desliga ou dá kernel panic alguns minutos depois do jailbreak ou depois que um jogo abre.",
+          "Começou depois de adicionar um plugin, overlay ou payload, e o jailbreak era estável antes."
+        ]
+      },
+      "sources": [
+        "onionhen-readme",
+        "shadowmountplus-1-7"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "bdj-check-patch-state",
+      "group": "bdj",
+      "severity": "medium",
+      "title": {
+        "en": "A BD-J disc shows a black screen or stopped working",
+        "es": "Un disco BD-J muestra pantalla negra o dejó de funcionar",
+        "pt": "Um disco BD-J mostra tela preta ou parou de funcionar"
+      },
+      "symptoms": {
+        "en": [
+          "The BD-J disc shows a black screen after you used another jailbreak method.",
+          "A BD-J unpatch payload does not run, or a disc that worked suddenly stops."
+        ],
+        "es": [
+          "El disco BD-J muestra una pantalla negra después de usar otro método de jailbreak.",
+          "Un payload de unpatch de BD-J no se ejecuta, o un disco que funcionaba deja de hacerlo de repente."
+        ],
+        "pt": [
+          "O disco BD-J mostra tela preta depois de usar outro método de jailbreak.",
+          "Um payload de unpatch do BD-J não roda, ou um disco que funcionava para de repente."
+        ]
+      },
+      "sources": [
+        "netflix-n-hack-readme",
+        "y2jb-autoloader-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "netflix-n-hack-proxy",
+      "group": "exploit",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "Netflix-N-Hack shows a notification but nothing else happens",
+        "es": "Netflix-N-Hack muestra una notificación pero no pasa nada más",
+        "pt": "O Netflix-N-Hack mostra uma notificação mas nada mais acontece"
+      },
+      "symptoms": {
+        "en": [
+          "Netflix opens and a notification appears, but the jailbreak does not continue.",
+          "It works on some tries and not on others."
+        ],
+        "es": [
+          "Netflix se abre y aparece una notificación, pero el jailbreak no continúa.",
+          "Funciona en algunos intentos y en otros no."
+        ],
+        "pt": [
+          "A Netflix abre e aparece uma notificação, mas o jailbreak não continua.",
+          "Funciona em algumas tentativas e em outras não."
+        ]
+      },
+      "sources": [
+        "netflix-n-hack-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "warning-spoof-vs-installed-firmware",
+      "group": "compat",
+      "severity": "high",
+      "title": {
+        "en": "An update warning appears, or the firmware version looks wrong",
+        "es": "Aparece un aviso de actualización o la versión del firmware no cuadra",
+        "pt": "Aparece um aviso de atualização ou a versão do firmware parece errada"
+      },
+      "symptoms": {
+        "en": [
+          "An update notification appears, for example when the console enters rest mode or from PSN.",
+          "After a restore, Console Information shows a different version than you expected."
+        ],
+        "es": [
+          "Aparece una notificación de actualización, por ejemplo al entrar en modo de reposo o desde PSN.",
+          "Después de una restauración, Información del sistema muestra otra versión de la que esperabas."
+        ],
+        "pt": [
+          "Aparece uma notificação de atualização, por exemplo quando o console entra em modo de repouso ou pela PSN.",
+          "Depois de uma restauração, Informações do console mostra uma versão diferente da esperada."
+        ]
+      },
+      "sources": [
+        "sony-safemode-en",
+        "sony-safemode-es",
         "sony-safemode-pt"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "disc-drive-needs-online-pairing",
+      "group": "hardware",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "The disc drive needs to be paired online",
+        "es": "La unidad de disco necesita emparejarse con conexión",
+        "pt": "A unidade de disco precisa ser emparelhada online"
+      },
+      "symptoms": {
+        "en": [
+          "After a format or a reset, the console asks to pair the disc drive again.",
+          "The disc drive is not registered and discs are not recognized."
+        ],
+        "es": [
+          "Después de formatear o restablecer, la consola pide emparejar otra vez la unidad de disco.",
+          "La unidad de disco no está registrada y no reconoce los discos."
+        ],
+        "pt": [
+          "Depois de formatar ou redefinir, o console pede para emparelhar a unidade de disco de novo.",
+          "A unidade de disco não está registrada e os discos não são reconhecidos."
+        ]
+      },
+      "sources": [
+        "sony-disc-drive-en",
+        "sony-disc-drive-es",
+        "sony-disc-drive-pt"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "disc-read-vs-bdj-patch",
+      "group": "hardware",
+      "severity": "low",
+      "title": {
+        "en": "The console does not read discs after the jailbreak",
+        "es": "La consola no lee discos después del jailbreak",
+        "pt": "O console não lê discos depois do jailbreak"
+      },
+      "symptoms": {
+        "en": [
+          "The drive does not read a DVD or a disc that worked before.",
+          "Only the BD-J exploit disc fails, or every disc fails."
+        ],
+        "es": [
+          "La unidad no lee un DVD o un disco que antes funcionaba.",
+          "Solo falla el disco de exploit BD-J, o fallan todos los discos."
+        ],
+        "pt": [
+          "A unidade não lê um DVD ou um disco que funcionava antes.",
+          "Só o disco de exploit BD-J falha, ou todos os discos falham."
+        ]
+      },
+      "sources": [
+        "sony-disc-drive-en",
+        "sony-disc-drive-es",
+        "sony-disc-drive-pt"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "heat-video-controller-checks",
+      "group": "hardware",
+      "severity": "medium",
+      "title": {
+        "en": "Overheating, image glitches, controller or demo-mode problems",
+        "es": "Sobrecalentamiento, fallos de imagen, mando o modo de demostración",
+        "pt": "Superaquecimento, falhas de imagem, controle ou modo de demonstração"
+      },
+      "symptoms": {
+        "en": [
+          "The console gets very hot in games, or the image shows stretched textures or black squares.",
+          "The controller asks for an update, or the console is stuck in a store demo mode."
+        ],
+        "es": [
+          "La consola se calienta mucho en los juegos, o la imagen muestra texturas estiradas o cuadrados negros.",
+          "El mando pide una actualización, o la consola está atascada en un modo de demostración de tienda."
+        ],
+        "pt": [
+          "O console esquenta muito nos jogos, ou a imagem mostra texturas esticadas ou quadrados pretos.",
+          "O controle pede atualização, ou o console está preso num modo de demonstração de loja."
+        ]
+      },
+      "sources": [
+        "sony-safemode-en",
+        "sony-safemode-es",
+        "sony-safemode-pt",
+        "sony-dualsense-pair-en",
+        "sony-dualsense-pair-es",
+        "sony-dualsense-pair-pt"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "save-import-wrong-user",
+      "group": "saves",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "An imported save lands on the wrong user or does not load",
+        "es": "Una partida importada va al usuario equivocado o no carga",
+        "pt": "Um save importado vai para o usuário errado ou não carrega"
+      },
+      "symptoms": {
+        "en": [
+          "After you import your own save with Garlic, the game does not find it or says it is corrupted.",
+          "The save shows up under another user on the console."
+        ],
+        "es": [
+          "Después de importar tu propia partida con Garlic, el juego no la encuentra o dice que está dañada.",
+          "La partida aparece en otro usuario de la consola."
+        ],
+        "pt": [
+          "Depois de importar o seu próprio save com o Garlic, o jogo não o encontra ou diz que está corrompido.",
+          "O save aparece em outro usuário do console."
+        ]
+      },
+      "sources": [
+        "garlic-releases",
+        "garlic-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "garlic-import-slot-fixes",
+      "group": "saves",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "Older Garlic versions break some save imports",
+        "es": "Versiones antiguas de Garlic estropean algunas importaciones de partidas",
+        "pt": "Versões antigas do Garlic quebram algumas importações de save"
+      },
+      "symptoms": {
+        "en": [
+          "A PS4 save shows as corrupted after you import it with Garlic.",
+          "Importing an encrypted save from USB fails with \"Not a decrypted save folder\", or a game with several save slots mixes them up."
+        ],
+        "es": [
+          "Una partida de PS4 aparece dañada después de importarla con Garlic.",
+          "Importar una partida cifrada desde USB falla con \"Not a decrypted save folder\", o un juego con varias ranuras de guardado las mezcla."
+        ],
+        "pt": [
+          "Um save de PS4 aparece corrompido depois de importado com o Garlic.",
+          "Importar um save criptografado pelo USB falha com \"Not a decrypted save folder\", ou um jogo com vários slots de save mistura os slots."
+        ]
+      },
+      "sources": [
+        "garlic-releases"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "uninstall-by-original-method",
+      "group": "games-mount",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "A game or app will not uninstall or keeps its icon",
+        "es": "Un juego o app no se desinstala o deja su icono",
+        "pt": "Um jogo ou app não desinstala ou deixa o ícone"
+      },
+      "symptoms": {
+        "en": [
+          "You try to delete a game or app and it fails with an error, or the icon stays on the Home screen.",
+          "The console may restart or show an error such as CE-118883-9 during the uninstall."
+        ],
+        "es": [
+          "Intentas borrar un juego o una app y falla con un error, o el icono se queda en la pantalla de inicio.",
+          "La consola puede reiniciarse o mostrar un error como CE-118883-9 durante la desinstalación."
+        ],
+        "pt": [
+          "Você tenta apagar um jogo ou app e dá erro, ou o ícone continua na tela inicial.",
+          "O console pode reiniciar ou mostrar um erro como CE-118883-9 durante a desinstalação."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-1-7"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "other-storage-audit",
+      "group": "storage",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "The Other space is much larger than expected",
+        "es": "El espacio Otros ocupa mucho más de lo esperado",
+        "pt": "O espaço Outros ocupa muito mais que o esperado"
+      },
+      "symptoms": {
+        "en": [
+          "Storage shows tens or hundreds of GB under Other that you cannot explain.",
+          "Space did not come back after you deleted games."
+        ],
+        "es": [
+          "El almacenamiento muestra decenas o cientos de GB en Otros que no sabes explicar.",
+          "No recuperaste espacio después de borrar juegos."
+        ],
+        "pt": [
+          "O armazenamento mostra dezenas ou centenas de GB em Outros que você não sabe explicar.",
+          "O espaço não voltou depois que você apagou jogos."
+        ]
+      },
+      "sources": [
+        "shadowmountplus-1-7"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "internal-vs-usb-vs-extended-storage",
+      "group": "storage",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "Problems with an M.2 SSD, a USB drive or extended storage",
+        "es": "Problemas con un SSD M.2, una unidad USB o el almacenamiento ampliado",
+        "pt": "Problemas com SSD M.2, unidade USB ou armazenamento estendido"
+      },
+      "symptoms": {
+        "en": [
+          "Moving or copying games between drives fails, or the console turns off during the copy.",
+          "A drive will not format, or a newly installed M.2 SSD gives errors."
+        ],
+        "es": [
+          "Mover o copiar juegos entre unidades falla, o la consola se apaga durante la copia.",
+          "Una unidad no se formatea, o un SSD M.2 recién instalado da errores."
+        ],
+        "pt": [
+          "Mover ou copiar jogos entre unidades falha, ou o console desliga durante a cópia.",
+          "Uma unidade não formata, ou um SSD M.2 recém-instalado dá erro."
+        ]
+      },
+      "sources": [
+        "sony-m2-en",
+        "sony-m2-es",
+        "sony-m2-pt",
+        "shadowmountplus-1-7"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "reregister-after-rebuild",
+      "group": "games-run",
+      "severity": "medium",
+      "title": {
+        "en": "Games or apps vanished after Rebuild Database",
+        "es": "Juegos o apps desaparecieron tras Reconstruir base de datos",
+        "pt": "Jogos ou apps sumiram depois de Recriar banco de dados"
+      },
+      "symptoms": {
+        "en": [
+          "After Rebuild Database in Safe Mode, some homebrew, mounted games or installed packages are no longer on the Home screen.",
+          "Welcome hub backgrounds may be gone too."
+        ],
+        "es": [
+          "Después de Reconstruir base de datos en el Modo seguro, algunos homebrew, juegos montados o paquetes instalados ya no están en la pantalla de inicio.",
+          "Los fondos del Welcome hub también pueden haber desaparecido."
+        ],
+        "pt": [
+          "Depois de Recriar banco de dados no Modo de Segurança, alguns homebrews, jogos montados ou pacotes instalados não aparecem mais na tela inicial.",
+          "Os fundos do Welcome hub também podem ter sumido."
+        ]
+      },
+      "sources": [
+        "sony-safemode-en",
+        "sony-safemode-es",
+        "sony-safemode-pt",
+        "shadowmountplus-1-7"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "emulator-media-or-audio-issues",
+      "group": "emulators",
+      "severity": "low",
+      "title": {
+        "en": "A game stutters, lags or has no sound",
+        "es": "Un juego va a tirones, con lag o sin sonido",
+        "pt": "Um jogo engasga, fica lento ou sem som"
+      },
+      "symptoms": {
+        "en": [
+          "A game in an emulator, or a backup of your own game, stutters, lags or drifts out of sync with its sound.",
+          "A game has no sound or no dialogue, or apps take longer to open and you suspect the SSD."
+        ],
+        "es": [
+          "Un juego en un emulador, o una copia de tu propio juego, va a tirones, con lag o con el sonido desincronizado.",
+          "Un juego no tiene sonido ni diálogos, o las apps tardan más en abrir y sospechas del SSD."
+        ],
+        "pt": [
+          "Um jogo em um emulador, ou um backup do seu próprio jogo, engasga, fica lento ou com o som fora de sincronia.",
+          "Um jogo fica sem som ou sem diálogos, ou os apps demoram mais para abrir e você desconfia do SSD."
+        ]
+      },
+      "sources": [
+        "ps5sx2-performance",
+        "shadowmountplus-1-7"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "ps5sx2-update-and-performance",
+      "group": "emulators",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "PS5SX2 is slow, glitches or won't update",
+        "es": "PS5SX2 va lento, falla en los gráficos o no se actualiza",
+        "pt": "O PS5SX2 fica lento, tem falhas gráficas ou não atualiza"
+      },
+      "symptoms": {
+        "en": [
+          "Games in PS5SX2 stutter, run in slow motion, or show graphics errors such as grid lines.",
+          "An HD texture pack download stops before the end, or a game does not start."
+        ],
+        "es": [
+          "Los juegos en PS5SX2 van a tirones, a cámara lenta o muestran errores gráficos como líneas de cuadrícula.",
+          "La descarga de un paquete de texturas HD se detiene antes del final, o un juego no arranca."
+        ],
+        "pt": [
+          "Os jogos no PS5SX2 engasgam, ficam em câmera lenta ou mostram erros gráficos como linhas de grade.",
+          "O download de um pacote de texturas HD para antes do fim, ou um jogo não inicia."
+        ]
+      },
+      "sources": [
+        "ps5sx2-release-2-20",
+        "ps5sx2-performance"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "ps5sx2-nothing-to-boot",
+      "group": "emulators",
+      "severity": "low",
+      "evidence": "reported",
+      "title": {
+        "en": "PS5SX2 or PS5SX3 shows Nothing to boot or keeps loading",
+        "es": "PS5SX2 o PS5SX3 muestra Nothing to boot o se queda cargando",
+        "pt": "O PS5SX2 ou o PS5SX3 mostra Nothing to boot ou fica carregando"
+      },
+      "symptoms": {
+        "en": [
+          "A disc you own installs as a game and then shows \"Nothing to boot\".",
+          "An image of your own game stays on the loading screen and never starts."
+        ],
+        "es": [
+          "Un disco tuyo se instala como juego y luego muestra \"Nothing to boot\".",
+          "Una imagen de tu propio juego se queda en la pantalla de carga y nunca arranca."
+        ],
+        "pt": [
+          "Um disco seu é instalado como jogo e depois mostra \"Nothing to boot\".",
+          "Uma imagem do seu próprio jogo fica na tela de carregamento e nunca inicia."
+        ]
+      },
+      "sources": [
+        "ps5sx2-release-2-20"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "prospero-win-library",
+      "group": "emulators",
+      "severity": "medium",
+      "evidence": "proven",
+      "title": {
+        "en": "prospero-win shows no games",
+        "es": "prospero-win no muestra juegos",
+        "pt": "O prospero-win não mostra jogos"
+      },
+      "symptoms": {
+        "en": [
+          "prospero-win opens its blue launcher, but the game list is empty.",
+          "A game you set up does not appear after copying or updating the app."
+        ],
+        "es": [
+          "prospero-win abre su lanzador azul, pero la lista de juegos está vacía.",
+          "Un juego que configuraste no aparece después de copiar o actualizar la app."
+        ],
+        "pt": [
+          "O prospero-win abre o launcher azul, mas a lista de jogos está vazia.",
+          "Um jogo que você configurou não aparece depois de copiar ou atualizar o app."
+        ]
+      },
+      "sources": [
+        "prospero-win-getting-started"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "linux-loader-video-network-audio",
+      "group": "emulators",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "Linux on the PS5 won't start, shows a black screen, or has no network or sound",
+        "es": "Linux en la PS5 no arranca, da pantalla negra o no tiene red ni sonido",
+        "pt": "O Linux no PS5 não inicia, fica com tela preta ou sem rede ou som"
+      },
+      "symptoms": {
+        "en": [
+          "The ps5-linux loader runs but nothing happens, or the console starts the PS5 system again.",
+          "Linux starts with a black screen, or has no Wi-Fi, network or sound."
+        ],
+        "es": [
+          "El loader de ps5-linux se ejecuta pero no pasa nada, o la consola vuelve a arrancar el sistema de la PS5.",
+          "Linux arranca con la pantalla negra, o no tiene wifi, red ni sonido."
+        ],
+        "pt": [
+          "O loader do ps5-linux roda, mas nada acontece, ou o console volta a iniciar o sistema do PS5.",
+          "O Linux inicia com tela preta, ou fica sem wifi, rede ou som."
+        ]
+      },
+      "sources": [
+        "ps5-linux-loader-readme"
+      ],
+      "reviewedAt": "2026-10-31"
+    },
+    {
+      "slug": "ps5sx2-ps5sx3-coexistence",
+      "group": "emulators",
+      "severity": "high",
+      "evidence": "proven",
+      "title": {
+        "en": "PS5SX2 and PS5SX3 on the same console",
+        "es": "PS5SX2 y PS5SX3 en la misma consola",
+        "pt": "PS5SX2 e PS5SX3 no mesmo console"
+      },
+      "symptoms": {
+        "en": [
+          "You have both PS5SX2 and PS5SX3, and a disc opens in the wrong one.",
+          "Installing one app seems to replace or break the other."
+        ],
+        "es": [
+          "Tienes PS5SX2 y PS5SX3, y un disco se abre en la app equivocada.",
+          "Instalar una app parece reemplazar o romper la otra."
+        ],
+        "pt": [
+          "Você tem o PS5SX2 e o PS5SX3, e um disco abre no app errado.",
+          "Instalar um app parece substituir ou quebrar o outro."
+        ]
+      },
+      "sources": [
+        "ps5sx2-release-2-20"
       ],
       "reviewedAt": "2026-10-31"
     }

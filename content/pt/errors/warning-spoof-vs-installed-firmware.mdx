@@ -1,0 +1,47 @@
+## O que significa
+
+Há relatos de notificação de atualização quando o console entra em modo de repouso, de PSN pedindo atualização, ou de Informações do console mostrando outra versão depois de uma restauração. Um aviso na tela nem sempre quer dizer que uma atualização foi instalada, e se a sua pilha faz spoof (falsifica) a versão, o que você vê pode não ser a versão instalada. Esta página é uma lista de verificações, não uma correção documentada.
+
+## O que fazer
+
+<Step n={1} title="Anote a versão instalada">
+
+Como diagnóstico, abra Informações do console e anote a versão. Anote também se algo na sua pilha faz spoof da versão.
+
+<MenuPath items={["Configurações", "Sistema", "Software do sistema", "Informações do console"]} />
+
+</Step>
+
+<Step n={2} title="Desligue o download e a instalação automáticos">
+
+Como diagnóstico, confira se "Baixar arquivos de atualização automaticamente" e "Instalar arquivos de atualização automaticamente" estão desmarcados.
+
+<MenuPath items={["Configurações", "Sistema", "Software do sistema", "Atualização e configurações do software do sistema"]} />
+
+</Step>
+
+<Step n={3} title="Depois de um kernel panic, confira o DNS">
+
+Como diagnóstico, confirme que as configurações de rede e DNS que você fez continuam no lugar.
+
+</Step>
+
+<Step n={4} title="Não aceite uma atualização para investigar o aviso" src="sony-safemode-pt">
+
+O Modo de segurança também tem a opção "Atualizar software do sistema". Não escolha essa opção: atualizar pode remover o firmware de que o seu jailbreak precisa.
+
+</Step>
+
+<Step n={5} title="Se uma atualização já começou, anote em que etapa estava">
+
+Como diagnóstico, anote o que a tela mostrava e até onde chegou antes de tentar qualquer recuperação.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="update" title="Nada aqui desfaz uma atualização">
+
+Nenhuma das fontes desta página diz que restaurar um backup muda a versão do firmware instalado, então não conte com isso. Este guia não confirmou nenhuma forma segura de remover à mão uma atualização pendente. Não apague partições do sistema. Uma versão mostrada numa tela não prova, sozinha, qual versão estava instalada antes.
+
+</Warn>

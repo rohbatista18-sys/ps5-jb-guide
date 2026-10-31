@@ -1,0 +1,49 @@
+## Qué significa
+
+Los tirones, el lag y la falta de sonido pueden tener causas distintas: una copia incompleta de tu propio juego, un ajuste que exige demasiado a la consola, una unidad o un formato de imagen lentos, o un fallo de sonido de toda la consola. Hay relatos de esto con emuladores y con copias de seguridad de juegos propios. Los pasos de abajo son comprobaciones para saber cuál es la causa, no una solución confirmada. La configuración básica de emuladores está en la [guía de emuladores retro](/es/guias/retro-emulators).
+
+## Qué hacer
+
+<Step n={1} title="Vuelve a los ajustes originales" src="ps5sx2-performance">
+
+Desactiva los parches de FPS y las texturas HD y prueba otra vez. En PS5SX2, un parche de 60 FPS duplica el trabajo de la CPU y de la GPU, y los paquetes de texturas HD pueden dar tirones mientras las texturas se cargan por primera vez. Para comprobar un paquete, desactiva **Texture replacements** en ese juego.
+
+</Step>
+
+<Step n={2} title="Como comprobación, revisa tu copia del juego">
+
+Comprueba que tu copia está completa, incluidos los archivos de audio y de idioma. Si solo un juego no tiene sonido o diálogos, empieza por esa copia, no por la consola.
+
+</Step>
+
+<Step n={3} title="Como comprobación, compara en una unidad que funcione">
+
+Copia el mismo juego a una unidad donde otros juegos van bien y juega el mismo tramo. Conserva la copia original hasta saber el resultado.
+
+</Step>
+
+<Step n={4} title="Revisa el formato de la imagen" src="shadowmountplus-1-7">
+
+ShadowMountPlus dice que las imágenes PFS comprimidas (`.ffpfsc`) se leen a unos 150–250 MB/s, y que los juegos que leen muchos datos o cargan texturas sin parar pueden dar tirones. También dice que las imágenes exFAT creadas con clústeres de menos de `64 KB` pueden perder rendimiento.
+
+</Step>
+
+<Step n={5} title="En PS5SX2, mira qué frena el juego" src="ps5sx2-performance">
+
+Activa el cuadro de información: en la página de ajustes, **On screen**, pon **Info box** en **FPS + load**. Ve a un tramo lento y mira EE, GS y VU. El que esté en 100 o cerca es lo que frena el juego.
+
+</Step>
+
+<Step n={6} title="Como comprobación, si no hay sonido en toda la consola">
+
+Si el sonido falla en todos los juegos y aplicaciones, y no solo en uno, el problema no es el juego. Revisa la salida de audio de la consola (por ejemplo, prueba PCM), el televisor o el receptor, y otra entrada HDMI. En un emulador, revisa también sus propios ajustes de audio y de renderizado.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Son comprobaciones, no una solución">
+
+Que un juego vaya a tirones no demuestra que el SSD esté fallando. No hay una solución general para el sonido desincronizado. No borres ni formatees nada solo para probar: conserva la copia original hasta que la nueva funcione.
+
+</Warn>

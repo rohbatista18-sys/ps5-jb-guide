@@ -1,0 +1,51 @@
+## O que significa
+
+Depois de uma redefinição de fábrica ou de uma restauração, as configurações e os arquivos de que o jailbreak precisa podem ter sumido: configurações do navegador, a rede, as atualizações automáticas, o aplicativo de entrada e seus payloads. Esta página é uma lista para configurar tudo de novo. É uma ordem de diagnóstico, não uma correção documentada.
+
+## O que fazer
+
+<Step n={1} title="Confira se o JavaScript está ligado no navegador que o host usa">
+
+Como diagnóstico, confira se o JavaScript está ativado. Um relato de usuário diz que uma barra de progresso vazia num host WebKit sumiu depois de ativar o JavaScript. É um relato só, não prova de que essa seja a causa em todo host.
+
+</Step>
+
+<Step n={2} title="Configure a conexão de rede de novo" src="y2jb-autoloader-readme">
+
+O README do Y2JB Autoloader diz que o Relapse precisa de uma interface de rede ativa: Wi-Fi ou cabo ligado a uma rede local, sem precisar de acesso à internet. No 10.20–13.60 ela é obrigatória.
+
+</Step>
+
+<Step n={3} title="Desligue de novo as atualizações automáticas">
+
+Como diagnóstico, abra este menu e confira se "Baixar arquivos de atualização automaticamente" e "Instalar arquivos de atualização automaticamente" estão desmarcados.
+
+<MenuPath items={["Configurações", "Sistema", "Software do sistema", "Atualização e configurações do software do sistema"]} />
+
+</Step>
+
+<Step n={4} title="Instale de novo o aplicativo de entrada e os payloads do seu firmware" src="y2jb-autoloader-readme">
+
+Por exemplo, o README do Y2JB Autoloader lista qual versão do YouTube vai com cada faixa de firmware e diz que o `download0.dat` vai em `/user/download/PPSA0165*/`.
+
+</Step>
+
+<Step n={5} title="Configure o Payload Manager de novo" src="payload-manager-readme">
+
+O README do Payload Manager diz que os autoloaders recentes já trazem o `pldmgr.elf` como payload padrão, e que ele também pode ser carregado à mão como qualquer outro arquivo `.elf`.
+
+</Step>
+
+<Step n={6} title="Teste primeiro sem as configurações antigas">
+
+Como diagnóstico, teste o host com uma configuração nova antes de copiar arquivos de configuração antigos de volta. Se funcionar, devolva as configurações antigas uma por vez.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Redefinir não escolhe o seu firmware">
+
+Não conte com uma redefinição ou restauração para mudar a versão do firmware. Confira a versão em Informações do console antes de escolher payloads. Ativar o JavaScript resolveu um relato, mas uma barra vazia não prova essa causa em todo host.
+
+</Warn>

@@ -1,0 +1,43 @@
+## O que significa
+
+Alguns métodos por disco (BD-J) dependem de um arquivo do sistema modificado (patch), o `bdjstack.jar`. Há relatos de tela preta com um disco BD-J depois de usar outro método, de disco BD-J que parou de funcionar de repente, e de payload de unpatch que não rodou. Confira em que estado o console está antes de rodar qualquer outra coisa. É uma ordem de diagnóstico, não uma correção confirmada.
+
+## O que fazer
+
+<Step n={1} title="Anote o port, o firmware e o estado do patch">
+
+Como diagnóstico, anote qual port de BD-J você usa, a versão do firmware e se o `bdjstack.jar` está com patch agora.
+
+</Step>
+
+<Step n={2} title="Rode só o payload de patch ou unpatch do projeto certo para você" src="netflix-n-hack-readme">
+
+O README do Netflix-N-Hack diz que, nos consoles com leitor de disco, o ELF loader pode ser usado para aplicar ou desfazer o patch do `bdjstack.jar` (projeto BD-UN-JB). Rode só depois que o loader estiver pronto, e só a versão feita para o seu firmware.
+
+</Step>
+
+<Step n={3} title="Confira se o loader aceita payloads do seu dispositivo" src="y2jb-autoloader-readme">
+
+O README do Y2JB Autoloader diz que o ELF loader padrão dele só aceita conexões do próprio PS5. Para enviar um payload de outro dispositivo, primeiro você precisa carregar um ELF loader normal pelo `autoload.txt`, como o README explica.
+
+</Step>
+
+<Step n={4} title="Reinicie e teste com um disco que você sabe que funciona">
+
+Como diagnóstico, reinicie o console antes de cada teste, para uma tentativa não afetar a próxima.
+
+</Step>
+
+<Step n={5} title="Se começou depois de outro método, anote os passos">
+
+Como diagnóstico, anote o que você rodou antes de o problema começar e o erro exato que aparece.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Não repita unpatch ao acaso">
+
+Não misture payloads feitos para firmwares diferentes, e não rode um payload de unpatch várias vezes seguidas. O README do Netflix-N-Hack diz que esse patch é possível, mas não confirma correção para cada tela preta relatada.
+
+</Warn>

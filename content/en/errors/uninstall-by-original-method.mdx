@@ -1,0 +1,49 @@
+## What it means
+
+On a jailbroken console, a title can come from different places: a package installed into the system, a homebrew, or a game image from your own backup that ShadowMountPlus mounts and registers. Each one is removed in a different way. The icon on the Home screen, the file in storage and the save data are three separate things, so removing one does not remove the others.
+
+## What to do
+
+<Step n={1} title="Work out what kind of content it is" src="shadowmountplus-1-7">
+
+ShadowMountPlus mounts game folders and image files (`.ffpkg`, `.exfat`, `.ffpfs`, `.ffpfsc`). A `.pkg` is different: it goes through the system installer. Remove each one through the tool that put it there.
+
+</Step>
+
+<Step n={2} title="Know what ShadowMountPlus does when the source is gone" src="shadowmountplus-1-7">
+
+By default it does not remove a game from the library when its file disappears (`auto_remove_missing_games=0`). With `auto_remove_missing_games=1`, it removes the game once the file has been missing for `auto_remove_missing_delay_seconds` (300 by default), and cancels the removal if the file comes back. Games with installed DLC also need `auto_remove_games_with_dlc=1`.
+
+</Step>
+
+<Step n={3} title="If the entry is stuck, remove the icon and the Itemzflow entry" src="shadowmountplus-1-7">
+
+ShadowMountPlus's troubleshooting suggests removing the launcher icon and removing the title from Itemzflow when it does not register correctly.
+
+</Step>
+
+<Step n={4} title="Keep your saves out of it" src="shadowmountplus-1-7">
+
+ShadowMountPlus warns that removing the game data from the system settings deletes the game's saves. Back up your saves before you do it.
+
+</Step>
+
+<Step n={5} title="As a check, look at the icon, the file and the saves one by one">
+
+After removing something, check each of the three separately. A file left in a scan path can be found and registered again by the scanner.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Removing the icon is not removing the file">
+
+Deleting the icon does not necessarily delete the image in storage, and deleting game data deletes saves. Check what you are removing before you confirm.
+
+</Warn>
+
+<Warn kind="terms" title="No confirmed fix for some errors">
+
+For error CE-118883-9, or a console that restarts while you uninstall, this research found no specific confirmed fix.
+
+</Warn>

@@ -85,6 +85,10 @@ export const ERROR_GROUPS: ErrorGroup[] = [
   "bdj",
   "games-mount",
   "games-run",
+  "saves",
+  "storage",
+  "emulators",
+  "hardware",
   "codes",
   "triage",
 ];

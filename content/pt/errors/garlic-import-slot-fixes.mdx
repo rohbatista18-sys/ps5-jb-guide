@@ -1,0 +1,43 @@
+## O que significa
+
+As notas de versão do Garlic SaveMgr documentam bugs específicos de importação de saves que foram corrigidos em versões posteriores: saves de PS4 gravados com o ID de usuário errado, saves criptografados do USB que não importavam e jogos com vários slots de save. Se você importou com uma versão antiga, o seu problema pode ser um desses. As correções só cobrem esses bugs documentados.
+
+## O que fazer
+
+<Step n={1} title="Exporte um backup antes" src="garlic-releases">
+
+Desde a v1.6, o Garlic consegue copiar saves descriptografados para um pendrive. Faça isso antes de importar qualquer coisa de novo.
+
+</Step>
+
+<Step n={2} title="Saves de PS4 e o ID do usuário: v1.6" src="garlic-releases">
+
+As notas da v1.6 dizem que versões anteriores gravavam o ID do usuário no mesmo ponto de todos os saves, o que podia corromper saves de PS4, e que agora os saves de PS4 são importados na pasta certa.
+
+</Step>
+
+<Step n={3} title="Saves criptografados do USB: v1.62b" src="garlic-releases">
+
+A v1.62b corrige a importação de saves criptografados de PS5 pelo USB, que falhava com `Not a decrypted save folder`. Ela também permite importar saves do USB criptografados e descriptografados, de PS4 e de PS5.
+
+</Step>
+
+<Step n={4} title="Jogos com vários slots de save: v1.14" src="garlic-releases">
+
+A v1.14 corrige a identidade dos slots de save e o ID da conta gravados em jogos com vários slots.
+
+</Step>
+
+<Step n={5} title="Escolha o usuário certo e importe uma cópia de teste" src="garlic-releases">
+
+Escolha o usuário no seletor de usuário (adicionado na v1.6) e importe primeiro uma única cópia. As notas da v1.6 dizem que a importação pelo USB tem proteção contra sobrescrita.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Só corrige esses bugs">
+
+Essas versões corrigem bugs da ferramenta. Elas não trazem de volta um progresso que já foi perdido, nem provam que todo save quebrado foi causado por um desses bugs. Os nomes de versão não seguem a ordem numérica: na página de versões a v1.62b vem antes da v1.6.
+
+</Warn>

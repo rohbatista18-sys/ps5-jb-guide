@@ -1,0 +1,47 @@
+## What it means
+
+Users report an update notification when the console enters rest mode, PSN asking for an update, or Console Information showing a different version than they expected after a restore. A warning on screen does not always mean an update was installed, and if your stack spoofs (fakes) the version, what you see may not be the installed version. This page is a list of checks, not a documented fix.
+
+## What to do
+
+<Step n={1} title="Write down the installed version">
+
+As a check, open Console Information and note the version. Also note whether anything in your stack spoofs the version.
+
+<MenuPath items={["Settings", "System", "System Software", "Console Information"]} />
+
+</Step>
+
+<Step n={2} title="Turn off automatic download and install">
+
+As a check, make sure "Download Update Files Automatically" and "Install Update Files Automatically" are not selected.
+
+<MenuPath items={["Settings", "System", "System Software", "System Software Update and Settings"]} />
+
+</Step>
+
+<Step n={3} title="After a kernel panic, check your DNS settings">
+
+As a check, confirm that the network and DNS settings you set up are still in place.
+
+</Step>
+
+<Step n={4} title="Do not accept an update to investigate the warning" src="sony-safemode-en">
+
+Safe Mode also has an "Update System Software" option. Do not choose it: updating can remove the firmware your jailbreak needs.
+
+</Step>
+
+<Step n={5} title="If an update already started, write down the stage">
+
+As a check, note what the screen showed and how far it got before you try any recovery.
+
+</Step>
+
+## When to stop
+
+<Warn kind="update" title="Nothing here undoes an update">
+
+None of the sources for this page say that restoring a backup changes the installed firmware version, so do not count on it. This guide has not confirmed any safe way to remove a pending update by hand. Do not delete system partitions. A version shown on one screen does not, on its own, prove which version was installed before.
+
+</Warn>

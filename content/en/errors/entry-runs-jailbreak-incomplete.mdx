@@ -16,10 +16,44 @@ Each entry has its own requirements. For example, the BD-JB5 README says that on
 
 </Step>
 
+A kernel exploit that worked is also not the same as a ready homebrew setup. If apps still do not open, go through the next steps.
+
+<Step n={3} title="After a restart, run the exploit again and check the loader is up" src="onionhen-readme">
+
+The onionHEN README says it does not include a kernel exploit: you first run the kernel exploit and start an `elfldr` listening on port `9021`, and only then send the HEN.
+
+</Step>
+
+<Step n={4} title="Load one compatible HEN once and let it finish starting" src="onionhen-readme">
+
+For example, the onionHEN README says it starts the utility daemon, `kstuff` and the main daemon in that order. If the Toolbox does not appear, wait for that to finish and check the logs.
+
+</Step>
+
+<Step n={5} title="For games or apps from a folder or image, load ShadowMount+ and wait" src="shadowmountplus-1-7">
+
+The ShadowMount+ README says it needs `kstuff` (kstuff-lite v1.07 or later), shows a ShadowMount+ notification when it starts, and shows registration notifications such as `Register failed`. With a large library, the first scan can take a few seconds.
+
+</Step>
+
+<Step n={6} title="Check what is running" src="payload-manager-readme">
+
+The Payload Manager README says it can show the active processes, so you can see what is actually loaded.
+
+</Step>
+
+<Step n={7} title="Test an app you know works, without the overlay, and keep the logs" src="onionhen-readme">
+
+The onionHEN README lists an `overlay.enabled` option to turn the in-game overlay off. If the error keeps coming back, the README asks reports to include the firmware, the exploit host, the logs and the steps to reproduce it.
+
+</Step>
+
 ## When to stop
 
 <Warn kind="terms" title="A userland test is not a full jailbreak">
 
 A userland test does not prove kernel support, or that a HEN is compatible with your setup.
+
+Do not ignore a system error that keeps coming back just because a notification said the jailbreak worked. There is no single fix for every homebrew app.
 
 </Warn>

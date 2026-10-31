@@ -1,0 +1,55 @@
+## Qué significa
+
+PS5SX2 es un emulador de PS2 para tus propios juegos. Sus notas de rendimiento separan un juego lento (bajan los FPS, el sonido da tirones, todo va a cámara lenta) de uno roto (no arranca, se cierra, o muestra pantalla negra o gráficos rotos). Los ajustes ayudan con el primer caso y casi nunca con el segundo. Muchos juegos de PS2 van a 30 fps, o a 25 en discos europeos, por diseño. La versión 2.20 (build `vk-285-182`) añade actualizaciones dentro de la app y una comprobación de BIOS antes de cada inicio. La configuración básica de emuladores está en la [guía de emuladores retro](/es/guias/retro-emulators).
+
+## Qué hacer
+
+<Step n={1} title="Revisa la BIOS" src="ps5sx2-release-2-20">
+
+Antes de iniciar un juego, PS5SX2 2.20 pregunta si usar OpenPS2BIOS o tu propia BIOS en `/data/PCSX2/bios`. Tu propia BIOS siempre tiene prioridad. OpenPS2BIOS es experimental: algunos juegos aún no funcionan con ella y no puede iniciar discos de PS1, CD de audio ni DVD de vídeo.
+
+</Step>
+
+<Step n={2} title="Actualiza desde la propia app" src="ps5sx2-release-2-20">
+
+En la estantería, pulsa Cuadrado y ve a **All games**, **PS5SX2**, **System update**. Pulsa X para buscar y X otra vez para instalar. PS5SX2 se cierra, instala la nueva versión y vuelve a abrirse solo.
+
+</Step>
+
+<Step n={3} title="Si la descarga de un paquete de texturas se atasca" src="ps5sx2-release-2-20">
+
+Desde la 2.20, cuando se agota el límite de descargas de Google Drive, PS5SX2 muestra un mensaje claro en lugar de una descarga atascada. Inténtalo más tarde o elige la otra copia del paquete que ofrece la app.
+
+</Step>
+
+<Step n={4} title="Para los tirones, mira qué frena el juego" src="ps5sx2-performance">
+
+Activa el cuadro de información (página de ajustes, **On screen**, **Info box**: **FPS + load**) y ve a un tramo lento. De EE, GS y VU, el que esté en 100 o cerca es el límite. Cambia un ajuste cada vez y anota los FPS después de cada cambio.
+
+</Step>
+
+<Step n={5} title="Reduce la carga" src="ps5sx2-performance">
+
+Baja la **Resolution** un paso cada vez (6x, 5x, 4x, 3x); en una PS5 normal o Slim, los juegos pesados suelen necesitar 4x o 3x. Desactiva el parche de 60 FPS del juego. Para saber si un paquete de texturas HD es la causa, desactiva **Texture replacements** en ese juego.
+
+</Step>
+
+<Step n={6} title="Para errores gráficos, compara con el renderizador por software" src="ps5sx2-performance">
+
+El renderizador por software es mucho más lento que el de hardware, así que úsalo solo para un juego que el de hardware dibuja mal. Un cambio de **Renderer** solo se aplica al reiniciar el juego.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="update" title="Actualiza la app, no la consola">
+
+Antes de actualizar o reinstalar PS5SX2, copia la carpeta `/data/PCSX2` (contiene tu BIOS y los registros) a un PC o a una unidad USB. Nunca actualices el firmware de la consola para arreglar un emulador.
+
+</Warn>
+
+<Warn kind="terms" title="Partidas de otros sitios">
+
+Esta guía no pudo confirmar que las partidas guardadas de una PS2 real o de otro emulador funcionen en PS5SX2. No cuentes con poder importarlas.
+
+</Warn>

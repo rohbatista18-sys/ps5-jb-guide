@@ -1,0 +1,49 @@
+## Qué significa
+
+Hay relatos de consolas que se cuelgan, dan kernel panic o se apagan unos minutos después del jailbreak o después de abrir un juego, aunque el jailbreak era estable antes. Antes de sospechar del hardware, descarta lo que corre encima del jailbreak: plugins, overlays y payloads opcionales. El README de ShadowMount+ también avisa de que montar imágenes puede causar problemas de apagado y corromper datos en las unidades internas, con más frecuencia en firmwares antiguos. Es un orden de diagnóstico, no una solución confirmada.
+
+## Qué hacer
+
+<Step n={1} title="Guarda tus ajustes y reinicia sin autoload opcional" src="onionhen-readme">
+
+El README de onionHEN dice que guarda sus ajustes en `/data/OnionHEN/config.ini` y `/user/data/OnionHEN/config.ini`. Copia el archivo antes de cambiar nada.
+
+</Step>
+
+<Step n={2} title="Desactiva el overlay y los payloads opcionales" src="onionhen-readme">
+
+El README incluye la opción `overlay.enabled` y dice que la mayoría de las opciones se pueden cambiar en la Toolbox. El inicio automático de tus payloads también se ajusta en la Toolbox, y los plugins están en `/data/OnionHEN/plugins/`. Deja solo la pila que de verdad necesitas.
+
+</Step>
+
+<Step n={3} title="Repite la misma prueba y luego vuelve a activar las cosas de una en una">
+
+Como comprobación, haz lo mismo que provocó el fallo. Si queda estable, vuelve a activar cada plugin, overlay o payload por separado y prueba después de cada uno.
+
+</Step>
+
+<Step n={4} title="Lee los registros de onionHEN" src="onionhen-readme">
+
+El README dice que el registro principal es `/data/OnionHEN/OnionHEN.log` y que los detalles de los fallos se guardan en `/data/OnionHEN/OnionHEN_crash.log`.
+
+</Step>
+
+<Step n={5} title="Lee el registro de ShadowMount+" src="shadowmountplus-1-7">
+
+El README de ShadowMount+ dice que el registro de depuración viene activado por defecto y escribe en `/data/shadowmount/debug.log`. También vigila el arranque de los juegos durante hasta 60 segundos y muestra una notificación cuando ve un error fatal.
+
+</Step>
+
+<Step n={6} title="Solo entonces revisa temperatura y alimentación">
+
+Como comprobación, si el problema sigue solo con la pila básica, revisa la temperatura, la ventilación y la alimentación.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="brick" title="No lo borres todo">
+
+Hay relatos de que el problema paró después de quitar un elemento añadido hace poco. Eso no prueba que haya un tiempo fijo, y no es motivo para borrar todos tus juegos o datos. No cargues dos pilas de HEN a la vez. Como el README de ShadowMount+ avisa de datos corruptos en las unidades internas, haz una copia de tus partidas guardadas antes de seguir probando.
+
+</Warn>

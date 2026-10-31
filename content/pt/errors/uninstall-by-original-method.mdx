@@ -1,0 +1,49 @@
+## O que significa
+
+Num console com jailbreak, um título pode vir de lugares diferentes: um pacote instalado no sistema, um homebrew ou uma imagem da sua própria cópia de um jogo que o ShadowMountPlus monta e registra. Cada um sai de um jeito diferente. O ícone na tela inicial, o arquivo no armazenamento e os saves são três coisas separadas, então tirar uma não tira as outras.
+
+## O que fazer
+
+<Step n={1} title="Descubra que tipo de conteúdo é" src="shadowmountplus-1-7">
+
+O ShadowMountPlus monta pastas de jogo e arquivos de imagem (`.ffpkg`, `.exfat`, `.ffpfs`, `.ffpfsc`). Um `.pkg` é outra coisa: ele passa pelo instalador do sistema. Remova cada um pela ferramenta que o colocou ali.
+
+</Step>
+
+<Step n={2} title="Saiba o que o ShadowMountPlus faz quando o arquivo some" src="shadowmountplus-1-7">
+
+Por padrão ele não tira um jogo da biblioteca quando o arquivo some (`auto_remove_missing_games=0`). Com `auto_remove_missing_games=1`, ele remove o jogo depois que o arquivo fica ausente por `auto_remove_missing_delay_seconds` (300 por padrão), e cancela a remoção se o arquivo voltar. Jogos com DLC instalada também precisam de `auto_remove_games_with_dlc=1`.
+
+</Step>
+
+<Step n={3} title="Se a entrada travar, remova o ícone e a entrada do Itemzflow" src="shadowmountplus-1-7">
+
+A parte de problemas do ShadowMountPlus sugere remover o ícone do lançador e tirar o título do Itemzflow quando ele não registra direito.
+
+</Step>
+
+<Step n={4} title="Deixe os saves de fora" src="shadowmountplus-1-7">
+
+O ShadowMountPlus avisa que remover os dados do jogo pelas configurações do sistema apaga os saves do jogo. Faça backup dos saves antes.
+
+</Step>
+
+<Step n={5} title="Como diagnóstico, confira o ícone, o arquivo e os saves um por um">
+
+Depois de remover algo, confira cada uma das três coisas separadamente. Um arquivo que continua num caminho de busca pode ser encontrado e registrado de novo pelo scanner.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Tirar o ícone não é tirar o arquivo">
+
+Apagar o ícone não apaga necessariamente a imagem no armazenamento, e apagar os dados do jogo apaga os saves. Confira o que você está removendo antes de confirmar.
+
+</Warn>
+
+<Warn kind="terms" title="Sem correção confirmada para alguns erros">
+
+Para o erro CE-118883-9, ou um console que reinicia durante a desinstalação, esta pesquisa não encontrou uma correção específica confirmada.
+
+</Warn>

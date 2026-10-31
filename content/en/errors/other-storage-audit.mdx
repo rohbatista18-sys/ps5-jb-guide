@@ -1,0 +1,49 @@
+## What it means
+
+Users report the Other space in storage growing by tens or hundreds of GB, sometimes after copying or deleting games. Other is not all junk. Before you delete anything, find out what is actually using the space: copies of your own games you still keep, the same game stored twice, or a copy that never finished.
+
+## What to do
+
+<Step n={1} title="See how much space each path uses" src="shadowmountplus-1-7">
+
+ShadowMountPlus 1.7's installation browser has a Drives and folders view that shows the free and total space of each path. It refreshes after copy, move, delete and install jobs, including jobs that were cancelled or failed and may have changed disk usage.
+
+</Step>
+
+<Step n={2} title="Look for the same game stored twice" src="shadowmountplus-1-7">
+
+If ShadowMountPlus shows a duplicate title ID notification, keep only one source for that Title ID.
+
+</Step>
+
+<Step n={3} title="Look for copies that did not finish" src="shadowmountplus-1-7">
+
+`source not stable yet` in `/data/shadowmount/debug.log` means a copy is still changing. Let it finish before you decide what to remove.
+
+</Step>
+
+<Step n={4} title="Check whether images stay mounted" src="shadowmountplus-1-7">
+
+With `persistent_image_mounts=1`, images stay mounted between game launches. With the default `0`, an image is mounted when the game starts and released after it exits. Close the game and check the usage again.
+
+</Step>
+
+<Step n={5} title="As a check, delete only what you have identified">
+
+Make a backup first, and only remove content you have identified, using the action of the tool that put it there. Then check the usage again.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Do not delete system folders">
+
+Do not delete `/user`, databases or whole `data` folders. Other is not all junk, and an image file can take more space than the data inside it. A large Other size on its own does not prove that anything is corrupted.
+
+</Warn>
+
+<Warn kind="brick" title="Images on the internal drive">
+
+ShadowMountPlus warns that mounting images can cause shutdown problems and data corruption on internal drives, more often on older firmware.
+
+</Warn>

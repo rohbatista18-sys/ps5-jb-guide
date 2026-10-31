@@ -10,27 +10,57 @@ If your config has at least one `scanpath=` line, only those custom paths are us
 
 </Step>
 
-<Step n={2} title="Check the scan depth" src="shadowmountplus-readme">
+<Step n={2} title="With no scanpath lines, use a default folder" src="shadowmountplus-1-7">
+
+Without `scanpath=` lines, version 1.7 looks in default places such as `/data/homebrew`, `/data/etaHEN/games`, the `homebrew` and `etaHEN/games` folders on `/mnt/ext0` and `/mnt/ext1`, and the USB drives at `/mnt/usb0` to `/mnt/usb7`. Make sure the drive with the game is connected and mounted.
+
+</Step>
+
+<Step n={3} title="Check the scan depth" src="shadowmountplus-readme">
 
 With `scan_depth=1` (the default), only first-level subfolders are checked. A game one folder deeper needs `scan_depth=2`.
 
 </Step>
 
-<Step n={3} title="Check the folder structure" src="shadowmountplus-readme">
+<Step n={4} title="Check the folder structure" src="shadowmountplus-readme">
 
 A game folder needs `sce_sys/param.json` or `sce_sys/param.sfo` inside it.
 
 </Step>
 
-<Step n={4} title="Read the log" src="shadowmountplus-readme">
+<Step n={5} title="A game folder also needs eboot.bin" src="shadowmountplus-1-7">
+
+Besides the param file, a game folder needs `eboot.bin` or `eboot2.bin`.
+
+</Step>
+
+<Step n={6} title="Know which files are images" src="shadowmountplus-1-7">
+
+The image formats are `.ffpkg` (UFS, the recommended default), `.exfat` (only for titles that need external-drive compatibility), and `.ffpfs` and `.ffpfsc` (both experimental). A `.pkg` is an install package, not one of these images.
+
+</Step>
+
+<Step n={7} title="Read the log" src="shadowmountplus-readme">
 
 Debug logging is on by default and writes to `/data/shadowmount/debug.log`.
 
 </Step>
 
-<Step n={5} title="Wait if the copy is still being written" src="shadowmountplus-readme">
+<Step n={8} title="Wait if the copy is still being written" src="shadowmountplus-readme">
 
 If the log shows `source not stable yet`, the copy has not finished. Wait for it to finish.
+
+</Step>
+
+<Step n={9} title="Wait for the next scan" src="shadowmountplus-1-7">
+
+A full scan runs every `scan_interval_seconds`, which is 15 seconds by default.
+
+</Step>
+
+<Step n={10} title="As a check, try a copy you know works">
+
+Put one copy that has worked before in the same folder. If that one shows up, the problem is the other copy, not the scanner.
 
 </Step>
 
@@ -39,5 +69,11 @@ If the log shows `source not stable yet`, the copy has not finished. Wait for it
 <Warn kind="terms" title="Renaming does not fix it">
 
 Renaming the file does not fix content or a structure that is invalid.
+
+</Warn>
+
+<Warn kind="brick" title="Do not format the drive over this">
+
+A scan that finds nothing is not a reason to format the drive. Converting the copy to another format does not guarantee that every game will work either. ShadowMountPlus recommends `.ffpkg` (UFS) for normal use and keeps exFAT for compatibility.
 
 </Warn>

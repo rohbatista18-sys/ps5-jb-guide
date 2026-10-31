@@ -1,0 +1,37 @@
+## Qué significa
+
+Sony dice que Reconstruir base de datos, en el Modo seguro, explora la unidad y crea una base de datos nueva con todo el contenido del sistema. Hay relatos de que, en una consola con jailbreak, el homebrew, los juegos montados y los paquetes de PS4 instalados pueden desaparecer de la pantalla de inicio después, y de que también pueden perderse los fondos del Welcome hub. Eso no significa necesariamente que los archivos se hayan borrado: puede que solo falte el registro. Esto son comprobaciones, no una solución confirmada.
+
+## Qué hacer
+
+<Step n={1} title="Como comprobación, mira si los archivos siguen ahí">
+
+Busca en el almacenamiento las carpetas de juego, las imágenes y el homebrew antes de dar nada por borrado.
+
+</Step>
+
+<Step n={2} title="Deja que ShadowMountPlus busque de nuevo" src="shadowmountplus-1-7">
+
+Para juegos montados y homebrew, asegúrate de que ShadowMountPlus está en marcha: al cargarse muestra una notificación ShadowMount+. Hace una búsqueda completa cada `scan_interval_seconds` (15 por defecto). Luego revisa `/data/shadowmount/debug.log`.
+
+</Step>
+
+<Step n={3} title="Como comprobación, ten cuidado con herramientas para paquetes instalados">
+
+Para paquetes de PS4 instalados en el sistema, usa solo una herramienta de recuperación de registros que diga claramente que es compatible con PS5, y haz antes una copia de su base de datos.
+
+</Step>
+
+<Step n={4} title="Como comprobación, conserva los archivos si no hay una herramienta fiable">
+
+Si no encuentras una herramienta de confianza, conserva los archivos y apunta qué tenías instalado antes de reinstalar nada.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Reconstruir no es restaurar">
+
+Reconstruir base de datos de Sony no sirve para restaurar registros personalizados. En esta investigación no se comprobó ningún script de base de datos de PS4 en PS5, y no hay forma garantizada de recuperar los fondos del Welcome hub con este método.
+
+</Warn>

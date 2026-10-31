@@ -1,0 +1,37 @@
+## What it means
+
+Sony says Rebuild Database, in Safe Mode, scans the drive and creates a new database of all content on the system. Users report that on a jailbroken console, homebrew, mounted games and installed PS4 packages can vanish from the Home screen after it, and that Welcome hub backgrounds can be gone too. That does not have to mean the files are gone: it may be only the registration that is missing. These are checks, not a confirmed fix.
+
+## What to do
+
+<Step n={1} title="As a check, see whether the files are still there">
+
+Look in storage for the game folders, images and homebrew before you assume anything was deleted.
+
+</Step>
+
+<Step n={2} title="Let ShadowMountPlus scan again" src="shadowmountplus-1-7">
+
+For mounted games and homebrew, make sure ShadowMountPlus is running: when it loads it shows a ShadowMount+ notification. It runs a full scan every `scan_interval_seconds` (15 by default). Then check `/data/shadowmount/debug.log`.
+
+</Step>
+
+<Step n={3} title="As a check, be careful with tools for installed packages">
+
+For PS4 packages installed into the system, only use a registration recovery tool that clearly says it supports PS5, and back up its database first.
+
+</Step>
+
+<Step n={4} title="As a check, keep the files if there is no reliable tool">
+
+If you find no tool you can trust, keep the files and write down what was installed before you reinstall anything.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="A rebuild is not a restore">
+
+Sony's Rebuild Database is not a way to restore custom registrations. No PS4 database script has been checked for PS5 in this research, and there is no guaranteed way to bring back Welcome hub backgrounds with this method.
+
+</Warn>

@@ -1,0 +1,49 @@
+## O que significa
+
+Engasgos, lentidão e falta de som podem ter causas diferentes: uma cópia incompleta do seu próprio jogo, uma configuração que exige demais do console, uma unidade ou um formato de imagem lento, ou uma falha de som no console inteiro. Há relatos disso com emuladores e com backups de jogos próprios. Os passos abaixo são verificações para descobrir qual é a causa, não uma correção confirmada. A configuração básica de emuladores está no [guia de emuladores retrô](/pt/guias/retro-emulators).
+
+## O que fazer
+
+<Step n={1} title="Volte às configurações originais" src="ps5sx2-performance">
+
+Desligue patches de FPS e texturas HD e teste de novo. No PS5SX2, um patch de 60 FPS dobra o trabalho da CPU e da GPU, e pacotes de texturas HD podem engasgar enquanto as texturas carregam pela primeira vez. Para testar um pacote, desligue **Texture replacements** naquele jogo.
+
+</Step>
+
+<Step n={2} title="Como verificação, confira a sua cópia do jogo">
+
+Confira se a sua cópia está completa, incluindo os arquivos de áudio e de idioma. Se só um jogo está sem som ou sem diálogos, comece por essa cópia, não pelo console.
+
+</Step>
+
+<Step n={3} title="Como verificação, compare em uma unidade que funciona">
+
+Copie o mesmo jogo para uma unidade onde outros jogos rodam bem e jogue o mesmo trecho. Mantenha a cópia original até saber o resultado.
+
+</Step>
+
+<Step n={4} title="Confira o formato da imagem" src="shadowmountplus-1-7">
+
+O ShadowMountPlus diz que imagens PFS comprimidas (`.ffpfsc`) são lidas a cerca de 150–250 MB/s, e que jogos que leem muitos dados ou carregam texturas o tempo todo podem engasgar. Ele também diz que imagens exFAT criadas com clusters menores que `64 KB` podem perder desempenho.
+
+</Step>
+
+<Step n={5} title="No PS5SX2, veja o que está segurando o jogo" src="ps5sx2-performance">
+
+Ligue a caixa de informações: na página de configurações, **On screen**, coloque **Info box** em **FPS + load**. Vá até um trecho lento e olhe EE, GS e VU. O que estiver em 100 ou perto disso é o que está segurando o jogo.
+
+</Step>
+
+<Step n={6} title="Como verificação, se o console inteiro está sem som">
+
+Se o som falha em todos os jogos e apps, e não só em um, o problema não é o jogo. Confira a saída de áudio do console (por exemplo, teste PCM), a TV ou o receiver e outra entrada HDMI. Em um emulador, confira também as configurações de áudio e de renderização dele.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="São verificações, não uma correção">
+
+Um jogo engasgando não prova que o SSD está falhando. Não existe correção geral para som fora de sincronia. Não apague nem formate nada só para testar: mantenha a cópia original até a nova funcionar.
+
+</Warn>

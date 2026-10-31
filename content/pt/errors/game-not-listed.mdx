@@ -10,27 +10,57 @@ Se a sua configuração tiver pelo menos uma linha `scanpath=`, só esses caminh
 
 </Step>
 
-<Step n={2} title="Confira a profundidade da busca" src="shadowmountplus-readme">
+<Step n={2} title="Sem linhas scanpath, use uma pasta padrão" src="shadowmountplus-1-7">
+
+Sem linhas `scanpath=`, a versão 1.7 procura em lugares padrão como `/data/homebrew`, `/data/etaHEN/games`, as pastas `homebrew` e `etaHEN/games` de `/mnt/ext0` e `/mnt/ext1`, e as unidades USB de `/mnt/usb0` a `/mnt/usb7`. Confirme que a unidade com o jogo está conectada e montada.
+
+</Step>
+
+<Step n={3} title="Confira a profundidade da busca" src="shadowmountplus-readme">
 
 Com `scan_depth=1` (o padrão), só as subpastas do primeiro nível são verificadas. Um jogo uma pasta mais fundo precisa de `scan_depth=2`.
 
 </Step>
 
-<Step n={3} title="Confira a estrutura da pasta" src="shadowmountplus-readme">
+<Step n={4} title="Confira a estrutura da pasta" src="shadowmountplus-readme">
 
 A pasta do jogo precisa ter `sce_sys/param.json` ou `sce_sys/param.sfo` dentro dela.
 
 </Step>
 
-<Step n={4} title="Leia o log" src="shadowmountplus-readme">
+<Step n={5} title="A pasta do jogo também precisa do eboot.bin" src="shadowmountplus-1-7">
+
+Além do arquivo param, uma pasta de jogo precisa de `eboot.bin` ou `eboot2.bin`.
+
+</Step>
+
+<Step n={6} title="Saiba quais arquivos são imagens" src="shadowmountplus-1-7">
+
+Os formatos de imagem são `.ffpkg` (UFS, o padrão recomendado), `.exfat` (só para títulos que precisam de compatibilidade de unidade externa) e `.ffpfs` e `.ffpfsc` (ambos experimentais). Um `.pkg` é um pacote de instalação, não uma dessas imagens.
+
+</Step>
+
+<Step n={7} title="Leia o log" src="shadowmountplus-readme">
 
 O log de depuração vem ligado por padrão e é gravado em `/data/shadowmount/debug.log`.
 
 </Step>
 
-<Step n={5} title="Espere se a cópia ainda estiver sendo gravada" src="shadowmountplus-readme">
+<Step n={8} title="Espere se a cópia ainda estiver sendo gravada" src="shadowmountplus-readme">
 
 Se o log mostrar `source not stable yet`, a cópia ainda não terminou. Espere ela terminar.
+
+</Step>
+
+<Step n={9} title="Espere a próxima busca" src="shadowmountplus-1-7">
+
+Uma busca completa roda a cada `scan_interval_seconds`, que por padrão são 15 segundos.
+
+</Step>
+
+<Step n={10} title="Como diagnóstico, teste uma cópia que você sabe que funciona">
+
+Coloque na mesma pasta uma cópia que já funcionou antes. Se ela aparecer, o problema está na outra cópia, não no scanner.
 
 </Step>
 
@@ -39,5 +69,11 @@ Se o log mostrar `source not stable yet`, a cópia ainda não terminou. Espere e
 <Warn kind="terms" title="Renomear não resolve">
 
 Renomear o arquivo não corrige conteúdo nem estrutura inválidos.
+
+</Warn>
+
+<Warn kind="brick" title="Não formate a unidade por causa disso">
+
+Uma busca que não encontra nada não é motivo para formatar a unidade. Converter a cópia para outro formato também não garante que todo jogo vá funcionar. O ShadowMountPlus recomenda `.ffpkg` (UFS) para uso normal e mantém o exFAT para compatibilidade.
 
 </Warn>

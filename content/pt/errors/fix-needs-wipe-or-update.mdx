@@ -1,54 +1,90 @@
 ## O que significa
 
-Algumas correções são inofensivas e outras apagam tudo. O Modo de Segurança da Sony mostra essas opções separadas, e a Sony avisa que algumas delas causam perda de dados. Num console com jailbreak, qualquer coisa que remova ou reinstale o software do sistema também pode custar a versão de firmware de que o jailbreak precisa. Antes de seguir um conselho de redefinir, restaurar ou reinstalar, saiba qual opção você está escolhendo de verdade. Veja também [os riscos](/pt/riscos).
+Algumas correções são inofensivas e outras apagam tudo. O Modo de Segurança da Sony mostra essas opções separadas, e a Sony avisa que algumas delas causam perda de dados. Num console com jailbreak, qualquer coisa que remova ou reinstale o software do sistema também pode custar a versão de firmware de que o jailbreak precisa. Antes de seguir um conselho de redefinir, restaurar ou reinstalar, saiba qual opção você está escolhendo de verdade. Comece pelas opções que preservam seus dados e só passe para as que apagam se não houver outro jeito. Veja também [os riscos](/pt/riscos).
 
 ## O que fazer
 
-<Step n={1} title="Limpar cache do software do sistema" src="sony-safemode-pt">
+<Step n={1} title="Como diagnóstico, anote a mensagem e as opções que aparecem">
+
+Anote a mensagem de erro exata e quais opções o console realmente oferece. Assim você sabe onde está antes de escolher qualquer coisa.
+
+</Step>
+
+<Step n={2} title="Reiniciar PS5" src="sony-safemode-pt">
+
+A Sony diz que essa opção sai do Modo de Segurança e reinicia o console normalmente.
+
+</Step>
+
+<Step n={3} title="Reparar armazenamento do console" src="sony-safemode-pt">
+
+A Sony sugere essa opção para problemas de inicialização ou de armazenamento e diz que ela não apaga dados.
+
+</Step>
+
+<Step n={4} title="Limpar cache do software do sistema" src="sony-safemode-pt">
 
 Fica dentro de Limpar cache e recriar banco de dados, no Modo de Segurança. A Sony sugere essa opção para problemas em recursos do sistema ou queda de desempenho. A página do Modo de Segurança não a coloca entre as opções que apagam dados.
 
 </Step>
 
-<Step n={2} title="Recriar banco de dados" src="sony-safemode-pt">
+<Step n={5} title="Recriar banco de dados" src="sony-safemode-pt">
 
 É a outra escolha dentro de Limpar cache e recriar banco de dados. A Sony diz que ela verifica a unidade e cria um novo banco de dados de todo o conteúdo do sistema. Não está entre as opções que, segundo a Sony, apagam dados.
 
 </Step>
 
-<Step n={3} title="Redefinir PS5 apaga todos os dados do usuário" src="sony-safemode-pt">
+<Step n={6} title="Como diagnóstico, conte com ter de registrar o homebrew de novo">
+
+Há relatos de homebrew e jogos montados que somem da tela inicial depois de recriar o banco. Guarde os arquivos e veja [Jogos ou apps sumiram depois de Recriar banco de dados](/pt/erros/reregister-after-rebuild).
+
+</Step>
+
+<Step n={7} title="Redefinir PS5 apaga todos os dados do usuário" src="sony-safemode-pt">
 
 A Sony diz que essa opção exclui todos os dados do usuário e devolve o console ao estado original.
 
 </Step>
 
-<Step n={4} title="Redefinir PS5 (Reinstalar software do sistema) apaga os dados e o software do sistema" src="sony-safemode-pt">
+<Step n={8} title="Redefinir PS5 (Reinstalar software do sistema) apaga os dados e o software do sistema" src="sony-safemode-pt">
 
 A Sony diz que essa opção exclui todos os dados do usuário e remove o software do sistema do PS5. Você pode perder a versão de firmware de que o jailbreak precisa.
 
 </Step>
 
-<Step n={5} title="As páginas de erro da Sony levam a essas opções" src="sony-su-101337-5">
+<Step n={9} title="As páginas de erro da Sony levam a essas opções" src="sony-su-101337-5">
 
 No SU-101337-5, se desligar o console e deixá-lo fora da tomada por cinco minutos não resolver, o próximo passo da Sony é Redefinir PS5 (Reinstalar software do sistema). Pare e leia esta página antes de seguir esse passo.
 
 </Step>
 
-<Step n={6} title="Redefinir pelas Configurações também apaga tudo" src="sony-ce-108262-9">
+<Step n={10} title="Redefinir pelas Configurações também apaga tudo" src="sony-ce-108262-9">
 
 No CE-108262-9, o último passo da Sony é redefinir o console pelas Configurações, e a Sony diz que isso apaga todos os dados salvos no armazenamento do console.
 
 </Step>
 
-<Step n={7} title="Faça backup dos saves e das configurações antes" src="sony-safemode-pt">
+<Step n={11} title="Se o console não reconhecer o arquivo do USB" src="sony-reinstall-pt">
+
+O pendrive precisa estar em FAT32 ou exFAT. A estrutura da Sony é uma pasta `PS5`, dentro dela uma pasta `UPDATE` e o arquivo salvo como `PS5UPDATE.PUP`, tudo em maiúsculas. Se o arquivo não for reconhecido, a Sony manda conferir esses nomes. Lembre que essa reinstalação exclui todos os dados do console.
+
+</Step>
+
+<Step n={12} title="Faça backup dos saves e das configurações antes" src="sony-safemode-pt">
 
 A Sony recomenda fazer backup num pendrive USB ou no armazenamento online antes de escolher uma opção que pode perder dados.
 
 </Step>
 
-<Step n={8} title="Como diagnóstico, decida antes de mexer no software do sistema">
+<Step n={13} title="Como diagnóstico, decida antes de mexer no software do sistema">
 
 Se a correção precisar mudar o software do sistema, decida só depois de saber o que você perde: seus dados e, talvez, o jailbreak.
+
+</Step>
+
+<Step n={14} title="Se o console não liga" src="sony-safemode-pt">
+
+A Sony manda desligar e ligar o console de novo e conferir os cabos, e depois seguir o guia dela para quando o console não inicia no Modo de Segurança, antes de pedir reparo. Não fique repetindo o jailbreak num console que não inicia.
 
 </Step>
 

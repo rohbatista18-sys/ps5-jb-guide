@@ -1,0 +1,43 @@
+## Qué significa
+
+Las notas de versión de Garlic SaveMgr documentan fallos concretos de importación de partidas que se corrigieron en versiones posteriores: partidas de PS4 escritas con el ID de usuario equivocado, partidas cifradas desde USB que no se importaban y juegos con varias ranuras de guardado. Si importaste con una versión antigua, tu problema puede ser uno de estos. Las correcciones solo cubren estos fallos documentados.
+
+## Qué hacer
+
+<Step n={1} title="Exporta antes una copia" src="garlic-releases">
+
+Desde la v1.6, Garlic puede volcar partidas descifradas a una unidad USB. Hazlo antes de volver a importar nada.
+
+</Step>
+
+<Step n={2} title="Partidas de PS4 y el ID de usuario: v1.6" src="garlic-releases">
+
+Las notas de la v1.6 dicen que las versiones anteriores escribían el ID de usuario en el mismo sitio en todas las partidas, lo que podía dañar partidas de PS4, y que ahora las partidas de PS4 se importan en la carpeta correcta.
+
+</Step>
+
+<Step n={3} title="Partidas cifradas desde USB: v1.62b" src="garlic-releases">
+
+La v1.62b corrige la importación de partidas cifradas de PS5 desde USB, que fallaba con `Not a decrypted save folder`. También permite importar partidas de USB cifradas y descifradas, de PS4 y de PS5.
+
+</Step>
+
+<Step n={4} title="Juegos con varias ranuras de guardado: v1.14" src="garlic-releases">
+
+La v1.14 corrige la identidad de las ranuras de guardado y el ID de cuenta que se escriben en juegos con varias ranuras.
+
+</Step>
+
+<Step n={5} title="Elige el usuario correcto e importa una copia de prueba" src="garlic-releases">
+
+Elige el usuario en el selector de usuario (añadido en la v1.6) e importa primero una sola copia. Las notas de la v1.6 dicen que la importación desde USB tiene protección contra sobrescritura.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="Solo corrige estos fallos">
+
+Estas versiones corrigen fallos de la herramienta. No recuperan un progreso que ya se perdió, ni demuestran que cada partida dañada se deba a uno de estos fallos. Los nombres de versión no siguen el orden numérico: en la página de versiones la v1.62b va antes que la v1.6.
+
+</Warn>

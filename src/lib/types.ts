@@ -130,6 +130,10 @@ export type ErrorGroup =
   | "bdj"
   | "games-mount"
   | "games-run"
+  | "saves"
+  | "storage"
+  | "emulators"
+  | "hardware"
   | "codes"
   | "triage";
 

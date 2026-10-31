@@ -1,0 +1,37 @@
+## What it means
+
+Users report two cases: a PS3 disc they own installs as a game in PS5SX3 and then shows `Nothing to boot`, or an image of their own game stays on the loading screen and never starts. There is no confirmed fix for either case. PS5SX2 (PS2) and PS5SX3 are separate apps, so first find out which one is involved. The steps below are checks, and only the PS5SX2 ones are documented. The basic emulator setup is in the [retro emulators guide](/en/guias/retro-emulators).
+
+## What to do
+
+<Step n={1} title="As a check, note the app and its build">
+
+Write down whether it happens in PS5SX2 or PS5SX3, which build you have, and the exact message on screen.
+
+</Step>
+
+<Step n={2} title="In PS5SX2, check the BIOS" src="ps5sx2-release-2-20">
+
+PS5SX2 2.20 checks for a BIOS before every start and tells you what to do; its release notes say most failed starts were a missing BIOS. Your own BIOS goes in `/data/PCSX2/bios`. The built-in OpenPS2BIOS is experimental: some games don't work with it yet, and it can't start PS1 discs, audio CDs or DVD video.
+
+</Step>
+
+<Step n={3} title="Check which app takes the disc" src="ps5sx2-release-2-20">
+
+With PS5SX2 2.20, a PS2 disc goes to PS5SX2 and any other disc is left to PS5SX3. For this, PS5SX3 must be TB19.1 or newer.
+
+</Step>
+
+<Step n={4} title="As a check, look at your copy and the emulator's own instructions">
+
+Check that your dump is complete and in a format that build accepts. Read that build's own instructions to see whether it needs a BIOS or firmware file of its own.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="No confirmed fix">
+
+No confirmed fix was found for a disc that shows `Nothing to boot` or an image that keeps loading. Do not follow guides for PC emulators such as RPCS3 as if they were the same program. Never update the console firmware to try to fix an emulator.
+
+</Warn>

@@ -1,54 +1,90 @@
 ## What it means
 
-Some fixes are harmless and some erase everything. Sony's Safe Mode lists them as separate options, and Sony warns that some of them cause data loss. On a jailbroken console, anything that removes or reinstalls the system software can also cost you the firmware version your jailbreak needs. Before you follow any advice to reset, restore or reinstall, know which option you are actually choosing. See also [the risks](/en/riscos).
+Some fixes are harmless and some erase everything. Sony's Safe Mode lists them as separate options, and Sony warns that some of them cause data loss. On a jailbroken console, anything that removes or reinstalls the system software can also cost you the firmware version your jailbreak needs. Before you follow any advice to reset, restore or reinstall, know which option you are actually choosing. Start with the options that keep your data, and move to the ones that erase it only if you must. See also [the risks](/en/riscos).
 
 ## What to do
 
-<Step n={1} title="Clear System Software Cache" src="sony-safemode-en">
+<Step n={1} title="As a check, write down the message and the options you see">
+
+Note the exact error message and which options the console actually offers. That tells you where you are before you choose anything.
+
+</Step>
+
+<Step n={2} title="Restart PS5" src="sony-safemode-en">
+
+Sony says this option ends Safe Mode and restarts the console normally.
+
+</Step>
+
+<Step n={3} title="Repair Console Storage" src="sony-safemode-en">
+
+Sony suggests it for startup or storage problems and says this option does not erase data.
+
+</Step>
+
+<Step n={4} title="Clear System Software Cache" src="sony-safemode-en">
 
 It is under Clear Cache and Rebuild Database in Safe Mode. Sony suggests it for problems with system features or slower performance. Sony's Safe Mode page does not list it among the options that delete data.
 
 </Step>
 
-<Step n={2} title="Rebuild Database" src="sony-safemode-en">
+<Step n={5} title="Rebuild Database" src="sony-safemode-en">
 
 It is the other choice under Clear Cache and Rebuild Database. Sony says it scans the drive and creates a new database of all content on the system. It is not one of the options Sony says delete data.
 
 </Step>
 
-<Step n={3} title="Reset PS5 deletes all user data" src="sony-safemode-en">
+<Step n={6} title="As a check, expect homebrew to need registering again">
+
+Users report that homebrew and mounted games can disappear from the Home screen after a rebuild. Keep the files and see [Games or apps vanished after Rebuild Database](/en/erros/reregister-after-rebuild).
+
+</Step>
+
+<Step n={7} title="Reset PS5 deletes all user data" src="sony-safemode-en">
 
 Sony says it deletes all user data and returns the console to its original state.
 
 </Step>
 
-<Step n={4} title="Reset PS5 (Reinstall System Software) deletes data and the system software" src="sony-safemode-en">
+<Step n={8} title="Reset PS5 (Reinstall System Software) deletes data and the system software" src="sony-safemode-en">
 
 Sony says it deletes all user data and removes the PS5 system software. You can lose the firmware version your jailbreak needs.
 
 </Step>
 
-<Step n={5} title="Sony's error pages lead to these options" src="sony-su-101337-5">
+<Step n={9} title="Sony's error pages lead to these options" src="sony-su-101337-5">
 
 For SU-101337-5, if turning the console off and unplugging it for five minutes does not help, Sony's next step is Reset PS5 (Reinstall System Software). Stop and read this page before you follow it.
 
 </Step>
 
-<Step n={6} title="A reset from Settings also erases everything" src="sony-ce-108262-9">
+<Step n={10} title="A reset from Settings also erases everything" src="sony-ce-108262-9">
 
 For CE-108262-9, Sony's last step is to reset the console from Settings, and Sony says that erases all data saved on the console storage.
 
 </Step>
 
-<Step n={7} title="Back up your saves and settings first" src="sony-safemode-en">
+<Step n={11} title="If the console does not recognize the file on USB" src="sony-reinstall-en">
+
+The USB drive must be FAT32 or exFAT. Sony's layout is a `PS5` folder, an `UPDATE` folder inside it, and the file saved as `PS5UPDATE.PUP`, all in uppercase. If the file is not recognized, Sony says to check those names. Remember that this reinstall deletes all data on the console.
+
+</Step>
+
+<Step n={12} title="Back up your saves and settings first" src="sony-safemode-en">
 
 Sony recommends backing up to a USB drive or Cloud Storage before you choose an option that can lose data.
 
 </Step>
 
-<Step n={8} title="As a check, decide before you change the system software">
+<Step n={13} title="As a check, decide before you change the system software">
 
 If a fix needs to change the system software, decide only after you know what you lose: your data, and possibly the jailbreak.
+
+</Step>
+
+<Step n={14} title="If the console does not turn on" src="sony-safemode-en">
+
+Sony says to turn the power off and on again and check the cables, then follow its guide for a console that cannot start in Safe Mode before you ask for a repair. Do not keep retrying the jailbreak on a console that will not start.
 
 </Step>
 

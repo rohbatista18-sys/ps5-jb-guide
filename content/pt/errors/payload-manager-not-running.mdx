@@ -2,17 +2,39 @@
 
 Um usuário do PS5 WebKit Autoloader (série 0.6) relatou que, ao tirar do modo de repouso um PS5 Pro no 13.40, o Payload Manager mostrou `pldmgr not running`. O desenvolvedor respondeu no mesmo tópico. É um relato só, não confirmado para todos os consoles nem todos os firmwares.
 
+Também há relatos de perder o acesso ao Payload Manager depois de mudar as configurações dele, de página em branco, ou de página parada em `Loading autoload settings`. Nenhuma causa única foi comprovada para esses casos.
+
 ## O que fazer
 
-<Step n={1} title="Desligue e religue a conexão de rede nas configurações do PS5" src="webkit-autoloader-feedback-060">
+<Step n={1} title="Confira o endereço IP do console e abra o gerenciador de outro dispositivo" src="payload-manager-readme">
+
+O README do Payload Manager diz que a interface web dele pode ser usada pelo PC, pelo celular ou pelo próprio PS5. Confira o endereço IP atual do console e tente abrir a interface de um PC ou celular na mesma rede.
+
+<MenuPath items={["Configurações", "Rede", "Ver status da conexão"]} />
+
+</Step>
+
+<Step n={2} title="Desligue e religue a conexão de rede nas configurações do PS5" src="webkit-autoloader-feedback-060">
 
 O desenvolvedor respondeu que isso deve fazer o Payload Manager restaurar o servidor web dele.
 
 </Step>
 
-<Step n={2} title="Se não resolver, reinicie e execute a cadeia de novo" src="webkit-autoloader-feedback-060">
+<Step n={3} title="Se não resolver, reinicie e execute a cadeia de novo" src="webkit-autoloader-feedback-060">
 
 O usuário que relatou reiniciou o console, executou o autoloader de novo e funcionou. Anote o que você fez, para que o problema possa ser reproduzido e relatado.
+
+</Step>
+
+<Step n={4} title="Se ainda não conseguir acessar, carregue o pldmgr.elf à mão" src="payload-manager-readme">
+
+O README diz que dá para carregar o gerenciador à mão como qualquer outro arquivo `.elf`. Reinicie o console e envie o `pldmgr.elf` pelo seu loader.
+
+</Step>
+
+<Step n={5} title="Teste com um autoload mínimo" src="y2jb-autoloader-readme">
+
+O README do Y2JB Autoloader diz que, se não encontrar `autoload.txt`, o autoloader inicia o Payload Manager. Se você usa `autoload.txt`, o Payload Manager só inicia quando `pldmgr.elf` está na lista. Neste teste, deixe só o `pldmgr.elf` na lista. Guarde uma cópia das suas configurações antes de mudá-las.
 
 </Step>
 
@@ -20,6 +42,6 @@ O usuário que relatou reiniciou o console, executou o autoloader de novo e func
 
 <Warn kind="terms" title="Tentativa de recuperação, não correção garantida">
 
-Trate isso como tentativa de recuperação, não como correção confirmada para todos.
+Trate isso como tentativa de recuperação, não como correção confirmada para todos. Página em branco ou parada em `Loading autoload settings` não tem causa única comprovada. Não apague pastas ao acaso para tentar redefinir o gerenciador.
 
 </Warn>

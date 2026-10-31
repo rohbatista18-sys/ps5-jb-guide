@@ -1,0 +1,49 @@
+## O que significa
+
+O PS5 pode usar três tipos diferentes de armazenamento extra, e cada um tem as suas regras: um SSD M.2 instalado dentro do console, uma unidade USB que o console configura como armazenamento estendido, e uma unidade com arquivos de imagem dos seus próprios jogos para um montador como o ShadowMountPlus. Há relatos de cópias que falham, unidades que não formatam e consoles que desligam ao mover jogos. Uma falha numa unidade não prova que outra, ou o SSD interno, esteja com defeito.
+
+## O que fazer
+
+<Step n={1} title="Confira se o SSD M.2 interno é compatível" src="sony-m2-pt">
+
+A Sony exige um SSD M.2 NVMe PCI-Express Gen4x4 (Key M). SSDs SATA M.2 não são compatíveis. A unidade também precisa de dissipação de calor efetiva com uma estrutura de resfriamento, como um dissipador.
+
+</Step>
+
+<Step n={2} title="Guarde seus dados antes de formatar" src="sony-m2-pt">
+
+A Sony diz que formatar o SSD M.2 apaga todos os dados dele e que esses dados não podem ser recuperados. Não desligue o console enquanto a unidade estiver sendo formatada ou enquanto dados estiverem sendo salvos.
+
+</Step>
+
+<Step n={3} title="Saiba para que serve o armazenamento estendido USB" src="sony-m2-pt">
+
+A Sony diz que jogos de PS5 podem ser movidos para o armazenamento estendido USB, mas precisam ser copiados de volta para o armazenamento do console ou para o SSD M.2 antes de jogar.
+
+</Step>
+
+<Step n={4} title="Arquivos de imagem são outro uso" src="shadowmountplus-1-7">
+
+Para o ShadowMountPlus, as imagens `.ffpkg` (UFS) são o padrão recomendado. As imagens `.exfat` são só para títulos que precisam de compatibilidade de unidade externa, com tamanho de cluster de 64 KB. Isso não tem nada a ver com o armazenamento estendido do próprio console.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Formatar apaga a unidade">
+
+Formatar apaga tudo o que está na unidade. Se o console travar ou desligar enquanto grava, pare e confira a unidade e os seus arquivos antes de tentar de novo.
+
+</Warn>
+
+<Warn kind="brick" title="Imagens na unidade interna">
+
+O ShadowMountPlus avisa que montar imagens pode causar problemas ao desligar e corrupção de dados em unidades internas, com mais frequência em firmwares antigos.
+
+</Warn>
+
+<Warn kind="update" title="Pule o passo de atualizar">
+
+A página da Sony sobre o M.2 pede para instalar o software do sistema mais recente antes de instalar o SSD. Se você quer manter o jailbreak, não siga esse passo: uma atualização pode fechá-lo de vez.
+
+</Warn>

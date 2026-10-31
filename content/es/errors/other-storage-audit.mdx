@@ -1,0 +1,49 @@
+## Qué significa
+
+Hay relatos de que el espacio Otros del almacenamiento crece decenas o cientos de GB, a veces después de copiar o borrar juegos. Otros no es todo basura. Antes de borrar nada, averigua qué está ocupando el espacio de verdad: copias de tus propios juegos que todavía guardas, el mismo juego guardado dos veces o una copia que nunca terminó.
+
+## Qué hacer
+
+<Step n={1} title="Mira cuánto ocupa cada ruta" src="shadowmountplus-1-7">
+
+El navegador de instalación de ShadowMountPlus 1.7 tiene una vista Drives and folders que muestra el espacio libre y total de cada ruta. Se actualiza después de copiar, mover, borrar e instalar, incluidas las tareas canceladas o fallidas que pueden haber cambiado el uso del disco.
+
+</Step>
+
+<Step n={2} title="Busca el mismo juego guardado dos veces" src="shadowmountplus-1-7">
+
+Si ShadowMountPlus muestra una notificación de Title ID duplicado, deja solo un origen para ese Title ID.
+
+</Step>
+
+<Step n={3} title="Busca copias que no terminaron" src="shadowmountplus-1-7">
+
+`source not stable yet` en `/data/shadowmount/debug.log` significa que una copia todavía está cambiando. Deja que termine antes de decidir qué quitar.
+
+</Step>
+
+<Step n={4} title="Comprueba si las imágenes siguen montadas" src="shadowmountplus-1-7">
+
+Con `persistent_image_mounts=1`, las imágenes siguen montadas entre una partida y otra. Con el valor por defecto `0`, una imagen se monta al arrancar el juego y se libera al salir. Cierra el juego y vuelve a mirar el uso.
+
+</Step>
+
+<Step n={5} title="Como comprobación, borra solo lo que hayas identificado">
+
+Haz antes una copia de seguridad y quita solo el contenido que hayas identificado, con la acción de la herramienta que lo puso ahí. Luego vuelve a mirar el uso.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="brick" title="No borres carpetas del sistema">
+
+No borres `/user`, bases de datos ni carpetas `data` enteras. Otros no es todo basura, y un archivo de imagen puede ocupar más que los datos que contiene. Un tamaño grande de Otros, por sí solo, no demuestra que haya algo dañado.
+
+</Warn>
+
+<Warn kind="brick" title="Imágenes en la unidad interna">
+
+ShadowMountPlus avisa de que montar imágenes puede causar problemas al apagar y daños en los datos de las unidades internas, sobre todo en firmwares antiguos.
+
+</Warn>

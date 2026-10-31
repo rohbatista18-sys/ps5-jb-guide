@@ -16,10 +16,34 @@ Una carpeta extra en el nivel superior de la imagen puede impedir que se reconoz
 
 </Step>
 
+<Step n={3} title="En una imagen, mira dentro del montaje" src="shadowmountplus-1-7">
+
+Por FTP, abre la carpeta de esa imagen dentro de `/mnt/shadowmnt/`. Su nombre es el de la imagen seguido de un hash. Comprueba que el archivo param esté ahí.
+
+</Step>
+
+<Step n={4} title="Como comprobación, asegúrate de que los archivos son de este juego">
+
+El Title ID y la carpeta `sce_sys` deben venir de la misma copia de tu juego. No reutilices un `param.json` de otro título.
+
+</Step>
+
+<Step n={5} title="Deja que el escáner lo registre de nuevo y lee el registro" src="shadowmountplus-1-7">
+
+Después de corregir la copia, espera a la siguiente búsqueda. Luego revisa `/data/shadowmount/debug.log` y fíjate si aparece alguna notificación `Register failed`.
+
+</Step>
+
 ## Cuándo parar
 
 <Warn kind="terms" title="No te inventes metadatos">
 
 No crees archivos de metadatos inventados. Vuelve a hacer la copia a partir de tu propio original en buen estado.
+
+</Warn>
+
+<Warn kind="brick" title="No copies bases de datos entre consolas">
+
+No copies `app.db` de otra consola. Que falte el logotipo o la descripción no demuestra que el juego no vaya a arrancar, y no se encontró una solución confirmada única para los datos del título que faltan.
 
 </Warn>

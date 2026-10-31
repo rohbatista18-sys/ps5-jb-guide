@@ -134,6 +134,174 @@
       "accessedAt": "2026-10-31"
     },
     {
+      "id": "y2jb-autoloader-changelog",
+      "url": "https://github.com/itsPLK/ps5-y2jb-autoloader/blob/main/CHANGELOG.md",
+      "title": "PS5 Y2JB Autoloader changelog",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "payload-manager-readme",
+      "url": "https://github.com/itsPLK/ps5-payload-manager#readme",
+      "title": "PS5 Payload Manager README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "shadowmountplus-1-7",
+      "url": "https://github.com/drakmor/ShadowMountPlus/tree/1.7",
+      "title": "ShadowMountPlus 1.7 branch README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "garlic-readme",
+      "url": "https://github.com/earthonion/garlic-savemgr#readme",
+      "title": "Garlic save manager README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "garlic-releases",
+      "url": "https://github.com/earthonion/garlic-savemgr/releases",
+      "title": "Garlic save manager releases",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "onionhen-readme",
+      "url": "https://github.com/aydencharles/onionHEN#readme",
+      "title": "onionHEN README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "nanodns-readme",
+      "url": "https://github.com/drakmor/nanoDNS#readme",
+      "title": "nanoDNS README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "netflix-n-hack-readme",
+      "url": "https://github.com/NetflixNHack/Netflix-N-Hack#readme",
+      "title": "Netflix-N-Hack README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "ps5sx2-performance",
+      "url": "https://github.com/Swordpdf/PS5SX2/blob/main/PERFORMANCE.md",
+      "title": "PS5SX2: performance notes",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "ps5sx2-release-2-20",
+      "url": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-182",
+      "title": "PS5SX2 2.20 release (vk-285-182)",
+      "kind": "release",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "prospero-win-getting-started",
+      "url": "https://github.com/mpereiraesaa/prospero-win/blob/main/docs/GETTING_STARTED.md",
+      "title": "prospero-win: getting started",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "ps5-linux-loader-readme",
+      "url": "https://github.com/ps5-linux/ps5-linux-loader#readme",
+      "title": "ps5-linux-loader README",
+      "kind": "readme",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-reinstall-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/reinstall-playstation-system-software-safe-mode/",
+      "title": "Sony: reinstall system software in Safe Mode (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-reinstall-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/reinstall-playstation-system-software-safe-mode/",
+      "title": "Sony: reinstall system software in Safe Mode (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-reinstall-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/reinstall-playstation-system-software-safe-mode/",
+      "title": "Sony: reinstall system software in Safe Mode (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-m2-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/ps5-install-m2-ssd/",
+      "title": "Sony: install an M.2 SSD in PS5 (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-m2-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/ps5-install-m2-ssd/",
+      "title": "Sony: install an M.2 SSD in PS5 (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-m2-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/ps5-install-m2-ssd/",
+      "title": "Sony: install an M.2 SSD in PS5 (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-disc-drive-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/ps5-disc-drive-set-up/",
+      "title": "Sony: set up the PS5 disc drive (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-disc-drive-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/ps5-disc-drive-set-up/",
+      "title": "Sony: set up the PS5 disc drive (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-disc-drive-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/ps5-disc-drive-set-up/",
+      "title": "Sony: set up the PS5 disc drive (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-dualsense-pair-en",
+      "url": "https://www.playstation.com/en-us/support/hardware/pair-dualsense-controller-bluetooth/",
+      "title": "Sony: pair a DualSense controller (en-us)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-dualsense-pair-es",
+      "url": "https://www.playstation.com/es-es/support/hardware/pair-dualsense-controller-bluetooth/",
+      "title": "Sony: pair a DualSense controller (es-es)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
+      "id": "sony-dualsense-pair-pt",
+      "url": "https://www.playstation.com/pt-br/support/hardware/pair-dualsense-controller-bluetooth/",
+      "title": "Sony: pair a DualSense controller (pt-br)",
+      "kind": "sony-support",
+      "accessedAt": "2026-10-31"
+    },
+    {
       "id": "sony-version-en",
       "url": "https://www.playstation.com/en-us/support/hardware/playstation-system-software-application-version/",
       "title": "Sony: check the system software version (en-us)",

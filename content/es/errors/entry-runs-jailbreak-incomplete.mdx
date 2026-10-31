@@ -16,10 +16,44 @@ Cada entrada tiene sus propios requisitos. Por ejemplo, el README de BD-JB5 dice
 
 </Step>
 
+Que el exploit de kernel haya funcionado tampoco significa que el entorno de homebrew esté listo. Si las aplicaciones siguen sin abrir, sigue los pasos siguientes.
+
+<Step n={3} title="Después de reiniciar, vuelve a ejecutar el exploit y comprueba que el loader está activo" src="onionhen-readme">
+
+El README de onionHEN dice que no incluye un exploit de kernel: primero ejecutas el exploit de kernel e inicias un `elfldr` escuchando en el puerto `9021`, y solo después envías el HEN.
+
+</Step>
+
+<Step n={4} title="Carga un HEN compatible una sola vez y deja que termine de arrancar" src="onionhen-readme">
+
+Por ejemplo, el README de onionHEN dice que inicia el daemon de utilidades, `kstuff` y el daemon principal en ese orden. Si la Toolbox no aparece, espera a que termine y revisa los registros.
+
+</Step>
+
+<Step n={5} title="Para juegos o apps desde una carpeta o imagen, carga ShadowMount+ y espera" src="shadowmountplus-1-7">
+
+El README de ShadowMount+ dice que necesita `kstuff` (kstuff-lite v1.07 o posterior), muestra una notificación de ShadowMount+ al iniciarse y muestra notificaciones de registro como `Register failed`. Con una biblioteca grande, el primer escaneo puede tardar unos segundos.
+
+</Step>
+
+<Step n={6} title="Comprueba qué se está ejecutando" src="payload-manager-readme">
+
+El README de Payload Manager dice que puede mostrar los procesos activos, así puedes ver qué está cargado de verdad.
+
+</Step>
+
+<Step n={7} title="Prueba una app que sepas que funciona, sin el overlay, y guarda los registros" src="onionhen-readme">
+
+El README de onionHEN incluye la opción `overlay.enabled` para desactivar el overlay del juego. Si el error sigue volviendo, el README pide que los reportes incluyan el firmware, el host del exploit, los registros y los pasos para reproducirlo.
+
+</Step>
+
 ## Cuándo parar
 
 <Warn kind="terms" title="Una prueba de userland no es un jailbreak completo">
 
 Una prueba de userland no demuestra soporte del kernel ni que un HEN sea compatible con tu configuración.
+
+No ignores un error del sistema que vuelve una y otra vez solo porque una notificación dijo que el jailbreak funcionó. No hay una solución única para todas las apps homebrew.
 
 </Warn>

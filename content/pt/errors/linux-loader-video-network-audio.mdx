@@ -1,0 +1,57 @@
+## O que significa
+
+O ps5-linux transforma um PS5 com jailbreak em um PC com Linux. Depois do jailbreak você envia um payload, o loader do ps5-linux, que coloca o console em modo de repouso para você iniciá-lo no Linux. O README dele documenta os modelos e firmwares suportados, os passos que precisam acontecer em ordem, o que tentar em caso de tela preta e quais chips de rede funcionam. Ele também lista bugs conhecidos.
+
+## O que fazer
+
+<Step n={1} title="Confira se o seu modelo e o seu firmware estão na lista" src="ps5-linux-loader-readme">
+
+O README tem listas de firmware separadas para PS5 Phat e Slim e para PS5 Pro. Dentro da faixa deste guia, ele lista vários firmwares 7.xx, 11.xx, 12.xx e 13.xx para Phat e Slim, e menos para o Pro. Ele não lista nenhum firmware 8.xx, 9.xx ou 10.xx. Se o seu não aparece, o loader não é documentado para ele.
+
+</Step>
+
+<Step n={2} title="Desative o etaHEN e o kstuff antes do loader" src="ps5-linux-loader-readme">
+
+O README diz que, se o console trava em vez de entrar em modo de repouso, provavelmente o etaHEN ou o kstuff está ativado, e eles são incompatíveis com o loader.
+
+</Step>
+
+<Step n={3} title="Mantenha as portas USB alimentadas no repouso" src="ps5-linux-loader-readme">
+
+<MenuPath items={["Configurações", "Sistema", "Economia de energia", "Recursos disponíveis no modo de repouso"]} />
+
+Coloque a opção de fornecer energia às portas USB em **Sempre**. Se você redefinir as configurações do console, ajuste de novo.
+
+</Step>
+
+<Step n={4} title="Espere a luz laranja ficar fixa" src="ps5-linux-loader-readme">
+
+O loader coloca o console em modo de repouso sozinho. Espere a luz laranja parar de piscar e ficar fixa, e só então aperte o botão liga/desliga. Se o Linux iniciar, a luz fica branca. Se o console iniciar o sistema do PS5, você apertou cedo demais ou a opção de energia USB não está ativada.
+
+</Step>
+
+<Step n={5} title="Luz branca mas tela preta: confira o cmdline.txt" src="ps5-linux-loader-readme">
+
+O arquivo é o `cmdline.txt`, na partição FAT32 do pendrive ou SSD USB. Se você editou, volte o original. Depois tente remover `video=DP-1:1920x1080@60`, ou tente adicionar `amdgpu.force_1080p=1`.
+
+</Step>
+
+<Step n={6} title="Sem rede: teste o Ethernet e confira o chip de wifi" src="ps5-linux-loader-readme">
+
+O README diz que o Ethernet funciona em todos os modelos. O wifi é suportado no chip Marvell (Phat e Slim) e no MediaTek MT7925 (Pro). Se o wifi não funcionar, teste primeiro com um cabo Ethernet.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Limites conhecidos">
+
+O README diz que uma tela de "Reparando" e um aviso de que o PS5 não foi desligado corretamente, ao voltar para o sistema do PS5, são normais e inofensivos. Isso não cobre qualquer erro de armazenamento. O README também diz que o áudio por HDMI não funciona em alguns monitores, e não há correção geral para isso.
+
+</Warn>
+
+<Warn kind="brick" title="Não formate nada para testar">
+
+Um SSD M.2 preparado para o Linux deixa de servir para jogos do PS5, e, se ele tinha jogos, o README manda formatá-lo antes no PS5, o que apaga esses jogos. Não formate nenhuma unidade só para achar o problema. Nunca atualize o firmware do console para fazer o Linux funcionar.
+
+</Warn>

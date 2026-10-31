@@ -1,0 +1,41 @@
+## What it means
+
+Netflix-N-Hack runs code from the Netflix error screen through a proxy that runs on your PC. Users report that it shows a notification and then nothing else happens, or that it works only on some tries. The README lists PS5 firmware 4.03–12.XX. A notification on its own does not show that the kernel exploit finished.
+
+## What to do
+
+<Step n={1} title="Check your firmware and the Netflix app" src="netflix-n-hack-readme">
+
+The README lists PS5 firmware 4.03–12.XX. It also says the PS4 version of Netflix needs a license: if the app stays locked, you cannot use this jailbreak.
+
+</Step>
+
+<Step n={2} title="Check the proxy settings on the PS5" src="netflix-n-hack-readme">
+
+The README says the PC running the proxy must be on the same network as the PS5 and reachable at its local IP. In the PS5 internet setup, choose to set it up manually, leave DNS and MTU on Automatic, and set the proxy server to your PC's local IP and port `8080`. A "Can't connect to the internet" message is expected and can be ignored after you press OK.
+
+<MenuPath items={["Settings", "Network", "Settings", "Set Up Internet Connection"]} />
+
+</Step>
+
+<Step n={3} title="Start the logging server too" src="netflix-n-hack-readme">
+
+The README says the script triggers after the WebSocket used for remote logging starts, so run `ws.py` as well. If you use the Docker setup, check the `mitmproxy` and `ws` logs to see that both services started.
+
+</Step>
+
+<Step n={4} title="Retry the way the README says" src="netflix-n-hack-readme">
+
+If Netflix closes shortly after you open it, open it again. If a green `Exception` error appears, press X or O to retry. If Lapse fails, a notification tells you to reboot, and you must reboot before you retry.
+
+</Step>
+
+<Step n={5} title="Send your ELF only when elfldr is listening on port 9021" src="netflix-n-hack-readme" />
+
+## When to stop
+
+<Warn kind="terms" title="A notification is not a finished jailbreak">
+
+A notification on its own does not show that the kernel exploit finished. The README describes a separate P2JB variant only for firmware 10.x–12.40, with its own steps and an estimated time of about 70 minutes. Do not apply it to other firmware versions.
+
+</Warn>

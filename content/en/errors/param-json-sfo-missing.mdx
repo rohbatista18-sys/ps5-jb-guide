@@ -16,10 +16,34 @@ An extra top-level folder inside the image can stop the title from being recogni
 
 </Step>
 
+<Step n={3} title="For an image, look inside the mount" src="shadowmountplus-1-7">
+
+Over FTP, open the folder for that image under `/mnt/shadowmnt/`. Its name is the image name followed by a hash. Check that the param file is there.
+
+</Step>
+
+<Step n={4} title="As a check, make sure the files belong to this game">
+
+The Title ID and the `sce_sys` folder should come from the same copy of your game. Do not reuse a `param.json` from another title.
+
+</Step>
+
+<Step n={5} title="Let the scanner register it again and read the log" src="shadowmountplus-1-7">
+
+After you fix the copy, wait for the next scan. Then check `/data/shadowmount/debug.log` and look for any `Register failed` notification.
+
+</Step>
+
 ## When to stop
 
 <Warn kind="terms" title="Do not make up metadata">
 
 Do not create made-up metadata files. Make the copy again from your own intact original.
+
+</Warn>
+
+<Warn kind="brick" title="Do not copy databases between consoles">
+
+Do not copy `app.db` from another console. A missing logo or description does not prove the game will not run, and no single confirmed fix for missing title details was found.
 
 </Warn>

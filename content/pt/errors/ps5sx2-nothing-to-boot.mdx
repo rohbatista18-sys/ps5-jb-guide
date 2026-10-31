@@ -1,0 +1,37 @@
+## O que significa
+
+Há relatos de dois casos: um disco de PS3 próprio é instalado como jogo no PS5SX3 e depois mostra `Nothing to boot`, ou uma imagem de um jogo próprio fica na tela de carregamento e nunca inicia. Não há correção confirmada para nenhum dos dois. O PS5SX2 (PS2) e o PS5SX3 são apps separados, então primeiro descubra qual está envolvido. Os passos abaixo são verificações, e só os do PS5SX2 são documentados. A configuração básica de emuladores está no [guia de emuladores retrô](/pt/guias/retro-emulators).
+
+## O que fazer
+
+<Step n={1} title="Como verificação, anote o app e a build">
+
+Anote se acontece no PS5SX2 ou no PS5SX3, qual build você tem e a mensagem exata na tela.
+
+</Step>
+
+<Step n={2} title="No PS5SX2, confira a BIOS" src="ps5sx2-release-2-20">
+
+O PS5SX2 2.20 verifica a BIOS antes de cada início e diz o que fazer; as notas da versão dizem que a maioria das falhas ao iniciar era falta de BIOS. A sua própria BIOS vai em `/data/PCSX2/bios`. A OpenPS2BIOS embutida é experimental: alguns jogos ainda não funcionam com ela, e ela não inicia discos de PS1, CDs de áudio nem DVDs de vídeo.
+
+</Step>
+
+<Step n={3} title="Confira qual app recebe o disco" src="ps5sx2-release-2-20">
+
+Com o PS5SX2 2.20, um disco de PS2 vai para o PS5SX2 e qualquer outro disco fica com o PS5SX3. Para isso, o PS5SX3 precisa ser TB19.1 ou mais novo.
+
+</Step>
+
+<Step n={4} title="Como verificação, confira a sua cópia e as instruções do emulador">
+
+Confira se o seu dump está completo e em um formato que aquela build aceita. Leia as instruções daquela build para ver se ela precisa de um arquivo de BIOS ou de firmware próprio.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="terms" title="Sem correção confirmada">
+
+Não foi encontrada correção confirmada para um disco que mostra `Nothing to boot` nem para uma imagem que fica carregando. Não siga guias de emuladores de PC como o RPCS3 como se fossem o mesmo programa. Nunca atualize o firmware do console para tentar consertar um emulador.
+
+</Warn>

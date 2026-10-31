@@ -1,0 +1,49 @@
+## O que significa
+
+Há relatos de que o espaço Outros do armazenamento cresce dezenas ou centenas de GB, às vezes depois de copiar ou apagar jogos. Outros não é todo lixo. Antes de apagar qualquer coisa, descubra o que está ocupando o espaço de verdade: cópias dos seus próprios jogos que você ainda guarda, o mesmo jogo guardado duas vezes ou uma cópia que nunca terminou.
+
+## O que fazer
+
+<Step n={1} title="Veja quanto cada caminho ocupa" src="shadowmountplus-1-7">
+
+O navegador de instalação do ShadowMountPlus 1.7 tem uma tela Drives and folders que mostra o espaço livre e total de cada caminho. Ela atualiza depois de cópias, movimentações, exclusões e instalações, inclusive tarefas canceladas ou que falharam e podem ter mudado o uso do disco.
+
+</Step>
+
+<Step n={2} title="Procure o mesmo jogo guardado duas vezes" src="shadowmountplus-1-7">
+
+Se o ShadowMountPlus mostrar uma notificação de Title ID duplicado, deixe só uma origem para esse Title ID.
+
+</Step>
+
+<Step n={3} title="Procure cópias que não terminaram" src="shadowmountplus-1-7">
+
+`source not stable yet` no `/data/shadowmount/debug.log` quer dizer que uma cópia ainda está mudando. Deixe terminar antes de decidir o que remover.
+
+</Step>
+
+<Step n={4} title="Confira se as imagens continuam montadas" src="shadowmountplus-1-7">
+
+Com `persistent_image_mounts=1`, as imagens ficam montadas entre uma partida e outra. Com o padrão `0`, a imagem é montada quando o jogo abre e liberada quando ele fecha. Feche o jogo e confira o uso de novo.
+
+</Step>
+
+<Step n={5} title="Como diagnóstico, apague só o que você identificou">
+
+Faça backup antes e remova só o conteúdo que você identificou, pela ação da ferramenta que o colocou ali. Depois confira o uso de novo.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Não apague pastas do sistema">
+
+Não apague `/user`, bancos de dados nem pastas `data` inteiras. Outros não é todo lixo, e um arquivo de imagem pode ocupar mais espaço que os dados dentro dele. Um tamanho grande em Outros, sozinho, não prova que algo esteja corrompido.
+
+</Warn>
+
+<Warn kind="brick" title="Imagens na unidade interna">
+
+O ShadowMountPlus avisa que montar imagens pode causar problemas ao desligar e corrupção de dados em unidades internas, com mais frequência em firmwares antigos.
+
+</Warn>

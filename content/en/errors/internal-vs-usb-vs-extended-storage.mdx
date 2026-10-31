@@ -1,0 +1,49 @@
+## What it means
+
+The PS5 can use three different kinds of extra storage, and each has its own rules: an M.2 SSD installed inside the console, a USB drive the console sets up as extended storage, and a drive that holds image files of your own games for a mounter such as ShadowMountPlus. Users report copies that fail, drives that do not format and consoles that turn off while moving games. A failure on one drive does not prove that another one, or the internal SSD, is faulty.
+
+## What to do
+
+<Step n={1} title="Check that an internal M.2 SSD is compatible" src="sony-m2-en">
+
+Sony requires a PCI-Express Gen4x4 M.2 NVMe SSD (Key M). M.2 SATA SSDs are not supported. The drive also needs effective heat dissipation with a cooling structure, such as a heatsink.
+
+</Step>
+
+<Step n={2} title="Save your data before you format" src="sony-m2-en">
+
+Sony says formatting the M.2 SSD erases all the data on it, and that data cannot be recovered. Do not turn the power off while the drive is being formatted or while data is being saved.
+
+</Step>
+
+<Step n={3} title="Know what USB extended storage is for" src="sony-m2-en">
+
+Sony says PS5 games can be moved to USB extended storage, but they must be copied back to the console storage or the M.2 SSD before you can play them.
+
+</Step>
+
+<Step n={4} title="Image files are a different use" src="shadowmountplus-1-7">
+
+For ShadowMountPlus, `.ffpkg` (UFS) images are the recommended default. `.exfat` images are only for titles that need external-drive compatibility, with a 64 KB cluster size. This has nothing to do with the console's own extended storage.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Formatting erases the drive">
+
+Formatting erases everything on the drive. If the console crashes or turns off while it is writing, stop and check the drive and your files before you try again.
+
+</Warn>
+
+<Warn kind="brick" title="Images on the internal drive">
+
+ShadowMountPlus warns that mounting images can cause shutdown problems and data corruption on internal drives, more often on older firmware.
+
+</Warn>
+
+<Warn kind="update" title="Skip the update step">
+
+Sony's M.2 page asks you to install the latest system software before installing the SSD. If you want to keep the jailbreak, do not follow that step: an update can close it for good.
+
+</Warn>

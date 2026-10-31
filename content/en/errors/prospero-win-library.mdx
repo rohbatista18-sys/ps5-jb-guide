@@ -1,0 +1,49 @@
+## What it means
+
+prospero-win runs Windows games you own on a jailbroken PS5, through Wine. A game shows up in its launcher only through a profile: each game has a Wine prefix (its C: drive) and a profile file, and the launcher reads its list from `profiles/profiles.lst`. The first time you open it, the list is empty and it asks you to add profiles to `/data/prospero-win/profiles`. Its getting-started guide documents the steps below.
+
+## What to do
+
+<Step n={1} title="Note the build" src="prospero-win-getting-started">
+
+The app saves a log of each run in `/data/prospero-win/logs/`. Each log file starts with a `PW_REPORT/1` line that names the build and the game.
+
+</Step>
+
+<Step n={2} title="Install the whole app folder" src="prospero-win-getting-started">
+
+The app is the folder `PPSA99995`, with `eboot.bin`, its Wine runtime and its modules. Upload the whole folder to `/data/homebrew/` and let your loader register it. Copying only `eboot.bin` is not enough.
+
+</Step>
+
+<Step n={3} title="Check the profile list" src="prospero-win-getting-started">
+
+`profiles/profiles.lst` must list your profile's file name, one per line. The `prefix =` line in the profile must match the game's folder under `prefixes/`.
+
+</Step>
+
+<Step n={4} title="Check elfldr and lapy.elf" src="prospero-win-getting-started">
+
+elfldr must be listening on port 9021, and the app must contain `lapy.elf`. If that request does not complete, the app stops before it loads the profiles.
+
+</Step>
+
+<Step n={5} title="Update without losing your games" src="prospero-win-getting-started">
+
+To update, replace the whole `PPSA99995` folder. Your games and settings live in `/data/prospero-win` and are kept. Saves stay in each game's prefix.
+
+</Step>
+
+## When to stop
+
+<Warn kind="brick" title="Do not delete /data/prospero-win">
+
+That folder holds your games' prefixes, saves and settings. Deleting it to start over loses them. Copy it to a PC first if you must reinstall.
+
+</Warn>
+
+<Warn kind="update" title="Do not update the console">
+
+Never update the PS5 firmware to make a game appear. The guide says the app itself doesn't depend on the firmware: the jailbreak, the app loader and the Lapy daemon do, and each lists the firmwares it supports.
+
+</Warn>

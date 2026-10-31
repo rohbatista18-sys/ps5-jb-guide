@@ -1,0 +1,49 @@
+## O que significa
+
+O Garlic SaveMgr é um gerenciador de saves que roda como payload num PS5 com jailbreak e consegue importar os seus próprios saves para o console. Se um save vai para o usuário errado, ou para o lugar errado no caso de um save de PS4 ou de PS5, o jogo pode não enxergá-lo ou tratá-lo como corrompido. As notas de versão do Garlic listam vários bugs de importação que foram corrigidos em versões posteriores.
+
+## O que fazer
+
+<Step n={1} title="Faça um backup antes de importar" src="garlic-readme">
+
+O Garlic faz backups em arquivos ZIP criptografados que podem ser restaurados. Escolha o destino na aba Settings: no próprio PS5 (por padrão `/data/garlic/backups`) ou num pendrive (por padrão `/mnt/usb0/garlic-backups`).
+
+</Step>
+
+<Step n={2} title="Confira se é um save de PS4 ou de PS5" src="garlic-releases">
+
+As notas de versão dizem que saves de PS4 vão para `savedata/` e saves de PS5 vão para `savedata_prospero/`. Um save na pasta errada não funciona.
+
+</Step>
+
+<Step n={3} title="Escolha o usuário certo" src="garlic-releases">
+
+Desde a v1.6, o Garlic tem um seletor de usuário na barra de cima que mostra todos os usuários do PS5. Escolha o usuário que joga aquele jogo antes de importar.
+
+</Step>
+
+<Step n={4} title="Use uma versão que tenha as correções de importação" src="garlic-releases">
+
+A v1.6 faz os saves de PS4 serem importados na pasta certa; as notas dizem que versões anteriores gravavam o ID do usuário de um jeito que podia corromper saves de PS4. A v1.62b corrige a importação de saves criptografados de PS5 pelo USB. A v1.14 corrige a gravação de saves em jogos com vários slots.
+
+</Step>
+
+<Step n={5} title="Como diagnóstico, importe um save e teste">
+
+Importe um único save para o usuário escolhido e carregue no jogo. Confira se o Title ID dele é o do seu jogo. Só então importe o resto.
+
+</Step>
+
+## Quando parar
+
+<Warn kind="brick" title="Atualizar o Garlic não conserta um save">
+
+Uma versão nova do Garlic não recupera um save que já está corrompido. Renomear o Title ID não converte um save para outro jogo. Guarde o seu backup até o save importado funcionar.
+
+</Warn>
+
+<Warn kind="terms" title="Versões, chaves de PS4 e saves de outro console">
+
+Os nomes de versão do Garlic são tags, não números decimais: na página de versões a v1.62b vem antes da v1.6, e a v1.14 vem depois da v1.7. O backup de um save de PS4 também inclui o arquivo de chave `.bin` quando ele existe; mantenha os dois juntos. Migrar saves de um PS5 sem jailbreak depende das opções oficiais da Sony, da sua conta e do formato do save. Este guia não promete descriptografar um save pelo USB.
+
+</Warn>

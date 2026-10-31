@@ -1,0 +1,43 @@
+## Qué significa
+
+Algunos métodos por disco (BD-J) dependen de un archivo del sistema modificado (parche), `bdjstack.jar`. Hay relatos de pantalla negra con un disco BD-J después de usar otro método, de un disco BD-J que dejó de funcionar de repente, y de un payload de unpatch que no se ejecutó. Comprueba en qué estado está la consola antes de ejecutar nada más. Es un orden de diagnóstico, no una solución confirmada.
+
+## Qué hacer
+
+<Step n={1} title="Anota el port, el firmware y el estado del parche">
+
+Como comprobación, anota qué port de BD-J usas, la versión del firmware y si `bdjstack.jar` tiene el parche aplicado ahora mismo.
+
+</Step>
+
+<Step n={2} title="Ejecuta solo el payload de parche o unpatch del proyecto adecuado para ti" src="netflix-n-hack-readme">
+
+El README de Netflix-N-Hack dice que, en consolas con lector de discos, el ELF loader se puede usar para aplicar o quitar el parche de `bdjstack.jar` (proyecto BD-UN-JB). Ejecútalo solo cuando el loader esté listo, y solo la versión hecha para tu firmware.
+
+</Step>
+
+<Step n={3} title="Comprueba que el loader acepte payloads desde tu dispositivo" src="y2jb-autoloader-readme">
+
+El README de Y2JB Autoloader dice que su ELF loader por defecto solo acepta conexiones de la propia PS5. Para enviar un payload desde otro dispositivo, primero tienes que cargar un ELF loader normal mediante `autoload.txt`, como explica el README.
+
+</Step>
+
+<Step n={4} title="Reinicia y prueba con un disco que sepas que funciona">
+
+Como comprobación, reinicia la consola antes de cada prueba, para que un intento no afecte al siguiente.
+
+</Step>
+
+<Step n={5} title="Si empezó después de otro método, anota los pasos">
+
+Como comprobación, anota lo que ejecutaste antes de que empezara el problema y el error exacto que aparece.
+
+</Step>
+
+## Cuándo parar
+
+<Warn kind="terms" title="No repitas el unpatch al azar">
+
+No mezcles payloads hechos para firmwares distintos, y no ejecutes un payload de unpatch una y otra vez. El README de Netflix-N-Hack dice que este parche es posible, pero no confirma una solución para cada pantalla negra de los relatos.
+
+</Warn>

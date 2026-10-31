@@ -1,0 +1,43 @@
+## What it means
+
+Garlic SaveMgr's release notes document specific save import bugs that later releases fixed: PS4 saves written with the wrong user ID, encrypted saves from USB that would not import, and games with several save slots. If you imported with an older version, your problem may be one of these. The fixes only cover these documented bugs.
+
+## What to do
+
+<Step n={1} title="Export a backup first" src="garlic-releases">
+
+Since v1.6, Garlic can dump decrypted saves to a USB drive. Do this before you import anything again.
+
+</Step>
+
+<Step n={2} title="PS4 saves and the user ID: v1.6" src="garlic-releases">
+
+The v1.6 notes say earlier versions wrote the user ID at the same spot for every save, which could corrupt PS4 saves, and that PS4 saves now import to the correct folder.
+
+</Step>
+
+<Step n={3} title="Encrypted saves from USB: v1.62b" src="garlic-releases">
+
+v1.62b fixes importing encrypted PS5 saves from USB, which failed with `Not a decrypted save folder`. It also supports importing both encrypted and decrypted USB saves, for PS4 and PS5.
+
+</Step>
+
+<Step n={4} title="Games with several save slots: v1.14" src="garlic-releases">
+
+v1.14 fixes the save slot identity and the account ID written for games with several save slots.
+
+</Step>
+
+<Step n={5} title="Pick the right user and import a test copy" src="garlic-releases">
+
+Choose the user in the user selector (added in v1.6) and import one copy first. The v1.6 notes say the USB import has overwrite protection.
+
+</Step>
+
+## When to stop
+
+<Warn kind="terms" title="It only fixes these bugs">
+
+These releases fix bugs in the tool. They do not bring back progress that was already lost, and they do not prove that every broken save was caused by one of these bugs. Version names are not in number order: on the releases page v1.62b comes before v1.6.
+
+</Warn>

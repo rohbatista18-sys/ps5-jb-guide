@@ -19,7 +19,7 @@ const REPO_STATUSES = ["listed", "review", "excluded"];
 const SOURCE_KINDS = ["readme", "release", "sony-support", "news", "forum", "video", "archive"];
 const GUIDE_MENUS = ["jailbreak", "packages", "apps", "payloads", "transfer", "backup", "emulators"];
 const ERROR_SEVERITIES = ["low", "medium", "high"];
-const ERROR_GROUPS = ["exploit", "autoloader", "compat", "y2jb", "network", "hen", "bdj", "games-mount", "games-run", "codes", "triage"];
+const ERROR_GROUPS = ["exploit", "autoloader", "compat", "y2jb", "network", "hen", "bdj", "games-mount", "games-run", "saves", "storage", "emulators", "hardware", "codes", "triage"];
 
 const errors = [];
 const fail = (where, msg) => errors.push(`[${where}] ${msg}`);
