@@ -10,7 +10,7 @@ import SiteMenu from "@/components/SiteMenu";
 import { INTL_TAG, LOCALES, OG_LOCALE, hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { GUIDE_MENUS, getRanges } from "@/lib/content";
-import { COMMUNITY_URL, REPO_URL, SITE_URL, SUPPORT_URL, TRACKER_URL } from "@/lib/site";
+import { COMMUNITY_URL, REPO_URL, SITE_URL, TRACKER_URL } from "@/lib/site";
 import styles from "./layout.module.css";
 import "../globals.css";
 
@@ -104,21 +104,6 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
               guideMenus={GUIDE_MENUS}
             />
             <LanguageSwitcher current={lang} label={dict.header.language} />
-            {/* Fixed top-right on screen; last in the header so keyboard users meet the menu first. */}
-            <a
-              href={SUPPORT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`px-btn ${styles.support}`}
-              title={dict.header.supportSiteHint}
-            >
-              <span aria-hidden="true">♥ </span>
-              {dict.header.supportSite}
-              <span className="sr-only">
-                {" "}
-                — {dict.header.supportSiteHint} {dict.header.newTab}
-              </span>
-            </a>
           </header>
           <RiskStrip lang={lang} labels={dict.riskStrip} />
 

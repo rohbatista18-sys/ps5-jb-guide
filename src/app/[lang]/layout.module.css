@@ -6,54 +6,6 @@
   min-height: 100dvh;
 }
 
-/* Site donation, as in the tracker: fixed in the free top-right corner so it stays visible while
-   scrolling (the counter HUD and the own sprite take the bottom corners).
-   Doubled class: the global .px-btn padding/font-size would otherwise win. */
-.support.support {
-  position: fixed;
-  top: max(12px, env(safe-area-inset-top));
-  right: max(12px, env(safe-area-inset-right));
-  z-index: 30;
-  --pb: var(--yellow);
-  --btn-bg: var(--bg-deep);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  color: var(--yellow);
-  text-transform: uppercase;
-}
-
-.support > span[aria-hidden] {
-  color: var(--magenta);
-}
-
-/* The button is ~390px wide (EN): below ~1110px it reaches the centred brand, so push the header
-   down to clear it. */
-@media (max-width: 1149px) {
-  .shell {
-    padding-top: 56px;
-  }
-}
-
-@media (max-width: 639px) {
-  .support.support {
-    max-width: calc(100vw - 24px);
-    padding: 8px 10px;
-    font-size: var(--pixel-min);
-    white-space: normal;
-  }
-}
-
-/* Below ~380px the label wraps to two lines: give the header the extra room. */
-@media (max-width: 379px) {
-  .shell {
-    padding-top: 80px;
-  }
-}
-
 /* Off-screen until focused. Fixed, so PixelCrowd's gutter measurement ignores it. */
 .skip {
   position: fixed;
