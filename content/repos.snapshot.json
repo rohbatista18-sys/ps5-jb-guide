@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T12:02:56.315Z",
+  "checkedAt": "2026-11-09T19:24:02.471Z",
   "repos": {
     "ntfargo/Relapse-Exploit": {
       "full_name": "ntfargo/Relapse-Exploit",
@@ -8,7 +8,7 @@
       "fork": false,
       "created_at": "2026-09-17T19:45:13Z",
       "pushed_at": "2026-09-30T19:28:05Z",
-      "stargazers_count": 2602,
+      "stargazers_count": 2701,
       "license": "MIT",
       "latestRelease": null,
       "flags": []
@@ -20,7 +20,7 @@
       "fork": false,
       "created_at": "2023-10-25T06:08:24Z",
       "pushed_at": "2026-05-04T03:14:05Z",
-      "stargazers_count": 826,
+      "stargazers_count": 837,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "2.5B",
@@ -35,7 +35,7 @@
       "fork": true,
       "created_at": "2025-03-10T00:11:02Z",
       "pushed_at": "2026-01-25T17:49:52Z",
-      "stargazers_count": 358,
+      "stargazers_count": 372,
       "license": null,
       "latestRelease": {
         "tag": "v1.6.7",
@@ -52,7 +52,7 @@
       "fork": false,
       "created_at": "2024-04-09T21:38:02Z",
       "pushed_at": "2026-10-21T17:41:33Z",
-      "stargazers_count": 148,
+      "stargazers_count": 159,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.27",
@@ -66,12 +66,12 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-08-05T19:05:25Z",
-      "pushed_at": "2026-10-28T00:07:17Z",
-      "stargazers_count": 1286,
+      "pushed_at": "2026-11-08T00:52:43Z",
+      "stargazers_count": 1392,
       "license": "GPL-3.0",
       "latestRelease": {
-        "tag": "v0.6.2",
-        "published_at": "2026-10-28T00:07:18Z"
+        "tag": "v0.7.1",
+        "published_at": "2026-11-08T00:52:43Z"
       },
       "flags": [
         "windows-binary"
@@ -84,7 +84,7 @@
       "fork": false,
       "created_at": "2026-04-19T12:45:11Z",
       "pushed_at": "2026-10-19T13:42:54Z",
-      "stargazers_count": 681,
+      "stargazers_count": 738,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.6.3",
@@ -99,7 +99,7 @@
       "fork": true,
       "created_at": "2025-11-11T22:20:46Z",
       "pushed_at": "2026-10-28T14:19:47Z",
-      "stargazers_count": 1085,
+      "stargazers_count": 1220,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v1.1.0-ba879c8",
@@ -115,12 +115,12 @@
       "archived": false,
       "fork": false,
       "created_at": "2024-04-09T21:40:48Z",
-      "pushed_at": "2026-10-20T16:51:06Z",
-      "stargazers_count": 197,
+      "pushed_at": "2026-11-08T21:40:15Z",
+      "stargazers_count": 212,
       "license": "GPL-3.0",
       "latestRelease": {
-        "tag": "v0.21.1",
-        "published_at": "2026-08-20T17:02:45Z"
+        "tag": "v0.22",
+        "published_at": "2026-11-08T21:40:53Z"
       },
       "flags": []
     },
@@ -131,7 +131,7 @@
       "fork": false,
       "created_at": "2024-05-18T20:17:11Z",
       "pushed_at": "2026-10-10T22:31:18Z",
-      "stargazers_count": 219,
+      "stargazers_count": 226,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.35",
@@ -145,8 +145,8 @@
       "archived": false,
       "fork": false,
       "created_at": "2024-04-06T09:53:45Z",
-      "pushed_at": "2026-10-21T17:43:01Z",
-      "stargazers_count": 267,
+      "pushed_at": "2026-11-08T18:50:40Z",
+      "stargazers_count": 278,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.45",
@@ -157,11 +157,11 @@
     "Gezine/Y2JB": {
       "full_name": "Gezine/Y2JB",
       "html_url": "https://github.com/Gezine/Y2JB",
-      "archived": false,
+      "archived": true,
       "fork": false,
       "created_at": "2025-10-16T12:07:52Z",
       "pushed_at": "2026-08-02T16:19:46Z",
-      "stargazers_count": 1613,
+      "stargazers_count": 1682,
       "license": "MIT",
       "latestRelease": {
         "tag": "1.6",
@@ -172,7 +172,7 @@
     "Gezine/BD-JB5": {
       "full_name": "Gezine/BD-JB5",
       "html_url": "https://github.com/Gezine/BD-JB5",
-      "archived": false,
+      "archived": true,
       "fork": false,
       "created_at": "2026-03-21T08:15:06Z",
       "pushed_at": "2026-08-04T23:40:33Z",
@@ -191,7 +191,7 @@
       "fork": false,
       "created_at": "2025-03-22T18:21:32Z",
       "pushed_at": "2025-12-02T19:06:30Z",
-      "stargazers_count": 162,
+      "stargazers_count": 165,
       "license": "Unlicense",
       "latestRelease": null,
       "flags": []
@@ -203,7 +203,7 @@
       "fork": false,
       "created_at": "2022-09-27T19:53:44Z",
       "pushed_at": "2024-02-07T03:26:04Z",
-      "stargazers_count": 930,
+      "stargazers_count": 932,
       "license": null,
       "latestRelease": {
         "tag": "v1.03",
@@ -218,7 +218,7 @@
       "fork": false,
       "created_at": "2025-10-29T01:30:34Z",
       "pushed_at": "2026-10-03T01:11:21Z",
-      "stargazers_count": 186,
+      "stargazers_count": 195,
       "license": null,
       "latestRelease": {
         "tag": "v2.10",
@@ -233,7 +233,7 @@
       "fork": false,
       "created_at": "2026-09-18T15:02:47Z",
       "pushed_at": "2026-10-19T20:57:27Z",
-      "stargazers_count": 410,
+      "stargazers_count": 430,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v4.0.0-beta-4",
@@ -247,16 +247,14 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-02T19:05:20Z",
-      "pushed_at": "2026-10-28T15:44:18Z",
-      "stargazers_count": 450,
+      "pushed_at": "2026-11-08T00:21:25Z",
+      "stargazers_count": 520,
       "license": "GPL-3.0",
       "latestRelease": {
-        "tag": "v1.000.115",
-        "published_at": "2026-10-28T15:44:23Z"
+        "tag": "v1.000.116",
+        "published_at": "2026-10-29T12:30:23Z"
       },
-      "flags": [
-        "new-repo"
-      ]
+      "flags": []
     },
     "elripalda/RecompStore": {
       "full_name": "elripalda/RecompStore",
@@ -264,12 +262,12 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-13T04:27:38Z",
-      "pushed_at": "2026-10-28T09:11:59Z",
-      "stargazers_count": 270,
+      "pushed_at": "2026-11-09T16:59:55Z",
+      "stargazers_count": 365,
       "license": "GPL-3.0",
       "latestRelease": {
-        "tag": "v2.7.3",
-        "published_at": "2026-10-26T07:15:51Z"
+        "tag": "v2.7.4",
+        "published_at": "2026-10-30T04:00:44Z"
       },
       "flags": [
         "new-repo"
@@ -281,12 +279,12 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-01-10T06:37:43Z",
-      "pushed_at": "2026-10-29T09:35:08Z",
-      "stargazers_count": 933,
-      "license": "NOASSERTION",
+      "pushed_at": "2026-11-09T18:45:47Z",
+      "stargazers_count": 1153,
+      "license": "GPL-3.0",
       "latestRelease": {
-        "tag": "v9.0.1",
-        "published_at": "2026-10-29T10:03:46Z"
+        "tag": "v12.4.0",
+        "published_at": "2026-11-09T16:34:12Z"
       },
       "flags": [
         "windows-binary"
@@ -299,7 +297,7 @@
       "fork": false,
       "created_at": "2026-09-18T20:38:09Z",
       "pushed_at": "2026-10-05T20:26:33Z",
-      "stargazers_count": 185,
+      "stargazers_count": 203,
       "license": "MIT",
       "latestRelease": {
         "tag": "v1.2.9",
@@ -316,8 +314,8 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-16T00:46:59Z",
-      "pushed_at": "2026-10-28T13:58:23Z",
-      "stargazers_count": 393,
+      "pushed_at": "2026-11-09T19:19:14Z",
+      "stargazers_count": 476,
       "license": "NOASSERTION",
       "latestRelease": null,
       "flags": [
@@ -330,8 +328,8 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-18T04:11:40Z",
-      "pushed_at": "2026-10-27T12:37:46Z",
-      "stargazers_count": 342,
+      "pushed_at": "2026-11-05T23:23:10Z",
+      "stargazers_count": 17,
       "license": "MIT",
       "latestRelease": null,
       "flags": [
@@ -345,7 +343,7 @@
       "fork": false,
       "created_at": "2026-10-27T20:21:38Z",
       "pushed_at": "2026-10-27T22:38:45Z",
-      "stargazers_count": 29,
+      "stargazers_count": 50,
       "license": "NOASSERTION",
       "latestRelease": null,
       "flags": [
@@ -359,14 +357,13 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-22T00:35:32Z",
-      "pushed_at": "2026-10-22T00:49:21Z",
-      "stargazers_count": 0,
+      "pushed_at": "2026-10-30T15:32:56Z",
+      "stargazers_count": 1,
       "license": null,
       "latestRelease": null,
       "flags": [
         "new-repo",
-        "few-stars",
-        "new-account"
+        "few-stars"
       ]
     },
     "stark3y93/PS5-FW-14.10-Research": {
@@ -376,7 +373,7 @@
       "fork": false,
       "created_at": "2026-10-20T10:31:30Z",
       "pushed_at": "2026-10-20T22:49:57Z",
-      "stargazers_count": 0,
+      "stargazers_count": 1,
       "license": "MIT",
       "latestRelease": null,
       "flags": [
@@ -390,7 +387,7 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-23T13:35:29Z",
-      "pushed_at": "2026-10-28T03:22:59Z",
+      "pushed_at": "2026-11-05T02:32:38Z",
       "stargazers_count": 0,
       "license": null,
       "latestRelease": null,
@@ -404,10 +401,10 @@
       "html_url": "https://github.com/oniz93/ps5-14.10-research",
       "archived": false,
       "fork": false,
-      "created_at": "2026-10-24T06:26:53Z",
-      "pushed_at": "2026-10-28T20:55:46Z",
-      "stargazers_count": 2,
-      "license": null,
+      "created_at": "2026-11-04T01:22:09Z",
+      "pushed_at": "2026-11-07T02:20:34Z",
+      "stargazers_count": 3,
+      "license": "NOASSERTION",
       "latestRelease": null,
       "flags": [
         "new-repo",
@@ -422,7 +419,7 @@
       "fork": false,
       "created_at": "2026-09-17T13:05:29Z",
       "pushed_at": "2026-10-10T15:38:09Z",
-      "stargazers_count": 235,
+      "stargazers_count": 252,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v1.5.1",
@@ -437,14 +434,13 @@
       "fork": false,
       "created_at": "2026-10-06T17:55:28Z",
       "pushed_at": "2026-10-26T01:22:00Z",
-      "stargazers_count": 12,
+      "stargazers_count": 17,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v3.99.5",
         "published_at": "2026-10-26T01:22:00Z"
       },
       "flags": [
-        "new-repo",
         "new-account",
         "windows-binary"
       ]
@@ -456,7 +452,7 @@
       "fork": false,
       "created_at": "2024-04-06T10:00:13Z",
       "pushed_at": "2026-10-16T15:41:39Z",
-      "stargazers_count": 27,
+      "stargazers_count": 30,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.41.1",
@@ -470,8 +466,8 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-09-29T01:14:43Z",
-      "pushed_at": "2026-10-29T11:07:16Z",
-      "stargazers_count": 60,
+      "pushed_at": "2026-11-09T19:11:09Z",
+      "stargazers_count": 68,
       "license": "GPL-3.0",
       "latestRelease": null,
       "flags": []
@@ -482,12 +478,12 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-08-17T19:26:34Z",
-      "pushed_at": "2026-10-27T19:11:31Z",
-      "stargazers_count": 273,
+      "pushed_at": "2026-11-09T00:31:51Z",
+      "stargazers_count": 321,
       "license": "GPL-3.0",
       "latestRelease": {
-        "tag": "v1.1",
-        "published_at": "2026-09-28T19:32:33Z"
+        "tag": "v1.2",
+        "published_at": "2026-11-09T00:31:51Z"
       },
       "flags": []
     },
@@ -497,7 +493,7 @@
       "archived": false,
       "fork": true,
       "created_at": "2026-10-12T04:24:16Z",
-      "pushed_at": "2026-10-29T09:51:03Z",
+      "pushed_at": "2026-11-09T06:10:58Z",
       "stargazers_count": 0,
       "license": "MIT",
       "latestRelease": null,
@@ -513,8 +509,8 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-04-28T22:26:17Z",
-      "pushed_at": "2026-10-29T04:55:06Z",
-      "stargazers_count": 185,
+      "pushed_at": "2026-11-09T05:17:36Z",
+      "stargazers_count": 195,
       "license": null,
       "latestRelease": {
         "tag": "payloads-mirror",
@@ -528,8 +524,8 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-07-20T03:10:14Z",
-      "pushed_at": "2026-10-27T05:44:15Z",
-      "stargazers_count": 479,
+      "pushed_at": "2026-11-06T04:54:07Z",
+      "stargazers_count": 502,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "v0.9.0",
@@ -544,7 +540,7 @@
       "fork": false,
       "created_at": "2022-12-11T23:18:21Z",
       "pushed_at": "2026-10-21T17:45:37Z",
-      "stargazers_count": 369,
+      "stargazers_count": 383,
       "license": "GPL-3.0",
       "latestRelease": {
         "tag": "1.08",
@@ -558,12 +554,12 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-03-01T19:24:02Z",
-      "pushed_at": "2026-10-23T13:44:07Z",
-      "stargazers_count": 177,
+      "pushed_at": "2026-11-09T06:18:30Z",
+      "stargazers_count": 205,
       "license": null,
       "latestRelease": {
-        "tag": "v1.15-beta1",
-        "published_at": "2026-10-23T13:44:07Z"
+        "tag": "v1.15-beta20",
+        "published_at": "2026-11-09T06:20:27Z"
       },
       "flags": []
     },
@@ -578,7 +574,6 @@
       "license": "GPL-3.0",
       "latestRelease": null,
       "flags": [
-        "new-repo",
         "few-stars",
         "fork-of-listed",
         "same-name-as:mihawk-99/PS5_RetroArch"
@@ -595,7 +590,6 @@
       "license": "GPL-3.0",
       "latestRelease": null,
       "flags": [
-        "new-repo",
         "few-stars",
         "fork"
       ]
@@ -607,7 +601,7 @@
       "fork": false,
       "created_at": "2026-08-23T12:23:21Z",
       "pushed_at": "2026-08-28T23:02:30Z",
-      "stargazers_count": 9,
+      "stargazers_count": 8,
       "license": "GPL-2.0",
       "latestRelease": {
         "tag": "v1.0",
@@ -622,15 +616,13 @@
       "fork": false,
       "created_at": "2026-10-08T11:12:07Z",
       "pushed_at": "2026-10-19T12:01:10Z",
-      "stargazers_count": 47,
+      "stargazers_count": 52,
       "license": "NOASSERTION",
       "latestRelease": {
         "tag": "v1.5.4",
         "published_at": "2026-10-18T21:46:43Z"
       },
-      "flags": [
-        "new-repo"
-      ]
+      "flags": []
     },
     "MiladRTX/ps5-homebrew-starter": {
       "full_name": "MiladRTX/ps5-homebrew-starter",
@@ -639,7 +631,7 @@
       "fork": false,
       "created_at": "2026-10-20T11:12:26Z",
       "pushed_at": "2026-10-20T13:51:08Z",
-      "stargazers_count": 7,
+      "stargazers_count": 9,
       "license": "GPL-3.0",
       "latestRelease": null,
       "flags": [
@@ -652,12 +644,11 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-01T07:01:52Z",
-      "pushed_at": "2026-10-27T07:47:49Z",
-      "stargazers_count": 6,
+      "pushed_at": "2026-10-29T21:38:42Z",
+      "stargazers_count": 8,
       "license": "MIT",
       "latestRelease": null,
       "flags": [
-        "new-repo",
         "same-name-as:ntfargo/Relapse-Exploit"
       ]
     },
@@ -668,7 +659,7 @@
       "fork": false,
       "created_at": "2026-08-10T11:06:50Z",
       "pushed_at": "2026-08-13T13:11:26Z",
-      "stargazers_count": 143,
+      "stargazers_count": 145,
       "license": null,
       "latestRelease": null,
       "flags": []
@@ -679,15 +670,14 @@
       "archived": false,
       "fork": false,
       "created_at": "2026-10-02T22:53:42Z",
-      "pushed_at": "2026-10-29T11:54:45Z",
-      "stargazers_count": 1235,
+      "pushed_at": "2026-11-06T12:05:29Z",
+      "stargazers_count": 1365,
       "license": null,
       "latestRelease": {
-        "tag": "v1.7.0",
-        "published_at": "2026-10-26T19:38:41Z"
+        "tag": "v1.8.5",
+        "published_at": "2026-11-04T17:35:29Z"
       },
       "flags": [
-        "new-repo",
         "windows-binary",
         "readme-scam-phrase"
       ]
